@@ -1,0 +1,35 @@
+PEW RESEARCH CENTER - Global Attitudes & Trends
+ 
+Spring 2018 27-Nation Survey
+
+It is important to read this information before using the Pew Research Center's Spring 2018 Global Attitudes survey dataset. 
+
+ 
+1.	General population weight:
+	
+	The weight that must be used when analyzing the attitudes and opinions of the general populations is:
+		
+	General population variable name:  Weight
+			
+	Weight by weight for this analysis. 
+
+
+2.	The full topline results are for the general populations, unless otherwise stated. To access topline trends, please use the Pew Global Attitudes & Trends Question Database on our website: http://www.pewresearch.org/global/question-search/     
+
+
+3.	The topline results exclude data for questions where there are fewer than 100 observations for a particular country. This data is, however, included in the full dataset. 
+  
+
+4.	The questionnaire includes full question wording as well as answer category values. Question wording and answer categories for any demographic questions that vary by country can be found in the variable and value labels in the data file.
+
+
+5.	Methodological overviews of each survey country, including sample design, mode, languages, fieldwork dates, sample size, margin of error and representativeness are available on our methods website: http://www.pewresearch.org/methodology/international-survey-research/international-methodology/
+
+
+6.	Certain variables have been eliminated from the dataset either because of disclosure sensitivities or because of administrative errors.
+
+
+7.	Data for certain geopolitical questions in India that was not released in published reports is included in this data file. The data was dropped from analyses due to high don't know and refused responses because of a difference in survey administration and probing compared with previous years.
+
+
+8. 	Data was collected among adults ages 18 and older. In Mexico and South Africa, the exact ages of a small number of respondents were unclear based on discrepancies in respondents' reported ages at different points in the interview. These interviews have been dropped from the data set, which may result in minor discrepancies from previously published findings.
