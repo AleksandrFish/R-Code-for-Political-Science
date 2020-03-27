@@ -1,0 +1,45 @@
+---
+title: "Analysis of Burt's IQ Data"
+author: "John Fox"
+date: "`r as.character(Sys.Date())`"
+output: html_document
+---
+
+
+```{r echo=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, fig.height=8, fig.width=8) 
+#    use fig.height=6.5, fig.width=6.5 for word output
+```
+
+## A Graph of Burt's Data
+
+
+```{r}
+library(car)
+Burt$class <- with(Burt, factor(class, levels=c("low", "medium", "high")))
+scatterplot(IQbio ~ IQfoster | class,  data=Burt, 
+            boxplots=FALSE, smooth=FALSE)
+```
+
+The regression lines for the three classes are not very different, but they are
+also remarkably parallel.
+
+## Burt's Regression
+
+
+```{r}
+burt.mod <- lm(IQbio ~ IQfoster*class, data=Burt)
+summary(burt.mod)
+Anova(burt.mod)
+```
+
+There is no evidence of an interaction, and only weak evidence of a class main effect.
+There is very strong evidence for an IQfoster "effect."
+
+## Why Should We Strongly Suspect that the Data Are Cooked?
+
+The p-value for the interaction is very close to 1, indicating that the three
+regression lines are *almost perfectly* parallel. Data this parallel would occur by
+chance less than 1 percent of the time, even if there were no interaction
+in the population.

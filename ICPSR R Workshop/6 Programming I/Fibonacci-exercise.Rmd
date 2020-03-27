@@ -1,0 +1,89 @@
+---
+title: "Fibonacci Numbers"
+author: "John Fox"
+date: "`r as.character(Sys.Date())`"
+output: html_document
+---
+
+
+```{r echo=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, fig.height=8, fig.width=8) 
+#    use fig.height=6.5, fig.width=6.5 for word output
+```
+
+## Calculating Fibonacci Numbers by Recursion
+
+```{r}
+fib0 <- function(n, verbose=FALSE){
+    if (verbose) cat("n = ", n, " ")
+    if (n <= 2) return(1)
+    fib0(n - 1, verbose=verbose) + fib0(n - 2, verbose=verbose)
+}
+sapply(1:10, fib0)
+
+```
+
+I've included a verbose argument to trace the recursive function calls (see below).
+
+## Calculating Fibonacci Numbers by Iteration
+
+```{r}
+fib1 <- function(n){
+    if (n <= 2) return(1)
+    last.minus.1 <- 1
+    last.minus.2 <- 1
+    for (i in 3:n){
+        save <- last.minus.1
+        last.minus.1 <- last.minus.1 + last.minus.2
+        last.minus.2 <- save
+    }
+    last.minus.1
+}
+
+sapply(1:10, fib1)
+```
+
+## Computing Fibonacci Numbers by Binet's Formula
+
+```{r}
+fib2 <- function(n){
+    round(((1 + sqrt(5))/2)^n/sqrt(5))
+}
+sapply(1:10, fib2)
+
+```
+
+## Comparing the Efficiency of the three Solutions
+
+```{r}
+options(scipen=10)  # suppress scientific notation
+system.time(print(fib0(30)))
+system.time(print(fib1(70)))
+system.time(print(fib2(70)))
+```
+
+The latter two solutions are too fast to time with `system.time()` but we can get timings with the **microbenchmark** package:
+
+```{r}
+library(microbenchmark) # need to install the microbenchmark package
+microbenchmark(fib1=fib1(70),
+               fib2=fib2(70))
+```
+
+As expected `fib2()`, which uses Binet's formula is much faster (proportionally) than `fib1()`, which uses iteration.
+
+`fib2(70)` produces the right answer, but not `fib2(71)`:
+
+```{r}
+fib1(71)
+fib2(71)
+```
+
+To see why the recursive function `fib0()` is so inefficient, trace the computation:
+
+```{r}
+fib0(8, verbose=TRUE)
+```
+
+It's apparent that some of the same Fibonacci numbers (e.g., for n = 2) end up being computed over and over and over again.

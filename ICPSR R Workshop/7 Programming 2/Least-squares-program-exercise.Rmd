@@ -1,0 +1,142 @@
+---
+title: "A Least-Squares Regression Program"
+author: "John Fox"
+date: "`r as.character(Sys.Date())`"
+output: html_document
+---
+
+```{r echo=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, fig.height=8, fig.width=8) 
+#    use fig.height=6.5, fig.width=6.5 for word output
+```
+
+## Basic Least-Squares Function
+
+```{r}
+ls <- function(X, y, intercept=TRUE){
+    if (intercept) X <- cbind(1, X)
+    n <- nrow(X)
+    p <- ncol(X)
+    V <- solve(t(X) %*% X)
+    b <- as.vector(V %*% t(X) %*% y)
+    yhat <- as.vector(X %*% b)
+    e <- y - yhat
+    s2 <- sum(e^2)/(n - p)
+    V <- s2*V
+    list(coef=b, vcov=V, residuals=e, fitted=yhat)
+}
+```
+
+Testing the function with the Longley data:
+
+```{r}
+mod.lm <- lm(Employed ~., data=longley)
+coef(mod.lm)
+
+X <- data.matrix(longley[, 1:6])
+y <- longley[, "Employed"]
+mod.ls <- ls(X, y)
+mod.ls$coef
+
+mod.ls$coef/coef(mod.lm) # should be close to 1
+sqrt(diag(mod.ls$vcov))/sqrt(diag(vcov(mod.lm))) # ditto
+```
+
+My `ls()` function produces results similar to those produced by `lm()`.
+
+## Making the Least-Squares Function Object-Oriented
+
+Defining the `ls()` generic function with `"default"` and `"formula"` methods:
+
+```{r}
+ls <- function(X, ...){
+    UseMethod("ls")
+}
+
+ls.default <- function(X, y, intercept=TRUE, ...){
+    if (intercept) X <- cbind(1, X)
+    n <- nrow(X)
+    p <- ncol(X)
+    V <- solve(t(X) %*% X)
+    b <- as.vector(V %*% t(X) %*% y)
+    names(b) <- colnames(X)
+    yhat <- as.vector(X %*% b)
+    e <- y - yhat
+    s2 <- sum(e^2)/(n - p)
+    V <- s2*V
+    result <- list(coef=b, vcov=V, residuals=e, fitted=yhat)
+    class(result) <- "ls"
+    result
+}
+
+ls.formula <- function(formula, data, subset, na.action, model = TRUE,
+    contrasts = NULL, ...) {
+    call <- match.call()  # returns the function call
+    mf <- match.call(expand.dots = FALSE)  # the function call w/o ...
+    args <- match(c("formula", "data", "subset", "na.action"),
+        names(mf), 0)  # which arguments are present?
+    mf <- mf[c(1, args)]
+    mf$drop.unused.levels <- TRUE
+    mf[[1]] <- as.name("model.frame")
+    mf <- eval.parent(mf)  # create a model frame
+    terms <- attr(mf, "terms")  # terms object for the model
+    y <- model.response(mf)  # response variable
+    X <- model.matrix(terms, mf, contrasts)  # model matrix
+    mod <- ls.default(X, y, intercept=FALSE)
+    mod$na.action <- attr(mf, "na.action")
+    mod$contrasts <- attr(X, "contrasts")
+    mod$xlevels <- .getXlevels(terms, mf)
+    mod$call <- call
+    mod$terms <- terms
+    if (model)  mod$model <- mf
+    mod
+}
+```
+
+Defining `"ls"` methods for some standard generic functions:
+
+```{r}
+coef.ls <- function(object, ...) object$coef
+
+vcov.ls <- function(object, ...) object$vcov
+
+print.ls <- function(x, ...) {
+    print(coef(x))
+    invisible(x)
+}
+
+summary.ls <- function(object, ...) {
+    b <- coef(object)
+    se <- sqrt(diag(vcov(object)))
+    e <- residuals(object)
+    df <- length(e) - length(b)
+    s2 <- sum(e^2)/df
+    t <- b/se
+    table <- cbind(b, se, t, 2*(1 - pt(abs(t), df=df)))
+    colnames(table) <- c("Estimate", "Std.Err", "t value", "Pr(>|t|)")
+    rownames(table) <- names(b)
+    result <- list(coef=table, s2=s2, df=df)
+    class(result) <- "summary.ls"
+    result
+}
+
+print.summary.ls <- function(x, ...) {
+    printCoefmat(x$coef)
+    cat("\nresidual std. dev. =", sqrt(x$s2), "  residual df =", x$df,"\n")
+    invisible(x)
+}
+
+```
+
+Testing:
+
+```{r}
+mod.ls <- ls(Employed ~ ., data=longley)
+mod.ls # print method
+summary(mod.ls)
+
+summary(mod.lm) # checkin against lm()
+```
+
+

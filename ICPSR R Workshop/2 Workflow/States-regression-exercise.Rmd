@@ -1,0 +1,57 @@
+---
+title: "States Regression Exercises"
+author: "John Fox"
+date: "`r as.character(Sys.Date())`"
+output: html_document
+---
+
+```{r echo=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, fig.height=8, fig.width=8) 
+#    use fig.height=6.5, fig.width=6.5 for word output
+```
+
+## Regression of SAT Math Scores on Teachers' Pay
+
+
+```{r}
+library(car)
+mod.1 <- lm(SATM ~ pay, data=States)
+summary(mod.1)
+```
+As teacher's pay goes up, on average SAT math scores go down!
+
+## Regression of SAT Math Scores on Both Teachers' Pay and Percent Taking the Exam
+
+```{r}
+mod.2 <- lm(SATM ~ pay + percent, data=States)
+summary(mod.2)
+compareCoefs(mod.1, mod.2)
+```
+
+Holding percent taking the exam constant, there's a *positive* relationship of SAT math scores to teachers' pay. On the other hand, holding teachers' pay constant, SAT math scores are negatively related to percent of students taking the exam.
+
+## Graphing the Data
+
+We probably should have started here! 
+
+Here's a scatterplot matrix for the three variables:
+
+```{r}
+scatterplotMatrix(~ SATM + pay + percent, data=States, span=0.9)
+```
+
+Both SATM and even more so percent taking the exam are bimodal. Some of the marginal relationships are apparently nonlinear, suggesting that there may be problems in the linear regression.
+
+Some Diagnostics
+----------------
+
+```{r, fig.height=4}
+crPlots(mod.2, span=0.9)
+avPlots(mod.2)
+```
+```{r}
+qqPlot(mod.2)
+```
+
+Indeed, nonlinearity seems an issue, though not an extreme issue. On the other hand, the added-variable plot doesn't suggest the presence of influential cases, nor is the distribution of the studentized residuals particularly prolematic.

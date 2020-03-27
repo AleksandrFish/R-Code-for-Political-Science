@@ -1,0 +1,24 @@
+
+---
+title: "Replace with Main Title"
+author: "Your Name"
+date: "the date"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment=NA, prompt=TRUE, fig.height=7, fig.width=7)
+# use fig.height=6.5, fig.width=6.5 for Word output (use of which is discouraged)
+```
+## Replace with Section Title
+* Make a bullet point.
+```{r}
+# R commands go here.
+# You can adjust fig.height, and fig.width to make graphs look better.
+# For example, for a small graph, try {r fig.width=4, fig.height=4};
+# for a graph with two side-by-side panels, try {r fig.height=4}.
+```
+* Intersperse R code chunks with explanatory text as needed.
+* Press the Knit button in the toolbar to process the .Rmd file into an .html (or .pdf or .docx) file.
+* For more information on using R Markdown in RStudio click on "Help > Markdown Quick Reference", "Help > Cheatsheets > R Markdown Cheat Sheet", or "Help > Cheatsheets > R Markdown Reference Guide".
+<head/>
