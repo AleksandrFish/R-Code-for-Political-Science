@@ -1,0 +1,564 @@
+---
+title: "Machine Learning"
+output: pdf_document
+---
+
+#Regression
+Let's get down to a bit of coding! Your task is to examine this course's first prediction model. You'll be working with the `Wage` dataset. It contains the wage and some general information for workers in the mid-Atlantic region of the US.
+
+As we briefly discussed in the video, there could be a relationship between a worker's `age` and his `wage`. Older workers tend to have more experience on average than their younger counterparts, hence you could expect an increasing trend in wage as workers age. So we built a linear regression model for you, using `lm()`: `lm_wage`. This model predicts the wage of a worker based only on the worker's age.
+
+With this linear model `lm_wage`, which is built with data that contain information on workers' age and their corresponding wage, you can predict the wage of a worker given the age of that worker. For example, suppose you want to predict the wage of a 60 year old worker. You can use the `predict()` function for this. This generic function takes a model as the first argument. The second argument should be some unseen observations as a data frame. `predict()` is then able to predict outcomes for these observations.
+
+Note: At this point, the workings of `lm()` are not important, you'll get a more comprehensive overview of regression in chapter 4.
+
+```{r}
+# The Wage dataset is available
+require(ISLR)
+
+# Build Linear Model: lm_wage (coded already)
+lm_wage <- lm(wage ~ age, data = Wage)
+
+# Define data.frame: unseen (coded already)
+unseen <- data.frame(age = 60)
+
+# Predict the wage for a 60-year old worker
+predict(lm_wage, unseen)
+```
+
+It's time for you to make another prediction with regression! More precisely, you'll analyze the number of views of your LinkedIn profile. With your growing network and your data science skills improving daily, you wonder if you can predict how often your profile will be visited in the future based on the number of days it's been since you created your LinkedIn account.
+
+The instructions will help you predict the number of profile views for the next 3 days, based on the views for the past 3 weeks. The `linkedin` vector, which contains this information, is already available in your workspace.
+```{r}
+#Linkedin vector
+linkedin <- c( 5,  7,  4,  9, 11, 10, 14, 17, 13, 11, 18, 17, 21, 21, 24, 23, 28, 35, 21, 27, 23)
+
+# Create the days vector
+days <- 1:21
+
+# Fit a linear model called on the linkedin views per day: linkedin_lm
+
+linkedin_lm <- lm(linkedin ~ days)
+
+# Predict the number of views for the next three days: linkedin_pred
+future_days <- data.frame(days = 22:24)
+linkedin_pred <-predict(linkedin_lm, future_days)
+
+# Plot historical data and predictions
+plot(linkedin ~ days, xlim = c(1, 24))
+points(22:24, linkedin_pred, col = "green")
+```
+
+#Clustering
+
+Last but not least, there's clustering. This technique tries to group your objects. It does this without any prior knowledge of what these groups could or should look like. For clustering, the concepts of prior knowledge and unseen observations are less meaningful than for classification and regression.
+
+In this exercise, you'll group irises in 3 distinct clusters, based on several flower characteristics in the `iris` dataset. It has already been chopped up in a data frame `my_iris` and a vector `species`, as shown in the sample code on the right.
+
+The clustering itself will be done with the `kmeans()` function. How the algorithm actually works, will be explained in the last chapter. For now, just try it out to gain some intuition!
+
+Note: In problems that have a random aspect (like this problem with `kmeans()`), the `set.seed()` function will be used to enforce reproducibility. If you fix the seed, the random numbers that are generated (e.g. in `kmeans()`) are always the same.
+
+```{r}
+# Set random seed. Don't remove this line.
+set.seed(1)
+
+# Chop up iris in my_iris and species
+my_iris <- iris[-5]
+species <- iris$Species
+
+# Perform k-means clustering on my_iris: kmeans_iris
+kmeans_iris<-kmeans(my_iris, 3)
+
+# Compare the actual Species to the clustering using table()
+table(species, kmeans_iris$cluster)
+
+# Plot Petal.Width against Petal.Length, coloring by cluster
+plot(Petal.Length ~ Petal.Width, data = my_iris, col = kmeans_iris$cluster)
+```
+
+#Supervised Learning
+
+Previously, you used `kmeans()` to perform clustering on the `iris` dataset. Remember that you created your own copy of the dataset, and dropped the `Species` attribute? That's right, you removed the labels of the observations.
+
+In this exercise, you will use the same dataset. But instead of dropping the `Species` labels, you will use them do some supervised learning using recursive partitioning! 
+
+```{r}
+#Require rpart package
+require("rpart")
+
+# Take a look at the iris dataset
+summary(iris)
+str(iris)
+
+
+# A decision tree model has been built for you
+tree <- rpart(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width,
+              data = iris, method = "class")
+
+# A dataframe containing unseen observations
+unseen <- data.frame(Sepal.Length = c(5.3, 7.2),
+                     Sepal.Width = c(2.9, 3.9),
+                     Petal.Length = c(1.7, 5.4),
+                     Petal.Width = c(0.8, 2.3))
+
+# Predict the label of the unseen observations. Print out the result.
+predict(tree, unseen, type="class")
+
+# Set random seed. Don't remove this line.
+set.seed(1)
+
+# Explore the cars dataset
+str(cars)
+summary(cars)
+
+# Group the dataset into two clusters: km_cars
+km_cars<-kmeans(cars, 2)
+
+# Print out the contents of each cluster
+print(km_cars$cluster)
+
+# Add code: color the points in the plot based on the clusters
+plot(cars, col=km_cars$cluster)
+
+# Print out the cluster centroids
+print(km_cars$centers)
+
+# Replace the ___ part: add the centroids to the plot
+points(km_cars$centers, pch = 22, bg = c(1, 2), cex = 2)
+```
+
+#Confusion Test
+
+Have you ever wondered if you would have survived the Titanic disaster in 1912? Our friends from Kaggle have some historical data on this event. The `titanic` dataset is already available in your workspace.
+
+In this exercise, a decision tree is learned on this dataset. The tree aims to predict whether a person would have survived the accident based on the variables `Age`, `Sex` and `Pclass` (travel class). The decision the tree makes can be deemed correct or incorrect if we know what the person's true outcome was. That is, if it's a supervised learning problem.
+
+Since the true fate of the passengers, `Survived`, is also provided in `titanic`, you can compare it to the prediction made by the `tree`. As you've seen in the video, the results can be summarized in a confusion matrix. In R, you can use the `table()` function for this.
+
+In this exercise, you will only focus on assessing the performance of the decision tree. In chapter 3, you will learn how to actually build a decision tree yourself.
+
+Note: As in the previous chapter, there are functions that have a random aspect. The `set.seed()` function is used to enforce reproducibility. Don't worry about it, just don't remove it!
+
+```{r}
+library(titanic)
+
+
+# Set random seed. Don't remove this line
+set.seed(1)
+
+# Have a look at the structure of titanic
+str(titanic_train)
+
+# A decision tree classification model is built on the data
+tree <- rpart(Survived ~ Age + Pclass, data = titanic_train, method = "class")
+
+# Use the predict() method to make predictions, assign to pred
+pred<-predict(tree, titanic_train, type="class")
+
+# Use the table() method to make the confusion matrix
+conf<-table(titanic_train$Survived,pred)
+
+# Assign TP, FN, FP and TN using conf
+TP <- conf[1, 1] # this will be 212
+FN <- conf[1, 2] # this will be 78
+FP <- conf[2, 1] # fill in
+TN <- conf[2, 2] # fill in
+
+# Calculate and print the accuracy: acc
+acc<- (TP + TN) / (TP + FN + FP + TN)
+print(acc)
+
+# Calculate and print out the precision: prec
+prec<- TP/(TP + FP)
+print(prec)
+
+# Calculate and print out the recall: rec
+rec<- TP/ (TP + FN)
+print(rec)
+```
+
+#Quality of Regression
+
+```{r}
+#Run model
+mod1<-lm(Survived ~ Age , data = titanic_train)
+
+# Use the model to predict for all values: pred
+pred<-predict(mod1)
+
+# Use air$dec and pred to calculate the RMSE 
+rmse<-sqrt((1/nrow(titanic_train)) * sum( (titanic_train$Survived - pred) ^ 2))
+
+# Print out rmse
+print(rmse)
+
+#Run second model
+mod2<-lm(Survived ~ Age + Pclass , data = titanic_train)
+
+# Use the model to predict for all values: pred
+pred2<-predict(mod2)
+
+# Use air$dec and pred to calculate the RMSE 
+rmse2<-sqrt((1/nrow(titanic_train)) * sum( (titanic_train$Survived - pred2) ^ 2))
+
+# Print out rmse
+print(rmse2)
+
+```
+#Training Sets
+
+Let's return to the `titanic` dataset for which we set up a decision tree. In exercises 2 and 3 you calculated a confusion matrix to assess the tree's performance. However, the `tree` was built using the entire set of observations. Therefore, the confusion matrix doesn't assess the predictive power of the `tree`. The training set and the test set were one and the same thing: this can be improved!
+
+First, you'll want to split the dataset into train and test sets. You'll notice that the `titanic` dataset is sorted on `titanic$Survived` , so you'll need to first shuffle the dataset in order to have a fair distribution of the output variable in each set.
+
+For example, you could use the following commands to shuffle a data frame `df` and divide it into training and test sets with a 60/40 split between the two.
+
+```{r}
+# Set random seed. Don't remove this line.
+set.seed(1)
+
+# Shuffle the dataset, call the result shuffled
+n <- nrow(titanic_train)
+shuffled <- titanic_train[sample(n),]
+
+# Split the data in train and test
+train_indicies <- 1:round(0.7*n)
+train <- shuffled[train_indicies, ]
+
+test_indices <- (round(0.7*n)+1):n
+test <- shuffled[test_indices, ]
+
+# Print the structure of train and test
+str(train)
+str(test)
+
+# Fill in the model that has been learned.
+tree <- rpart(Survived ~ Age + Pclass, train, method = "class")
+
+# Predict the outcome on the test set with tree: pred
+pred<-predict(tree, test, type="class")
+
+# Calculate the confusion matrix: conf
+conf<- table(test$Survived, pred) 
+
+# Print this confusion matrix
+print(conf)
+```
+
+In this exercise, you will fold the dataset 6 times and calculate the accuracy for each fold. The mean of these accuracies forms a more robust estimation of the model's true accuracy of predicting unseen data, because it is less dependent on the choice of training and test sets.
+
+```{r}
+# Set random seed. Don't remove this line.
+set.seed(1)
+
+# The shuffled dataset is already loaded into your workspace
+
+# Initialize the accs vector
+accs <- rep(0,6)
+
+for (i in 1:6) {
+  # These indices indicate the interval of the test set
+  indices <- (((i-1) * round((1/6)*nrow(shuffled))) + 1):((i*round((1/6) * nrow(shuffled))))
+  
+  # Exclude them from the train set
+  train <- shuffled[-indices,]
+  
+  # Include them in the test set
+  test <- shuffled[indices,]
+  
+  # A model is learned using each training set
+  tree <- rpart(Survived ~ Age + Pclass, train, method = "class")
+  
+  # Make a prediction on the test set using tree
+  pred <- predict(tree, test, type = "class")
+  
+  # Assign the confusion matrix to conf
+  conf <- table(test$Survived, pred)
+  
+  # Assign the accuracy of this model to the ith index in accs
+  accs[i] <- sum(diag(conf))/sum(conf)
+}
+# Print out the mean of accs
+mean(accs)
+```
+
+#Bias and Variance
+Loading the spam dataset from the repository
+
+```{r}
+library(foreign)
+spamD <- read.table('http://archive.ics.uci.edu/ml/machine-learning-databases/spambase/spambase.data',sep=',',header=F)
+spamCols <- c(
+   'word.freq.make', 'word.freq.address', 'word.freq.all',
+   'word.freq.3d', 'word.freq.our', 'word.freq.over', 'word.freq.remove',
+   'word.freq.internet', 'word.freq.order', 'word.freq.mail',
+   'word.freq.receive', 'word.freq.will', 'word.freq.people',
+   'word.freq.report', 'word.freq.addresses', 'word.freq.free',
+   'word.freq.business', 'word.freq.email', 'word.freq.you',
+   'word.freq.credit', 'word.freq.your', 'word.freq.font',
+   'word.freq.000', 'word.freq.money', 'word.freq.hp', 'word.freq.hpl',
+   'word.freq.george', 'word.freq.650', 'word.freq.lab',
+   'word.freq.labs', 'word.freq.telnet', 'word.freq.857',
+   'word.freq.data', 'word.freq.415', 'word.freq.85',
+   'word.freq.technology', 'word.freq.1999', 'word.freq.parts',
+   'word.freq.pm', 'word.freq.direct', 'word.freq.cs',
+   'word.freq.meeting', 'word.freq.original', 'word.freq.project',
+   'word.freq.re', 'word.freq.edu', 'word.freq.table',
+   'word.freq.conference', 'char.freq.semi', 'char.freq.lparen',
+   'char.freq.lbrack', 'char.freq.bang', 'char.freq.dollar',
+   'char.freq.hash', 'capital.run.length.average',
+   'capital.run.length.longest', 'capital.run.length.total',
+   'spam'
+)
+colnames(spamD) <- spamCols
+spamD$spam <- as.factor(ifelse(spamD$spam>0.5,'spam','non-spam'))
+set.seed(2350290)
+spamD$rgroup <- floor(100*runif(dim(spamD)[[1]]))
+#write.table(spamD,file='spamD.tsv',quote=F,sep='\t',row.names=F)
+```
+
+Do you remember the crude spam filter, `spam_classifier()`, from chapter 1? It filters spam based on the average sequential use of capital letters `(avg_capital_seq)` to decide whether an email was spam (1) or not (0).
+
+You may recall that we cheated and it perfectly filtered the spam. However, the set `(emails_small)` you used to test your classifier was only a small fraction of the entire dataset emails_full (Source: UCIMLR).
+
+Your job is to verify whether the `spam_classifier()` that was built for you generalizes to the entire set of emails. The accuracy for the set `emails_small` was equal to 1. Is the accuracy for the entire set `emails_full` substantially lower?
+
+```{r}
+# The spam filter that has been 'learned' for you
+spam_classifier <- function(x){
+  prediction <- rep(NA, length(x)) # initialize prediction vector
+  prediction[x > 4] <- 1 
+  prediction[x >= 3 & x <= 4] <- 0
+  prediction[x >= 2.2 & x < 3] <- 1
+  prediction[x >= 1.4 & x < 2.2] <- 0
+  prediction[x > 1.25 & x < 1.4] <- 1
+  prediction[x <= 1.25] <- 0
+  return(factor(prediction, levels = c("1", "0"))) # prediction is either 0 or 1
+}
+
+# Apply spam_classifier to emails_full: pred_full
+pred_full<-spam_classifier(spamD$capital.run.length.average)
+
+# Build confusion matrix for emails_full: conf_full
+conf_full<- table(spamD$spam, pred_full)
+
+# Calculate the accuracy with conf_full: acc_full
+acc_full <- sum(diag(conf_full))/sum(conf_full)
+
+# Print acc_full
+print(acc_full)
+```
+
+It's official now, the `spam_classifier()` from chapter 1 is bogus. It simply overfits on the emails_small set and, as a result, doesn't generalize to larger datasets such as `emails_full`.
+
+So let's try something else. On average, emails with a high frequency of sequential capital letters are spam. What if you simply filtered spam based on one threshold for `avg_capital_seq`?
+
+For example, you could filter all emails with `avg_capital_seq > 4` as spam. By doing this, you increase the interpretability of the classifier and restrict its complexity. However, this increases the bias, i.e. the error due to restricting your model.
+
+Your job is to simplify the rules of spam_classifier and calculate the accuracy for the full set `emails_ful`l. Next, compare it to that of the small set `emails_small`, which is coded for you. Does the model generalize now?
+
+```{r}
+# The all-knowing classifier that has been learned for you
+# You should change the code of the classifier, simplifying it
+spam_classifier <- function(x){
+  prediction <- rep(NA, length(x))
+  prediction[x > 4] <- 1
+  prediction[x <= 4] <- 0
+  return(factor(prediction, levels = c("1", "0")))
+}
+
+# Apply spam_classifier to emails_full and calculate the confusion matrix: conf_full
+conf_full<- table(spamD$spam, spam_classifier
+(spamD$capital.run.length.average))
+
+
+# Calculate acc_full
+acc_full = sum(diag(conf_full)) / sum(conf_full)
+
+# Print acc_full
+print(acc_full)
+```
+
+#Decision Tree
+
+```{r}
+data(mtcars)
+n = nrow(mtcars)
+trainIndex = sample(1:n, size = round(0.7*n), replace=FALSE)
+train = mtcars[trainIndex ,]
+test = mtcars[-trainIndex ,]
+
+# Code from previous exercise
+set.seed(1)
+library(rpart)
+tree <- rpart(vs ~ cyl + mpg, train, method = "class")
+
+# Predict the values of the test set: pred
+pred<-predict(tree, test, type="class")
+
+# Construct the confusion matrix: conf
+conf<-table(test$vs, pred)
+
+# Print out the accuracy
+sum(diag(conf)) / sum(conf)
+```
+
+#ROC PLOT
+
+```{r}
+#Load Data
+data = read.table("http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data",
+        sep=",",header=F,col.names=c("age", "type_employer", "fnlwgt", "education", 
+                "education_num","marital", "occupation", "relationship", "race","sex",
+                "capital_gain", "capital_loss", "hr_per_week","country", "income"),
+        fill=FALSE,strip.white=T)
+
+
+n = nrow(data)
+trainIndex = sample(1:n, size = round(0.7*n), replace=FALSE)
+train = data[trainIndex ,]
+test = data[-trainIndex ,]
+
+# Set random seed. Don't remove this line
+set.seed(1)
+
+# Build a tree on the training set: tree
+tree <- rpart(income ~ ., train, method = "class")
+
+# Predict probability values using the model: all_probs
+all_probs<-predict(tree, test, type="prob")
+```
+
+```{r, results="hide"}
+# Print out all_probs
+print(all_probs)
+```
+
+```{r}
+# Select second column of all_probs: probs
+probs<-all_probs[,2]
+```
+
+```{r}
+probs <- predict(tree, test, type = "prob")[,2]
+
+# Load the ROCR library
+library(ROCR)
+
+# Make a prediction object: pred
+pred<-prediction(probs, test$income)
+
+# Make a performance object: perf
+perf<-performance(pred, "tpr", "fpr")
+
+# Plot this curve
+plot(perf)
+
+# Make a performance object: perf
+perf<-performance(pred, "auc")
+
+# Print out the AUC
+perf@y.values[[1]]
+```
+
+#K-Means: Unsupervised Learning
+
+Categorizing types of pro and anti-Russian countries through `kmeans'. I begin by predicting there are three clusters.
+
+```{r}
+
+#Smaller dataset
+pew15<-read.dta("p15.dta")
+
+# Set random seed. Don't remove this line.
+set.seed(100)
+
+# Do k-means clustering with three clusters, repeat 20 times
+pew15_km<-kmeans(pew15, nstart=20, 3)
+
+# Print out 
+print(pew15_km)
+
+# Compare clusters with actual seed types. Set k-means clusters as rows
+table(pew15_km$cluster, pew15$percent_fav_rus)
+
+# Plot the length as function of width. Color by cluster
+plot(y= pew15$percent_fav_rus, x=pew15$percent_fav_us, col= pew15_km$cluster)
+```
+
+Now lets figure out how many cluster are optimal.
+
+```{r}
+# Set random seed. Don't remove this line.
+set.seed(100)
+
+# Initialise ratio_ss
+ratio_ss <- rep(0, 7)
+
+# Finish the for-loop
+for (k in 1:7) {
+  
+  # Apply k-means to school_result: school_km
+  pew15_km <- kmeans(pew15, k, nstart = 20)
+  
+  # Save the ratio between of WSS to TSS in kth element of ratio_ss
+  ratio_ss[k] <- pew15_km$tot.withinss / pew15_km$totss
+  
+}
+
+# Make a scree plot with type "b" and xlab "k"
+plot(ratio_ss, type = "b", xlab = "k")
+```
+
+#Hierchical Clustering
+
+```{r}
+#Load data
+pew15h<-read.dta("p15_h.dta")
+
+# Apply dist() to run_record_sc: run_dist
+con_dist<-dist(pew15h)
+
+# Apply hclust() to run_dist: run_single
+con_single<-hclust(con_dist, method="complete")
+
+# Apply cutree() to run_single: memb_single
+memb_single<-cutree(con_single, 5)
+
+# Apply plot() on run_single to draw the dendrogram
+plot(con_single)
+
+# Apply rect.hclust() on run_single to draw the boxes
+rect.hclust(con_single, k=5, border=2:6)
+```
+
+The clusters of the last exercise weren't truly satisfying. The single-linkage method appears to be placing each outlier in its own cluster. Let's see if complete-linkage agrees with this clustering!
+
+In this exercise, you'll repeat some steps from the last exercise, but this time for the complete-linkage method. Visualize your results and compare with the single-linkage results. A model solution to the previous exercise is already available to inspire you. It's up to you to add code for complete-linkage.
+
+#In-sample RMSE for linear regression on diamonds
+
+* Fit a linear model on the diamonds dataset predicting price using all other variables as predictors (i.e. price ~ .). Save the result to model.
+
+* Make predictions using model on the full original dataset and save the result to p.
+
+*Save the result to error.
+
+*Compute RMSE using the formula you learned in the video and print it to the console.
+
+```{r}
+data(diamonds)
+
+# Fit lm model: model
+model<- lm(price ~ ., data=diamonds)
+
+# Predict on full data: p
+p<-predict(model, diamonds)
+
+# Compute errors: error
+error<-p-diamonds$price
+
+# Calculate RMSE
+sqrt(mean(error^2))
+```

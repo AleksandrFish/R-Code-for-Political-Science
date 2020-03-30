@@ -1,0 +1,248 @@
+---
+title: "RMarkdown Workshop GW 2018"
+author: "Jack Hasler"
+date: "January 8, 2018"
+bibliography: "lit review.bib"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+#Introduction
+RMarkdown is a great way to write papers, reports or even just class notes. It is an evolution of LaTeX and can do almost anything traditional LaTeX applications, like TexStudio and TexWorks, can do. It can also seemlessly execute R code chunks and display their ouput directly in the results. Other languages, like bash and python, can also be included if the correct distributions are installed, but that will not be covered here.
+
+How does this all work? When you press "Knit" your RMarkdown document is repackaged into a regular markdown document using the `knitr` package. It is then sent to pandoc, which is a program that turns markdown documents into html pages, PDFs and even Word Documents. 
+
+This guide has been specifically created for the R Markdown Workshop at The George Washington University. But many more comprehensive guides exist. I list them here:
+
+ - [The Official R Markdown Guide from R Studio](http://rmarkdown.rstudio.com/index.html)
+ - As well as their [cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) and [reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf).
+ - [This Half Hour Youtube video](https://www.youtube.com/watch?v=-apyD5f9nwg) from the [Elementary Statistics With R](https://www.youtube.com/channel/UC0MxOB6BCL976Dm2kPK-HgA) YouTube page.
+ - And of course [Chapter 27](http://r4ds.had.co.nz/r-markdown.html) of Grolemund and Wickham's [*R for Data Science*](http://r4ds.had.co.nz/index.html)
+ - Once you get the basics down (or even before then) sites like [StackOverflow](https://stackoverflow.com/) will become your best friend for more complex problems. Just as for R, users can create custom packages for R Markdown and add them to CRAN. Often, your problem has already been solved by someone else!
+
+Everything in markdown is either text or part of a code chunk. Code chunks are preceeded by three tildes and a set of brackets and ended by three tildes. Inside the `{}`, a type of code (usually r) can be declared and various options can be set. This is what they look like:
+
+~~~~~~~~~~~~~~~~
+
+```{r}
+
+```
+
+~~~~~~~~~~~~~~~~
+
+Following the `r`, several options can be included: 
+
+`eval=FALSE` stops the block of code from being executed at all.
+
+`include=FALSE` evaluates the code but does not print the code or the results.
+
+`echo=FALSE` evaluates the code and prints the results, but not the code.
+
+A few other options are included in the Grolemund and Wickham's book.
+
+
+For starters, we'll load the following libraries in R:
+
+```{r warning=FALSE, message= FALSE}
+library(knitr)
+library(car)
+library(kableExtra)
+library(datasets)
+library(xtable)
+library(stargazer)
+
+```
+
+Note that I turned messages and warnings off by setting each to FALSE in that code chunk.
+
+#Text Basics
+
+One of the main advantages of RMarkdown over LaTeX is the minimal textual overhead both in setting up the document as well as basic text manipulations. The header of this document, is simply:
+
+```{}
+---
+title: "RMarkdown Workshop GW 2018"
+author: "Jack Hasler"
+date: "January 8, 2018"
+output: html_document
+---
+```
+
+I can add other features, such as the following, to change certain settings or include LaTeX libraries but they are usually not necessary:
+
+```{}
+fontsize: 12
+document class: article
+header-includes:
+  - \usepackage{bbm}
+```
+
+*'s can be used to create italic and bold text:
+
+`*italics*` = *italics*
+
+`**bold**` = **bold**
+
+To include some text "verbatim" (without triggering any special instructions), enclose the text in ` ` `'s:
+
+`` `*italics*` `` = `*italics*`
+
+Links are also fairly easy:
+
+`[GW PSC](https://politicalscience.columbian.gwu.edu/)` = [GW PSC](https://politicalscience.columbian.gwu.edu/)
+
+Finally, headers and lists can be made quickly:
+```{}
+#Header 1
+##Header 2
+###Header 3
+
+```
+ is the same as:
+ 
+#Header 1
+##Header 2
+###Header 3
+
+```{}
+* Bullet 1
+* Bullet 2
+    * Bullet 2a
+
+1. Item 1
+1. Item 2
+```
+is the same as:
+
+  * Bullet 1
+  * Bullet 2
+    * Bullet 2a
+
+  1. Item 1
+  1. Item 2
+
+#Basic R Chunks
+
+
+Now lets load some datasets from R's incuded `datasets` package:
+
+```{r}
+mtcars <- mtcars
+titanic <- data.frame(Titanic)
+```
+
+```{r}
+summary(mtcars)
+```
+
+
+*A Note On Piping*
+
+Piping is a feature in R (and thus R markdown) that was introduced to make code faster to understand and easier to write. After a command, you can write `%>%` to use the output of that command as input of the next command. So when you see: `f(x)%>%g()` read it as `g(f(x))`. This becomes useful for more complex commands and is often used in R markdown examples.
+
+#Tables
+Tables are perhaps the least intuitive part of markdown. They can be made in numerous ways, but here I cover ASCII, kable, and stargazer tables. Other packages, such as pander and tables exist and have their own pros and cons.
+
+##ASCII
+
+One of the simplest solutions is to just write out the table with dashes and bars, but this is not the best option asthetically.
+
+```{}
+             | Variable0 | Variable1
+-------------|-----------|-----------
+Observation0 | {0,0}     | {0,1}
+Observation1 | {1,0}     | {1,1}
+Observation2 | {2,0}     | {2,1}
+Observation3 | {3,0}     | {3,1}
+```
+
+##kable
+
+kable comes along with knitr and R markdown, but I suggest installing and using the kableExtra package as well, which gives you many more options that can be found  [here](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html). Another great resource for learning the kable options is [Hao Zhu's guide](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf). This second resource gives you great ways to group tables, add footnotes, change font size, color, and style, and even add visual components to your table. 
+
+It is important to remember that kable takes a data frame as its input. As such, that object should usually be constructed before calling the kable command.
+
+```{r}
+kable(head(mtcars))
+```
+
+The following is an example from Zhu's guide that pulls together a lot of relevant features for political scientists.
+
+```{r}
+kable((mtcars[1:5, 1:6]), format = "latex", caption = "Demo Table[note]", booktabs = T) %>%
+kable_styling(latex_options = "hold_position") %>%
+add_header_above(c(" ", "Group 1[note]" = 3, "Group 2[note]" = 3)) %>%
+add_footnote(c("This table is from mtcars", "Group 1 contains mpg, cyl and disp", 
+  "Group 2 contains hp, drat and wt"), notation = "symbol") 
+```
+
+```{r message=FALSE, warning =FALSE}
+attach(mtcars)
+lm(mpg ~ cyl + hp + gear + carb) %>%
+xtable() %>%
+kable() %>%
+kable_styling(latex_options="hold_position")
+```
+
+Note the use of piping in this command. The lm model is computed and then send to xtable, which in turn is sent to kable, and finally all of it is sent to kable_styling.
+
+##Stargazer
+
+Stargazer is incredibly useful for quickly creating professional graphs, but there are overall fewer easy modifications to make than with kable. It is, however, much easier to combine mupliple model results with Stargazer:
+
+```{r message = FALSE, results='asis'}
+attach(mtcars)
+mod1 <- lm(mpg ~ cyl + hp + gear + carb)
+mod2 <- lm(mpg ~ cyl + hp + gear)
+mod3 <- lm(mpg ~ cyl + hp + gear + carb + disp + wt)
+stargazer(mod1, mod2, mod3, 
+          title="THIS IS A TABLE", header = FALSE, 
+          column.labels = c("Model 1", "Model 2", "Model 3"), 
+          covariate.labels=c("Cylinder", "HorsePower", "Gear", NA, NA, "Weight", NA))
+```
+
+\pagebreak
+
+
+#Including Figures
+
+ 
+## Including Images
+Images can be included fairly easily by using the code given below. Another opiton is `![Name of picture](directory_link)`, but it doesn't give you as much control over where the image is placed and how it looks. Note that the entire path is not required because my picture is in the same folder as the rmarkdown file, which is the default working directory. This is why even if you work in Stata or another program, rmarkdown can still be used to create clean, professional papers and reports.
+
+```{r}
+knitr::include_graphics('PoliSciLarge.jpg')
+```
+
+##Various Graphs
+Graphing may be the single greatest strength of R. While Stata and other programs can make many different types of graphs, the defaults are ugly and coming up with what you want usually takes a good bit of wrangling. It can be challenging in R too, but the defaults are much better and you can usually get the graph you want with less trouble than other programs. Stata, SAS, and SPSS were built to be *statistical* programs with graphing features. That has begun to change, but R benefits from having graphing as a core part of it from the beginning.
+
+A complete tutorial on graphing in R is beyond the scope of this document, but here are some great resources for learning on your own: 
+
+ * [Chapters 3 and 28 of R4DS](http://r4ds.had.co.nz/data-visualisation.html)
+ 
+ * [Harvard's tutorial on ggplot2](http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html)
+
+ * [Many tutorials on plotly](https://plot.ly/r/)
+ 
+In RMarkdown, any of these graphs can be easily included by simply putting the R code in as you would do other R code.
+
+```{r}
+hist(mtcars$mpg)
+```
+
+Although most commands will likely be more complex than a simple histogram, the premise is the same. [Page 3 of the RMarkdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) has a number of options that can be attached to the code chunk that add captions and change the position, size, and placement of your graph. Although a single code chunk can enclose as many graphs as you wish, it may be easier to limit yourself to one graph per chunk until you have all the details mastered.
+
+#Citations
+Citations and bibliographies can be quickly and effectively rendered in RMarkdown with just a few extra steps. At the beginning of your document, between the `---` bars, include `bibliography: "lit review.bib"`. Here, `lit review.bib` is my bibtex file. Every reference manager (Zotero, Mendeley, EndNote, etc.) can generate these. You just need to save the to the same location as your R markdown document (or provide the complete file path). 
+
+Each item in that document starts with an `@` symbol and its type, which is often `article`. The first item aftyer the bracket is its id and can be used to call it in an in-line citation. For this, you use the `@` symbol. For example, if I want to cite Levy's 1988 article, I can write `@levy88`, which renders as @levy88. Anything I cite is then added to my bibiliography at the end of the document. Different reference managers construct these id's in different ways. You may find it useful to modify some of them. I suggest adding a `#References` header at the end. For a more thorough treatment, see [this guide](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html).
+
+#Knitting it all together!
+The easiest way to "knit" your document is to click the button in the options bar above. This will knit it to the last output option that you knitted to. Clicking the down arrow next to it will expand a menu with various options for knitting to HTML, pdf, and word. HTML is by far the simplest. It does not necessarily require a tex distribution (but if you've explicitly included tex code you'll still need one) and it is harder to get errors from the type and format options declared for various table types. The downside is it is really only viewable in a browser and will not be sufficient for submitting a paper to a conference, journal, or professor. PDF is the best option for this. You do need a tex distribution (either MikTex or MacTex) installed and findable on your computer. There are also some packages, like `stargazer`, that are more troublesome when knitting to a PDF. Some, like `shiny`, are impossible to knit to a PDF because they are meant to create interactive webpages. But if you are using markdown for an academic paper, you'll want this option. Knitting to Word exists because you occisionally need to put your work in a format someone can edit who is not familiar with R. The catch is that word cannot be sent back to a markdown format nearly as easily, so once you start working in Word, you lose many of the benefits that come with working in R Markdown.
+
+#Extra Topic: Including LaTeX code
+One of the benefits of LaTeX has always been its ability to include beautiful mathematical equations with little difficulty. Complex symbols and formulas can be written out with just your keyboard instead of a lot of clicking and pointing as in Word. All of this is completely available in R Markdown too! For example, I can get $$\int_{-\infty}^\infty e^{-x^2} \partial x = \sqrt{\pi}$$ by simply typing `$$\int_{-\infty}^\infty e^{-x^2} \partial x = \sqrt{\pi}$$`. The key is using `\` and various commands to make the symbols. For example. `$\mu$` is $\mu$ and `$\bar{X}$` is $\bar{X}$. It takes a little while to learn all the commands, but even if you have to look up one or two for an equation it will likely still be faster than Word's point and click method! And [here is the wikipedia page with the most commonly used symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)!
+
+#References

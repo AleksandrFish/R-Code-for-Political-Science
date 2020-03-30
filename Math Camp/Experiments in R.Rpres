@@ -1,0 +1,59 @@
+Experiments in R
+========================================================
+author: Aleksandr Fisher 
+date: 
+autosize: true
+
+
+First Slide
+========================================================
+
+* Planning
+    + Dependent Variable = outcome
+    + Independent Variable(s) = explanatory
+
+* Design
+* Analysis
+
+
+Load Data
+========================================================
+
+Remove all previous data with:
+rm(list = ls())
+
+```{r , echo = TRUE}
+# Load the ToothGrowth dataset
+data(ToothGrowth)
+```
+
+T.Test
+========================================================
+
+```{r}
+# Perform a two-sided t-test
+t.test(x = ToothGrowth$len, 
+       alternative = "two.sided", mu = 18)
+```
+
+T.Test (2)
+========================================================
+
+* Recall that randomization of subjects in an experiment helps spread any natural variability between subjects evenly across groups.
+
+* In the experiment that yielded the ToothGrowth dataset, guinea pigs were randomized to receive Vitamin C either through orange juice or ascorbic acid, indicated in the dataset by the supp variable. It's natural to wonder if there is a difference in tooth length by supplement type - a question that a t-test can also answer!
+
+
+T.Test (3)
+========================================================
+
+```{r}
+# Perform a t-test
+ToothGrowth_ttest <- t.test(len ~ supp, 
+                            data = ToothGrowth)
+
+# Load broom
+library(broom)
+
+tidy(ToothGrowth_ttest)
+```

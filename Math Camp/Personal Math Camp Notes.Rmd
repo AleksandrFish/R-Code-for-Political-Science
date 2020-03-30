@@ -1,0 +1,1748 @@
+---
+title: "Personal Math Camp Notes"
+author: "Alex Fisher"
+date: '2018'
+output:
+     pdf_document:
+       latex_engine: xelatex
+---
+
+## Introduction
+
+- Political scientists are interested in concepts such as participation, voting, democracy, party discipline, alliance commitment, war, etc. If scholars are to communicate meaningfully, they must be able to understand what one another is arguing. 
+
+- We assign variables and constants to concepts so that we may use them in formal mathematical expressions. Both variables and constants are frequently represented by an upper- or lowercase letter. `Y` or `y` is often used to represent a concept that one wishes to explain, and `X` or `x` is often used to represent a concept that causes Y to take different values (i.e., vary). 
+
+- The letter one chooses to represent a concept is arbitrary—one could choose m or `z` or `h`,etc. Thereare some conventions, such as the one about `x` and `y` , but there are no hard-and-fast rules here.
+
+-  Thinking abstractly in terms of constants and variables is a first step in developing clear theories and testable hypotheses.
+
+## Sets
+
+- A set is just a collection of elements
+- The set of all natural numbers is denoted `N` , and any variable n that is a natural number must come from this set
+- If we add negative numbers to the set of natural numbers, i.e., . . . , − 3 , − 2 , − 1, then we get the set of all integers, denoted `Z`.
+- All numbers that can be expressed as a ratio of two integers are called rational numbers, and the set of these is denoted `Q`.
+- The set of all rational and irrational numbers together is known as the real numbers and is denoted `R`.
+
+## Sets
+
+-  For example, population is typically an element of Z, the set of all positive integers, which is a subset of all integers.
+
+-  Researchers who develop a formal model, game theoretic or otherwise, must explicitly note the range of their variables, and we can use set notation to describe whether they are discrete or continuous variables.
+
+- A variable is discrete if each one of its possible values can be associated with a single integer. We might assign a 1 for a female and 2 for male. 
+
+- Continuous variables are those whose values cannot each be assigned a single integer. 
+- We typically assume that continuous variables are drawn from a subset of the real numbers, though this is not necessary.
+
+## Sets
+
+- A solution set is the set of all solutions to some equation, and may be discrete or continuous. 
+    + For example, the set of solutions to the equation $x^2 − 5 x +6 = 0$ is { 2 , 3 } , a discrete set. 
+    
+- We term a sample space a set that contains all of the values that a variable can take in the context of statistical inference. 
+
+- When discussing individuals’ actions in game theory, we instead use the term strategy space for the same concept. 
+    + For example, if a player in a one-shot game can either `(C)ooperate` with a partner for some joint goal or `(D)efect` to achieve personal goals, then the strategy space for that player is { C, D } 
+
+- This will make sense in context, as you study game theory.
+
+## Sets
+
+- Finally, sets can be ordered or unordered. The ordered set { a, b, c } differs from { c, a, b } , but the unordered set { a, b, c } is the same as { c, a, b } . 
+
+-  That is, when sets are ordered, the order of the elements is important. Political scientists
+
+-  A set can be finite or infinite, countable or uncountable, bounded or unbounded. All these terms mean what we would expect them to mean.
+
+## Sets
+
+
+- A __finite set__ is finite; that is, there are only so many elements in the set, and no more
+
+-  In contrast, there is no limit to the number of elements in an __infinite set__
+
+- A __countable set__ is one whose elements can be counted, i.e., each one can be associated with a natural number (or an integer)
+
+- An __uncountable set__ does not have this property. Both Z and the set of numbers from one to ten are countable, whereas the set of all real numbers between zero and one is not. 
+
+- A __bounded set__ has finite size (but may have infinite elements), while an unbounded set does not. 
+
+## Sets
+
+- Sets contain __elements__, so we need some way to indicate that a given element is a member of a particular set
+
+-  A “funky E” serves this purpose: $x \in A$ states that “ x is an element of the set A ” or “ x is in A .”
+
+- It is also convenient to use this notation to identify the range of, say, a dichotomous dependent variable in a statistical analysis: $y \in \{0 , 1\}$. This means that y either can take a value of 0 or a value of 1 .
+
+## Sets
+
+- The expression $A \subset B$ (read “A is a proper subset of B”) implies that set B contains all the elements in A , plus at least one more. 
+
+- More formally,  $A \subset B$ if all x that are elements in A are also elements in B. 
+
+- $A \subseteq B$ (read “A is a subset of B”), in contrast, allows A and B to be the same. We say that A is a proper subset of B in the first case but not in the second. 
+
+## Sets
+
+- So the set of voters is a subset of the set of eligible voters, and is most likely a proper subset, since we rarely experience full turnout
+
+- The empty set (or null set ) is the set with nothing in it and is written ∅ . The universal set is the set that contains all elements. This latter concept is particularly common in probability.
+
+## Sets
+
+- Finally, sets can be ordered or unordered. The ordered set {a, b, c} differs from {c, a, b} , but the unordered set {a, b, c} is the same as {c, a, b} . 
+
+- That is, when sets are ordered, the order of the elements is important. 
+
+-  Political scientists primarily work with ordered sets. For example, all datasets are ordered sets.
+
+- for more see: https://www.mathsisfun.com/sets/sets-introduction.html
+
+## Sets
+
+-  That is, the first element in each set must refer to the first person who was surveyed, the second element must refer to the second person, and the 1,232nd element must refer to the 1,232nd person surveyed, etc. 
+
+- All data analyses use ordered sets. Similarly, all equilibrium strategy sets in game theory are ordered according to player.
+
+## Sets - Why Should I Care?
+
+- Sets are useful to political scientists for two reasons: (1) one needs to understand sets before one can understand relations and functions, and (2) sets are used widely in formal theory and in the presentation of some areas of statistics (e.g., probability theory is often developed using set theory). 
+
+- They provide us with a more specific method for doing the type of categorization that political scientists are always doing. 
+
+- They also provide us with a conceptual tool that is useful for developing other important ideas. So a basic familiarity with sets is important for further study.
+
+## Operators
+
+-  Some operators on variables have been familiar since early childhood: addition (+), subtraction ( − ), multiplication ( ∗ or × or · or just placing two variables adjacent to each other as in xy ), and division ( ÷ or / ).
+
+- I assume you know how to perform these operations. 
+
+- Exponentiation, or raising x to the power  $x^{a}$, is likely also familiar.
+    
+- Taking an n th root ( n √ x ), and perhaps finding a factorial (!) as well.
+
+## Operators
+
+- Other useful basic operators include summation $\sum_{t} x_{i}$, which dictates that all the $x_{i}$ indexed by i should be added. 
+
+- Product $\prod_{i} x_{i}$, which dictates that all the $x_{i}$ be multiplied. 
+
+- These operators are common in empirical work, where each i corresponds to a data point (or observation). Here are a couple of examples: 
+
+$$\sum_{t = 1}^{3} = x_{1} +  x_{2} +  x_{3} $$
+
+$$\prod_{x = 1}^{3} = x_{1}*x_{2}*x_{3} $$
+
+## Operators
+
+- You may be less familiar with operators on sets, though they are no less fundamental. 
+
+- We consider six here: __differences__, __complements__, __intersections__, __unions__, __partitions__, and __Cartesian products__. 
+
+- for more on this see: https://www.probabilitycourse.com/chapter1/1_2_2_set_operations.php
+
+## Operators
+
+- The __difference__ between two sets A and B , denoted A \ B (read “A difference B”), is the set containing all the elements of A that are not also in B : x ∈ A \ B if x ∈ A but $x \notin B$ . 
+
+- This set comes up a great deal in game theory when one is trying to exclude individual players or strategies from consideration. 
+
+## Operators
+
+- The __complement of a set__, denoted $A^{'}$ or $A^{C}$ , is the set that contains the elements that are not contained in $A: x \in A^{c}$ if x is not an element of A. 
+
+- The complement of the set of registered voters is the set of all people who are not registered voters.
+
+
+## Operators
+
+- The __intersection__ of two sets A and B , denoted A ∩ B (read “ A intersection B ”), is the set of elements common to both sets.
+
+- In other words, x ∈ A ∩ B if x ∈ A and x ∈ B . 
+ 
+- Thus, if set A consists of elected Democrats in the state of Florida and set B consists of legislators in the Florida House of Representatives, then the intersection of A and B is the set containing all Democratic House members in Florida.
+
+## Operators
+
+
+- The __union__ of two sets is written A ∪ B (read “ A union B ”) and is the set of all elements contained in either set. 
+
+- In other words, x ∈ A ∪ B if x ∈ A or x ∈ B . Note that any x in both sets is also in their union. 
+
+- Continuing the example from above, the union of A and B is the set composed of all elected Democrats in Florida and all House members in Florida.
+
+## Operators
+
+- __Mutually exclusive sets__ are sets with an intersection equal to the empty set, i.e., sets with no elements in their intersection. 
+
+- Two sets A are mutually exclusive or disjoint if they do not have any shared elements; i.e., their intersection is the empty set, $A∩B=∅$
+
+## Operators
+
+- A __partition__ is a bit more complex: it is the collection of subsets whose union forms the set
+
+- The more elements a set has, the greater the number of partitions
+
+- Let’s consider the following example, the set of candidates for the 2004 US presidential election who received national press coverage: 
+    + A = { Bush , Kerry , Nader } .         
+    + We can partition A into three subsets: {Bush} , {Kerry} , {Nader} ; or we can partition it into two subsets: {Bush , Nader} , {Kerry} ; or {Kerry, Nader} , {Bush} ; or {Bush, Kerry} , {Nader} . 
+    + Finally, the set itself is a partition: { Bush , Kerry , Nader } .
+    
+    
+## Operators
+
+- A __Cartesian product__ is more complex still. Consider two sets A and B , and let a ∈ A and b ∈ B . 
+
+- Then the Cartesian product A × B is the set consisting of all possible ordered pairs ( a, b ), where a ∈ A and b ∈ B . 
+
+- For example, if A = { Female, Male } and B = { Income over $ 50k, Income under $ 50k } , then the Cartesian product is the set of cardinality four consisting of all possible ordered pairs: A × B = { (Female, Income over $ 50k), (Female, Income under $ 50k), (Male, Income over $ 50k), (Male, Income under $ 50k) }.
+
+- For example, If A = {7, 8} and B = {2, 4, 6}, find A × B. 
+
+$$A × B = {(7, 2); (7, 4); (7, 6); (8, 2); (8, 4); (8, 6)}$$ 
+
+## Operators - Why Should I Care?
+
+- Operators on variables are essential; without them we could not even add two numbers
+
+-  They are also necessary for properly specifying functions of all sorts
+
+## Relations
+
+- A mathematical relation allows one to compare constants, variables, or expressions of these (or, if you prefer, concepts).
+
+-  The symbols > , < , and = form the familiar relations of arithmetic.
+
+-  The most common relation we’ll use, though, is a function. In this context we want to know the mapping between sets A and B . In other words, we want to know how the function transforms an element of A into an element of B . In this case we call A the __domain__ and B the __range__.
+
+## Levels of Measurement
+
+- We now have most of the building blocks we need to describe relationships between concepts. These in turn allow us to distinguish among different levels of measurement: __nominal__, __ordinal__, __interval__, and __ratio__.
+
+## Levels of Measurement - Nominal
+
+- __Nominal level measurement__ does not establish mathematical relationships among the values. In other words, it does not make sense to assert that a case with a nominal value of 3 is greater than one with a nominal value of 1, or that two cases with a nominal value of 2 are equal (e.g. Gender or Race).
+
+- The numbers in the variable are used only to classify the data. 
+
+## Levels of Measurement - Ordinal
+
+- __Ordinal level measurement__, on the other hand, does imply mathematical relationships among the values. More specifically, the symbols < , ≤ , =, ≥ , and > have meaning for ordinal level concepts (variables).
+
+-  For example, a voting scholar might be interested in people’s self-placement on an ideological scale.
+
+## Levels of Measurement - Ordinal
+
+- Ordinal measures have meaning up to “greater than” and “less than” operations, but they cannot be added or subtracted. 
+
+- If one considers the example above, we might assign the numerical values 1, 2, 3, 4, and 5 to the ideology scale, or we might assign the numerical values − 3, 2, 7, 44, and 1,324.
+
+## Levels of Measurement - Intervals
+
+- __Interval level measures__  have meaningful distances between values: the intervals between numbers are constant across the range of values.
+
+- This property is important because it makes addition and subtraction meaningful. 
+
+- One cannot meaningfully add or subtract variables with nominal or ordinal values because the operation does not make sense.
+
+## Levels of Measurement - Discrete and Continous
+
+- Interval levels measures may be __discrete__ or __continuous__. 
+
+- Discrete variables with interval level measurement are integers (or natural numbers). 
+
+- For example, a common survey item is the feeling thermometer.
+
+- Most researchers submit that the respondent recognizes that a shift of +10 points is the same anywhere on the scale. 19 That is, the distance from 0 to 5 is equivalent to the distance from 26 to 31, from 47 to 52, from 83 to 88, etc.
+
+
+## Levels of Measurement - Ratio
+
+- __Ratio level variables__ are interval level variables that have a meaningful zero value. 
+
+- The feeling thermometer variable has a zero value, but it does not represent the absence of feeling. 
+
+- Instead, it represents a very strong feeling: intense dislike. So zero is not a meaningful point on the scale. 
+
+- As such, while we can conduct meaningful addition and subtraction operations with such variables, we cannot conduct meaningful multiplication and division operations.
+
+##Levels of Measurement - Ratio
+
+- A good example of a ratio level scale is a public budget. 
+
+- Imagine that a municipal government spends four times as much on public safety as it does on public health. This is a ratio of 4:1. 
+
+- Thus, if the city spends $ 4.8 million on public safety, it must spend $ 1.2 million on public health. 
+
+## Levels of Measurement
+
+- To return to the feeling thermometer example, if the value 0 represents intense negative affect (i.e., dislike), 50 indicates an absence of affect (i.e., indifference), and 100 represents intense positive affect, then 0 is not an absence of affect. 
+
+- Thus, it is an interval level scale, not a ratio level scale, and we cannot conclude that the first member of two pairs of respondents with scores of 20 and 10, and 50 and 25, respectively, each have twice as much affect for a candidate as the second member of each pair.
+
+## Levels of Measurement
+
+- However, we could rescale the feeling thermometer to make it centered on zero, perhaps assigning the value of − 50 to intense negative affect, 0 to the absence of affect (or indifference), and 50 to intense positive affect. 
+
+- Doing so would transform the level of measurement from interval to ratio.
+
+- Examples of event counts that have been used in political science include the number of seats a party holds in parliament, the number of vetoes issued by an executive, the number of unanimous decisions by a court, and the number of wars in which a country has participated.
+
+
+## Levels of Measurement
+
+- You have likely noticed that each level of measurement subsumes the levels below it. That is, ordinal level measurement is also nominal, and an interval measure has ordinal and nominal properties. This suggests that whenever we have a concept at a high level of measurement we can reconceptualize and remeasure it at a lower level of measurement should we have cause to do so.
+
+- Without a firm grasp on levels of measurement one cannot be precise about one’s concepts, much less one’s measures of one’s concepts.
+
+## Notation
+
+- Operators take many forms, and are commonly used. We have already discussedsome: +, − , × , / , x^n , n √ x , , , !. Some of these have multiple ways to represent them, others mean multiple things depending on context.
+
+- One can also use the product operator $\prod$ , to represent the product of a , b , and c:
+
+$$\prod_{a}^{c}$$. 
+    
+- One reads that as the product of a through c .
+
+$$\prod_{x = 1}^{3} = x_{1}*x_{2}*x_{3} $$
+
+## Notation - Product
+
+- More typically, the product operator is used by indexing a variable (this is accomplished by adding a subscript: $x_{i}$) and writing:. 
+
+$$\prod_{i = k}^{l} x_{i} $$
+
+- One reads that as the product of $x_{i}$ over the range from i = k through i = l . 
+
+- When the product operator is used in an equation that is set apart from the text, it looks like this: 
+    
+$$\prod_{i = k}^{l} = x_{k}   * \dots * x_{l}$$
+  
+- The “ . . . ” here signals the reader to assume all interim values are included in the product. 
+
+## Notation - Sum
+
+- The summation operator $\sum$, can be used to represent the addition of several numbers.
+
+- For example if we wanted to add together all member of a set indexed by i, we can write $\sum_{i}$.
+
+- One reads that as the _sum over i_
+
+- Throught a range of values looks like this:
+
+$$\sum_{i=k}^{l}x_{i}$$
+
+- One reads that as the _sum of $x_{i}$ over the range from i = k through i = l_.
+
+- Set apart from the text in an equation, the summation operator looks like this:
+
+  $$\sum_{i = k}^{l} = x_{k}   + \dots + x_{l}$$
+  
+
+## Notation
+
+- The exponential operator, $x^{n}$ (read “x to the nth power,” or “x-squared” when n = 2 and “x-cubed” when n = 3), represents the power to which we raise
+the variable, x. 
+
+- The root operator, $n\sqrt{x}$  (read “the nth root of x,” or “the square root of x” when n = 2 or “the cube root of x” when n = 3), represents the root of x.
+
+- Factorial notation is used to indicate the product of a specific sequence of numbers. Thus, n! = n × (n−1) × (n−2) . . . × 2 × 1. So 5! = 5×4×3×2×1 = 120, and10!=10×9×...3×2×1=3,628,800. 
+
+- This notation is especially useful for calculating probabilities.
+
+## Notation
+
+- The derivative of `x` with respect to `t` is represented by the operator $\frac{dx}{ dt}$ . 
+
+- The operator ∂ indicates the partial derivative, and  $\int$ indicates the integral.
+
+## Notation
+
+- Sets, as we have seen, have a good deal of associated notation. 
+
+- There are the set operators ∩, ∪, ×, and \, plus the complement of A (A^c or A′). 
+
+- There are also the empty set ∅, set membership ∈, set nonmembership $\notin$, proper subset ⊂, and subset ⊆. To these we add | , : , or ∋, which are each read as “such that.” 
+
+- These are typically used in the definition of a set. For example, we define the set A = {x ∈ B|x ≤ 3}, read as “the set of all x in B such that x is less than or equal to 3.” 
+
+- In other words, the | indicates the condition that defines the set. It serves the same purpose in conditional probabilities (P(A|B)), as we will see
+
+## Notation
+
+- Functions are typically written as f() or f(·), both of which imply that f is a function of one or more variables and constants. 
+
+- The “·” here is a placeholder for a variable or constant; do not confuse it with its occasional use as a multiplication symbol.
+
+## Notation
+
+- Delimiters are used to indicate groups. Sometimes the groups are used to identify the order of the operations that are to be performed: $(x + x^{2})(x − z)$. 
+
+- One performs the operations inside the innermost parentheses first and then moves outward.
+
+- The open set (x1,xn) excludes the endpoint values x1 and xn, whereas the closed set [x1,xn] includes the endpoint values x1 and xn. 
+
+- Curly braces are used to denote set definitions, as above, or discrete sets: {x1 , x2 , . . . , xn }.
+
+## Notation
+
+- The symbol ∀ means “for all,” so ∀x ∈ A means the associated statement applies for all x in the set A. 
+
+- The symbol ∃ means “there exists,” typically used in the context of ∃ some x ∈ A such that x < 3. 
+
+- The symbol ⇒ is read as “implies” and is used as C ⇒ D, which means that whenever statement C is true, D is too. 
+
+## Notation
+
+- One can also use the reverse, C ⇐ D, which means that C is true if D is true. The symbol ⇔ means that both implications are true and is read as “if and only if,” so C ⇔ D means that C is true if D is true, and only if D is true. 
+
+- In other words, C and D are equivalent statements. The symbol ¬ denotes negation, so ¬C means statement C is not true. You will also sometimes see ∼ C used to mean C is not true.
+
+## Algebra Review
+
+- __Order of Operations__ states that multiplication and division are carried out before addition and subtraction
+
+$$3*5 + 24/6 = 15 + 4 = 19$$
+
+- The __associative properties__ state that (a+b)+c = a+(b+c) and (a×b)×c = a × (b × c). In words, the properties indicate that the grouping of terms does not affect the outcome of the operation.
+
+- The __commutative properties__ state that a+b = b+a and a×b = b×a. In words, the properties claim that the order of addition and multiplication is irrelevant.
+
+## Algebra Review
+
+- The __distributive property__ states that a(b + c) = ab + ac. In words, the property says that multiplication distributes over addition (and subtraction).
+
+- The __identity properties__ state that there exists a zero such that x + 0 = x and that there exists a one such that x×1 = x. 
+
+- In other words, there exist values that leave x unchanged under addition and multiplication (and subtraction and division, respectively, as well).
+The inverse property states that there exists a −x such that (−x) + x = 0. 
+
+- There exist values that when added to any x produce the identity under addition. 
+
+## Algebra Review
+
+- It is useful to recall at this stage that division by zero is undefined. 
+
+- The expression x/0 = ∞ is true for any $x\neq 0$, but is completely undefined for x=0. 
+- Other useful facts include that x=1x=x^1 =1x^1, and that x^0 =1. 
+
+- Recall also that multiplication by a variable with a negative value changes the sign of the product: −1 × x = −x. 
+
+- The product of two terms with negative signs is positive: (−x) · (−y) = xy.
+
+## Algebra Review - More on Exponents
+
+- Use of a negative exponent indicates the reciprocal of the base rasied to the absolute value of the exponent
+
+$$ a^{-n} = \frac{1}{a^{n}}$$
+$$ 10^{-3} = \frac{1}{10^{3}} = \frac{1}{1000} = .001$$
+
+## Algebra Review - More on Exponents
+
+- When multiplying powers with the same base, simply add the exponenents
+
+$$a^{x} * a^{y}= a^{x+y}$$
+$$10^{5} * 10^{-3}= 10^{2}$$
+
+- When raising a base with an exponent to a further exponent, simply multiply the exponenents
+
+$$(2^{3})^{2}=(2*2*2)^{2} = \\  (2*2*2)*(2*2*2) =2^{6}$$
+
+## Algebra Review - PEMDAS
+
+- The order of operations is also important and can trip people up. In arithmetic and algebra the order of operations is parentheses, exponents, multiplication, division, addition, subtraction. 
+
+- A common mnemonic device people use to memorize order of operations is PEMDAS, or Please Excuse My Dear Aunt Sally.
+
+
+## Algebra Review - Ratio
+
+- The ratio of two quantities is one divided by the other $\frac{x}{y}$
+is the ratio of x to y. 
+
+- Ratios are also written as x : y.
+
+- Keep in mind that one can
+only take the ratio of two variables measured at a ratio level of measurement
+(i.e., there is a constant scale between values, and a meaningful zero).
+
+- As an example, international relations scholars are often interested in the ratio of military power between two countries
+
+## Algebra Review - Proportion
+
+- The __proportion__ of two variables, on the other hand, is the amount one variable represents of the sum of itself and a second variable: $|\frac{x}{x+y}|$
+
+- A proportion ranges from a minimum of 0 to a maximum of 1. 
+
+- Students of budgetary politics are often interested in the proportion of expenditures that is spent in a given category (e.g., health and welfare, pork barrel politics, defense spending).
+
+## Algebra Review - Percentage
+
+- The __percentage__ one variable represents of a total is the proportion repre- sented over the range from 0 to 100. 
+
+- In other words, the percentage is a linear transformation of the proportion  $|\frac{x}{x+y}|$ × 100%. 
+
+- Many people find a percentage representation more intuitive than a proportion representation, but they provide the same information.
+
+## Algebra Review - Percent Change
+
+- You will also encounter the percentage change in a variable, which is calculated as:
+
+$$\frac{x_{t+1}-x_{t}}{x_{t}}$$
+
+- Where the subscript `t` indicates the first observation and the subscript `t + 1` indicates the second observation. 
+
+## Algebra Review - Percent Change
+
+- For instance, according to
+the Center for Defense Information’s Almanac, the United States spent $75.4 billion for military personnel wages in 2001 and an estimated $80.3 billion in 2002. 
+
+- The expenditures in 2002 represented a $6.5\%$ increase over 2001 expenditures: $\frac{80.3−75.4}{75.4} ≃ 6.5\%$ 
+
+- Note that the percentage change can range from −∞ to ∞
+
+## Algebra Review - Fractions
+
+- You can only add the numerators
+of two or more fractions when the denominators of each fraction are the same (i.e., you cannot add fractions with different denominators). $\frac{4}{\beta} + \frac{\alpha}{\beta} = \frac{4+ \alpha}{\beta}$
+
+- When two fractions have different denominators, such as $\frac{\beta}{4} + \frac{\alpha}{2}$, one must transform one or both of the denominators to make addition possible: the numerators of all fractions can be added once their denominators are made equal.
+
+## Algebra Review - Fractions
+
+- Unlike addition, multiplication does not require a common base, and one does multiply both numerator and denominator.
+
+- Another common mistake people make when adding fractions is to assume
+that all aspects of fractions follow the same rules of addition. For example, they
+assert that $\frac{1}{\delta + \theta}$ is equal to $\frac{1}{\delta} + \frac{1}{\theta}$. It is not.
+
+## Algebra Review - Factoring
+
+- Factoring involves rearranging the terms in an equation to make further ma- nipulation possible or to reveal something of interest. The goal is to make the expression simpler. One uses the properties described above rather extensively when factoring.
+
+- A standard algebraic manipulation involves combining like terms in an ex- pression. For example, to simplify $δ + δ^{2} + 4δ − 6δ^{2} + 18δ^{3}$, we combine all like terms. In this case we combine all the δ terms that have the same exponent, which gives us $18δ^{3} − 5δ^{2} + 5δ$.
+
+## Algebra Review - Factoring
+
+- Another standard factoring manipulation involves separating a common term from unlike ones. 
+
+- We first establish what we want to pull out of the equation, then apply the distributive property of multiplication in reverse. 
+
+- For example, we might want to pull x out of the following: $3x + 4x^{2} = x(3 + 4x)$. Another example is $6x^{2} − 12x+2x^3 =2x(3x−6+x^{2})$.
+
+## Algebra Review - Quadratic polynomials
+
+- Quadratic polynomials are composed of a constant and a variable that is both squared and raised to the power of one: $x^2 − 2x + 3$, or $7 − 12x + 6x^2$. 
+
+- Quadratic polynomials can be factored into the product of two terms: (x±?)×(x±?), where you need to determine whether the sign is + or −, and then replace the question marks with the proper values.
+
+- Consider the fraction:
+
+$$\frac{x^2-1}{x-1}$$
+
+## Algebra Review Quadratic polynomials
+
+- Consider the expression:
+
+$$\frac{3\lambda^4 + 3\lambda^3 + 6\lambda^2}{6\lambda^2 + 12\lambda}$$
+
+- Does $(δ + γ)^{2} = δ^{2} + γ^{2}?$
+
+## Algebra Review - FOIL
+
+- __F__: Multiply the first terms: $$(2π+7)(4+3π)=2π×4=8π.$$
+
+- __O__: Multiply the outer terms: $$(2π + 7)(4 + 3π) = 2π × 3π = 6π^2.$$ 
+
+- __I__: Multiply the inner terms: $$(2π+7)(4+3π)=4×7=28.$$ 
+
+- __L__: Multiply the last terms: $$(2π+7)(4+3π)=7×3π=21π.$$
+
+- Add terms to get $$8π+6π^2 +28+21π.$$
+
+- Finally, group like terms to get $$6π^2 + 29π + 28.$$
+
+## Algebra Review - Completing the Square
+
+- Many quadratic equations that you will face can be solved relatively easily by __completing the square__. 
+
+- The basic intuition for solving these is to isolate the variable and its square and then add a value to each side of the equation to “complete the square.”
+
+## Algebra Review  - Completing the Square
+
+- Start with a quadratic in your variable of interest (we’ll say it’s x) and move the constant to the right-hand side. Divide through by the coefficient on $x^{2}$. So if you have: $$2x^{2} − 4x − 2 = 0, \\ x^{2} − 2x = 1$$.
+
+- Divide the coefficient on x by 2 and then square it. Add that value to both sides of the equation. So now you have: $x^{2} − 2x + 1 = 1 + 1$.
+
+- Factor the left-hand side into a “(x ± some term) squared” form and simplify the right-hand side. So now you have: $(x − 1)^{2} = 2$.
+
+## Algebra Review  - Completing the Square
+
+- Take the square root of both sides (remember that when you take the square root of a number, the solution is always ±, because the square of
+√ a negative number is a positive number). So now you have: $x − 1$ = ± $\sqrt2$.
+
+- Solve for x. So the solutions are  x=1+√2 and x = 1−√2
+
+## Algebra Review  - Completing the Square
+
+- Completing the square is one method for solving a quadratic equation, but it is not the only one, and you will sometimes encounter equations that are rather complicated to solve by completing the square. 
+
+- For example, if you are faced with $x^{2} + √15x − 1 = 0$, you will not want to calculate half of √15, and then square it, add it to both sides, and try to factor the result. Instead, you will want to turn to the quadratic equation and formula
+
+## Algebra Review - Quadratic Equation
+
+- The general form of a quadratic equation is: 
+
+$$ax^2 +bx+c=0$$
+
+- The general solutions to this equation are
+
+$$x=\frac{−b± \sqrt(b^2−4ac)}{2a}$$
+
+- You can go online and use a quadratic equation solver and plug in the values for a, b, and c to verify the accuracy of your computations.
+
+## Algebra Review
+
+- Adding any number to each side of these relations will not change them;
+this includes the inequalities. That is, inequalities have the same addition and subtraction properties as equalities such that if x > y, then x + a > y + a and x − a > y − a.
+
+- For multiplication, if a is positive and x > y, then ax>ay. If a is negative and x>y, then ax<ay. 
+
+- To summarize, this means that you flip the < or > sign when multiplying or
+dividing by a negative.
+
+## Algebra Review - Common Errors
+
+- Sign errors
+
+- Only changing one side or term in an equation
+
+- Not distributing
+
+- Distributing with radicals and exponents
+
+## Function, Relations, and Utility
+
+- Hagle (1995, p. 7) opines that “functions are valuable to social scientists because most relationships can be modelled in the form of a function.” 
+
+- We would add that functions are valuable for those political scientists who want to make specific theoretical claims and/or use statistics to test the implications of theories of politics. 
+
+- In other words, functions are valuable because they are explicit: they make very specific arguments about relationships. In addition, functions play a key role in developing statistical models.
+
+## Variables, Functions, and Equations Review
+
+- A __coefficient__ can be considered a synonym of factor - i.e. an element of a product. In practice they refer to the factor mulitiplied by variables in regression equations. They are typically denotated with Greek letters.
+
+- $$Y= \alpha + \beta_{1}X$$
+
+- Here, X and Y are variables and $\alpha$ and $\beta$ are coefficients.
+
+- __Function__ is a rule the assigns a unique number y, for each value of a set of other numbers,x. We often write y=f(x)
+
+- A function is __monotonic__ if the value of the function  always increases as the value of the independent variable  increases or the value of of the function always decreases.
+
+## Function, Relations, and Utility
+
+- Misguided notion that the key to developing sound theory is to master a wide array of functions and then see which one applies to a given theoretical or statistical problem
+
+- Learning to be able to translate verbal conjectures into graphs and/or equations that represent those conjectures is a valuable skill to develop. That skill is essential for anyone who wants to do formal modeling.
+
+## Function, Relations, and Utility
+
+- The linear equation $y = a + bx$ is the best-known and most frequently used
+function in political science
+
+- You will hopefully recall the notation y = f(x), which is read “y is a function of x.”
+
+- For example, if we were given the explicit function y = 3x, then we could map the values of y for any given set of x values. 
+
+- In empirical work we typically refer to the x here as the independent or exogenous variable and the y as the dependent or endogenous variable, as it depends on and is affected by x
+
+## Function, Relations, and Utility
+
+- Now consider the equation y = 3x. No matter what x values we plug into the equation we get a unique value of y. As such, the equation is a function.
+
+```{r}
+
+curve(3*x, from=1, to=50, , xlab="x", ylab="y")
+
+```
+
+- If we can draw a vertical line at any point on the graph that intersects the curve at more than one point, then the equation is not a function.
+
+## Function, Relations, and Utility
+
+- Unfortunately, few (if any!) political relationships are so simple that they can be described usefully as a function of one variable. 
+
+- As such, we need to be able to use functions of two or more variables, such as y = f(x1,x2,x3) or z = f(x,y).
+
+- Consider the function: y = 3xz
+
+- Another way of saying the same thing is that the relationship of x on y is different (stronger or weaker) depending on the value of z. 
+
+## Function, Relations, and Utility
+
+- In the equation y = a + bx:
+
+- The constant a is the intercept, or in terms of the graph, where the function crosses the vertical (y) axis (i.e., the value of y when x = 0). 
+
+- The constant b is the slope of the line, or the amount that y changes given a one-unit increase in x. 
+
+- That is, a one-unit increase in x produces a 1b-unit increase in y, a three-unit increase in x produces a 3b-unit increase in y, etc. 
+    
+## Function, Relations, and Utility
+
+- Let pv represent the probability of voting and ed represent education level: $p_{v} = a+b(ed)$. 
+
+- In this function a represents the likelihood that someone without any formal education turns out to vote, and b indicates the impact of education on the probability of voting.
+
+## Function, Relations, and Utility
+
+- Lets assume that : $p_{v} = 1.215 + 0.134 × ed$. 
+
+- The intercept of 1.215 makes little sense, but we ignore that for this example. 
+- Education measure has four categories: 0–8 years of education, 9–11 years, 12 years, and more than 12 years. 
+
+- A slope (i.e., b) of 0.134 suggests that as we move from one category to another (e.g., from 0–8 years to 9–11 years, or from 12 years to more than 12 years), the probability that someone votes rises by 0.134. 
+
+- So if this linear model and its results are accurate, the typical adult with a college education has roughly a 0.4 greater probability of voting in a US presidential election than the typical adult without any high school education.
+
+## Function, Relations, and Utility
+
+- $p_{v} = 1.215 + 0.134ed$. 
+
+```{r}
+
+curve(1.215 + 0.134*x, from=0, to=4, , xlab="x", ylab="y")
+
+```
+
+
+## Function, Relations, and Utility
+
+- The linear equation states that the size of the impact of x on y is constant across all values of x. 
+
+- For example, in the above example the impact of x on y is roughly 0.13. 
+
+- Since the relationship is linear, that means that a shift from 0–8 years of education to 9–11 years of education increases the probability of voting in a national election by $\sim$.13, and a shift from 9–11 years to 12 years also produces an increase of $\sim$.13, as do shifts from 12 years of education to more than 12 years of education. 
+
+- Nonlinear functions, which we discuss in the third subsection, specify that the size of the impact of x on y varies across values of x.
+
+## Function, Relations, and Utility
+
+- Nonlinear functions are all those that are neither linear nor affine: those functions that describe (the graph of) a curve that is not a line. 
+
+- For example, y = cos(x)
+
+```{r}
+curve(cos(x), from=1, to=50, , xlab="x", ylab="y")
+```
+
+- Functions with exponent terms, including quadratics and other polynomials, are the most commonly used nonlinear functions in political science.
+
+## Function, Relations, and Utility
+
+- Nonlinear functions with exponents are of interest to political scientists when we suspect that a variable x has an impact on y, but that the strength of the impact is different for different values of x. 
+
+##Function, Relations, and Utility
+
+- Consider the graphs of the functions $y = x$ and $y = x^{2}$
+
+```{r}
+curve(1*x, from=1, to=50, , xlab="x", ylab="y")
+```
+
+## Function, Relations, and Utility
+
+- The slope of the curve for $y = x^{2}$ is not constant: the impact of x on y changes as we move along the x-axis.
+
+```{r}
+curve(x^2, from=1, to=5, , xlab="x", ylab="y")
+```
+
+## Function, Relations, and Utility
+
+- Below is a list of the algebraic rules that govern the manipulation of exponents.
+
+- __Multiplication__: to calculate the product of two terms with the same base one takes the sum of the two exponents:
+
+$$x^{m} × x^{n} = x^{m+n}$$
+
+- When the bases are different, you can simplify the expression only when the exponents are the same.
+
+$$x^{m} × z^{m} = (xz)^{m}$$
+
+- Last, when both the base and the exponent are different, you cannot simplify
+to a single term. Thus, e.g.,
+$$x^{m} × z^{n} \neq (xz)^{m+n}$$
+
+## Function, Relations, and Utility
+
+- To determine the __power of a power__, one multiplies the exponents. For example:
+
+$$(x^{m})^{n} = x^{mn}$$
+
+- __Division__: to calculate the quotient of two terms with the same base and
+different powers, one takes the difference of the exponents:
+
+$$\frac{x^{m}}{x^n}= x^{m-n}$$
+
+- To see why this is so, recall that:
+
+$$\frac{1}{x^n}= x^{-n}$$
+
+## Function, Relations, and Utility
+
+- Quadratic functions describe a relationship where a variable (y) is a function of the sum of another variable (x) and its square ($x^{2}$).
+
+```{r}
+curve(x+x^2, from=0, to=50, , xlab="x", ylab="y")
+```
+
+## Function, Relations, and Utility
+
+- What sort of theoretical expectations might one want to sharpen by stating them as a quadratic relationship? 
+
+- Speaking generally, a quadratic function is quite useful for depicting relationships where we think the impact of an independent variable is positive (negative) for low values of the independent variable, flat for middle-range values, and negative (positive) for high values. 
+
+- Put differently, when one thinks that there is some (often unknown) threshold at which the relationship between two concepts (variables) switches (i.e., from positive to negative or from negative to positive), one might consider whether the quadratic can represent our conjecture.
+
+## Function, Relations, and Utility
+
+- For example, many scholars have hypothesized that rebellion will be low in countries that exert little to no government coercion and in countries that exhibit high levels of government coercion. 
+
+- Where will one find rebellion? This conjecture suggests that it will be highest among those countries that engage in mid-range levels of coercion (e.g., Muller and Seligson, 1987). 
+
+- If we let r represent rebellion and c represent coercion, then this conjecture can be represented as follows:
+
+$$r=\alpha+β_{1}c−β_{2}c^{2}$$
+
+## Function, Relations, and Utility
+
+```{r}
+
+curve(4*x-x^2, from=0, to=4, , xlab="x", ylab="y")
+
+```
+
+## Function, Relations, and Utility
+
+- Higher-order polynomials are those possessing powers of x greater than the reference. In this case, we are referring to the presence of cubed and higher terms.
+
+```{r}
+
+curve(-x+x^2-x^3, from=0, to=2.5, , xlab="x", ylab="y")
+
+```
+
+
+## Function, Relations, and Utility
+
+- Some studies the relationship between the size of the majority party and central government expenditures in parliamentary democracies. 
+
+- A majority party is one that has at least 50% of the seats in the legislature and thus can govern without having to form a coalition with other parties. 
+
+- The basic underlying idea is that there are two different thresholds at work between the number of seats the majority party holds in the legislature and the size of government spending. 
+
+- First, as the number of seats held by the majority party rises from a bare majority (i.e., 51% of the legislature), spending declines, because it takes more and more legislators to defect and bring down the government.
+
+## Function, Relations, and Utility
+
+- While expects an initial negative relationship as the size of the majority party increases above a bare majority, they expects the relationship to quickly become positive (perhaps at around 56% of the legislative seats). 
+
+- Expenditures rise because the party has greater electoral safety and thus can take greater risks of alienating other parties’ constituents by more greatly rewarding its own constituents. 
+
+- Yet he does not argue that this incentive to spend more remains as party size grows beyond the supermajority threshold (roughly 67% of the seats).
+
+$$GovExp = α − β1(SizeMajParty) + \\ β2(SizeMajParty)^{2} − β3(SizeMajParty)^{3}$$
+
+## Function, Relations, and Utility
+
+- __Logarithms__ can be understood as the inverses of exponents (and vice versa). 
+
+- They can be used to transform an exponential function to a linear one, or a linear function to a nonlinear one in which the impact of one variable on another declines as the first variable rises in value. 
+
+- The logarithm (or log) tells you how many times to multiply its base a in order to get x, where a is a positive real number not equal to 1. 
+
+- When $log_{a}x= b$, then thus $x = a^{b}$. 
+
+- This lets us transition between logs and exponents readily.
+
+## More on e 
+
+- E Is NOT Just A Number
+
+- __e is the base rate of growth shared by all continually growing processes__.     
+    - e lets you take a simple growth rate (where all change happens at the end of the year) and find the impact of compound, continuous growth, where every nanosecond (or faster) you are growing just a little bit.
+    
+- Mathematically, if we have x splits then we get $2^{x}$ times as much stuff than when we started. With 1 split we have $2^{1}$ or 2 times as much. With 4 splits we have $2^{4} = 16$ times as much. As a general formula:
+
+$$\displaystyle{ growth = 2^x }$$
+
+## More on e 
+
+- Said another way, doubling is 100% growth. We can rewrite our formula like this:
+
+$$\displaystyle{ growth = (1 + 100\%)^x}$$
+
+- Of course, we can substitute any number (50%, 25%, 200%) for 100% and get the growth formula for that new rate. So the general formula for x periods of return is:
+
+$$\displaystyle{growth = (1 + return)^x}$$
+
+- This just means we use our rate of return, (1 + return), “x” times.
+
+- This formula assumes growth happens in discrete steps
+
+## More on e
+
+- But money is different. As soon as we earn a penny of interest, that penny can start earning micro-pennies of its own. We don’t need to wait until we earn a complete dollar in interest — fresh money doesn’t need to mature.
+
+- Let’s turn our return into a formula. The growth of two half-periods of 50% is:
+
+$$\displaystyle{growth = (1 + 100\%/2)^{2} = 2.25}$$
+
+- We get a formula by using 3 periods in our growth equation:
+
+$$\displaystyle{growth = (1 + 100\%/3)^3 = 2.37037...}$$
+
+## More on e 
+
+- Why not take even shorter time periods? How about every month, day, hour, or even nanosecond? Will our returns skyrocket?
+
+```{r}
+efunction <- function(x, y) {
+return((1 + 1/x)^x)
+}
+```
+
+## More on e 
+```{r}
+efunction(2)
+efunction(3)
+efunction(1000)
+efunction(1000000)
+```
+
+## More on e 
+
+- The numbers get bigger and converge around 2.718. Hey… wait a minute… that looks like e!
+
+- e is defined to be that rate of growth if we continually compound 100% return on smaller and smaller time periods:
+
+$$\displaystyle{growth = e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n}$$
+
+- Sure, you started out expecting to grow from 1 to 2 (that’s a 100% increase, right?). But with each tiny step forward you create a little dividend that starts growing on its own. When all is said and done, you end up with e (2.718…) at the end of 1 time period, not 2. e is the maximum, what happens when we compound 100% as much as possible.
+
+## More on e 
+
+- What if we grow at 50% annually, instead of 100%? Can we still use e?
+
+- Let’s see. The rate of 50% compound growth would look like this:
+
+$$\displaystyle{\lim_{n\to\infty} \left( 1 + \frac{.50}{n} \right)^n}$$
+
+- What can we do here? Remember, 50% is the total return, and n is the number of periods to split the growth into for compounding. If we pick n=50, we can split our growth into 50 chunks of 1% interest:
+
+$$\displaystyle{\left( 1 + \frac{.50}{50} \right)^{50} = \left( 1 + .01 \right)^{50}}$$
+ 
+- What is the difference between the two numbers? Well, it’s just half the number of changes:
+
+$$\displaystyle{\left( 1 + .01 \right)^{50} = \left( 1 + .01 \right)^{100/2} = \\ \left( \left( 1 + .01 \right)^{100}\right)^{1/2} = e^{1/2} }$$
+
+## More on e 
+
+- This works in general: if we had a 300% growth rate, we could break it into 300 chunks of 1% growth. This would be triple the normal amount for a net rate of e3.
+
+- Suppose we have 300% growth for 2 years. We’d multiply one year’s growth (e3) by itself:
+
+$$\displaystyle{growth = \left(e^{3}\right)^{2} = e^{6}}$$
+
+- And in general:
+
+$$\displaystyle{growth = \left(e^{rate}\right)^{time} = e^{rate \cdot time}}$$
+
+## More on e 
+
+- $e^{x}$ can mean two things:
+
+    - x is the number of times we multiply a growth rate: 100% growth for 3 years is $e^{3}$
+    
+    - x is the growth rate itself: 300% growth for one year is $e^{3}$
+    
+- When we write:
+
+$$\displaystyle{e^x}$$
+
+- The variable x is a combination of rate and time.
+
+$$\displaystyle{x = rate \cdot time}$$
+
+- 10 years of 3% growth means 30 changes of 1%. These changes happen over 10 years, so you are growing continuously at 3% per year.
+
+- 1 period of 30% growth means 30 changes of 1%, but happening in a single year. So you grow for 30% a year and stop.
+
+## More on e - interest rates
+
+- Suppose I have $120 in an account with 5% interest. My bank is generous and gives me the maximum possible compounding. How much will I have after 10 years?
+
+- Our rate is 5%, and we’re lucky enough to compound continuously. After 10 years, we get $120 · e^{.05 · 10} = 197.85$. 
+
+- Of course, most banks aren’t nice enough to give you the best possible rate. The difference between your actual return and the continuous one is how much they don’t like you.
+
+## Natural Log
+
+-  __The natural log__ gives you the time needed to reach a certain level of growth.
+
+- e and the Natural Log are twins:
+
+    - $e^{x}$ is the amount of continuous growth after a certain amount of time.
+    
+    - Natural Log (ln) is the amount of time needed to reach a certain level of continuous growth
+
+- Put another away $e^{x}$ lets us plug in time and get growth. $ln(x)$ lets us plug in growth and get the time it would take.
+
+- For example:
+
+    - $e^{x}$is 20.08. After 3 units of time, we end up with 20.08 times what we started with.
+    
+    - $ln(20.08)$ is about 3. If we want growth of 20.08, we’d wait 3 units of time (again, assuming a 100% continuous growth rate).
+
+## Natural Log
+
+- It doesn’t take any time to grow from 1 to 1.
+
+$$ln(1) = 0$$
+
+- Ok, how about a fractional value? How long to get 1/2 my current amount?
+
+- Assuming you are growing continuously at 100%, we know that ln(2) is the amount of time to double. If we reverse it (i.e., take the negative time) we’d have half of our current value.
+
+$$ln(.5) = – ln(2) = -.693$$
+
+- Makes sense, right? If we go backwards .693 units (negative seconds, let's say) we’d have half our current amount. In general, you can flip the fraction and take the negative
+
+- ln(negative number) = undefined
+
+- For more: https://betterexplained.com/articles/demystifying-the-natural-logarithm-ln/
+
+## Function, Relations, and Utility
+
+- Logs can be written in any base, though the most common are base 10 and the natural log. The base for the natural log is the e ≈ 2.7183 from the exponential function. 
+
+- The natural log is usually identified with the notation ln, and log base 10 is generally denoted log.
+
+## Function, Relations, and Utility
+
+```{r}
+curve(log(x), from=1, to=8, , xlab="x", ylab="y")
+```
+
+- Note that the impact of x on y diminishes as x increases, but it never becomes zero, and it never becomes negative. 
+
+## Function, Relations, and Utility
+
+- Theoretically, the log functions are very appealing precisely because of this property.
+
+- If you suspect, for example,that education increases the probability of voting in national elections, but that each additional year of education has a smaller impact on the probability of voting than the preceding year’s, then the log functions are good candidates to represent that conjecture.
+
+
+## Function, Relations, and Utility
+
+- If $p_{v}$ is “probability of voting” and ed is “years of education,” then $p_{v} = α+βed$ specifies a linear relationship where an additional year of education has the same impact on the probability of voting regardless of how many years of education one has had. 
+
+- By contrast, $p_{v} = α + βed^{2}$ represents the claim that the impact of education on the probability of voting rises the more educated one becomes. Neither of these functional forms captures the verbal conjecture. 
+
+- But if we take the log of an integer variable such as “years of education,” we transform the relationship between $p_{v}$ and ed from a linear one to a nonlinear one where the impact of an additional year of education declines the more educated one becomes: $p_{v} = α + β(ln(ed))$.
+
+## Function, Relations, and Utility
+
+- Log is not defined for numbers less than or equal to zero
+
+- Second, the log of a product is equal to the sum of the logs of each term, and the log of a ratio (or fraction) is the difference of the logs of each term:
+
+$$ln(x_{1} · x_{2}) = ln(x_{1}) + ln(x_{2}), \\ for : x_{1}, x_{2} > 0$$ 
+
+$$\frac{lnx_{1}}{lnx_{2}} =ln(x_{1})−ln(x_{1}), \\ for:  x1,x2>0$$
+
+- Note that addition and subtraction of logs do not distribute:
+and
+
+$$ln(x_{1} + x_{2}) \neq ln(x_{1}1) + ln(x_{2}) , for:  x_{1}, x_{2} > 0$$
+
+
+$$ln(x_{1} - x_{2}) \neq ln(x_{1}1) - ln(x_{2}) , for:  x_{1}, x_{2} > 0$$
+
+## Function, Relations, and Utility
+
+
+- The log of a variable raised to a power is equal to the product of the
+exponent value and the log of the variable:  
+
+$$ln(x^{b})=bln(x), for: x > 0$$
+
+- Political scientists generally use log functions to represent conjectures that anticipate a declining impact of some x over some y as x increases in value
+
+
+## Function, Relations, and Utility
+
+- __Roots__ (sometimes called __radicals__) are those numbers represented by the radical
+symbol: √
+
+- Although roots do not play a large role in political science, one encounters them from time to time. 
+
+## Function, Relations, and Utility - Who Cares?
+
+- Multivariate functions are especially useful as few political scientists suspect that much of politics can be usefully explained with bivariate hypotheses (i.e., conjectures that say only one concept is responsible for variation in another concept).
+
+- Let us briefly explain how one can move from verbal conjec- tures to writing down more specific functions. We will work with the probability of voting in a national election as an example. Suppose one suspects that the probability that a registered voter will cast a ballot will increase in response to (1) an individual’s education level, (2) partisan identification, (3) income, (4) age, and (5) the closeness of the race.
+
+## Function, Relations, and Utility - Who Cares?
+
+- Implicit Function $p_{v} = f(ed, p, i, a, c)$, where $p_{v}$ represents the probability of voting, `ed` represents education, `p` represents partisan identification, `i` represents income, `a` represents age, and `c` represents closeness.
+
+- This equation is called the implicit functional form because it is not specific: we do not know whether the variables have positive, negative, linear, monotonic, or nonlinear effects on pv. All the implicit function tells us is that they may have some effect
+
+## Function, Relations, and Utility - Who Cares?
+
+- $p_{v} = α+β1ed+β2p+β3i+β4a+β5c$, where α is the intercept (i.e., the expected value of pv when all of the explanatory variables have a value of 0) and the $β_{i}$ parameters represent the strength of the impact that each explanatory variable has on voting probability.
+
+- Alternatively, we might conjecture that voting probability has a linear relation with some variables and a nonlinear relation with others. 
+
+- For example, one might argue that the impact of education is greatest at low levels (i.e., the difference between a fourth-grade and an eighth-grade education has a larger impact on voting probability than the difference between an eighth-grade and a twelfth-grade education, and the difference between completing a high school degree and completing a college degree has an even smaller impact). 
+
+## Function, Relations, and Utility - Who Cares?
+
+- In addition, one might contend that greater levels of income have an even greater effect on voting probability. The following equation represents those conjectures: 
+
+$$p_{v} = α + β1 ln(ed) + β2p  + \\ β3i^{2} + β4a + β5c$$
+
+## Function, Relations, and Utility - Who Cares?
+
+- One might conjecture an interactive relationship among some of the independent variables and probability of voting. There are many such possibilities, but, for example, one could believe that the higher one’s level of education, the more the closeness of the race matters, as one will pay more attention to the media’s reporting on the race.
+
+- If this were true, we might expect a relationship like:
+
+$$p_{v} = α+β1ed+β2p+β3i+\\β4a+β5c+β6(ed·c)$$
+
+## Function, Relations, and Utility - Who Cares?
+
+- One might suspect that the relationship between each explanatory variable and the explained variable grows with the value of the explanatory variable, and that the strength of each relationship is conditional on the values of the other explanatory variables.
+
+- One can represent such an argument as follows:
+
+$$p_{v} = α·ed^{β1} ·p^{β2} · i^{β}3 · \\ a^{β4} ·c^{β5}$$
+
+## Function, Relations, and Utility - Who Cares?
+
+- We can take advantage of the relationship between exponents and logs to rewrite that as: 
+
+$$lnp_{v} = ln(α)+β1 ln(ed)+β2(lnp)+ \\β3 ln(i)+β4 ln(a)+β5 ln(c)$$ 
+
+- Such a transformation is useful because while we cannot use common statistical routines to estimate the β parameters in the first representation, we can do so in the second representation. 
+
+- Such a functional form are not usually observed in political science, they are in economics.
+
+
+
+## Game Theory
+
+- Game theory is a tool for understanding strategic interactions between political actors and developing theories about political behavior and the effect of institutions. 
+
+- The preferences of individual actors are foundational to game theory, as one cannot understand how one responds to incentives and others’ actions without understanding what one actually wants. 
+
+- Typically, individual preferences are represented by functions, and the properties of these functions mirror the structure of one’s preferences in the same manner that the form of the function described at the end of the last section matches one’s theoretical expectations about the probability that one votes.
+
+
+
+## Sequences and Series
+
+- A __sequence__ is an ordered list of numbers. For example, {1, 2, 3, 4 . . .} is a sequence. 
+
+- Sequences can be infinite (i.e., continue forever), as depicted above, or they can be finite: {2,1,3,1,4,1,5,1}. 
+
+- All sequences are countable, in that one can assign a natural number to each element in the sequence. 
+
+- A __series__ is the sum of a sequence. 
+
+- Put differently, a series is a sequence with addition operators between each of the elements (e.g., {1 + 2 + 3 + 4 + . . .} 
+
+## Limits
+
+- A __limit__ describes the behavior of a function, sequence, or series of numbers
+as it approaches a given value. 
+
+- The limit of a function can help us determine what the rate of change of the function is, and knowing the rate of change is useful in both statistics and formal models. 
+
+- A limit of a sequence $x_{i}$ is a number L such that $\lim_{x \to \infty}x_{i} = L$. 
+- The expression is read as “the limit of $x_{i}$ as i approaches infinity is L.”
+
+- https://www.youtube.com/watch?v=oDAKKQuBtDo&frags=pl%2Cwn
+
+## Limits
+
+- We say a sequence (or series, or function) __converges__ if it has a finite limit, and __diverges__ if it either has no limit or has a limit of ±∞.
+
+- The __extreme values__ of a set are the minimum and maximum values
+in that set.
+
+## Limits
+
+- Consider the function $3- (x-2)^{2}$ over the domain [0:4]. This functional is __unimodal__, possessing a single maximum point, and it is symmetric, meaning that the shape is mirrored on either side of the line through the middle.
+
+```{r}
+curve(3-(x-2)^2, from=0, to=4, , xlab="x", ylab="y")
+```
+
+## Limits
+
+- An interesting function is $f(x)= 1 + \frac{1}{x^{2}}$ over the domain (0, $\infty+$).
+
+```{r}
+curve(1+(1/x^2), from=0, to=20, , xlab="x", ylab="y")
+```
+
+- A x gets larger it progressively gets closer to 1
+
+$$\lim_{x \to \infty} f(x)=1$$
+
+$\lim_{x \to 0+} f(x)=\infty$
+
+
+## Limits and Functions
+
+- We are often interested in political science in the rate of change of a function at a point. We briefly mentioned this above when discussing the linear equation. 
+
+- If y = α+βx, then the rate of change of y with x is given by β, and is constant for all x. 
+
+- This β is the important output of a statistical analysis, as it tells us the degree to which the concept represented by x affects the concept affected by y.
+
+- Discerning such relationships, of course, is central to research in political science.
+
+## Limits and Functions - Rate of Change
+
+- Let’s try instead $y = βx^{2}$. It turns out that the rate of change of y with x now is given by 2βx, and so varies with the value of x. 
+
+- In this case, y is changing increasingly fast with x as x increases.
+
+- The way we figure out the value of the slope at any point is to look at the values of the function on both sides of a point x = c, but very close to that point. 
+
+- This difference tells us how much y changes for a small change in x. 
+
+- As we make this change smaller and smaller (i.e., take the limit as it goes to zero), we get a better and better approximation of the slope at that point, which is exact at the limit. 
+    
+## Limits and Functions - Maximum or Minimum
+
+- Limits are also a building block in several other concepts that are frequently used in political science. 
+
+- The first is the maximum or minimum of a function. More specifically, the limit is a stepping stone to understanding derivatives, and derivatives are used to find maximum and minimum values of a function.
+
+## Limits and Functions
+
+- When might one want to know the minimum or maximum of a function? Some theories assume that an actor wants to maximize something (e.g., their power, utility, time in office, etc.). 
+
+- If one writes down a function to describe the individual’s power, utility, time in office, etc., then one will be interested in limits (and derivatives) to help one determine whether a maximum exists and what it is.
+
+- One might want to minimize the predicted error in a regression or maximize the likelihood of matching the data to the statistical model that the researcher specified.
+
+    + In statistics, __ordinary least squares (OLS)__ is a type of linear least squares method for estimating the unknown parameters in a linear regression model. 
+
+    + In statistics, __maximum likelihood estimation (MLE)__ is a method of estimating the parameters of a statistical model, given observations. MLE attempts to find the parameter values that maximize the likelihood function, given the observations. 
+
+##Limits and Functions - Continuous and Discontinuous
+
+- A __continuous function__ is a function without sudden breaks in it. When you draw the graph of a continuous function, you never need to lift your pencil from the page. 
+- Put differently, the graph of a continuous function forms an unbroken curve, whereas the graph of a __discontinuous function__ has at least one break in it.
+
+## Limits and Functions
+
+- For example, best response correspondences in game theory, describe what one player’s optimal strategy (or strategies) is (are) given a particular choice in strategy by the other player. 
+
+- These are often discontinuous:  
+
+- One strategy may be optimal for some subset of the other player’s strategy space, but a quite different one might be optimal for a different subset. 
+
+- For example, a particular distribution of the budget might be optimal if each party bargains in good faith, but if one of the parties asks for too much, the optimal response might abruptly drop to an offer of nothing. 
+    
+## Introduction to Calculus
+
+- What if the function is defined between  two points? Let f(x) = $x^{2}$, now and consider x ∈ [1,2]. 
+
+- For this function, f(1) = 1 and f(2) = 4, and we can still say that moving from 1 to 2 results in a change of 3, but we can say a lot more. 
+
+- Differential calculus thus deals with the study of infinitesimally small changes in a function.
+
+- The derivative of the function f(x) = 3x is 3, which is the slope (rate of change) of the line y = 3x
+
+## Introduction to Calculus
+
+- But what if we had a derivative, and wanted to build back up a function from it? 
+
+- Well, we’d need to start at the smallest value of x about which we cared and add up all the infinitesimal changes to f(x) that occurred as we increased x from that point. 
+
+- But how do we add infinitesimal things? The answer is the integral, or antiderivative.
+
+- Integrating the function f′(x) = 3 returns the function f(x) = 3x + C, where the C is a constant that has to be added because the derivative doesn’t contain information about the value of the function at x = 0, so we don’t know where to start adding infinitesimals.
+
+## What is the Derivative?
+
+- The __derivative__ is the instantaneous rate of change of a function. That’s it. 
+
+- Rate of change is certainly straightforward, but what is the _instantaneous rate of change_? 
+
+- The first difference of a variable is the value of that variable at time t minus the value of that variable at time t − 1, and it is a measure of _discrete change_.
+
+- __Discrete change__, then, is the first difference between two observations. It is a measure of change in a variable across two discrete moments in time. 
+    
+## What is the Derivative?
+
+- The difference $(x_{t+1} − x_{t})$ has a limitation: it can only represent the rate of change over two discrete moments in time.
+
+- If we could evaluate the rate of change at a point on a function by taking the limit of the difference as the interval gets smaller and smaller, then that would tell us what the __instantaneous rate of change__ was at the point (or moment in time).
+
+## Secant and Tangents
+
+- To figure out the discrete rate of change between any two points on this line we look at the amount of change on the y-axis relative to a particular amount of change on the x-axis.
+
+$$m = \frac{f(x_{2}) -f(x_{1})}{x_{2}- x_{1}}=\frac{y_{2}- y_{1}}{x_{2}-x_{1}}$$
+
+- It is the equation for the slope of a line.
+
+- The rate of change between two discrete points is just the slope of the line connecting those two points, known as a __secant__.
+
+- Conversly, for the function $f(x) = x^{2}$, the secant drawn between x = 1 and x = 2 is above the curve.
+
+- A line that intersects the function at x = 1 and has a slope equal to the instantaneous rate of change of the function at x = 1 is known as the __tangent__.
+
+## The Derivative, Formally
+
+- Baron Gottfried Wilhelm von Leibniz used the following notation to identify the derivative
+of a function: 
+
+$$\frac{d}{dx}f(x)$$ 
+
+- This is  read “the derivative of f of x with respect to x.”
+One might say this more cumbersomely, but completely, as the instantaneous rate of change in f of x with respect to x.
+
+- There is no difference between $\frac{d}{dx}f(x)$ and f′(x); they mean the same thing.
+
+- You may on occasion see Euler’s differential operator D, indicating that the derivative is Df(x). 
+
+## Limits and Derivatives
+
+- Taking the difference between discrete points that are closer and closer together (i.e., two values of x that are increasingly close in value) resulted in determining this instantaneous rate of change, and that doing so is effectively equivalent to taking the limit as this difference goes to zero.
+
+## Limits and Derivatives
+
+- To see how this works, start with the equation for the slope of the secant:
+
+$$m = \frac{f(x_{2}) -f(x_{1})}{x_{2}- x_{1}}$$
+
+- Now let $x_{2} = x_{1} + h$, where h is any real number.
+
+$$m = \frac{f(x_{1}+ h) -f(x_{1})}{h}$$
+
+- All that we have to do now is make the difference between points smaller and smaller until it approaches zero. That is, to get the derivative we take the limit as h → 0:
+
+$$ \lim_{h \to 0}\frac{f(x_{1}+ h) -f(x_{1})}{h}= \frac{d}{dx}f(x)$$
+
+## Limits and Derivatives - Example
+
+- Let’s go through some examples to make this concrete, starting with the linear function f(x) = 3x. We calculate its derivative by plugging into the definition:
+
+$$ \lim_{h \to 0}\frac{f(x_{1}+ h) -f(x_{1})}{h}= \\ \lim_{h \to 0}\frac{3(x_{1}+ h) - 3(x_{1})}{h} = \\ \lim_{h \to 0}\frac{3x_{1}+ 3h - 3x_{1}}{h} = 3$$
+
+## Limits and Derivatives - Example
+
+- Now let’s do a slightly more complicated one, $f(x) = x^{2}$. Again we plug into the definition:
+
+$$ \lim_{h \to 0}\frac{f(x + h) -f(x)}{h}= \\ \lim_{h \to 0}\frac{(x+ h)^{2} - x^{2}}{h} = \\ \lim_{h \to 0}\frac{x^{2}+2xh+h^{2}-x^{2}}{h}= \\
+\\ \lim_{h \to 0}\frac{2xh+h^{2}}{h}=
+\\ \lim_{h \to 0}2x+h = \\ 2x$$
+
+## Limits and Derivatives - Partial Derivative
+
+
+- Let’s extend our functions to consider two variables. Write these as f (x, z). Examples would be $f (x, z) = 3x^{2}z+2z$ or  $y=\sqrt{x2 +z^{2}}$. 
+
+- Say we want to know how y changes with x,holding z constant. This is a fundamental question in both statistics and formal theory. We can find this via what is known as the __partial derivative__.
+
+## Limits and Derivatives - Partial Derivative
+
+- Partial derivatives appear commonly in early statistics courses, which is why we bring them up here. The context is usually of an empirical model such as $$y = β0 +β1x+β2z+β3xz$$. 
+
+- Here we have both a direct dependence on x by itself, and an interaction term with z. If we want to know how x affects y, holding z constant, we need to take the partial derivative with respect to x. 
+
+## Limits and Derivatives - Partial Derivative
+
+- Since this treats z as a constant, this partial derivative is 
+
+$$\frac{\delta}{\delta x}f(x,z) = β_{1} +β_{3}z$$. 
+
+- When ∂x interpreting the effect of x on y, this is the expression of interest, which varies with z.
+
+- Familiarity with the derivative permits greater precision in presentation as well as greater flexibility in choice about what results are of most interest given one’s research question and hypothesis
+
+## Want to Learn More?
+
+- Daniel Kleitman’s Calculus for Beginners and Artists site: http://www-math.mit.edu/~djk/calculus_beginners/. 
+
+- Dan Sloughter’s online text: http://math.furman.edu/ ~dcs/book/. 
+
+- If you want a refresher, try Harvey Mudd College’s Calculus Tutorial, which includes review and quizzes: http://www.math.hmc.edu/calculus/tutorials/. 
+
+## Rules of Differentiation - Addition & Subtraction
+
+- Rather than go back to the definition each time, it will help to have some rules for the differentiation of specific functions and types of functions we can call on.
+
+- __Sum Rule__
+
+$$(f(x) + g(x))′ = f′(x) + g′(x)$$
+
+- __Difference rule__
+
+$$(f(x) − g(x))′ = f′(x) − g′(x)$$
+
+- __Multiply by constant rule__
+
+$$f′(ax) = af′(x)$$
+
+## Rules of Differentiation - Chain Rule
+
+- The rule for differentiating composite functions is known as the __chain rule__: a composite function looks like $g(f(x))$.
+
+- Take the derivative of the outer function (g of x) evaluated at the inner function (f of x), then take the derivative of the inner function (f of x), and multiply the two terms. 
+
+- We can also write it as: 
+
+$$(g(f(x)))′ = g′(f(x))f′(x)$$ 
+
+## Rules of Differentiation - Chain Rule
+
+- The key concept here is that one can separate the derivative of a composite function into two derivatives: one of the outer function, evaluated at the inner function, and one of the inner function, evaluated at x.
+
+- The major step in using the chain rule is to figure out how to assign g(x) and f(x). 
+
+## Rules of Differentiation - Products and Quotients
+
+-  The __product rule__:
+
+$$(f(x)g(x))′ = f′(x)g(x) + f(x)g′(x)$$
+
+- The __quotient rule__
+
+$$ (\frac{f(x)}{g(x)})^{'} = \frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^{2}} $$
+
+## Rules of Differentiation - Products and Quotients
+
+- If we can just differentiate anything of the form $x^{n}$, where n is a rational number, we can address a large proportion of derivatives in political science.
+
+- It turns out that it is easy to take this derivative. You might even have guessed the pattern from earlier examples such as $(x^3)′ = 3x^2$ and $(x^9)′ = 9x^8$. The __power rule__ is:
+
+$$ \frac{dx^{n}}{dx}= nx^{n-1}$$
+
+- Derivitive of a constant is 0
+
+## Rules of Differentiation - Some More Rules
+
+- __Exponential rule 1__
+
+
+$$ \frac{de^{x}}{dx}= e^{x}$$
+
+-  __Exponential rule 2__
+
+$$ \frac{da^{x}}{dx}= a^{x}(ln(a))$$
+
+- __Logarithm rule 1__
+
+$$ (ln(x))'= \frac{1}{x}$$
+
+- __Logarithm rule 2__
+
+$$ (log_{a}(x))'= \frac{1}{x(ln(a))}$$
+
+## Derivitive Resources
+
+see: https://www.mathsisfun.com/calculus/derivatives-rules.html
+
+see: http://tutorial.math.lamar.edu/Classes/CalcI/DiffExpLogFcns.aspx
+
+## The Integral
+
+- What if we care less about change than about the net effect of change? Say we had some continuous function that represented the marginal change in voter turnout with respect to some aggregate measure of education, and we wanted to know the total level of voter turnout for all levels of education.
+
+- The integral of the marginal change function essentially adds up an infinite number of infinitesimal changes in turnout to produce the required total turnout function. This function specifies the level of turnout at any amount of education.
+
+- The most common use of the integral in political science relates to its connection to probability density functions, which describe the chance of any particular value of a continuous function occurring.
+
+## The Integral
+
+- The intuition behind finding the area under a curve is pretty straightforward and is developed by thinking about finding the area within geometric shapes for which the formula for the area is known. 
+
+- The solution is to draw our shapes very thinly: as they become more and more narrow, the divergence between the sum of their areas and the area under the curve will shrink.
+
+## The Integral
+
+- How does this work? If we let the width be denoted ∆x, then the area of each rectangle is $f(x_{i})∆x$, where $f(x_{i})$ is the value of the function at each
+(evenly spaced) point we have chosen. 
+
+- The total area might then be written as  $\sum_{i}f(x_i)∆x$. We can take the limit of this sum as ∆x → 0 to produce the true area. 
+
+## The Integral
+
+- We call this limit the definite integral, and write it in general as:
+
+$$\int_{a}^{b}f(x)dx$$
+
+
+- The integral symbol looks like an S and is meant to remind you that it is in essence a sum. 
+
+## The Integral
+
+- The dx in the integral tells you the variable of integration. It is exactly analogous to the dx in the derivative. The f(x), or more generally,
+the expression multiplying the dx, is known as the __integrand__. 
+
+- The a and b are the bounds (or limits) of integration. They tell you the value of x at which to start and the value at which to stop. 
+
+- If $x^{2}$ is the integrand, a = 1 and b = 2 are
+the bounds of integration, and the definite integral is  $\int_{a}^{b}x^{2}dx$.
+
+## Antiderivatives and the Indefinite Integral
+
+- If you add 3 and then subtract 3, you end up where you started. Similarly, if you multiply by some non-zero number and then divide by this same number, you end up where you started. So, in a sense, × and ÷ are inverses of each other. We’ll see that the derivative and the __antiderivative__ (aka indefinite integral) are similarly related.
+
+- The antiderivative of f(x) is denoted F(x). That is, it’s the capital of the letter used to represent the function.
+
+- Start with f (x) = 1. What is its antiderivative? 
+
+- Well, we know that the derivative of x is one. So $F(x) = x$ is one antiderivative.
+
+## Antiderivatives and the Indefinite Integral
+
+- It’s not quite that easy, though. Take F (x) = x + 10. The derivative of that is also one, as is the derivative of F (x) = x + 1, 000. 
+
+- In general, because the derivative of a constant is zero, there are lots (an infinite number, actually) of antiderivatives that all produce the same f(x). 
+
+- Luckily, they’re all of the same form: $F(x) = x + C$. 
+
+- We call C the constant of integration, and it can be any constant value (i.e., any value that does not depend on x).
+
+- The antiderivative of x is $\frac{1}{2}x^2 + C$. (Don’t forget the C !)
+
+## Antiderivatives and the Indefinite Integral
+
+- The __fundamental theorem of calculus__
+
+$$\int_{a}^{b}f(x)dx = F(b) - F(a)$$
+
+- In other words, the definite integral of a function from a to b is equal to the antiderivative of that function evaluated at b minus the same evaluated at a.
+
+- The theorem is fundamental because it bridges (or links) differential and integral
+calculus.
+
+- We can make the connection even more clear with a little notation
+$\int_{a}^{b}f(x)dx = \left. F(x) \right|_{a}^{b}$ , 
+    + where the vertical line means “evaluate the antiderivative F(x) at b, and subtract the antiderivative evaluated at a.”
+    
+## Antiderivatives and the Indefinite Integral - Example
+
+- Lets start with $f(x) = x^{2}$. What’s the antiderivative of this? 
+
+- Well, we know that the derivative of $x^{3}$ is $3x^{2}$ from the previous chapter, so an $x^{3}$ will be involved. 
+
+- If we further divide by 3 we’ll get $x^{2}$ without the 3 in front. Thus, $F(x) = \frac{1}{3}x^{3}$. 
+
+## Antiderivatives and the Indefinite Integral - Example
+
+- Consequently, by the fundamental theorem of calculus,  
+
+$$\int_{1}^{2}x^{2}dx = F(2) - F(1) = \\
+\frac{1}{3}2^{3} - \frac{1}{3}1^{3} = \\
+\frac{8}{3}- \frac{1}{3} = \frac{7}{3}$$
+
+...and that is the area under the curve of $x^{2}$ between 1 and 2.
+
+## Antiderivatives and the Indefinite Integral - Who Cares
+
+- One will encounter a number of statistical tables that report integral values. For example, z-scores—which report the area between the mean of a distribution and a point a selected distance from that mean under the standard normal curve—are definite integrals.
+
+- When you look up z-score values in a table in the appendix of a statistics text you are looking up the value of the difference between the antiderivative when x = 0 (the mean in a standard normal distribution) and the antiderivative at the point _z_ (i.e., $\frac{X_{i} -\bar{X}}{s}$), 
+
+  + where $X_{i}$ is a given value of x, $\bar{X}$ is the sample mean, and _s_ is the standard deviation of the sample). 
+
+## Antiderivatives and the Indefinite Integral - Who Cares
+
+- In formal theories, while some outcomes over which individuals may have an interest are certain, it is more often true that there is some level of uncertainty in the outcome, either because one is not sure what others with whom one is interacting will do, or because the payoffs themselves are variable. 
+
+- We can describe the chance that any particular outcome occurs by a probability distribution over outcomes. The expected value of the game (or expected utility) is the definite integral over all possible outcomes (or possible values of one’s utility arising from different outcomes), weighted by the chance that each outcome occurs, i.e., by the probability distribution over outcomes.
+
+## Antiderivatives and the Indefinite Integral - Example Game Theory
+
+- Assume that a bureaucrat must allocate money over two public works projects, one fixing a bridge and one building a new road. The payoff for the road might be known, but the payoff for the bridge is stochastic, since it depends on the likelihood that the bridge will collapse if it is not fixed. 
+
+- In other words, the return on investment in the case of the bridge is uncertain. To make things simpler, let the bureaucrat’s decision be dichotomous: either money gets allocated or it doesn’t, and money can only be allocated to one project. 
+
+- How would we figure out which project gets the money?
+
+## Antiderivatives and the Indefinite Integral - Example Game Theory
+
+-  Let the payoff for the road be 2, and the payoff for the bridge be uniformly distributed between −2 (if the bridge wouldn’t have collapsed anyway) and 8 (if the bridge were in immediate danger of collapse). 
+
+- A uniform distribution places equal probability on every outcome. A rational actor will put money into the project with the greater payoff, but which is greater?
+
+## Antiderivatives and the Indefinite Integral - Example Game Theory
+
+- Here we assert that the expected value of a variable distributed according to the uniform distribution provided in the problem is the definite integral: 
+
+$$\frac{1}{8-(-2)}\int_{-2}^{8}xdx = \\
+\frac{1}{10}\frac{1}{2}(x^{2}) \left.\right|_{-2}^{8} = \\
+\frac{1}{20}(64-(4))=3$$ 
+
+- This gives us the payoff we need. Since 3 > 2, the bureaucrat should fix the bridge.
+
+## Rules of Integration
+
+- Though you will largely rely on tables and statistical software to compute in- tegrals of cumulative distribution functions, you will have cause to compute integrals should you choose to delve further into the underpinnings of statistical methodology.
+
+- For more: http://www.technologyuk.net/mathematics/integral-calculus/basic-rules-of-integration.shtml
+
+- List of integrals: https://en.wikipedia.org/wiki/Lists_of_integrals
+
+## Extrema in One Dimension
+
+- A major motivation for computing the derivative is to find the maximum or minimum of a function. Maxima and minima are both types of _extrema_.
+
+- Theorists often assume that an actor wants to maximize or minimize something (e.g., power, utility, time in office, etc.). 
+
+- Statistical analysis often hinges on locating the maximum or minimum value of a function. Ordinary least squares (OLS) is a technique that minimizes the squared error between the observed data and the predicted values of a regression model. Maximum likelihood estimation maximizes a likelihood function.
+
+## Extrema
+
+- Maximum and minimum are concepts just as straightforward as you might expect. They are the high and low points of a function, or the “peaks” and “valleys” in the graph of a function. 
+
+- A high point is called a _maximum_ and a low point is called a _minimum_. Together these two points are referred to as the extrema of a function.
+
+## Extrema
+
+- We say an extremum is __local__ whenever it is the largest (or smallest) value of the function over some interval of values in the domain of the function, e.g., over some interval on the x-axis. So we can have local maxima, and local minima. 
+
+- A __global__ extremum, in comparison, is the highest (or lowest) point on the function
+
+- The __supremum__ can be thought of as the least upper bound of any set, and the __infimum__ can be thought of as the greatest lower bound of any set. 
+
+## Extrema
+
+- For example, the function f(x) = (x−1)(x−3)(x−4) has two local extrema between 1 and 4, one maximum and one minimum. But the function shoots off to ∞ as x gets bigger than 4 and to −∞ as x gets less than 1, so neither of these two local extrema is a global extremum if we expand the range over which we’re looking. 
+
+```{r}
+curve((x-1)*(x-3)*(x-4), from=1, to=5, , xlab="x", ylab="y")
+```
+
+
+
+## Higher-order derivatives
+
+- The first-order derivative is the instantaneous rate of change at a specific point. 
+- The second-order derivative is the rate of change of the instantaneous rate of change. The third-order derivative is the rate of change of the second-order derivative, and so on.
+
+- If $\frac{df(x)}{dx}$ if a first derivitive, then $\frac{d^{2}f(x)}{dx^{2}}$ is a second derivative.
+
+- Similarly, if $f′(x)$ is a first derivative, then $f′′(x)$ is a second derivative and $f′′′(x)$ is a third derivative.
+
+## Higher-order derivatives - Example
+
+- Let’s consider the first derivative of: $$y = f (x) = 2x^3: \frac{dy}{dx} = 6x^2$$. 
+
+## Higher-order derivatives - Example
+
+- The second-order derivative is
+$$f′′(x) = \frac{d^{2}y}{dx^{2}} = (6x^2)′ = 12x$$. 
+
+
+## Higher-order derivatives - Example
+
+```{r}
+curve(2*x^3, from=-5, to=5, , xlab="x", ylab="y")
+```
+
+## Higher-order derivatives 
+
+- What do higher-order derivatives represent conceptually? 
+
+- In physics, where one is concerned with the motion of physical bodies in space, the first derivative is the speed or velocity of an object, its rate of change in position with respect to time. 
+
+- The second derivative is the rate at which speed changes, which is known more commonly as the acceleration of an object. 
+
+- You will at times see this word used in reference to the second derivative of variables in political science as well.
+
+## Higher-order derivatives 
+
+- The first derivative tells us in which direction it is trending: is it increasing or decreasing? 
+
+- The second derivative tells us the most basic curvature of the function: is the rate at which it is increasing or decreasing getting faster or slower? 
+
+- Higher-order derivatives provide more nuanced information about the shape of functions; however, we will typically find first and second derivatives sufficient for our purposes.
+
+## Concavity and Convexity
+
+- A function with a rate of increase that slows as the value of the function gets bigger is an example of a __concave__ function. 
+
+- One with a rate of increase that speeds up as the value of the function gets bigger is an example of a __convex__ function.
+
+## Summary of methods
+
+- Find f'(x)
+- Set f′(x∗) = 0 and solve for all $x^{∗}$. These are stationary points of the function.
+- Find f''(x)
+- For each stationary point $x^{∗}$, substitute $x^{∗}$ into f′′(x)
+
+    +  If f′′( $x^{∗}$) < 0, f(x) has a local maximum at  $x^{∗}$.
+    +  If f′′( $x^{∗}$) > 0, f(x) has a local minimum at  $x^{∗}$.
+    +  If f′′($x^{∗}$) = 0, $x^{∗}$ may be an inflection point. To check this:
+    
+        + Calculate higher-order derivatives (f′′′(x) until you find the first one that is non-zero at $x^{∗}$. Call the order of this derivative n.
+        + If n is odd, then this $x^{∗}$ is an inflection point and not an ex- tremum. Do not include it in further steps.
+        + If n is even and $f^{(n)}(x^{∗})$ < 0, f(x) has a local maximum at $x^{∗}$.
+        + If n is even and $f^{(n)}(x^{∗})$ > 0, f(x) has a local minimum at $x^{∗}$.
+
+
+## Examples - Maximizing Utility
+
+- Let’s assume that you have $1 million that you could donate to a campaign. Call the amount of money you choose to donate, in millions of dollars, x. 
+
+- Let’s also assume that you get some nice benefit for donating, either via feeling good about yourself or, more cynically, via future favors expected, and that this benefit can be represented by the function x. 
+
+- That is, you get the same benefit in terms of utility as the amount of money you donate, x. Finally, let’s assume that you could have done other things with your money, so donating occasions an opportunity cost that can be represented by $x^{2}$. 
+
+- Finally, let’s assume x is measured in millions of dollars, so you can donate any x ∈ [0, 1].
+
+## Example - Maximizing Utility
+
+- Putting these assumptions together gives a utility function: 
+
+$$u(x) = x − x^{2}$$
+
+- The optimal choice for a donation maximizes this function in the domain $[0, 1]$.
+
+- First, we find $u′(x) = 1 − 2x$. 
+
+- Second, we solve for 
+
+$$x^{∗}: 1−2x^{∗} =0⇒x^{*} = \frac{1}{2}$$ 
+
+- Third,we find $u′′(x)=−2<0$. 
+
+- This is  negative for all x, so step four tells us we have a local maximum.
+
+## Example - Maximizing Utility
+
+So the global maximum occurs at a donation of $x=\frac{1}{2}$ . 
+
+```{r}
+curve(x-x^2, from=0, to=1, , xlab="x", ylab="y")
+```

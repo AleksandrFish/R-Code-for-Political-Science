@@ -1,0 +1,21 @@
+---
+title: "Math Concepts"
+output: pdf_document
+---
+
+
+## Exponenents
+
+An Exponent is a number  placed in a superscript position immediatly following another number or variable to indicate repeated multiplication
+
+```{r}
+2^3
+```
+
+#Math inside RMarkdown
+
+Example: $\sum_{n=1}^{10} n^2$ is rendered as:
+
+Example: $$\sum_{n=1}^{10} n^2$$ is rendered as:
+
+##Mathematical Notation

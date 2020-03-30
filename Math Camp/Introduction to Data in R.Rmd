@@ -1,0 +1,156 @@
+---
+title: "Introduction to Data in R"
+output: pdf_document
+---
+
+
+##Introduction
+```{r}
+library(openintro)
+data(hsb2)
+summary(hsb2)
+str(hsb2)
+```
+
+```{r}
+library(dplyr)
+glimpse(hsb2)
+```
+
+##Types of Variables
+Categorical data are often stored as factors in R. 
+
+Recall from the video that the filter() function from dplyr allows you to filter a dataset to create a subset containing only certain levels of a variable. 
+
+# Subset of emails with big numbers: email50_big
+```{r}
+hsb_big <- hsb2 %>%
+  filter(gender=="male")
+```
+
+# Glimpse the subset
+```{r}
+glimpse(hsb_big)
+```
+# Table of gender variable
+```{r}
+table(hsb_big$gender)
+```
+# Drop levels
+```{r}
+hsb_big$gender <- droplevels(hsb_big$gender)
+```
+# Another table of number variable
+```{r}
+table(hsb_big$gender)
+```
+#Load Email data
+```{r}
+data(email50)
+```
+# Calculate median number of characters: med_num_char
+```{r}
+med_num_char <- median(email50$num_char)
+```
+# Create num_char_cat variable in email50
+```{r}
+email50 <- email50 %>%
+  mutate(num_char_cat = ifelse(num_char < med_num_char, "below median", "at or above median"))
+```  
+# Count emails in each category
+```{r}
+table(email50$num_char_cat)
+```
+# Create number_yn column in email50
+```{r}
+email50 <- email50 %>%
+  mutate(number_yn= ifelse(number=="none", "no", "yes"))
+```
+# Visualize number_yn
+```{r}
+ggplot(email50, aes(x = number_yn)) +
+  geom_bar()
+```
+# Load packages
+```{r}
+library(dplyr)
+library(tidyr)
+```
+# Count number of male and female applicants admitted
+```{r}
+hsb_race <- hsb2 %>%
+  count(gender, race)
+```
+# View result
+```{r}
+print(hsb_race)
+```
+# Spread the output across columns
+```{r}
+hsb_race %>%
+  spread(gender, n)
+```  
+
+# Table of counts of admission status and gender
+ count(schtyp, gender) %>%
+# Spread output across columns based on admission status
+ spread(schtyp, n)  %>%
+# Create new variable
+mutate(Perc_type = public/ (public+private))
+print(hsb_type)
+# Table of counts of admission status and gender for each department
+hsb_type2 <- hsb2 %>%
+  count(ses, schtyp, gender) %>%
+  spread(schtyp, n) %>%
+# Percentage of those admitted to each department
+  mutate(Perc_type = public / (public+private))
+  print(hsb_type2)
+
+library(openintro)
+data(county)
+
+county_noDC<- county %>%
+  filter(state !="District of Columbia") %>%
+  droplevels()
+
+#Simple Random Sample  
+county_srs <- county_noDC %>%
+  sample_n(size=150)
+  glimpse(county_srs)
+  
+county_srs %>%
+  group_by(state) %>%
+  count()
+  
+#Stratified Sample
+county_str <- county_noDC %>%
+  group_by(state) %>%
+  sample_n(size=3)
+  glimpse(county_str)
+  
+#Beauty in the Classroom
+download.file("http://www.openintro.org/stat/data/evals.RData", destfile = "evals.RData")
+load("evals.RData")
+
+# Inspect variable types
+glimpse(evals)
+str(evals) # Another option
+
+# Remove non-factor variables from this vector
+cat_vars <- c("rank", "ethnicity", "gender", "language",
+              "cls_level", "cls_profs", "cls_credits",
+              "pic_outfit", "pic_color") 
+              
+# Recode cls_students as cls_type: evals
+evals <- evals %>%
+  # Create new variable
+  mutate(cls_type = factor(ifelse(cls_students <= 18, "small",
+                      ifelse(cls_students >= 19 & cls_students <= 59, "midsize",  "large"))))
+                      
+# Scatterplot of score vs. bty_avg
+ggplot(evals, aes(x=bty_avg, y=score)) +
+  geom_point()
+  
+# Scatterplot of score vs. bty_avg colored by cls_type
+ggplot(evals, aes(x=bty_avg, y=score, color=cls_type)) +
+  geom_point()

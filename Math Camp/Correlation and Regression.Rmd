@@ -1,0 +1,298 @@
+---
+title: "Correlation and Regression"
+output: pdf_document
+---
+
+#Getting Started
+
+Remove all previous data with:
+```{r}
+rm(list = ls())
+```
+
+The `ncbirth` data set resides in the `openintro` package of the *R* programming language.
+
+The ncbirths dataset is a random sample of 1,000 cases taken from a larger dataset collected in 2004. Each case describes the birth of a single child born in North Carolina, along with various characteristics of the child (e.g. birth weight, length of gestation, etc.), the child's mother (e.g. age, weight gained during pregnancy, smoking habits, etc.) and the child's father (e.g. age).
+
+
+
+```{r message = FALSE}
+library(openintro)
+data(ncbirths)
+```
+
+#Making our First Scatterplot
+
+We need to load the `ggplot()` package.
+```{r message = FALSE}
+library(ggplot2)
+```
+
+Using the `ncbirths` dataset, make a scatterplot using `ggplot` to illustrate how the birth weight of these babies varies according to the number of weeks of gestation.
+```{r}
+ggplot(data=ncbirths, aes(y=weight, x=weeks)) +
+  geom_point()
+```
+
+#Extra Datsets and Scatterplots
+
+Creating scatterplots is simple and they are so useful that is it worthwhile to expose yourself to many examples. Over time, you will gain familiarity with the types of patterns that you see. You will begin to recognize how scatterplots can reveal the nature of the relationship between two variables.
+
+In this exercise, and throughout this chapter, we will be using several datasets listed below. These data are available through the openintro package. Briefly:
+
+* The `mammals` dataset contains information about 39 different species of mammals, including their body weight, brain weight, gestation time, and a few other variables.
+
+* The `mlbBat10` dataset contains batting statistics for 1,199 Major League Baseball players during the 2010 season.
+
+* The `bdims` dataset contains body girth and skeletal diameter measurements for 507 physically active individuals.
+
+* The `smoking` dataset contains information on the smoking habits of 1,691 citizens of the United Kingdom.
+
+```{r}
+# Mammals scatterplot
+ggplot(mammals, aes(y=BrainWt, x=BodyWt)) +
+  geom_point()
+
+
+# Baseball player scatterplot
+ggplot(mlbBat10, aes(y=SLG, x=OBP)) +
+  geom_point()
+
+
+# Body dimensions scatterplot
+ggplot(bdims, aes(y=wgt, x=hgt, color=factor(sex))) +
+  geom_point()
+
+
+# Smoking scatterplot
+ggplot(smoking, aes(y=amtWeekdays, x=age)) +
+  geom_point()
+```
+
+#Transformations
+
+The relationship between two variables may not be linear. In these cases we can sometimes see strange and even inscrutable patterns in a scatterplot between the variables. Sometimes there really is no meaningful relationship between the two variables. Other times, a careful transformation of one or both of the variables can reveal a clear relationship.
+
+Recall the bizarre pattern that you saw in the scatterplot between brain weight and body weight among mammals in a previous exercise. Can we use transformations to clarify this relationship?
+
+ggplot2 provides several different mechanisms for viewing transformed relationships. The `coord_trans()` function transforms the coordinates of the plot. Alternatively, the `scale_x_log10()` and `scale_y_log10()` functions perform a base-10 log transformation of each axis. Note the differences in the appearance of the axes.
+
+```{r}
+# Scatterplot with coord_trans()
+ggplot(data = mammals, aes(x =BodyWt , y = BrainWt)) +
+  geom_point() + 
+  coord_trans(x = "log10", y = "log10")
+
+# Scatterplot with scale_x_log10() and scale_y_log10()
+ggplot(data = mammals, aes(x = BodyWt, y = BrainWt)) +
+  geom_point() + 
+  scale_x_log10() + 
+  scale_y_log10()
+```
+
+#Outliers
+
+We will discuss how outliers can affect the results of a linear regression model, and how we can deal with them. For now, it is enough to simply identify them, and note how the relationship between two variables may change as a result of removing outliers.
+
+Recall that in the baseball example earlier in the chapter, most of the points were clustered in the lower left corner of the plot, making it difficult to see the general pattern of the majority of the data. This difficulty was caused by a few outlying players whose on-base percentages (OBPs) were exceptionally high. These values are present in our dataset only because these players had very few batting opportunities.
+
+Both OBP and SLG are known as rate statistics, since they measure the frequency of certain events (as opposed to their count). In order to compare these rates sensibly, it makes sense to include only players with a reasonable number of opportunities, so that these observed rates have the chance to approach their long-run frequencies.
+
+In Major League Baseball, batters qualify for the batting title only if they have 3.1 plate appearances per game. This translates into roughly 502 plate appearances in a 162-game season. The `mlbBat10` dataset does not include plate appearances as a variable, but we can use at-bats (AB) -- which constitute a subset of plate appearances -- as a proxy.
+
+```{r}
+library(magrittr)
+library(dplyr)
+```
+
+```{r}
+# Scatterplot of SLG vs. OBP
+mlbBat10 %>%
+  filter(AB >=200) %>%
+  ggplot(aes(x = OBP, y = SLG)) +
+  geom_point()
+
+# Identify the outlying player
+mlbBat10 %>%
+  filter(AB >= 200, OBP <0.200)
+```
+
+#Correlation
+
+The `cor(x, y)` function will compute the Pearson product-moment correlation between variables `x` and `y`. Since this quantity is symmetric with respect to `x` and `y`, it doesn't matter in which order you put the variables.
+
+At the same time, the `cor()` function is very conservative when it encounters missing data (e.g. `NAs`). The use argument allows you to override the default behavior of returning `NA` whenever any of the values encountered is `NA`. Setting the use argument to `"pairwise.complete.obs"` allows `cor() `to compute the correlation coefficient for those observations where the values of `x` and `y` are both not missing.
+
+If you are looking for a good time see the [correlation game](http://guessthecorrelation.com)
+
+```{r}
+# Compute correlation for all non-missing pairs
+ncbirths %>%
+  summarize(N = n(), r = cor(weight, mage, use = "pairwise.complete.obs"))
+```
+
+**An interesting note**: When using the `summarize` function outside of `knitr` make sure to spell it `summarise`.
+
+```{r}
+# Correlation for all baseball players
+mlbBat10 %>%
+  summarize(N = n(), r = cor(OBP, SLG))
+
+# Correlation for all players with at least 200 ABs
+mlbBat10 %>%
+  filter(AB>=200) %>%
+  summarize(N = n(), r = cor(OBP, SLG))
+
+# Correlation of body dimensions
+bdims %>%
+  group_by(sex) %>%
+  summarize(N = n(), r = cor(wgt, hgt))
+
+# Correlation among mammals, with and without log
+mammals %>%
+  summarize(N = n(), 
+            r = cor(BodyWt, BrainWt), 
+            r_log = cor(log(BodyWt), log(BrainWt)))
+```
+
+
+#Visualization of Linear Models
+
+he simple linear regression model for a numeric response as a function of a numeric explanatory variable can be visualized on the corresponding scatterplot by a straight line. This is a "best fit" line that cuts through the data in a way that minimizes the distance between the line and the data points.
+
+We might consider linear regression to be a specific example of a larger class of smooth models. The `geom_smooth()` function allows you to draw such models over a scatterplot of the data itself. This technique is known as visualizing the model in the data space. The method argument to `geom_smooth()` allows you to specify what class of smooth model you want to see. Since we are exploring linear models, we'll set this argument to the value `"lm"`.
+
+Note that `geom_smooth()` also takes an `se` argument that controls the standard error, which we will ignore for now.
+
+```{r}
+# Scatterplot with regression line
+ggplot(data = bdims, aes(x = hgt, y = wgt)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+#Linear Regression
+
+While the `geom_smooth(method = "lm")` function is useful for drawing linear models on a scatterplot, it doesn't actually return the characteristics of the model. As suggested by that syntax, however, the function that creates linear models is `lm()`. This function generally takes two arguments:
+
+* A formula that specifies the model
+* A data argument for the data frame that contains the data you want to use to fit the model
+
+The `lm() function` return a model object having class `"lm"`. This object contains lots of information about your regression model, including the data used to fit the model, the specification of the model, the fitted values and residuals, etc.
+
+```{r}
+# Linear model for weight as a function of height
+lm(wgt ~ hgt, data = bdims)
+
+# Linear model for SLG as a function of OBP
+lm(SLG ~ OBP, data = mlbBat10)
+
+# Log-linear model for body weight as a function of brain weight
+mod <- lm(log(BodyWt) ~ log(BrainWt), data=mammals )
+
+# Show the coefficients
+coef(mod)
+
+# Show the full output
+summary(mod)
+
+# Mean of weights equal to mean of fitted values?
+mean(bdims$wgt) == mean(fitted.values(mod))
+
+# Mean of the residuals
+mean(resid(mod))
+```
+
+```{r}
+# Load broom
+library(broom)
+
+# Create bdims_tidy
+bdims_tidy <- augment(mod)
+
+# Glimpse the resulting data frame
+glimpse(bdims_tidy)
+```
+
+#Making Predictions
+
+The `fitted.values()` function or the `augment()`-ed data frame provides us with the fitted values for the observations that were in the original data. However, once we have fit the model, we may want to compute expected values for observations that were not present in the data on which the model was fit. These types of predictions are called out-of-sample.
+
+The `ben` data frame contains a height and weight observation for one person. The `mod` object contains the fitted model for weight as a function of height for the observations in the `bdims` dataset. We can use the `predict()` function to generate expected values for the weight of new individuals. We must pass the data frame of new observations through the `newdata` argument.
+
+#Model Fit
+
+One way to assess strength of fit is to consider how far off the model is for a typical case. That is, for some observations, the fitted value will be very close to the actual value, while for others it will not. The magnitude of a typical residual can give us a sense of generally how close our estimates are.
+
+However, recall that some of the residuals are positive, while others are negative. In fact, it is guaranteed by the least squares fitting procedure that the mean of the residuals is zero. Thus, it makes more sense to compute the square root of the mean squared residual, or root mean squared error (RMSE). R calls this quantity the residual standard error.
+
+To make this estimate unbiased, you have to divide the sum of the squared residuals by the degrees of freedom in the model. 
+
+You can recover the residuals from `mod` with `residuals()`, and the degrees of freedom with `df.residual()`
+
+```{r}
+#model
+mod <- lm(log(BodyWt) ~ log(BrainWt), data=mammals )
+
+# View summary of model
+summary(mod)
+
+# Compute the mean of the residuals
+mean(residuals(mod))
+
+# Compute RMSE
+sqrt(sum(residuals(mod)^2) / df.residual(mod))
+```
+
+
+summary(mod)
+
+```{r}
+bdims_tidy %>%
+  summarize(var_y =var(wgt) , var_e =  var(.resid)) %>%
+  mutate(R_squared = 1- (var_e/var_y))
+```
+
+#Unusual points
+
+The leverage of an observation in a regression model is defined entirely in terms of the distance of that observation from the mean of the explanatory variable. That is, observations close to the mean of the explanatory variable have low leverage, while observations far from the mean of the explanatory variable have high leverage. Points of high leverage may or may not be influential.
+
+The `augment()` function from the `broom` package will add the leverage scores `(.hat)` to a model data frame.
+
+```{r}
+
+# Rank points of high leverage
+mod %>%
+  augment() %>%
+  arrange(desc(.hat)) %>%
+  head()
+
+```
+
+As noted previously, observations of high leverage may or may not be influential. The influence of an observation depends not only on its leverage, but also on the magnitude of its residual. Recall that while leverage only takes into account the explanatory variable (x), the residual depends on the response variable (y) and the fitted value (ŷ y^).
+
+Influential points are likely to have high leverage and deviate from the general relationship between the two variables. We measure influence using Cook's distance, which incorporates both the leverage and residual of each observation.
+
+```{r}
+# Rank influential points
+mod %>%
+  augment() %>%
+  arrange(desc(.cooksd)) %>%
+  head()
+
+# Create nontrivial_players
+nontrivial_players <- mlbBat10 %>%
+  filter(OBP<0.500 & AB >=10)
+
+# Fit model to new data
+mod_cleaner <- lm(SLG ~ OBP, data=nontrivial_players)
+
+# View model summary
+summary(mod_cleaner)
+
+
+# Visualize new model
+ggplot(nontrivial_players, aes(y=SLG, x=OBP))+
+  geom_point()+
+  geom_smooth(method="lm", se=F)
+```

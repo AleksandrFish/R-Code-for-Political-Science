@@ -1,0 +1,43 @@
+---
+title: "Statistics Basics"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Descriptive Statistics
+
+```{r}
+library(foreign)
+library(dplyr)
+affairs <- read.csv(url("https://raw.githubusercontent.com/glago66/Final-Project/master/affairs.csv"))
+glimpse(affairs)
+affairs$child
+mlabs<-c("very unhappy", "unhappy", "average", "happy", "very happy")
+affairs$marriage<-factor(affairs$rate, labels =mlabs)
+
+#Frequency of Having Kids
+table(affairs$child)
+
+#Marriage Ratings
+prop.table(table(affairs$marriage))
+
+#Contingency Table
+countstab<-table(affairs$marriage, affairs$child)
+
+# Share within marriage
+prop.table(countstab, margin=1)
+
+# Share within has kids
+prop.table(countstab, margin=2)
+
+#Pie Chart
+pie(table(affairs$marriage), col=gray(seq(.2, 1,.2)))
+
+#Bar plot 
+barplot(table(affairs$child, affairs$marriage), 
+        horiz = T, las=1, legend=T, args.legend = c(x="bottomright"), 
+        main="Happiness by Kids")
+```
