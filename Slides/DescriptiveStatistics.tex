@@ -1,0 +1,125 @@
+---
+title: "Descriptive Statistics"
+author: "Aleksandr Fisher"
+output: beamer_presentation
+theme: metropolis
+latex_engine: xelatex
+highlight: zenburn
+---
+
+
+## Plan
+
+1. Overview of Last Week
+2. Measurement 
+3. Descriptive Statistics
+4. Readings
+5. Wrap up
+
+## Measurement
+
+* Social science is about developing and testing causal theories:
+  + Does minimum wage change levels of employment?
+  + Does outgroup contact influence views on immigration?
+* Theories are made up of concepts:
+  + Minimum wage, level of employment, outgroup contact, views on
+immigration.
+  + We took these for granted when talking about causality.
+* Important to consider how we measure these concepts.
+  + Some more straightforward: what is your age?
+  + Others more complicated: what does it mean to “be liberal”?
+  + Have to create an operational definition of a concept to make it into a
+variable in our dataset.
+
+## Example
+
+- Concept: presidential approval.
+- Conceptual definition:
+  - Extent to which US adults support the actions and policies of the current US
+president.
+  - Operational definition:
+- “On a scale from 1 to 5, where 1 is least supportive and 5 is more supportive,
+how much would you say you support the job that Donald Trump is doing as
+president?”
+
+## Measurement Error
+
+- **Measurement error**: chance variation in our measurements.
+  - individual measurement = exact value + chance error
+  - chance errors tend to cancel out when we take averages.
+- No matter how careful we are, a measurement could have always come out
+differently.
+  - Panel study of 19,000 respondents: 20 reported being a citizen in 2010 and
+then a non-citizen in 2012.
+  - Data entry errors.
+- **Bias**: systematic errors for all units in the same direction.
+  - individual measurement = exact value + bias + chance error.
+  - “Did you vote?” ~ overreporting
+
+## Definitions
+
+- A **variable** is a series of measurements about some concept.
+- **Descriptive statistics** are numerical summaries of those measurements.
+  - If we smart enough, we wouldn’t need them: just look at the list of numbers
+and completely understand.
+- Two salient features of a variable that we want to know:
+  - **Central tendency**: where is the middle/typical/average value.
+  - **Spread** around the center: are all the data close to the center or spread out?
+
+## Center of the Data
+
+- "Center" of the data: Typical/average value
+- **Mean**: sum of the values divided by the number od observations
+- **Median**: the "middle" of a sorted list of numbers.
+- Median more robust to outliers
+  - Example 1: data = {0, 1, 2, 3, 5}, mean = 2.2, median = 2
+  - Example 2: data = {0, 1, 2, 3, 100}, mean = 21.2, median = 2
+  
+## Spread of the data
+
+- Are the data close to the center?
+- **Range**: [min(x), max(x]
+- **Quantile** (quartile, quintile, percentile, etc):
+  - 25th percentile = lower quartile (25% of the data below this value)
+  - 50th percentile = median (50% of the data below this value)
+  - 75th percentile = upper quartile (75% of the data below this value)
+- **Interquartile range (IQR)**: a measure of variability
+  - How spread out is the middle half of the data?
+  - Is most of the data really close to the median or are the values spread out?
+- One definition of outliers: over 1.5 × IQR above the upper quartile or below
+lower quartile.
+
+## Standard deviation
+
+- **Standard deviation**: On average, how far away are data points from the
+mean?
+$$\sqrt\frac{\sum((x - \bar{x})^{2})}{n-1}$$
+- Steps:
+
+  1. Subtract each data point by the mean
+  2. Square each resulting difference
+  3. Take the sum of these values
+  4. Divide by n-1
+  5. Take the square root
+
+## Variance
+
+- **Variance** = standard deviation (squared)
+
+$$\frac{\sum((x - \bar{x})^{2})}{n-1}$$
+
+## How large is large?
+
+- Need a way to put any variable on common units.
+-  **z-score**: $$\frac{x - \bar{x}}{\sigma}$$
+
+- Interpretation:
+  - Positive values above the mean, negative values below the mean
+  - Units now on the scale of standard deviations away from the mean
+  - Intuition: data more than 3 SDs away from mean are rare.
+  
+## Data
+
+```{r cars, messages=FALSE, warning=FALSE, background='#F7F7F7'}
+summary(cars)
+```

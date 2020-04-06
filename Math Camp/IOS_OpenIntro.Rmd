@@ -2,9 +2,9 @@
 title: "OpenIntro Labs"
 smaller: yes
 output:
-  slidy_presentation: default
-  ioslides_presentation: default
   beamer_presentation: default
+  ioslides_presentation: default
+  slidy_presentation: default
 ---
 
 ## Getting the Basics
@@ -12,11 +12,7 @@ output:
 - Don't forget to check and set your working directory
 
 ```{r}
-##run the following lines just once 
-#source("http://www.openintro.org/stat/data/cdc.R")
-#dir.create("data")
-#save("cdc", file = "data/cdc.RData", compress = TRUE)
-#if (!exists("cdc")) {load("cdc.RData")}
+cdc  <- data.frame(source("http://www.openintro.org/stat/data/cdc.R"))
 ```
 
 ## Getting the Basics
@@ -63,8 +59,8 @@ CDC
 ```{r}
 library(dplyr)
 library(ggplot2)
-library(oilabs)
-source("http://www.openintro.org/stat/data/arbuthnot.R")
+
+arbuthnot<-data.frame(source("http://www.openintro.org/stat/data/arbuthnot.R"))
 ```
 
 ##Look as Data

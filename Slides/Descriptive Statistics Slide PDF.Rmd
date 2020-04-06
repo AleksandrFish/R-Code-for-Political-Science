@@ -1,0 +1,32 @@
+---
+title: "Descriptive Statistics"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Plan
+
+1. Overview of Last Week
+2. Measurement 
+3. Descriptive Statistics
+4. Readings
+5. Wrap up
+
+## Measurement
+
+* Social science is about developing and testing causal theories:
+  + Does minimum wage change levels of employment?
+  + Does outgroup contact influence views on immigration?
+* Theories are made up of concepts:
+  + Minimum wage, level of employment, outgroup contact, views on
+immigration.
+  + We took these for granted when talking about causality.
+* Important to consider how we measure these concepts.
+  + Some more straightforward: what is your age?
+  + Others more complicated: what does it mean to “be liberal”?
+  + Have to create an operational definition of a concept to make it into a
+variable in our dataset.
+

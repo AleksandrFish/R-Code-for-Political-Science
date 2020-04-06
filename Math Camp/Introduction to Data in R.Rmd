@@ -7,6 +7,7 @@ output: pdf_document
 ##Introduction
 ```{r}
 library(openintro)
+library(ggplot2)
 data(hsb2)
 summary(hsb2)
 str(hsb2)
@@ -36,10 +37,7 @@ glimpse(hsb_big)
 ```{r}
 table(hsb_big$gender)
 ```
-# Drop levels
-```{r}
-hsb_big$gender <- droplevels(hsb_big$gender)
-```
+
 # Another table of number variable
 ```{r}
 table(hsb_big$gender)
@@ -73,7 +71,6 @@ ggplot(email50, aes(x = number_yn)) +
 ```
 # Load packages
 ```{r}
-library(dplyr)
 library(tidyr)
 ```
 # Count number of male and female applicants admitted

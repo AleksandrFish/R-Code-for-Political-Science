@@ -8,7 +8,10 @@ library(naniar)
 library(ggthemes)
 
 # Read Data
-pew2018 = read_sav("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Pew Global Attitudes and Trends 2018/Pew Research Global Attitudes Spring 2018 Dataset WEB FINAL.sav")
+pew2018 <- read_sav("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Code/Pew Global Attitudes and Trends 2018/Pew Research Global Attitudes Spring 2018 Dataset WEB FINAL.sav", user_na=TRUE) %>%
+                  as_factor()
+
+pew2018 = read_sav("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Code/Pew Global Attitudes and Trends 2018/Pew Research Global Attitudes Spring 2018 Dataset WEB FINAL.sav")
 pew2018_label = read.spss("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Pew Global Attitudes and Trends 2018/Pew Research Global Attitudes Spring 2018 Dataset WEB FINAL.sav", to.data.frame=TRUE)
 
 # Get country names
@@ -17,8 +20,9 @@ pew2018_label = select(pew2018_label, ID, country)
 pew2018 = merge(pew2018_label,pew2018,by='ID')
 
 # Select 
-str(pew2018)
-pew = select(pew2018, country, satisfied_democracy, gender20yr, 
+
+pew = pew2018 %>%
+  select(COUNTRY, satisfied_democracy, gender20yr, 
              gender20yr_fu, trade_jobs, econ_power, confid_putin, confid_putin,
              cyberattack_infrastructure, cyberattack_elections, cyberattack_natsec,
              sex, age, d_political_scale_us)
@@ -108,4 +112,19 @@ range(pew$confid_putin, na.rm=TRUE)
 pew$confid_putin[pew$confid_putin %in% c(8,9)] = NA
 pew$confid_putin = 5-pew$confid_putin
 
+# Read Data
+pew2018 <- read_sav("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Code/Pew Global Attitudes and Trends 2018/Pew Research Global Attitudes Spring 2018 Dataset WEB FINAL.sav", user_na=TRUE) %>%
+  as_factor()
 
+
+pew2018 <-  pew2018 %>%
+  mutate(views_on_women = case_when(
+    (gender20yr == "Increased" & gender20yr_fu == "Good thing") | 
+      (gender20yr == "Decreased" & gender20yr_fu == "Bad thing") ~ "Feminist",
+    (gender20yr == "Decreased" & gender20yr_fu == "Good thing") | 
+      (gender20yr == "Increased" & gender20yr_fu == "Bad thing") ~ "Anti-Feminist",
+  ))
+
+table(pew2018$d_political_scale_us, pew2018$views_on_women)
+
+levels(pew2018$d_educ_us_2017)
