@@ -26,7 +26,7 @@ highlight: zenburn
 
 ## Claims in the Media
 
-```{r pressure, echo=FALSE, fig.cap="Do American's Support Impeachment?", out.width = '70%'}
+```{r, echo=FALSE, fig.cap="Do American's Support Impeachment?", out.width = '70%'}
 knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/intro_impeach.jpg")
 ```
 
@@ -102,6 +102,175 @@ inferences
 ## Which is a better Research Question?
 
 
+## The Dataset and you
+
+- A rectangular, case-by-variable dataset
+    - dataset observations (DSOs')
+    
+- Clear unit of analysis
+
+- Quanaitive and qualiative measures
+
+- Calculation of summary statistics
+
+## Happiness Dataset
+
+\tiny
+```{r, warning=FALSE, message=FALSE}
+# Read Happiness Data
+happ2019 = read.csv("C:/Users/afisher/Documents/R Code/Resources/Data/Happiness/2019.csv")
+# First 6 observations
+head(happ2019)
+```
+\normalsize
+
+## Quanitative vs. Qualitative research
+
+- This divide is illusory because all research is qualitative and some involves quantitative data description
+
+## An Example: Opinion
+
+- _Opinion_ is a summay evaluation of a particular object
+
+- Only one necessary feature: evaluation/favorability
+
+- How do we measure this?
+
+## Operationalization
+
+- Measure features
+    - Level of measurement
+    - How to score each case on each feature
+    - Be concrete
+- Aggregate feature measurements
+    - Sum? Average? AND logical?
+    - Range of possible values
+    - Justify against criticisms/alternatives
+
+## Operationalization
+
+- To study concepts, we need to be able to observe those concepts and encode them as variables
+
+- The definition of _variable_: A dimension that describes an observation or, the operationalization of a concept
+
+## Operationalization
+
+- Definition
+    - Feature
+        - Indicator(s)
+
+## Examples
+
+- What are concepts that we use often in politics that are difficult to measure?
+
+
+## Activity!
+
+- Concept: Democracy
+- Attribute: Free and fair elections
+- Measure:
+    - Categorical
+    - Ordinal
+    - Numeric
+
+## Assessing Measurement Quality
+
+- Conceptual clarity
+
+- Construct validity
+    - Convergent validity
+    - Divergent validity
+    
+- Accuracy and precision
+
+## Assessing Measures
+
+- _Conceptual clarity_ is about knowing what we want to measure
+- Sloppy concepts make for bad measures
+    - Ambiguity
+    - Vagueness
+
+## Assessing Measures 
+
+- _Construct validity_ is the degree to which a variable measures a concept
+- Construct validity is **high** if a variable is a measure of the concept we care about
+- Construct validity is **low** if a variable is actually a measure of something else
+
+## Example Polity
+
+Institutionalized Democracy: _Democracy is conceived as three
+essential, interdependent elements_. One is the **presence of
+institutions and procedures through which citizens can
+express effective preferences about alternative policies
+and leaders**. Second is the existence of **institutionalized
+constraints on the exercise of power by the executive**.
+Third is the **guarantee of civil liberties to all citizens in
+their daily lives and in acts of political participation**.
+Other aspects of plural democracy, such as the rule of law,
+systems of checks and balances, freedom of the press, and so
+on are means to, or specific manifestations of, these general
+principles. We do not include coded data on civil liberties.
+
+## Assessing Construct Validity
+
+- Multiple Measures
+
+- Look for:
+  - Convergence (Convergent validity)
+  - Discrimination (Discriminant validity)
+  
+- Convergent validity tests whether constructs that should be related, are related. 
+- Discriminant validity tests whether believed unrelated constructs are, in fact, unrelated.
+
+## Using Multiple Indicator
+
+- Choose the "best" one
+
+- Must have all indicators to be coded "1"
+
+- Scale the indicators (sum or mean)
+
+## Accuracy and Precision
+
+- **Accuracy** is how close a measured value is to the actual (true) value.
+
+- **Precision** is how close the measured values are to each other.
+
+## Accuracy vs. Precision 
+
+```{r, echo=FALSE, fig.cap="Accuracy vs Precision", out.width = '70%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/accuracy.png")
+```
+
+## Reliability
+
+- **Reliability**: To what extent would our measure yield the
+same results if we went out and collected more
+data? 
+
+- The more consistent the results, the higher the reliability
+
+- Example: 
+    - “Will you vote for Trump in 2020?”
+    - “On a scale from 0 (negative) to 100
+    (positive), what is your opinion of Trump?”
+
+- Second question is likely to be less reliable.
+
+## Examples of Reliability Concerns
+
+- _Converse (1964)_ found that most people’s
+opinions on issues as measured by survey
+questions appeared to vary randomly over time.
+His conclusion: people have “non-attitudes,” are
+ignorant of even basic political issues.
+
+- _Achen (1975)_ argued this was actually a
+reliability problem – the apparent attitude
+instability was due to unreliable measures of
+political attitudes.
+
+- Debate is still unresolved today.
 
 ## Data Types
 
@@ -116,16 +285,16 @@ inferences
 - **Ordinal**:
     - categories with a specified order
     - think survey responses (strongly agree, somewhat agree,...)
-    
-## Cyanide and Happiness 2017 Politics Poll
-```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-library(ggplot2)
-library(tidyverse)
-library(ggthemes)
-# read in CSV ( File path should have "/" slashes)
-cah = read.csv('C:/Users/afisher/Documents/R Code/Resources/Data/Pulse of the Nation/201710cah_clean.csv')
 
-```
+## Why do we care?
+
+- Once we have measured variables for observations, we can conduct analysis!
+
+- And once we have analysis, we can draw inferences and make evidence-based claims.
+
+## Now for some R...    
+
+
 
 ## Looking at the Data (dim and glimpse)
 
@@ -510,4 +679,12 @@ arbuthnot %>%
 ```
 \normalsize
 
+## Cyanide and Happiness 2017 Politics Poll
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(ggplot2)
+library(tidyverse)
+library(ggthemes)
+# read in CSV ( File path should have "/" slashes)
+cah = read.csv('C:/Users/afisher/Documents/R Code/Resources/Data/Pulse of the Nation/201710cah_clean.csv')
+```
 

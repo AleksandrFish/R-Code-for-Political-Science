@@ -1,0 +1,97 @@
+---
+title: "Visualization"
+author: "Aleksandr Fisher"
+output: beamer_presentation
+theme: metropolis
+latex_engine: xelatex
+highlight: zenburn
+
+---
+## (Really) Bad Visualizations 
+
+```{r, echo=FALSE, fig.cap="Panel study that examined how much high school seniors retained the party affiliations of their parents", out.width = '70%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/badchart1.png")
+```
+
+## Improved Visalization
+
+```{r, echo=FALSE, fig.cap="Panel study that examined how much high school seniors retained the party affiliations of their parents", out.width = '70%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/goodchart1.png")
+```
+
+## Basic Principles
+
+- Be honest
+- Data-ink ratio
+- Tell a story
+- Steer reader attention
+- Use balanced color palettes
+
+## In R...
+
+- R has 5+ graphics “systems”
+  - Base graphics
+  - The ggplot2 package
+  - The lattice package
+  - The plotrix package
+  - The htmlwidgets package + JavaScript’s d3 library
+  
+## ggplot2
+
+- Most coherent graphics system
+- Based on a “grammar” of graphics
+- Easily customized using various “themes”
+
+## A bit about the grammar
+
+- `ggplot()` creates a plot object
+- `aes` describes a mapping of data to a visual element (e.g., color, shape, etc.)
+- `geom_*()` displays a particular graphical representation
+- `scale_*()` modifies the axes
+- `coord_*()` modifies the coordinate system
+- `theme_*()` modifies the overall look
+- `facet_*()` creates small multiples
+  - Some built-in to ggplot2
+  - Some in an add-on package (ggthemes)
+  
+## Ways to display a variable
+
+- In a scatterplot, `geom point()` allows us to display a variable as:
+  - X/Y Axis variable (via `aes(x=, y=)`)
+  - Colour (via `aes(color=)`)
+  - Alpha (via `aes(alpha=)`)
+  - Size (via `aes(size=)`)
+  - Shape (via `aes(shape=)`)
+  - Facets (via `facet wrap()`)
+  
+## Misleading charts (truncating the scale)
+  
+```{r, echo=FALSE, fig.cap="Mistake:Truncating the scale", out.width = '90%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/badchart2.png")
+```
+
+
+## Misleading charts (forced relationship)
+
+```{r, echo=FALSE, fig.cap="Mistake:Forcing a relationship by cherry-picking scales", out.width = '90%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/badchart3.png")
+```
+
+## Misleading charts (visualization method)
+
+```{r, echo=FALSE, fig.cap="Mistake: Choosing the wrong visualisation method", out.width = '90%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/badchart4.png")
+```
+
+## Misleading charts (skewed axis)
+
+```{r, echo=FALSE, fig.cap="Skewing the y-axis on Planned Parenthood data", out.width = '80%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/badchart5.jpg")
+```
+
+## Misleading charts (skewed axis) 
+
+```{r, echo=FALSE, fig.cap="Politfact's New Graph", out.width = '90%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/goodchart2.png")
+```
+

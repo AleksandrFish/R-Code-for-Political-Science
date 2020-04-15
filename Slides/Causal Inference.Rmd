@@ -1,0 +1,43 @@
+---
+title: "Causality"
+author: "Aleksandr Fisher"
+date: "4/15/2020"
+output: beamer_presentation
+theme: metropolis
+latex_engine: xelatex
+highlight: zenburn
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Causal Questions
+
+- Does the minimum wage increase the unemployment rate?
+  - Unemployment rate went up aǒter the minimum wage increased
+  - Would the unemployment rate have gone up, had the minimum wage increase not occurred?
+- Does race affect one’s job prospect?
+  - Jamal applied for a job but did not get it
+  - Would Jamal have gotten a job if he were white?
+  
+## Logic of Causality
+
+- Our intuition about causation relies too heavily on simple comparisons of
+pre-post change in outcomes before and after something happens
+  - No change: no causation
+  - Increase in outcome: positive effect
+  - Decrease in outcome: negative effect
+
+- Comparison between factual and counterfactual
+- **Fundamental problem of causal inference**: We must infer counterfactual
+outcomes
+- No causation without manipulation: **immutable characteristics**
+
+
+
+## For more see...
+
+- https://uclspp.github.io/PUBL0050/
+- https://egap.org/methods-guides/10-things-you-need-know-about-causal-inference

@@ -119,7 +119,100 @@ $$\frac{\sum((x - \bar{x})^{2})}{n-1}$$
     - Units now on the scale of standard deviations away from the mean
     - Intuition: data more than 3 SDs away from mean are rare.
 
+## Shape
+
+- _Skewness_
+  - Positive/right skew
+  - Symmetric
+  - Negative/left skew
+  
+- _Kurtosis_: peakedness of a distribution
+
+## Skewness
+
+```{r, echo=FALSE, fig.cap="Skewness", out.width = '90%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/skew.png")
+```
+
+## Kurtosis
+
+```{r, echo=FALSE, fig.cap="Kurtosis", out.width = '90%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/kurt.jpg")
+```
+
+## Relationship
+
+- **Covariance**: provides a measure of the strength of the correlation between two or more sets of random variates.
+
+$$cov_{x,y}=\frac{\sum_{i=1}^{N}(x_{i}-\bar{x})(y_{i}-\bar{y})}{N-1}$$
+
+- **Correlation** is the degree to which two or more quantities are linearly associated
+
+$$r = \frac{{}\sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y})}
+{\sqrt{\sum_{i=1}^{n} (x_i - \overline{x})^2(y_i - \overline{y})^2}}$$
+
+## Correlation
+
+
+```{r, echo=FALSE, fig.cap="Correlation by hand", out.width = '80%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/corrbyhand.png")
+```
+
+## Correlation
+
+- Correlation is **Positive** when the values **increase** together
+- Correlation is **Negative** when one value **decreases** as the other increases
+
+- Correlation can have a value:
+
+  - 1 is a perfect **positive** correlation
+  - 0 is no correlation (the values don't seem linked at all)
+  - -1 is a perfect **negative** correlation
+
+## Correlation
+
+```{r, echo=FALSE, fig.cap="Correlation", out.width = '80%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/correlation.png")
+```
+
+## Correlation is not good at curves
+
+```{r, echo=FALSE, fig.cap="Anscombe's Quartet", out.width = '80%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/ans.png")
+```
+
+## Correlation is not Causation
+
+- What it really means is that a correlation does not prove one thing causes the other:
+
+  - One thing might cause the other
+  - The other might cause the first to happen
+  - They may be linked by a different thing
+  - Or it could be random chance!
+
+## Spurious Correlations
+
+```{r, echo=FALSE, fig.cap="Correlation is NOT Causation", out.width = '80%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/cage.png")
+```
+## Examples
+
+- Age and conservatism
+- GDP and democracy
+- Personality traits and political ideologies
+- Healthcare spending and happiness
+
+## In R...
+
+- `mean()`
+- `median()`, `min()`, `max()`, `quantile()`
+- `var()`
+- `sd()`
+- `cov()`
+- `cor()`
+
 ## Studying Feelings Toward Democracy
+
 - 2018 Pew Study
 - 27 countries, ~ 30,000 respondents
 - **Question**: How satisfied are you with the way democracy is working in our country – very satisfied, somewhat satisfied, not too satisfied, or not at all satisfied? 
@@ -366,9 +459,7 @@ ggplot(pew)+
   coord_flip() +
   facet_wrap(~partyid2)
 ```
-
 ## Satisfaction with democracy by party
 
 - Why are Republicans more satified with democracy?
-
 
