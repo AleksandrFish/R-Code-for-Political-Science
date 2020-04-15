@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.26)  8 APR 2020 12:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.26)  9 APR 2020 16:35
 entering extended mode
-**./Descriptive-Statistics.tex
-(Descriptive-Statistics.tex
+**./Introduction.tex
+(Introduction.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06>
 ("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamer.cl
@@ -1052,8 +1052,8 @@ end-pdfmode.def"
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count334
 \l__pdf_internal_box=\box80
-) (Descriptive-Statistics.aux)
-\openout1 = `Descriptive-Statistics.aux'.
+) (Introduction.aux)
+\openout1 = `Introduction.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
 LaTeX Font Info:    ... okay on input line 147.
@@ -1235,291 +1235,406 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(Descriptive-Statistics.nav)
+(Introduction.nav)
 Overfull \vbox (44.55624pt too high) detected at line 148
  []
 
 [1
 
-{C:/Users/afisher/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
-
-]
+{C:/Users/afisher/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-210.
+171.
 ("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmss.fd"
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3
+) [2
 
-] [4
+]
+<C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
+or Slides/intro_img.jpg, id=28, 381.425pt x 286.06876pt>
+File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
+ges For Slides/intro_img.jpg Graphic file (type jpg)
+<use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
+es For Slides/intro_img.jpg>
+Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
+-Science/Slides/Images For Slides/intro_img.jpg  used on input line 184.
+(pdftex.def)             Requested size: 215.09811pt x 161.3236pt.
+[3
 
-] [5
+pdfTeX warning (ext4): destination with the same identifier (name{id}) has been
+ already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.184 \end{frame}
+                  <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Scien
+ce/Slides/Images For Slides/intro_img.jpg>]
+<C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
+or Slides/intro_impeach.jpg, id=36, 934.49126pt x 525.965pt>
+File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
+ges For Slides/intro_impeach.jpg Graphic file (type jpg)
+<use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
+es For Slides/intro_impeach.jpg>
+Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
+-Science/Slides/Images For Slides/intro_impeach.jpg  used on input line 193.
+(pdftex.def)             Requested size: 215.09958pt x 121.0657pt.
+[4
+
+ <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
+For Slides/intro_impeach.jpg>] [5
 
 ] [6
 
-] [7
+]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 247.
+[7
 
 ] [8
 
-]
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-401.
-("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
-File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmss' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-01.
-("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-401.
-("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-401.
-("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 401.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 401.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 401.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 401
-.
-("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
-"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msa
-.cfg"
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 401
-.
-("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
-"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msb
-.cfg"
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 401.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 401.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 401.
-[9
+] [9
 
 ] [10
 
-] [11
+]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 340.
+[11
 
 ] [12
 
-]
-\openout4 = `Descriptive-Statistics.vrb'.
+] [13
 
-(Descriptive-Statistics.vrb
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-3.
+] [14
+
+] [15
+
+] [16
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
+.
 ("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <6> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 14.
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-16.
-("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmtt.fd"
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [13
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 9.
+)
+Overfull \vbox (14.54164pt too high) detected at line 459
+ []
+
+[17
 
 ]
-\openout4 = `Descriptive-Statistics.vrb'.
+\openout4 = `Introduction.vrb'.
 
-(Descriptive-Statistics.vrb) [14
-
-]
-\openout4 = `Descriptive-Statistics.vrb'.
-
-(Descriptive-Statistics.vrb) [15
-
-]
-\openout4 = `Descriptive-Statistics.vrb'.
-
-(Descriptive-Statistics.vrb) [16
-
-]
-\openout4 = `Descriptive-Statistics.vrb'.
-
-(Descriptive-Statistics.vrb) [17
-
-]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-6-1.pdf, id=130, 722.
-7pt x 505.89pt>
-File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-6-1.pdf Graphic 
-file (type pdf)
-<use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-6-1.pdf  used on input line 681.
-(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
-
-Overfull \vbox (3.35876pt too high) detected at line 681
+(Introduction.vrb)
+Overfull \vbox (90.03021pt too high) detected at line 513
  []
 
 [18
 
- <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-6-1.pdf>]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-7-1.pdf, id=142, 722.
-7pt x 505.89pt>
-File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-7-1.pdf Graphic 
-file (type pdf)
-<use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-7-1.pdf  used on input line 689.
-(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+]
+\openout4 = `Introduction.vrb'.
 
-Overfull \vbox (3.35876pt too high) detected at line 689
- []
-
-[19
-
- <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-7-1.pdf>]
-\openout4 = `Descriptive-Statistics.vrb'.
-
-(Descriptive-Statistics.vrb
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 28.
-) [20
+(Introduction.vrb
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 12.
+) [19
 
 ]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-9-1.pdf, id=162, 722.
-7pt x 505.89pt>
-File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-9-1.pdf Graphic 
-file (type pdf)
-<use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-9-1.pdf>
-Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-9-1.pdf  used on input line 747.
-(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+\openout4 = `Introduction.vrb'.
 
-Overfull \vbox (3.35876pt too high) detected at line 747
- []
-
-[21
-
- <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-9-1.pdf>] [22
+(Introduction.vrb) [20
 
 ]
-\openout4 = `Descriptive-Statistics.vrb'.
+\openout4 = `Introduction.vrb'.
 
-(Descriptive-Statistics.vrb) [23
+(Introduction.vrb) [21
 
-]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-11-1.pdf, id=187, 722
-.7pt x 505.89pt>
-File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-11-1.pdf Graphic
- file (type pdf)
-<use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-11-1.pdf>
-Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-11-1.pdf  used on input line 810.
-(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
-
-Overfull \vbox (3.35876pt too high) detected at line 810
- []
-
-[24
-
- <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-11-1.pdf>]
-\openout4 = `Descriptive-Statistics.vrb'.
-
-(Descriptive-Statistics.vrb) [25
+] [22
 
 ]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-13-1.pdf, id=207, 722
-.7pt x 505.89pt>
-File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-13-1.pdf Graphic
- file (type pdf)
-<use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-13-1.pdf>
-Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-13-1.pdf  used on input line 857.
-(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+\openout4 = `Introduction.vrb'.
 
-Overfull \vbox (3.35876pt too high) detected at line 857
- []
-
-[26
-
- <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-13-1.pdf>]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-14-1.pdf, id=220, 722
-.7pt x 505.89pt>
-File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-14-1.pdf Graphic
- file (type pdf)
-<use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-14-1.pdf>
-Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-14-1.pdf  used on input line 864.
-(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
-
-Overfull \vbox (3.35876pt too high) detected at line 864
- []
-
-[27
-
- <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-14-1.pdf>] [28
+(Introduction.vrb) [23
 
 ]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [24
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [25
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [26
+
+] [27
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [28
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [29
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [30
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [31
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [32
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb
+<Introduction_files/figure-beamer/unnamed-chunk-16-1.pdf, id=222, 722.7pt x 505
+.89pt>
+File: Introduction_files/figure-beamer/unnamed-chunk-16-1.pdf Graphic file (typ
+e pdf)
+<use Introduction_files/figure-beamer/unnamed-chunk-16-1.pdf>
+Package pdftex.def Info: Introduction_files/figure-beamer/unnamed-chunk-16-1.pd
+f  used on input line 12.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+)
+Overfull \vbox (29.03625pt too high) detected at line 921
+ []
+
+[33
+
+ <./Introduction_files/figure-beamer/unnamed-chunk-16-1.pdf>]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [34
+
+]
+<Introduction_files/figure-beamer/unnamed-chunk-18-1.pdf, id=240, 722.7pt x 505
+.89pt>
+File: Introduction_files/figure-beamer/unnamed-chunk-18-1.pdf Graphic file (typ
+e pdf)
+<use Introduction_files/figure-beamer/unnamed-chunk-18-1.pdf>
+Package pdftex.def Info: Introduction_files/figure-beamer/unnamed-chunk-18-1.pd
+f  used on input line 948.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+
+Overfull \vbox (3.35876pt too high) detected at line 948
+ []
+
+[35
+
+ <./Introduction_files/figure-beamer/unnamed-chunk-18-1.pdf>]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb
+<Introduction_files/figure-beamer/unnamed-chunk-19-1.pdf, id=252, 722.7pt x 505
+.89pt>
+File: Introduction_files/figure-beamer/unnamed-chunk-19-1.pdf Graphic file (typ
+e pdf)
+<use Introduction_files/figure-beamer/unnamed-chunk-19-1.pdf>
+Package pdftex.def Info: Introduction_files/figure-beamer/unnamed-chunk-19-1.pd
+f  used on input line 12.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+)
+Overfull \vbox (16.85034pt too high) detected at line 964
+ []
+
+[36
+
+ <./Introduction_files/figure-beamer/unnamed-chunk-19-1.pdf>]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb
+<Introduction_files/figure-beamer/unnamed-chunk-20-1.pdf, id=264, 722.7pt x 505
+.89pt>
+File: Introduction_files/figure-beamer/unnamed-chunk-20-1.pdf Graphic file (typ
+e pdf)
+<use Introduction_files/figure-beamer/unnamed-chunk-20-1.pdf>
+Package pdftex.def Info: Introduction_files/figure-beamer/unnamed-chunk-20-1.pd
+f  used on input line 12.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+)
+Overfull \vbox (16.85034pt too high) detected at line 980
+ []
+
+[37
+
+ <./Introduction_files/figure-beamer/unnamed-chunk-20-1.pdf>]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [38
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [39
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [40
+
+] [41
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb
+<Introduction_files/figure-beamer/unnamed-chunk-23-1.pdf, id=301, 722.7pt x 505
+.89pt>
+File: Introduction_files/figure-beamer/unnamed-chunk-23-1.pdf Graphic file (typ
+e pdf)
+<use Introduction_files/figure-beamer/unnamed-chunk-23-1.pdf>
+Package pdftex.def Info: Introduction_files/figure-beamer/unnamed-chunk-23-1.pd
+f  used on input line 12.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+)
+Overfull \vbox (16.85034pt too high) detected at line 1094
+ []
+
+[42
+
+ <./Introduction_files/figure-beamer/unnamed-chunk-23-1.pdf>]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb
+<Introduction_files/figure-beamer/unnamed-chunk-24-1.pdf, id=313, 722.7pt x 505
+.89pt>
+File: Introduction_files/figure-beamer/unnamed-chunk-24-1.pdf Graphic file (typ
+e pdf)
+<use Introduction_files/figure-beamer/unnamed-chunk-24-1.pdf>
+Package pdftex.def Info: Introduction_files/figure-beamer/unnamed-chunk-24-1.pd
+f  used on input line 12.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+)
+Overfull \vbox (16.85034pt too high) detected at line 1110
+ []
+
+[43
+
+ <./Introduction_files/figure-beamer/unnamed-chunk-24-1.pdf>]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [44
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [45
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [46
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [47
+
+] [48
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [49
+
+]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [50
+
+]
+<Introduction_files/figure-beamer/unnamed-chunk-30-1.pdf, id=369, 722.7pt x 505
+.89pt>
+File: Introduction_files/figure-beamer/unnamed-chunk-30-1.pdf Graphic file (typ
+e pdf)
+<use Introduction_files/figure-beamer/unnamed-chunk-30-1.pdf>
+Package pdftex.def Info: Introduction_files/figure-beamer/unnamed-chunk-30-1.pd
+f  used on input line 1290.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+
+Overfull \vbox (3.35876pt too high) detected at line 1290
+ []
+
+[51
+
+ <./Introduction_files/figure-beamer/unnamed-chunk-30-1.pdf>]
+\openout4 = `Introduction.vrb'.
+
+(Introduction.vrb) [52
+
+]
+<Introduction_files/figure-beamer/unnamed-chunk-32-1.pdf, id=387, 722.7pt x 505
+.89pt>
+File: Introduction_files/figure-beamer/unnamed-chunk-32-1.pdf Graphic file (typ
+e pdf)
+<use Introduction_files/figure-beamer/unnamed-chunk-32-1.pdf>
+Package pdftex.def Info: Introduction_files/figure-beamer/unnamed-chunk-32-1.pd
+f  used on input line 1330.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+
+Overfull \vbox (3.35876pt too high) detected at line 1330
+ []
+
+[53
+
+ <./Introduction_files/figure-beamer/unnamed-chunk-32-1.pdf>]
 \tf@nav=\write6
-\openout6 = `Descriptive-Statistics.nav'.
+\openout6 = `Introduction.nav'.
 
 \tf@toc=\write7
-\openout7 = `Descriptive-Statistics.toc'.
+\openout7 = `Introduction.toc'.
 
 \tf@snm=\write8
-\openout8 = `Descriptive-Statistics.snm'.
+\openout8 = `Introduction.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 877.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 877.
-(Descriptive-Statistics.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 877.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 877.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1332.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1332.
+(Introduction.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1332.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1332.
  ) 
 Here is how much of TeX's memory you used:
- 27419 strings out of 480932
- 531756 string characters out of 2898969
- 780329 words of memory out of 3000000
- 42546 multiletter control sequences out of 15000+200000
- 588219 words of font info for 80 fonts, out of 3000000 for 9000
+ 27437 strings out of 480932
+ 532865 string characters out of 2898969
+ 800662 words of memory out of 3000000
+ 42464 multiletter control sequences out of 15000+200000
+ 577087 words of font info for 72 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,13n,95p,1825b,574s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1
-.enc}{C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-
-ec.enc}{C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/l
-m-mathit.enc}{C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
-s/lm/lm-mathsy.enc}{C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/en
-c/dvips/lm/lm-rm.enc}{C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/
-enc/dvips/lm/lm-mathex.enc}<C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/lm/lmex10.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users/afisher/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/afisher/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Users/afisher/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/afisher/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Users/afis
-her/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/User
-s/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C
-:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.
-pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
-mtt8.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/lm/lmtti10.pfb>
-Output written on Descriptive-Statistics.pdf (28 pages, 270711 bytes).
+ 71i,13n,95p,1815b,574s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
+enc}{C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-t
+s1.enc}<C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
+m/lmss10.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmss8.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmssbx10.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/lm/lmsso10.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Users/afisher/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Users/afisher/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Users/afisher/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb>
+Output written on Introduction.pdf (53 pages, 426442 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 10313 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 464 PDF objects out of 1000 (max. 8388607)
+ 161 named destinations out of 1000 (max. 500000)
+ 12381 words of extra memory for PDF output out of 14400 (max. 10000000)
 

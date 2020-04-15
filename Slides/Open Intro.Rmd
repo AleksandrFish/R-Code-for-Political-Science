@@ -1,0 +1,1152 @@
+---
+title: "Open Intro Fall 2020"
+author: "Aleksandr Fisher"
+output: beamer_presentation
+theme: metropolis
+latex_engine: xelatex
+highlight: zenburn
+
+---
+
+## Getting the Basics
+
+- Don't forget to check and set your working directory
+
+```{r}
+source("http://www.openintro.org/stat/data/cdc.R")
+```
+
+## Getting the Basics
+
+- The Behavioral Risk Factor Surveillance System (BRFSS) is an annual telephone survey of 350,000 people in the United States. The BRFSS Web site contains a complete description of the survey, including the research questions that motivate the study and many interesting results derived from the data.
+
+```{r}
+library(tidyverse)
+data(cdc)
+CDC <- tbl_df(cdc)
+class(cdc)
+```
+
+## Explore the data
+
+- You can see and inspect the data set comfortably in RStudio with the View() command, which invokes a spreadsheet-style data viewer on a matrix-like R object.
+
+```{r}
+CDC
+```
+
+
+## Explore the data
+
+- After loading the data and converting it into a tibble, one should inspect the data to get some understanding about the structure and content. Common funtions for these tasks are:
+
+- `<name-of-data-tibble>`: Display the first 10 rows and all columns that fit on one screen. It also prints an abbreviated description of the column type.
+
+- `head(<name-of-df>)`, `tail(<name-of-df>)`: Return the first or last part. Use these commands if it is not a tibble but a data frame
+
+- `dim()`: Retrieve the dimension
+
+- `names()`: Get the names
+
+- `str()`: Display compactly the internal structure
+  
+- `glimpse()`: is the dplyr-version of str() showing values of each variable the whole sceen width, but does not display the number of levels and names of factor variables. But this feature of str() cannot be displayed completly with either many or long levels names.
+
+- `View()`: With RStudio you can see and inspect the data set comfortably. The View() function invokes a spreadsheet-style data viewer.
+
+
+## Install Packages 
+
+When you download R from the Comprehensive R Archive Network (CRAN), you get that ``base" R system
+
+The base R system comes with basic functionality; implements the R language
+
+One reason R is so useful is the large collection of packages that extend the basic functionality of R
+
+R packages are developed and published by the larger R community
+
+```{r}
+library(dplyr) # for data manipulation
+library(ggplot2) # for plotting
+
+```
+
+##Look as Data
+
+The Arbuthnot data set refers to Dr. John Arbuthnot, an 18th century physician, writer, and mathematician. He was interested in the ratio of newborn boys to newborn girls, so he gathered the baptism records for children born in London for every year from 1629 to 1710. We can view the data by typing its name into the console.
+
+```{r}
+source("http://www.openintro.org/stat/data/arbuthnot.R")
+dim(arbuthnot)
+glimpse(arbuthnot)
+```
+
+##Look as Data
+```{r}
+names(arbuthnot)
+#We can access the data in a single column of a data frame separately.
+arbuthnot$boys
+```
+
+## Plot Data - Base R
+```{r}
+plot(x = arbuthnot$year, y = arbuthnot$girls)
+```
+
+## Plot Data - qplot R
+
+- R has some powerful functions for making graphics. We can create a simple plot of the number of girls baptized per year with qplot.
+
+```{r}
+qplot(x = year, y = girls, data = arbuthnot)
+```
+
+## Plot Data - line graph
+```{r}
+plot(x = arbuthnot$year, y = arbuthnot$girls, type = "l")
+```
+
+## Plot Data - line graph
+```{r}
+qplot(x = year, y = girls, data = arbuthnot, geom = "line")
+?plot
+```
+
+## Manipulating Data - Creating New Variables
+
+- Now, suppose we want to plot the total number of baptisms. To compute this, we could use the fact that R is really just a big calculator. We can type in mathematical expressions like
+
+```{r}
+
+5218 + 4683
+
+arbuthnot$boys + arbuthnot$girls
+```
+
+## Manipulating Data - Creating New Variables (mutate)
+
+- We’ll be using this new vector to generate some plots, so we’ll want to save it as a permanent column in our data frame.
+
+```{r}
+arbuthnot <- arbuthnot %>%
+  mutate(total = boys + girls)
+```
+
+- The `%>%` operator is called the piping operator. It takes the output of the previous expression and pipes it into the first argument of the function in the following one. To continue our analogy with mathematical functions, `x %>% f(y)` is equivalent to `f(x, y)`.
+
+## Manipulating Data - Creating New Variables
+
+- __A note on piping:__ Note that we can read these three lines of code as the following:
+
+- "Take the arbuthnot dataset and pipe it into the mutate function. Mutate the arbuthnot data set by creating a new variable called total that is the sum of the variables called boys and girls. 
+
+- Then assign the resulting dataset to the object called arbuthnot, i.e. overwrite the old arbuthnot dataset with the new one containing the new variable."
+
+## Manipulating Data - Adding in plot
+
+```{r}
+plot(arbuthnot$year, arbuthnot$boys + arbuthnot$girls, type = "l")
+```
+
+## Manipulating Data - Adding in qplot
+
+```{r}
+qplot(x = year, y = total, data = arbuthnot, geom = "line")
+```
+
+## Manipulating Data - creating ratios
+
+```{r}
+5218 / 4683
+```
+
+## Manipulating Data - creating ratios
+```{r}
+arbuthnot$boys / arbuthnot$girls
+
+arbuthnot <- arbuthnot %>%
+  mutate(boy_to_girl_ratio = boys / girls)
+```
+
+## Manipulating Data - ratios using mutate
+
+```{r}
+5218 / (5218 + 4683)
+
+arbuthnot$boys / (arbuthnot$boys + arbuthnot$girls)
+
+arbuthnot <- arbuthnot %>%
+  mutate(boy_ratio = boys / total)
+```
+
+## Manipulating Data - True/False
+
+```{r}
+arbuthnot$boys > arbuthnot$girls
+```
+
+
+## Manipulating Data
+
+- Make a plot that displays the boy-to-girl ratio for every year in the data set. What do you see? Does Arbuthnot’s observation about boys being born in greater proportion than girls hold up in the U.S.? Include the plot in your response.
+
+- In what year did we see the most total number of births in the U.S.? You can refer to the help files or the R reference card http://cran.r-project.org/doc/contrib/Short-refcard.pdf to find helpful commands.
+
+## Some More Plots
+
+```{r}
+arbuthnot %>% ggplot(aes(year, total)) +
+        geom_line() +
+        xlab("Year") + ylab("Baptized children (boys and girls)") +
+        ggtitle("Baptized children, born in London. Recorded by Dr. John Arbuthnot.")
+```
+
+## Some More Plots
+
+- Similarly to how we computed the total number of births, we can compute different kinds of ratios (boys to girls, boys to total, girls to total).
+
+```{r}
+arbuthnot <- arbuthnot %>%
+  mutate(boy_to_girl_ratio = boys / girls)
+arbuthnot <- arbuthnot %>%
+  mutate(boy_ratio = boys / total)
+arbuthnot <- arbuthnot %>%
+  mutate(girl_ratio = girls / total)
+arbuthnot %>% 
+        ggplot(aes(year, boy_to_girl_ratio)) +
+        geom_line() +
+        xlab("Year") + ylab("Baptized ratio (boys to girls)") +
+        ggtitle("Baptized children, born in London. Recorded by Dr. John Arbuthnot.")
+```
+
+- I am now providing a short version of the plot graph with the pipecommand, dropping the names of the arguments for default values but adding labels and title.
+
+## Introduction to Data
+
+```{r}
+source("http://www.openintro.org/stat/data/cdc.R")
+
+names(cdc)
+```
+
+## Introduction to Data 
+- First 6 observations
+
+```{r}
+head(cdc)
+```
+
+## Introduction to Data 
+- Last 6 observations
+
+```{r}
+tail(cdc)
+```
+
+## Introduction to Data - Summary
+
+```{r}
+summary(cdc$weight)
+```
+
+## Introduction to Data - Mean, Variance, Median
+```{r}
+mean(cdc$weight) 
+var(cdc$weight)
+median(cdc$weight)
+```
+
+## Introduction to Data -Tables and Plots
+
+```{r}
+table(cdc$smoke100)
+
+table(cdc$smoke100)/20000
+```
+
+## Introduction to Data -Tables and Plots
+```{r}
+barplot(table(cdc$smoke100))
+```
+
+##Introduction to Data - Tables and Plots
+
+```{r}
+smoke <- table(cdc$smoke100)
+
+barplot(smoke)
+```
+
+## Introduction to Data - 2X2 Table
+ 
+```{r}
+table(cdc$gender,cdc$smoke100)
+```
+
+## Introduction to Data - Mosaic Plot
+```{r}
+mosaicplot(table(cdc$gender,cdc$smoke100))
+```
+
+## Introduction to Data - How R Stores Data
+```{r}
+dim(cdc)
+
+cdc[567,6]
+
+names(cdc)
+```
+
+## Introduction to Data - How R Stores Data
+```{r}
+cdc[1:10,6]
+
+1:10
+```
+
+## Introduction to Data
+
+```{r}
+cdc[1:4,]
+
+head(cdc)
+```
+
+## Introduction to Data
+
+```{r}
+cdc[,6]
+```
+
+## Introduction to Data
+
+```{r}
+
+cdc$weight[567]
+
+cdc$weight[1:10]
+```
+
+## Introduction to Data - Select Variable
+
+```{r echo=T, results='hide'}
+cdc$gender == "m"
+```
+
+##Introduction to Data - Select Variable
+
+```{r}
+cdc$age > 30
+```
+
+##Introduction to Data - Select Variables
+
+```{r}
+mdata <- subset(cdc, cdc$gender == "m")
+
+head(mdata)
+
+m_and_over30 <- subset(cdc, gender == "m" & age > 30)
+
+m_or_over30 <- subset(cdc, gender == "m" | age > 30)
+
+```
+
+## Introduction to Data
+
+```{r}
+boxplot(cdc$height)
+
+summary(cdc$height)
+```
+
+## Introduction to Data
+
+```{r}
+boxplot(cdc$height ~ cdc$gender)
+```
+
+##Introduction to Data
+
+```{r}
+bmi <- (cdc$weight / cdc$height^2) * 703
+boxplot(bmi ~ cdc$genhlth)
+```
+
+## Introduction to Data
+
+```{r}
+hist(cdc$age)
+
+hist(bmi, breaks = 50)
+```
+
+## Introduction to Data - with dyplyr
+
+- The Bureau of Transportation Statistics (BTS) is a statistical agency that is a part of the Research and Innovative Technology Administration (RITA). As its name implies, BTS collects and makes available transportation data, such as the flights data we will be working with in this lab.
+
+- We begin by loading the nycflights data frame. Type the following in your console to load the data:
+
+```{r}
+library(statsr)
+data(nycflights)
+
+names(nycflights)
+```
+
+
+## Introduction to Data - with dyplyr
+
+
+- A very useful function for taking a quick peek at your data frame and viewing its dimensions and data types is `str`, which stands for structure.
+
+```{r}
+str(nycflights)
+```
+
+
+## Introduction to Data - with dyplyr
+
+- Let's start by examing the distribution of departure delays of all flights with a histogram.
+
+## Introduction to Data - with dyplyr
+
+```{r}
+qplot(x = dep_delay, data = nycflights, geom = "histogram")
+```
+
+## Introduction to Data - with dyplyr
+
+- If we want to focus only on departure delays of flights headed to Los Angeles, we need to first filter the data for flights with that destination (dest == "LAX") and then make a histogram of the departure delays of only those flights.
+
+## Introduction to Data - with dyplyr
+
+```{r}
+lax_flights <- nycflights %>%
+  filter(dest == "LAX")
+```
+
+## Introduction to Data - histogram
+
+```{r}
+qplot(x = dep_delay, data = lax_flights, geom = "histogram")
+```
+
+## Introduction to Data - with dyplyr
+
+- Command 1: Take the `nycflights` data frame, filter for flights headed to LAX, and save the result as a new data frame called `lax_flights`.
+    - == means "if it's equal to".
+    - LAX is in quotation marks since it is a character string.
+
+- Command 2: Basically the same qplot call from earlier for making a histogram, except that it uses the smaller data frame for flights headed to LAX instead of all flights.
+
+```{r}
+lax_flights %>%
+  summarise(mean_dd = mean(dep_delay), median_dd = median(dep_delay), n = n())
+```
+
+## Introduction to Data - with dyplyr
+
+- We can also filter based on multiple criteria. Suppose we are interested in flights headed to San Francisco (SFO) in February:
+
+```{r}
+sfo_feb_flights <- nycflights %>%
+  filter(dest == "SFO", month == 2)
+```
+
+## Introduction to Data - with dyplyr
+
+- Another useful technique is quickly calculating summary statistics for various groups in your data frame. For example, we can modify the above command using the group_by function to get the same summary stats for each origin airport:
+
+## Introduction to Data - with dyplyr
+
+```{r}
+sfo_feb_flights %>%
+  group_by(origin) %>%
+  summarise(median_dd = median(dep_delay), iqr_dd = IQR(dep_delay), n_flights = n())
+```
+
+## Introduction to Data - with dyplyr
+
+- Which month would you expect to have the highest average delay departing from an NYC airport?
+
+- Let's think about how we would answer this question:
+
+- First, calculate monthly averages for departure delays. With the new language we are learning, we need to group_by months, then summarise mean departure delays.
+
+- Then, we need to arrange these average delays in descending order
+    
+```{r}
+nycflights %>%
+  group_by(month) %>%
+  summarise(mean_dd = mean(dep_delay)) %>%
+  arrange(desc(mean_dd))
+```
+
+## Probability
+```{r}
+library(dplyr)
+library(ggplot2)
+library(oilabs)
+data(kobe_basket)
+```
+
+##Probability
+
+- Our investigation will focus on the performance of one player: Kobe Bryant of the Los Angeles Lakers. His performance against the Orlando Magic in the 2009 NBA Finals earned him the title Most Valuable Player and many spectators commented on how he appeared to show a hot hand. Let's load some necessary files that we will need for this lab.
+
+```{r}
+kobe_streak <- calc_streak(kobe_basket$shot)
+```
+
+## Probability
+
+```{r}
+barplot(table(kobe_streak))
+qplot(data = kobe_streak, x = length, geom = "bar")
+```
+
+## Probability
+
+- We've shown that Kobe had some long shooting streaks, but are they long enough to support the belief that he had a hot hand? What can we compare them to?
+
+```{r}
+outcomes <- c("heads", "tails")
+sample(outcomes, size = 1, replace = TRUE)
+
+sim_fair_coin <- sample(outcomes, size = 100, replace = TRUE)
+table(sim_fair_coin)
+```
+
+## Probability
+```{r}
+sim_unfair_coin <- sample(outcomes, size = 100, replace = TRUE, prob = c(0.2, 0.8))
+table(sim_unfair_coin)
+
+```
+
+## Probability
+```{r}
+outcomes <- c("H", "M")
+sim_basket <- sample(outcomes, size = 133, replace = TRUE)
+
+kobe_streak <-calc_streak(kobe_basket$shot)
+barplot(table(kobe_streak))
+
+sim_streak <- calc_streak(sim_basket)
+barplot(table(sim_streak))
+```
+
+## Probability
+```{r}
+set.seed(22322)
+shot_outcomes <- c("H", "M")
+sim_basket <- sample(shot_outcomes, size = 133, replace = TRUE, 
+                     prob = c(0.45, 0.55))
+
+
+sim_streak <- calc_streak(sim_basket)
+```
+
+## Probability - ggplot
+
+```{r}
+ggplot(sim_streak, aes(x = length)) +
+                ggtitle("1st Calculating Streaks of Independent Shooter (seed set)") +
+                geom_bar(alpha = 0.5, fill = "green", colour = "black")
+```
+
+
+## The Normal Distribution
+
+- We'll be working with measurements of body dimensions. This data set contains measurements from 247 men and 260 women, most of whom were considered healthy young adults. Let's take a quick peek at the first few rows of the data.
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(oilabs)
+```
+
+## The Normal Distribution
+
+```{r}
+data(bdims)
+head(bdims)
+```
+
+## The Normal Distribution
+
+- We'll be focusing on just three columns to get started: weight in kg (wgt), height in cm (hgt), and sex (m indicates male, f indicates female).
+
+- Since males and females tend to have different body dimensions, it will be useful to create two additional data sets: one with only men and another with only women.
+
+```{r}
+mdims <- bdims %>%
+  filter(sex == "m")
+fdims <- bdims %>%
+  filter(sex == "f")
+```
+
+## The Normal Distribution
+
+* Make a plot (or plots) to visualize the distributions of men's and women's heights. How do their centers, shapes, and spreads compare?
+
+## The Normal Distribution - Histogram
+
+```{r}
+qplot(data = mdims, x = hgt, geom = "histogram")
+qplot(data = fdims, x = hgt, geom = "histogram")
+
+```
+
+## The Normal Distribution
+
+- How does this compare to the regular histogram function
+
+```{r}
+hist(mdims$hgt, xlab = "Male Height", main = "", xlim = c(140, 190), ylim = c(0, 80));
+
+hist(fdims$hgt, xlab = "Female Height", main = "", xlim = c(140, 190), ylim = c(0, 80))
+```
+
+
+## The Normal Distribution
+
+- Does it look bell-shaped or normal? It's tempting to say so when faced with a unimodal symmetric distribution.
+
+- To see how accurate that description is, we can plot a normal distribution curve on top of a histogram to see how closely the data follow a normal distribution. 
+
+- This normal curve should have the same mean and standard deviation as the data.
+
+- We'll be working with women's heights, so let's store them as a separate object and then calculate some statistics that will be referenced later.
+
+
+## The Normal Distribution
+
+```{r}
+fhgtmean <- mean(fdims$hgt)
+fhgtsd   <- sd(fdims$hgt)
+```
+
+- Next we make a density histogram to use as the backdrop and use the lines function to overlay a normal probability curve. 
+
+- The difference between a frequency histogram and a density histogram is that while in a frequency histogram the heights of the bars add up to the total number of observations, in a density histogram the areas of the bars add up to 1. 
+
+- The area of each bar can be calculated as simply the height times the width of the bar. Using a density histogram allows us to properly overlay a normal distribution curve over the histogram since the curve is a normal probability density function that also has area under the curve of 1. 
+
+- Frequency and density histograms both display the same exact shape; they only differ in their y-axis. You can verify this by comparing the frequency histogram you constructed earlier and the density histogram created by the commands below.
+
+## The Normal Distribution
+
+```{r}
+qplot(x = hgt, data = fdims, geom = "blank") +
+  geom_histogram(aes(y = ..density..)) +
+  stat_function(fun = dnorm, args = c(mean = fhgtmean, sd = fhgtsd), col = "tomato")
+```
+
+## The Normal Distribution
+
+- Eyeballing the shape of the histogram is one way to determine if the data appear to be nearly normally distributed, but it can be frustrating to decide just how close the histogram is to the curve. 
+
+- An alternative approach involves constructing a normal probability plot, also called a normal Q-Q plot for "quantile-quantile".
+
+## The Normal Distribution: Q-Q plot
+
+```{r}
+qplot(sample = hgt, data = fdims, geom = "qq")
+```
+
+## The Normal Distribution
+
+- The x-axis values correspond to the quantiles of a theoretically normal curve with mean 0 and standard deviation 1 (i.e., the standard normal distribution). 
+
+- The y-axis values correspond to the quantiles of the original unstandardized sample data. However, even if we were to standardize the sample data values, the Q-Q plot would look identical. 
+
+## The Normal Distribution
+
+- A data set that is nearly normal will result in a probability plot where the points closely follow a diagonal line. Any deviations from normality leads to deviations of these points from that line.
+
+- The plot for female heights shows points that tend to follow the line but with some errant points towards the tails. We're left with the same problem that we encountered with the histogram above: how close is close enough?
+
+## The Normal Distribution
+
+- A useful way to address this question is to rephrase it as: what do probability plots look like for data that I know came from a normal distribution? 
+
+- We can answer this by simulating data from a normal distribution using rnorm.
+
+## The Normal Distribution
+
+```{r}
+sim_norm <- rnorm(n = nrow(fdims), mean = fhgtmean, sd = fhgtsd)
+```
+
+- The first argument indicates how many numbers you'd like to generate, which we specify to be the same number of heights in the fdims data set using the nrow() function. 
+
+- The last two arguments determine the mean and standard deviation of the normal distribution from which the simulated sample will be generated. 
+
+- We can take a look at the shape of our simulated data set, sim_norm, as well as its normal probability plot.
+
+
+## The Normal Distribution
+
+```{r}
+hist(sim_norm)
+```
+
+## The Normal Distribution
+
+
+```{r}
+qqnorm(fdims$hgt)
+qqline(fdims$hgt)
+
+qqnorm(sim_norm)
+qqline(sim_norm)
+```
+
+## The Normal Distribution
+
+- Even better than comparing the original plot to a single plot generated from a normal distribution is to compare it to many more plots using the following function. It shows the Q-Q plot corresponding to the original data in the top left corner, and the Q-Q plots of 8 different simulated normal data. 
+
+## The Normal Distribution
+
+```{r}
+qqnormsim(sample = hgt, data = fdims)
+```
+
+## The Normal Probabilities
+
+- Okay, so now you have a slew of tools to judge whether or not a variable is normally distributed. Why should we care?
+
+- It turns out that statisticians know a lot about the normal distribution. Once we decide that a random variable is approximately normal, we can answer all sorts of questions about that variable related to probability. 
+
+- Take, for example, the question of, "What is the probability that a randomly chosen young adult female is taller than 6 feet (about 182 cm)?" 
+
+## The Normal Probabilities
+
+- If we assume that female heights are normally distributed (a very close approximation is also okay), we can find this probability by calculating a Z score and consulting a Z table (also called a normal probability table). 
+
+- In R, this is done in one step with the function pnorm().
+
+```{r}
+1 - pnorm(q = 182, mean = fhgtmean, sd = fhgtsd)
+```
+
+- Note that the function pnorm() gives the area under the normal curve below a given value, q, with a given mean and standard deviation. 
+
+- Since we're interested in the probability that someone is taller than 182 cm, we have to take one minus that probability.
+
+## The Normal Probabilities
+
+- Assuming a normal distribution has allowed us to calculate a theoretical probability. If we want to calculate the probability empirically, we simply need to determine how many observations fall above 182 then divide this number by the total sample size.
+
+## The Normal Probabilities
+
+```{r}
+fdims %>% 
+  filter(hgt > 182) %>%
+  summarise(percent = n() / nrow(fdims))
+
+sum(fdims$hgt > 182) / length(fdims$hgt)
+```
+
+## Sampling Distributions
+
+- We consider real estate data from the city of Ames, Iowa. The details of every real estate transaction in Ames is recorded by the City Assessor's office. 
+
+- Our particular focus for this lab will be all residential home sales in Ames between 2006 and 2010. This collection represents our population of interest. 
+
+- We would like to learn about these home sales by taking smaller samples from the full population. 
+
+```{r}
+data(ames)
+```
+
+## Sampling Distributions
+
+- We see that there are quite a few variables in the data set, enough to do a very in-depth analysis. For this lab, we'll restrict our attention to just two of the variables: the above ground living area of the house in square feet (area) and the sale price (price).
+
+- We can explore the distribution of areas of homes in the population of home sales visually and with summary statistics. Let's first create a visualization, a histogram:
+
+
+## Sampling Distributions
+
+```{r}
+qplot(data = ames, x = area, binwidth = 250, geom = "histogram")
+```
+
+## Sampling Distributions
+
+- Let's also obtain some summary statistics. Note that we can do this using the summarise function. 
+
+- Some of the functions below should be self explanatory (like mean, median, sd, IQR, min, and max). A new function here is the quantile function which we can use to calculate values corresponding to specific percentile cutoffs in the distribution. 
+
+- Finding these values is useful for describing the distribution, as we can use them for descriptions like "the middle 50% of the homes have areas between such and such square feet".
+
+## Sampling Distributions
+
+```{r}
+ames %>%
+  summarise(mu = mean(area), pop_med = median(area), 
+            sigma = sd(area), pop_iqr = IQR(area),
+            pop_min = min(area), pop_max = max(area),
+            pop_q1 = quantile(area, 0.25),  # first quartile, 25th percentile
+            pop_q3 = quantile(area, 0.75))  # third quartile, 75th percentile
+```
+
+## The unknown sampling distribution
+
+- Here, we have access to the entire population, but this is rarely the case in real life. 
+
+- Gathering information on an entire population is often extremely costly or impossible. Because of this, we often take a sample of the population and use that to understand the properties of the population.
+
+- If we were interested in estimating the mean living area in Ames based on a sample, we can use the sample_n command to survey the population.
+
+```{r}
+samp1 <- ames %>%
+  sample_n(50)
+```
+
+## The unknown sampling distribution
+
+- If we're interested in estimating the average living area in homes in Ames using the sample, our best single guess is the sample mean.
+
+```{r}
+samp1 %>%
+  summarise(x_bar = mean(area))
+```
+
+## The unknown sampling distribution
+```{r}
+hist(samp1$area)
+```
+
+## The unknown sampling distribution
+
+- Not surprisingly, every time we take another random sample, we get a different sample mean. 
+
+- It's useful to get a sense of just how much variability we should expect when estimating the population mean this way. 
+
+- The distribution of sample means, called the sampling distribution (of the mean), can help us understand this variability. In this lab, because we have access to the population, we can build up the sampling distribution for the sample mean by repeating the above steps many times. 
+
+- Here we will generate 15,000 samples and compute the sample mean of each. Note that we specify that replace = TRUE since sampling distributions are constructed by sampling with replacement.
+
+```{r}
+sample_means50 <- ames %>%
+                    rep_sample_n(size = 50, reps = 15000, replace = TRUE) %>%
+                    summarise(x_bar = mean(area))
+```
+
+## The unknown sampling distribution
+
+```{r}
+qplot(data = sample_means50, x = x_bar)
+```
+
+## Interlude: Sampling distributions
+
+- The idea behind the rep_sample_n function is repetition. Earlier we took a single sample of size n (50) from the population of all houses in Ames. With this new function we are able to repeat this sampling procedure rep times in order to build a distribution of a series of sample statistics, which is called the sampling distribution.
+
+- Note that in practice one rarely gets to build true sampling distributions, because we rarely have access to data from the entire population.
+
+## Interlude: Sampling distributions
+
+- Without the rep_sample_n function, this would be painful. We would have to manually run the following code 15,000 times
+
+```{r}
+ames %>%
+  sample_n(size = 50) %>%
+  summarise(x_bar = mean(area))
+```
+
+## Sample size and the sampling distribution
+
+- Mechanics aside, let's return to the reason we used the `rep_sample_n` function: to compute a sampling distribution, specifically, the sampling distribution of the mean home area for samples of 50 houses.
+
+## Sample size and the sampling distribution
+
+```{r}
+qplot(data = sample_means50, x = x_bar, geom = "histogram")
+```
+
+## Foundations for statistical inference - Confidence intervals
+
+- We consider real estate data from the city of Ames, Iowa. This is the same dataset used in the previous lab. The details of every real estate transaction in Ames is recorded by the City Assessor's office. 
+
+- Our particular focus for this lab will be all residential home sales in Ames between 2006 and 2010. This collection represents our population of interest. In this lab we would like to learn about these home sales by taking smaller samples from the full population. Let's load the data.
+
+## Foundations for statistical inference - Confidence intervals
+
+- We'll start with a simple random sample of size 60 from the population.
+
+```{r}
+n <- 60
+samp <- sample_n(ames, n)
+```
+
+## Standard Deviations
+
+- The __Standard Deviation__ is a measure of how spread out numbers are.
+
+- __68%__ of values are within
+__1 standard deviation__	of the mean
+
+- __95%__ of values are within 
+__2 standard deviations__ of the mean
+
+- __99.7%__ of values are within 
+__3 standard deviations__ of the mean
+
+## Standard Deviations
+
+- The number of standard deviations from the mean is also called the "Standard Score", "sigma" or "z-score".
+
+- Example:
+
+$$ \mu = 1.40$$
+$$ \sigma =0.15$$
+
+- How many standard deviations is 1.85m from the mean? 
+
+## Standard Score
+
+- To calculate the __standard score__ ("z-score")
+
+- First, subtract the mean from number
+
+- Second, divide by the standard deviation
+    
+- Here is the formula for z-score that we have been using:
+
+$$z = \frac{x-\mu}{\sigma}$$
+
+## Confidence intervals
+
+- Based only on this single sample, the best estimate of the average living area of houses sold in Ames would be the sample mean, usually denoted as $\bar{x}$ (here we're calling it `x_bar`). 
+
+- That serves as a good point estimate but it would be useful to also communicate how uncertain we are of that estimate. This uncertainty can be quantified using a confidence interval.
+
+- A confidence interval for a population mean is of the following form $[ \bar{x} + z^\star \frac{s}{\sqrt{n}} ]$
+
+## Confidence intervals
+
+- Remember that confidence levels and percentiles are not equivalent. For example, a 95% confidence level refers to the middle 95% of the distribution, and the critical value associated with this area will correspond to the 97.5th percentile.
+
+## Confidence intervals
+
+- We can find the critical value for a 95% confidence interal using
+
+```{r}
+z_star_95 <- qnorm(0.975)
+z_star_95
+```
+
+## Confidence intervals
+
+- Let's finally calculate the confidence interval:
+
+```{r}
+samp %>%
+  summarise(x_bar = mean(area), 
+            se = sd(area) / sqrt(n),
+            me = z_star_95 * se,
+            lower = x_bar - me,
+            upper = x_bar + me)
+```
+
+- To recap: even though we don't know what the full population looks like, we're 95% confident that the true average size of houses in Ames lies between the values lower and upper. There are a few conditions that must be met for this interval to be valid.
+
+## 95% Confidence Intervals
+
+- A 95% confidence interval is a range of values that you can be 95% certain contains the true mean of the population. This is not the same as a range that contains 95% of the values. The graph below emphasizes this distinction.
+
+-  With large samples, you know that mean with much more precision than you do with a small sample, so the confidence interval is quite narrow when computed from a large sample.
+
+## 95% Confidence Intervals
+
+- It is correct to say that there is a 95% chance that the confidence interval you calculated contains the true population mean. It is not quite correct to say that there is a 95% chance that the population mean lies within the interval.
+
+- What's the difference?
+
+## 95% Confidence Intervals
+
+- The population mean has one value. You don't know what it is (unless you are doing simulations) but it has one value. If you repeated the experiment, that value wouldn't change (and you still wouldn't know what it is). Therefore it isn't strictly correct to ask about the probability that the population mean lies within a certain range.
+
+- In contrast, the confidence interval you compute depends on the data you happened to collect. If you repeated the experiment, your confidence interval would almost certainly be different. So it is OK to ask about the probability that the interval contains the population mean.
+  
+## Confidence intervals
+
+- Using R, we're going to collect many samples to learn more about how sample means and confidence intervals vary from one sample to another.
+
+- Here is the rough outline:
+
+- Obtain a random sample.
+
+- Calculate the sample's mean and standard deviation, and use these to calculate and store the lower and upper bounds of the confidence intervals.
+
+## Confidence intervals
+
+- Repeat these steps 50 times.
+
+```{r}  
+ci <- ames %>%
+        rep_sample_n(size = n, reps = 50, replace = TRUE) %>%
+        summarise(x_bar = mean(area), 
+                  se = sd(area) / sqrt(n),
+                  me = z_star_95 * se,
+                  lower = x_bar - me,
+                  upper = x_bar + me)
+```
+
+## Confidence intervals
+
+- Let's view the first five intervals:
+
+```{r}
+ci %>%
+  slice(1:5)
+```
+
+## Confidence Intervals - Plot
+
+
+```{r}
+params <- ames %>%
+  summarise(mu = mean(area))
+```
+
+## Confidence intervals
+```{r}
+ci <- ci %>%
+  mutate(capture_mu = ifelse(lower < params$mu & upper > params$mu, "yes", "no"))
+```
+
+```{r}
+qplot(data = ci, x = replicate, y = x_bar, color = capture_mu) +
+  geom_errorbar(aes(ymin = lower, ymax = upper)) + 
+  geom_hline(data = params, aes(yintercept = mu), color = "darkgray") + # draw vertical line
+  coord_flip()
+```
+  
+
+## Confidence intervals - Plot
+
+- We want a plot that indicates whether the interval does or does not capture the true population mean.
+
+```{r}
+download.file("http://www.openintro.org/stat/data/ames.RData", destfile = "ames.RData")
+load("ames.RData")
+
+population <- ames$Gr.Liv.Area
+samp <- sample(population, 60)
+
+samp_mean <- rep(NA, 50)
+samp_sd <- rep(NA, 50)
+n <- 60
+
+for(i in 1:50){
+  samp <- sample(population, n) # obtain a sample of size n = 60 from the population
+  samp_mean[i] <- mean(samp)    # save sample mean in ith element of samp_mean
+  samp_sd[i] <- sd(samp)        # save sample sd in ith element of samp_sd
+}
+
+lower_vector <- samp_mean - 1.96 * samp_sd / sqrt(n) 
+upper_vector <- samp_mean + 1.96 * samp_sd / sqrt(n)
+```
+
+## Confidence Intervals - Plot
+
+```{r}
+plot_ci(lower_vector, upper_vector, mean(population))
+```
+
+## Inference for Numerical Data
+
+
+- In 2004, the state of North Carolina released a large data set containing information on births recorded in this state. This data set is useful to researchers studying the relation between habits and practices of expectant mothers and the birth of their children. We will work with a random sample of observations from this data set.
+
+- Load the nc data set into our workspace.
+
+```{r}
+data(nc)
+```
+
+## Explaratory Data Analysis
+
+- What are the cases in this data set? How many cases are there in our sample?
+
+```{r}
+glimpse(nc)
+```
+
+## Explaratory Data Analysis
+
+- Using visualization and summary statistics, describe the distribution of weight gained by mothers during pregnancy. The summary function can be useful.
+
+```{r}
+summary(nc$gained)
+```
+
+- We can also looking at the possible relationship between a mother's smoking habit and the weight of her baby
+
+```{r}
+nc %>%
+  group_by(habit) %>%
+  summarise(mean_weight = mean(weight))
+```
+
+## Explaratory Data Analysis - boxplot
+
+```{r}
+# Basic box plot
+boxplot(weight~habit,data=nc, main="Relation Between Mother's Habit and Baby's Weight", 
+    ylab="Baby's Weight", xlab="Mother Smoker/Non-Smoker")
+```
+
+## Explaratory Data Analysis - ggplot boxplot
+
+```{r}
+library(ggplot2)
+# gpplot box plot
+p<-ggplot(nc, aes(x=habit, y=weight)) + 
+  geom_boxplot()
+```
+
+## Explaratory Data Analysis - ggplot boxplot
+```{r}  
+p + scale_color_grey() + theme_classic()
+```
+
+## Explaratory Data Analysis - inference
+
+
+- There is an observed difference, but is this difference statistically significant? In order to answer this question we will conduct a hypothesis test.
+
+- Next, we introduce a new function, inference, that we will use for conducting hypothesis tests and constructing confidence intervals.
+
+## Explaratory Data Analysis - inference
+
+
+```{r}
+inference(y = weight, x = habit, data = nc, statistic = "mean", type = "ht", null = 0, 
+          alternative = "twosided", method = "theoretical")
+```
+
+## Explaratory Data Analysis - inference
+
+- Let's pause for a moment to go through the arguments of this custom function. 
+  - The first argument is `y`, which is the response variable that we are interested in: `weight`. 
+  
+## Explaratory Data Analysis - inference
+
+- The second argument is the explanatory variable, `x`, which is the variable that splits the data into two groups, smokers and non-smokers: `habit`. 
+
+- The third argument, `data`, is the data frame these variables are stored in. 
+  
+## Explaratory Data Analysis - inference
+
+- Next is statistic, which is the sample statistic we're using, or similarly, the population parameter we're estimating. 
+
+- When performing a hypothesis test, we also need to supply the null value, which in this case is `0`, since the null hypothesis sets the two population means equal to each other. 
+
+- The alternative hypothesis can be `"less"`, `"greater"`, or `"twosided"`. Lastly, the method of inference can be `"theoretical"` or `"simulation"` based.

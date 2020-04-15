@@ -138,11 +138,19 @@ $$\frac{\sum((x - \bar{x})^{2})}{n-1}$$
 ```{r, warning=FALSE, message=FALSE}
 library(haven) # package to read the data
 library(dplyr) # package for data manipulation
+library(tidyverse) # package for 'tidy' data
 pew2018 <- read_sav("Pew 2018.sav",
                   user_na=TRUE) %>%
                   as_factor()
-pew2018 = pew2018 %>% select(COUNTRY, satisfied_democracy, age, sex)
-head(pew2018) # top 6 observations
+pew2018 = pew2018 %>% select(COUNTRY, satisfied_democracy, age, sex, d_ptyid_us)
+pew2018$partyid2 <- fct_collapse(pew2018$d_ptyid_us,
+                         DK = c("No preference (DO NOT READ)", 
+                                     "Other party (DO NOT READ)",
+                                     "Don’t know (DO NOT READ)",
+                                     "Refused (DO NOT READ)"),
+                         Rep = "Republican",
+                         Ind = "Independent",
+                         Dem = "Democrat")
 ```
 \normalsize
 
@@ -194,7 +202,8 @@ prop.table(table(pew2018$satisfied_democracy))
 \tiny
 ```{r,  message=FALSE, warning=FALSE, results='hide', fig.keep = 'none'}
 barplot(prop.table(table(pew2018$satisfied_democracy)), 
-xlab = "Self-reported satisfaction with democracy", ylab = "Proportion of respondents")
+xlab = "Self-reported satisfaction with democracy", 
+ylab = "Proportion of respondents")
 ```
 \normalsize
 
@@ -245,3 +254,121 @@ ggplot(pew2018)+
 \normalsize
 
 ## Histogram
+
+- Visualize density of continuous/numeric variable.
+- How to create a histogram by hand:
+    1. create bins along the variable of interest
+    2. count number of observations in each bin
+    3. **density** = bin height
+
+- In R, we use `hist()` with `freq = FALSE`:
+
+\small
+```{r,  message=FALSE, warning=FALSE, results='hide', fig.keep = 'none'}
+hist(as.numeric(pew2018$age), freq = FALSE, ylim = c(0, 0.04),
+xlab = "Age", main = "Distribution of Respondent's Age")
+```
+\normalsize
+
+- Other arguments:
+    - `ylim` sets the range of the y-axis to show (if you don’t set it, uses the range
+of the data).
+    - `main` sets the title for the figure.
+
+## Histogram
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+hist(as.numeric(pew2018$age), freq = FALSE, 
+     ylim = c(0, 0.04),
+     xlab = "Age", 
+     main = "Distribution of Respondent's Age")
+abline(v=median(as.numeric(pew2018$age)), col = "dodgerblue", lwd = 2)
+```
+
+## What is Density
+
+- The areas of the blocks = proportion of observations in those blocks.
+- area of the blocks sum to 1 (100%)
+- Can lead to confusion: height of block can go above 1!
+
+## Boxplot
+
+- A boxplot can characterize the distribution of continuous variables
+- Use `boxplot()`:
+
+\small
+```{r,  message=FALSE, warning=FALSE, results='hide', fig.keep = 'none'}
+boxplot(as.numeric(pew2018$age), 
+ylab = "Age", 
+main = "Distribution of Respondent's Age")
+```
+\normalsize
+
+- “Box” represents range between lower and upper quartile.
+- “Whiskers” represents either:
+    - 1.5 × IQR or max/min of the data, whichever is tinyer.
+    - Points beyond whiskers are outliers
+    
+## Boxplot
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+boxplot(as.numeric(pew2018$age), 
+ylab = "Age", 
+main = "Distribution of Respondent's Age")
+```
+
+## Comparing Distributions with the boxplot
+
+- Useful for comparing a variable across groups:
+
+\small
+```{r,  message=FALSE, warning=FALSE, results='hide', fig.keep = 'none'}
+boxplot(as.numeric(pew2018$age) ~ pew2018$sex, 
+ylab = "Age", 
+main = "Distribution of Respondent's Age")
+```
+\normalsize
+
+- First argument is called a formula, `y ~ x`:
+    - `y` is the continuous variable whose distribution we want to explore.
+    - `x` is the grouping variable.
+    - When using a formula, we need to add a `data` argument
+    
+## Comparing Distributions with the boxplot
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+boxplot(as.numeric(pew2018$age) ~ pew2018$partyid2, 
+ylab = "Age", 
+main = "Distribution of Respondent's Age")
+```
+
+## Satisfaction with democracy by party
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+pew = pew2018 %>% filter(partyid2=="Dem" | partyid2=="Rep" | partyid2=="Ind")
+library(ggplot2)
+library(scales)
+ggplot(pew)+
+  aes(x=satisfied_democracy)+
+  geom_bar(aes(y=..prop.., group = 1)) +
+  scale_y_continuous(labels=scales::percent_format())+
+  labs(x ="Self-reported satisfaction with democracy", y = " Percent")+
+  theme(plot.title = element_text(),
+    axis.title.x = element_text(),
+    axis.title.y = element_text(),
+    axis.text.y = element_text(),
+    axis.text.x = element_text(size=10)) +
+  scale_x_discrete(labels=c("Very satisfied",
+                "Somewhat satisfied",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "DK",
+                "Refused"))+
+  coord_flip() +
+  facet_wrap(~partyid2)
+```
+
+## Satisfaction with democracy by party
+
+- Why are Republicans more satified with democracy?
+
+

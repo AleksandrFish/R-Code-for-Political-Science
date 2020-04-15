@@ -1,0 +1,325 @@
+---
+title: "R Basics"
+author: "Aleksandr Fisher"
+output: beamer_presentation
+theme: metropolis
+latex_engine: xelatex
+highlight: zenburn
+
+---
+
+## Getting the Basics
+
+- Don't forget to check and set your working directory
+- R can't find files that aren't there
+
+## Getting the Basics
+
+- The Behavioral Risk Factor Surveillance System (BRFSS) is an annual telephone survey of 350,000 people in the United States. The BRFSS Web site contains a complete description of the survey, including the research questions that motivate the study and many interesting results derived from the data.
+
+```{r,  message=FALSE, warning=FALSE, fig.keep = 'none'}
+library(tidyverse)
+source("http://www.openintro.org/stat/data/cdc.R")
+CDC <- tbl_df(cdc)
+class(cdc)
+```
+
+## Explore the data
+
+- You can see and inspect the data set comfortably in RStudio with the View() command, which invokes a spreadsheet-style data viewer on a matrix-like R object.
+
+\tiny
+```{r}
+CDC
+```
+\normalsize
+
+## Explore the data
+
+- After loading the data and converting it into a tibble, one should inspect the data to get some understanding about the structure and content. Common funtions for these tasks are:
+
+- `<name-of-data-tibble>`: Display the first 10 rows and all columns that fit on one screen. It also prints an abbreviated description of the column type.
+
+- `head(<name-of-df>)`, `tail(<name-of-df>)`: Return the first or last part. Use these commands if it is not a tibble but a data frame
+
+- `dim()`: Retrieve the dimension
+
+- `names()`: Get the names
+
+## Explore the data
+
+- `str()`: Display compactly the internal structure
+  
+- `glimpse()`: is the dplyr-version of str() showing values of each variable the whole sceen width, but does not display the number of levels and names of factor variables. But this feature of str() cannot be displayed completly with either many or long levels names.
+
+- `View()`: With RStudio you can see and inspect the data set comfortably. The View() function invokes a spreadsheet-style data viewer.
+
+
+## Install Packages 
+
+- When you download R from the Comprehensive R Archive Network (CRAN), you get that "base" R system
+
+- The base R system comes with basic functionality; implements the R language
+
+- One reason R is so useful is the large collection of packages that extend the basic functionality of R
+
+- R packages are developed and published by the larger R community
+
+
+## Install Packages
+
+- Packages can be installed with the `install.packages()` function in R
+
+- To install a single package, pass the name of the lecture to the install.packages() function as the first argument
+
+- You can install multiple R packages at once with a single call to install.packages()
+
+
+- `install.packages(c("dplyr", "ggplot2", "devtools"))`
+
+
+## Loading R Packages
+
+- Installing a package does not make it immediately available to you in R; you must load the package
+
+- The library() function is used to load packages into R
+
+- The following code is used to load the ggplot2 package into R
+
+```{r, warning=FALSE, message=FALSE}
+library(ggplot2)
+```
+
+- NOTE: Do not put the package name in quotes!
+
+## Arbuthnot Dataset
+
+- The Arbuthnot data set refers to Dr. John Arbuthnot, an 18th century physician, writer, and mathematician. He was interested in the ratio of newborn boys to newborn girls, so he gathered the baptism records for children born in London for every year from 1629 to 1710. We can view the data by typing its name into the console.
+
+- Read data from online with the code below:
+
+```{r}
+source("http://www.openintro.org/stat/data/arbuthnot.R")
+```
+
+## Look as Data
+
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+dim(arbuthnot) #get number of rows and columns
+glimpse(arbuthnot) #get the structure of the data
+```
+\normalsize
+
+## Look as Data
+
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+names(arbuthnot)
+#We can access the data in a single column of a data frame separately.
+arbuthnot$boys
+```
+\normalsize
+
+
+## Plot Data - Base R
+
+
+```{r,  message=FALSE, warning=FALSE, results='hide', fig.keep = 'none'}
+plot(x = arbuthnot$year, y = arbuthnot$girls)
+```
+
+\tiny
+```{r, warnings=FALSE, message=FALSE, echo=FALSE}
+plot(x = arbuthnot$year, y = arbuthnot$girls)
+```
+\normalsize
+
+## Plot Data - qplot R
+
+- R has some powerful functions for making graphics. We can create a simple plot of the number of girls baptized per year with qplot.
+
+
+```{r,  message=FALSE, warning=FALSE, results='hide', fig.keep = 'none'}
+qplot(x = year, y = girls, data = arbuthnot)
+```
+
+## Plot Data - qplot R
+
+\tiny
+```{r, warnings=FALSE, message=FALSE, echo=FALSE}
+qplot(x = year, y = girls, data = arbuthnot)
+```
+
+## Plot Data - line graph
+
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+plot(x = arbuthnot$year, y = arbuthnot$girls, type = "l")
+```
+\normalsize
+
+## Plot Data - line graph
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+qplot(x = year, y = girls, data = arbuthnot, geom = "line")
+
+```
+\normalsize
+
+## Manipulating Data - Creating New Variables
+
+- Now, suppose we want to plot the total number of baptisms. To compute this, we could use the fact that R is really just a big calculator. We can type in mathematical expressions like
+
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+
+5218 + 4683
+
+arbuthnot$boys + arbuthnot$girls
+```
+\normalsize
+
+## Manipulating Data - Creating New Variables (mutate)
+
+- We’ll be using this new vector to generate some plots, so we’ll want to save it as a permanent column in our data frame.
+
+
+```{r, warnings=FALSE, message=FALSE}
+arbuthnot <- arbuthnot %>%
+  mutate(total = boys + girls)
+```
+
+## Piping Operator
+
+- The `%>%` operator is called the piping operator. It takes the output of the previous expression and pipes it into the first argument of the function in the following one. To continue our analogy with mathematical functions, `x %>% f(y)` is equivalent to `f(x, y)`.
+
+## Piping Operator
+
+- __A note on piping:__ Note that we can read these three lines of code as the following:
+
+- "Take the arbuthnot dataset and pipe it into the mutate function. Mutate the arbuthnot data set by creating a new variable called total that is the sum of the variables called boys and girls. 
+
+- Then assign the resulting dataset to the object called arbuthnot, i.e. overwrite the old arbuthnot dataset with the new one containing the new variable."
+
+## Manipulating Data - Adding in plot
+
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+plot(arbuthnot$year, arbuthnot$boys + arbuthnot$girls, type = "l")
+```
+\normalsize
+
+## Manipulating Data - Adding in qplot
+
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+qplot(x = year, y = total, data = arbuthnot, geom = "line")
+```
+\normalsize
+
+## Manipulating Data - creating ratios
+
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+5218 / 4683
+```
+\normalsize
+
+## Manipulating Data - creating ratios
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+arbuthnot$boys / arbuthnot$girls
+
+arbuthnot <- arbuthnot %>%
+  mutate(boy_to_girl_ratio = boys / girls)
+```
+\normalsize
+
+## Manipulating Data - ratios using mutate
+
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+arbuthnot <- arbuthnot %>%
+  mutate(boy_ratio = boys / total)
+```
+\normalsize
+
+## Manipulating Data - True/False
+
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+arbuthnot$boys > arbuthnot$girls
+```
+\normalsize
+
+## Manipulating Data
+
+- Make a plot that displays the boy-to-girl ratio for every year in the data set. What do you see? Does Arbuthnot’s observation about boys being born in greater proportion than girls hold up in the U.S.? Include the plot in your response.
+
+- In what year did we see the most total number of births in the U.S.? You can refer to the help files or the R reference card http://cran.r-project.org/doc/contrib/Short-refcard.pdf to find helpful commands.
+
+## Adding Labels to our plots
+
+- - I am now providing a short version of the plot graph with the pipecommand, dropping the names of the arguments for default values but adding labels and title.
+
+\tiny
+```{r, warnings=FALSE, message=FALSE, results='hide',fig.keep='none'}
+arbuthnot %>% ggplot(aes(year, total)) +
+        geom_line() +
+        xlab("Year") + ylab("Baptized children (boys and girls)") +
+        ggtitle("Baptized children, born in London. Recorded by Dr. John Arbuthnot.")
+```
+\normalsize
+
+## Adding Labels to our plots
+
+\tiny
+```{r, warnings=FALSE, message=FALSE}
+arbuthnot %>% ggplot(aes(year, total)) +
+        geom_line() +
+        xlab("Year") + ylab("Baptized children (boys and girls)") +
+        ggtitle("Baptized children, born in London. Recorded by Dr. John Arbuthnot.")
+```
+\normalsize
+
+## Ratio Plot
+
+- Similarly to how we computed the total number of births, we can compute different kinds of ratios (boys to girls, boys to total, girls to total).
+
+\tiny
+```{r, warnings=FALSE, message=FALSE, results='hide',fig.keep='none'}
+arbuthnot <- arbuthnot %>%
+  mutate(boy_to_girl_ratio = boys / girls)
+arbuthnot <- arbuthnot %>%
+  mutate(boy_ratio = boys / total)
+arbuthnot <- arbuthnot %>%
+  mutate(girl_ratio = girls / total)
+arbuthnot %>% 
+        ggplot(aes(year, boy_to_girl_ratio)) +
+        geom_line() +
+        xlab("Year") + ylab("Baptized ratio (boys to girls)") +
+        ggtitle("Baptized children, born in London. Recorded by Dr. John Arbuthnot.")
+```
+\normalsize
+
+
+## Ratio Plot
+
+\tiny
+```{r, warnings=FALSE, message=FALSE, echo=FALSE}
+arbuthnot <- arbuthnot %>%
+  mutate(boy_to_girl_ratio = boys / girls)
+arbuthnot <- arbuthnot %>%
+  mutate(boy_ratio = boys / total)
+arbuthnot <- arbuthnot %>%
+  mutate(girl_ratio = girls / total)
+arbuthnot %>% 
+        ggplot(aes(year, boy_to_girl_ratio)) +
+        geom_line() +
+        xlab("Year") + ylab("Baptized ratio (boys to girls)") +
+        ggtitle("Baptized children, born in London. Recorded by Dr. John Arbuthnot.")
+```
+\normalsize
+
+
