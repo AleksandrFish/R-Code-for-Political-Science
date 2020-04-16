@@ -300,6 +300,14 @@ political attitudes.
 
 \tiny
 ```{r}
+## Cyanide and Happiness 2017 Politics Poll
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(ggplot2)
+library(tidyverse)
+library(ggthemes)
+# read in CSV ( File path should have "/" slashes)
+cah = read.csv('C:/Users/afisher/Documents/R Code/Resources/Data/Pulse of the Nation/201710cah_clean.csv')
+
 # dim
 dim(cah) # number of rows, number of columns
 
@@ -679,12 +687,4 @@ arbuthnot %>%
 ```
 \normalsize
 
-## Cyanide and Happiness 2017 Politics Poll
-```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-library(ggplot2)
-library(tidyverse)
-library(ggthemes)
-# read in CSV ( File path should have "/" slashes)
-cah = read.csv('C:/Users/afisher/Documents/R Code/Resources/Data/Pulse of the Nation/201710cah_clean.csv')
-```
 
