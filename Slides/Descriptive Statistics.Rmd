@@ -140,6 +140,16 @@ knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-
 knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/kurt.jpg")
 ```
 
+## Correlation
+
+- How do variables move together on average?
+- If I know one variable is big, does that tell me anything about how big the
+other variable is?
+    - Positive correlation: when X is big, Y is also big
+    - Negative correlation: when X is big, Y is small
+    - High correlation: data cluster tightly around a line.
+
+
 ## Relationship
 
 - **Covariance**: provides a measure of the strength of the correlation between two or more sets of random variates.
@@ -150,6 +160,9 @@ $$cov_{x,y}=\frac{\sum_{i=1}^{N}(x_{i}-\bar{x})(y_{i}-\bar{y})}{N-1}$$
 
 $$r = \frac{{}\sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y})}
 {\sqrt{\sum_{i=1}^{n} (x_i - \overline{x})^2(y_i - \overline{y})^2}}$$
+
+
+
 
 ## Correlation
 
@@ -174,6 +187,20 @@ knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-
 ```{r, echo=FALSE, fig.cap="Correlation", out.width = '80%'}
 knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/correlation.png")
 ```
+
+## Properties of correlation coefficient
+
+- Correlation measures **linear** association.
+- Interpretation:
+    - Correlation is between -1 and 1
+    - Correlation of 0 means no linear association.
+    - Positive correlations ~ positive associations.
+    - Negative correlations ~ negative associations.
+    - Closer to -1 or 1 means stronger association.
+- Order doesn’t matter: cor(x,y) = cor(y,x)
+- Not affected by changes of scale:
+    - Celsius vs. Fahreneheit; dollars vs. pesos; cm vs. in.
+
 
 ## Correlation is not good at curves
 
@@ -459,7 +486,79 @@ ggplot(pew)+
   coord_flip() +
   facet_wrap(~partyid2)
 ```
+
 ## Satisfaction with democracy by party
 
 - Why are Republicans more satified with democracy?
 
+
+## Correlations in R
+
+- Use the `cor()` function
+- Missing values: set the use = ”pairwise” ~ available case analysis
+
+\tiny
+```{r, message=FALSE, warning=FALSE}
+
+# Read Happiness Data
+happ2019 = read.csv("C:/Users/afisher/Documents/R Code/Resources/Data/Happiness/2019.csv")
+
+# Structure of dataset
+str(happ2019)
+
+# Correlation
+cor(happ2019$Score, happ2019$GDP.per.capita)
+```
+\normalsize
+
+## QQ-plot example
+
+- **Quantile-quantile plot (qq-plot)**: Plot the **quantiles** of each distribution
+against each other.
+- Example points:
+    - (min of X, min of Y)
+    - (median of X, median of Y)
+    - (25th percentile of X, 25th percentile of Y)
+- 45 degree line indicates quality of the two distributions
+
+## QQ-plot example
+
+\tiny
+```{r, message=FALSE, warning=FALSE}
+
+qqplot(happ2019$Score, happ2019$GDP.per.capita, xlab = 'Score', ylab="GDP per capita")
+       
+```
+\normalsize
+
+## Scatterplot
+
+\footnotesize
+```{r, message=FALSE, warning=FALSE, fig.keep='none'}
+
+## Base R
+plot(happ2019$Score, happ2019$GDP.per.capita, xlab = 'Score', ylab="GDP per capita")
+
+## ggplot
+ggplot(happ2019) +
+  aes(x=Score, y=GDP.per.capita)+
+  geom_point()
+```
+\normalsize
+## Base R - Scatterplot
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+## Base R
+plot(happ2019$Score, happ2019$GDP.per.capita, xlab = 'Score', ylab="GDP per capita")
+```
+
+## ggplot - Scatterplot
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+## ggplot
+ggplot(happ2019) +
+  aes(x=Score, y=GDP.per.capita)+
+  geom_point()
+```

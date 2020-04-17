@@ -1,0 +1,313 @@
+---
+title: "Linear Regression"
+author: "Aleksandr Fisher"
+date: "4/17/2020"
+output: beamer_presentation
+theme: metropolis
+latex_engine: xelatex
+highlight: zenburn
+
+---
+
+
+## Introduction
+
+- How can we use one variable to predict another?
+- Big technical tool: linear regression
+
+
+## Predicting Happiness
+
+- Can we use a country's income to predict it's citizens' level of happiness?
+
+\tiny
+```{r, message=FALSE, warning=FALSE}
+
+# Read Happiness Data
+happ2019 = read.csv("C:/Users/afisher/Documents/R Code/Resources/Data/Happiness/2019.csv")
+
+# Structure of dataset
+str(happ2019)
+```
+\normalsize
+
+## Predicting using bivariate relationship
+
+- Goal: What’s our best guess about Y if we know what X is? 
+
+  - what’s our best guess about a country's happiness if I know its income level?
+- Terminology:
+  - **Dependent/outcome variable:** the variable we want to predict (happiness).
+  - **Independent/explanatory variable:** the variable we’re using to predict
+      (GDP per capita).
+
+## Plotting the data
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+# Scatterplot
+library(ggplot2)
+ggplot(happ2019) +
+  aes(x=Score, y=GDP.per.capita)+
+  geom_point(color = "dodgerblue") +
+  ggtitle("Relationship between Happiness and GDP") +
+  theme_classic()
+```
+
+## Correlation and scatter-plots:
+
+Recall the definition of correlation:
+
+$$r = \frac{{}\sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y})}
+{\sqrt{\sum_{i=1}^{n} (x_i - \overline{x})^2(y_i - \overline{y})^2}}$$
+
+  - positive correlation ~ upward slope
+  - negative correlation ~ downward slope
+  - high correlation ~ tighter, closer to a line
+  - correlation cannot capture nonlinear relationship.
+  
+  
+## Must be linear!
+
+```{r, echo=FALSE, fig.cap="", out.width = '90%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/correlation2.png")
+```
+
+
+## Linear Regression Model
+
+- Prediction: for any value of X, what's the best guess about Y?
+- Simplest possible way to relate two variables: a line.
+
+$$y =mx +b$$
+
+- Where:
+
+  - y = how far up
+  - x = how far along
+  - m = Slope or Gradient (how steep the line is)
+  - b = the Y Intercept (where the line crosses the Y axis)
+
+## Linear Regression Model
+
+- Problem: for any line we draw, not all the data is on the line.
+    - Some weights will be above the line, some below.
+    - Need a way to account for chance variation away from the line
+    
+## A line
+
+```{r, echo=FALSE, fig.cap="", out.width = '90%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/ymxb.png")
+```
+
+
+## Linear Regression Model
+
+- Model for the line of best fit:
+
+Population regression line:
+
+$$Y_i = \underbrace{\beta_0}_{\text{intercept}} +  \underbrace{\beta_1}_{\text{slope}} X_i + \underbrace{\epsilon_i}_{\text{error term}}$$
+
+
+- **Coefficients/parameters($\alpha, \beta$):** true unknown intercept/slope of the line of
+best fit.
+
+- **Chance error ($\epsilon$):** accounts for the fact that the line doesn’t perfectly fit the
+data.
+    - Each observation allowed to be off the regression line.
+    - Chance errors are 0 on average.
+  
+## Interpreting the regression line
+
+
+$$Y_i = \beta_0 + \beta_1 X_i + \epsilon_i$$
+
+- **Intercept** $\alpha$: average of Y when X is 0
+  - Average happiness when I GDP is 0.
+- **Slope** $\beta$: average change in Y when X increase by one unit.
+  - Average increase in happiness when gdp increases by 1 unit (what unit is your variable in?)
+- But we don't know $\alpha$ or $\beta$ is. How do we estimate it?
+
+## Estimated Coefficients
+
+- Parameters: $\alpha, \beta$
+    - Unknown features of the **data-generating process**
+    - Chance error makes these impossible to observe directly
+- Estimates $\hat\alpha, \hat\beta$
+    - An **estimate** is a function of the data that is our best guess about some parameter
+- **Regression line:** $\hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i + \hat{\epsilon}_i$
+- Average value of Y when X is equal to x
+- Represents the best guess or **predicted value** of the outcome at x
+
+## Plotting our data
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+# Scatterplot
+library(ggplot2)
+ggplot(happ2019) +
+  aes(x=Score, y=GDP.per.capita)+
+  geom_smooth(method = "lm") +
+  geom_point(color='steelblue') +
+  ggtitle("Relationship between Happiness and GDP") +
+  theme_classic()
+```
+
+
+## Least Squares
+
+- How do we figure out the best line to draw? 
+    - **Fitted/predicted value** for each observation: $\hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i + \hat{\epsilon}_i$
+    - **Residual/prediction error:** $\hat{\epsilon}_i = {Y}_i - \hat{Y}_i$
+- Get these estiamtes by the **least squares method**
+- Minimize the **sum of the squared resisduals (SSR)**:
+
+$$\sum_{j=1}^n (y_j - \beta_0 - \beta_1 x_j)^2.$$
+
+- This find the line that minimizes the magnitude of the prediction errors
+
+
+## Minimize the errors
+
+```{r, echo=FALSE, fig.cap="", out.width = '100%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/linearregression.jpg")
+```
+
+## Linear Regression in R
+
+- `R` will calculate least squares line for a data set using `lm()`.
+- Jargon: “fit the model”
+- Syntax: `lm(y ~ x, data = mydata)`
+- `y` is the name of the dependent variance, `x` is the name of the independent
+variable and `mydata` is the data.frame where they live
+
+## Linear Regression in R
+
+\footnotesize
+```{r, message=FALSE, warning=FALSE}
+fit = lm(Score ~ GDP.per.capita, data=happ2019)
+fit
+```
+\normalsize
+
+- What does this mean?
+
+## Coefficients and fitted values
+
+- Use `coef()` to extract estimated coefficients:
+
+```{r, message=FALSE, warning=FALSE}
+coef(fit)
+```
+
+- R can show you eachof the fitted values as well:
+
+```{r, message=FALSE, warning=FALSE}
+head(fitted(fit))
+```
+
+## Properties of least squares
+
+- Least squares line always goes throught ($\bar{X}, \bar{Y}$)
+- Estimated slop is relatd to correlation
+
+$$\hat{\beta} = \text{(correlation of X AND Y) x} \frac{\text{ SD of Y}}{\text{ SD of X}}$$
+- mean of residuals is always 0
+
+
+## Looking at the 2016 Election
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+votes = read.csv("C:/Users/afisher/Documents/R Code/Resources/Data/2016 Election/votes.csv")
+votes = votes %>%
+  select(Trump, state_abbr, county_name, population_change, White, Edu_batchelors)
+```
+
+## White Population and Trump Vote (Base R)
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+## Scatterplots
+plot(votes$White, votes$Trump, xlab = "% White Population",
+     ylab = "Trump Vote")
+```
+
+## White Population and Trump Vote (ggplot)
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+ggplot(votes) +
+  aes(x=White, y=Trump) +
+  geom_point(color = 'dodgerblue', alpha=0.3) +
+  geom_smooth(method='lm', color='black')+
+  theme_gray() +
+  labs(x="% White Population", y = "Trump Vote")
+```
+
+## Let's run our first regression!
+
+```{r, message=FALSE, warning=FALSE}
+
+## Linear Regression
+m1 = lm(Trump ~ White, data=votes)
+m1
+
+plot(votes$White, votes$Trump, xlab = "% White Population",
+     ylab = "Trump Vote")
+abline(m1, col='red')
+```
+
+## Making Predictions
+
+- What is the predicted Trump vote for a county thats 30% white
+```{r, message=FALSE, warning=FALSE}
+
+coef(m1)
+a.hat <- coef(m1)[1] ## estimated intercept
+b.hat <- coef(m1)[2] ## estimated slope
+
+pred30 = a.hat + b.hat * 0.3
+pred30
+```
+
+## Making Predictions
+
+
+- What is the predicted Trump vote for a county thats 80% white
+```{r, message=FALSE, warning=FALSE}
+pred80 = a.hat + b.hat * 0.8
+pred80
+```
+
+
+## Plotting our predictions
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+plot(votes$White, votes$Trump, xlab = "% White Population",
+     ylab = "Trump Vote")
+abline(m1, col='red')
+abline(v=0.3, col='blue')
+```
+
+## Breaking it down by State
+
+- How does the relationship between racial composition of a county and vote for Trump change from state to state?
+
+```{r, message=FALSE, warning=FALSE}
+
+penn = lm(Trump ~ White, data=votes, 
+          subset = state_abbr == 'PA')
+coef(penn)
+
+florida = lm(Trump ~ White, data=votes, 
+             subset = state_abbr == 'FL')
+coef(florida)
+```
+
+## Breaking it down by State
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+plot(votes$White, votes$Trump, xlab = "% White Population",
+     ylab = "Trump Vote")
+abline(m1, col='green')
+abline(penn, col='red')
+abline(florida, col='blue')
+```
