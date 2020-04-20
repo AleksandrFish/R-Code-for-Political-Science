@@ -220,7 +220,13 @@ $$\hat{\beta} = \text{(correlation of X AND Y) x} \frac{\text{ SD of Y}}{\text{ 
 library(tidyverse)
 votes = read.csv("C:/Users/afisher/Documents/R Code/Resources/Data/2016 Election/votes.csv")
 votes = votes %>%
-  select(Trump, state_abbr, county_name, population_change, White, Edu_batchelors)
+  select(Trump, state_abbr, county_name, population_change, White, Edu_batchelors) %>%
+  rename(educ_bach = Edu_batchelors)
+
+votes$Trump = votes$Trump*100
+votes$White = votes$White*100
+
+
 ```
 
 ## White Population and Trump Vote (Base R)
@@ -311,3 +317,273 @@ abline(m1, col='green')
 abline(penn, col='red')
 abline(florida, col='blue')
 ```
+
+
+## Why do we care about prediction?
+
+- Prediction is broadly across different fields.
+- Policy:
+    - Can policymakers predict where crime is likely occur in a city to deploy police resources?
+    - Can a school district predict which students will drop out of school to target counseling interventions?
+- Business:
+    - Can Amazon predict what product a customer is going to buy based on their
+past purchases (Amazon)?
+    - Can Netflix/YouTube/Spotify predict what movies/TV show/song a person
+will like based on what they have viewed/listened to in the past?
+- Linear regression often used to do these predictions, but how well does our
+model predict the data?
+
+## Racial identity or Education?
+
+- Does counties' racial compositon or education better predict vote for Trump?
+
+\tiny
+```{r, message=FALSE, warning=FALSE}
+# Race
+race = lm(Trump ~ White, data=votes)
+race
+
+# Education
+educ = lm(Trump ~ educ_bach, data=votes)
+educ
+```
+\normalsize
+
+## Comparing Models
+
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(gridExtra)
+library(grid)
+
+p1<-ggplot(votes) +
+  aes(x=White, y=Trump) +
+  geom_point(color = 'dodgerblue', alpha=0.3) +
+  geom_smooth(method='lm', color='black')+
+  theme_gray() +
+  labs(x="% White Population", y = "Trump Vote") +
+  ggtitle("Race")
+
+p2<-ggplot(votes) +
+  aes(x=educ_bach, y=Trump) +
+  geom_point(color = 'dodgerblue', alpha=0.3) +
+  geom_smooth(method='lm', color='black')+
+  theme_gray() +
+  labs(x="% with Bachelor degrees", y = "Trump Vote") +
+  ggtitle("Education")
+
+
+grid.arrange(p1, p2, ncol = 2)
+```
+
+## Model Fit
+
+- How well does the model "fit the data"?
+    - More specifically, how well does the model predict the outcome variable in
+the data?
+
+- **Coefficient of determination** or **$R^2$** (“R-squared”):
+
+    - $R^2$ = Explained variation / Total variation
+
+    - R-squared gives you the percentage variation in y explained by x-variables. 
+    - The range is 0 to 1 (i.e. 0% to 100% of the variation in y can be explained by the x-variables.
+    
+## Correlation and R-Squared
+
+- The coefficient of determination, $R^2$, is similar to the correlation coefficient, $R$
+
+    - The correlation coefficient formula will tell you how strong of a linear relationship there is between two variables. 
+    
+    - R Squared is the square of the correlation coefficient, r (hence the term r squared). 
+    
+    - The more variance that is accounted for by the regression model the closer the data points will fall to the fitted regression line
+
+
+## How to calculate R-squared
+
+- The R-Squared formula compares our fitted regression line to a baseline model
+
+    - The baseline model is a flat-line that predicts every value of y will be the mean value of y.
+    
+    - R-Squared checks to see if our fitted regression line will predict y better than the mean will
+
+```{r, echo=FALSE, fig.cap="", out.width = '100%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/rsquared.png")
+```
+
+
+## Model fit in R
+
+- To access $R^2$ from the `lm()` output, first pass it to the `summary()` function:
+
+```{r, message=FALSE, warning=FALSE}
+
+# R-squared for race model
+race.sum = summary(race)
+race.sum$r.squared
+  
+# R-squared for educ model
+educ.sum = summary(educ)
+educ.sum$r.squared
+```
+
+- Which does a better job predicting midterm election outcomes?
+
+## Is R-squared useful?
+
+- Does not prove causality
+
+- Do you care about prediction (machine learning context) or as an explanatory tool (econometrics/social science)?
+
+## Are Low R-squared Values Always a Problem?
+
+- Regression models with low R-squared values can be perfectly good models for several reasons
+
+- Some thing are hard to predict (...human behavior)
+
+-  if you have a low R-squared value but the independent variables are statistically significant, you can still draw important conclusions about the relationships between the variables.
+
+## Are High R-squared Values Always Great?
+
+- You can be predicting one variable by unintentionally using a different form of the same variable
+
+    - ex. Predict party affiliation with political ideology 
+    
+- There are too many variables in your model compared to the number of observations. 
+    - This will lead to an **overfitted model**
+    - Can predict the modeled data well BUT it will not predict new data well
+
+-  If you keep adding more and more independent variables, R-Squared will go up
+
+## Adjusted R-squared
+
+- **Adjusted R-Squared** takes into account the number of independent variables you employ in your model and can help indicate if a variable is useless or not
+
+- The more variables you add to your model without predictive quality the lower your Adjusted R-Squared will be 
+
+- You can see that the number of independent variables, k, is included in the Adjusted R-Squared formula below
+
+```{r, echo=FALSE, fig.cap="", out.width = '70%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/rsquaredadj.png")
+```
+
+## In-sample/Out-of-sample Fit
+
+- **In-sample fit:** how well your estimated model helps predict the data used
+to estimate the model.
+    - $R^2$ is a measure of in-sample fit.
+- **Out-of-sample fit:** how well your estimated model help predict outcomes
+outside of the sample used to fit the model.
+
+
+## Overfitting
+
+- **Overfitting:** OLS and other statistical procedures designed to predict
+in-sample outcomes really well, but may do really poorly out of sample.
+    - Example: predicting winner of Democratic presidential primary with gender
+of the candidate.
+    - Until 2016, gender of the canidate was a _perfect_ predictor of who wins the
+primary.
+    - Prediction for 2016 based on this: Bernie Sanders as Dem. nominee.
+    - Bad out-of-sample prediction due to overfitting!
+- Could waste tons of governmental or corporate resources with a bad
+prediction model!
+
+## Avoiding overfitting
+
+- Several procedure exist to guard against overfitting.
+- **Cross validation** is the most popular:
+    - Randomly choose half the sample to set aside (**test set**)
+    - Estimate the coefficients with the remaining half of the units (**training set**)
+    - Assess the model fit on the held out test set.
+    - Switch the test and training set and repeat, average the results.
+- Congrats, you know machine learning/artificial intelligence!
+
+## Multiple Predictors
+
+- What if we want to predict Y as a function of many variables
+
+$$Y = \alpha + \beta_1 X_{i1} + \beta_2 X_{i2} +... \beta_k X_{ik}+ \epsilon_i$$
+
+- Why include more than one predictor?
+
+  - Better predictions
+  - Better interpretation: $\beta_1$ is the effect of $X_{1}$ holding all other independent variables constant (**ceteris paribus**)
+  
+## Multiple Regression in R
+
+\tiny
+```{r, message=FALSE, warning=FALSE}
+mult.fit = lm(Trump ~ White + educ_bach, data=votes)
+summary(mult.fit)
+```
+\normalsize
+
+## Interpreting the output
+
+- $\hat\alpha = 35.9$: percent vote for Trump in a county that is 0% white and 0% have a bachelor degree (does this exist?)
+- $\hat\beta_1 = 0.52$: percent vote _increase_ for Trump for additional percentage point of white population, **holding education fixed**
+- $\hat\beta_2 = -0.86$: percent vote _decrease_ for Trump for additional percentage point of bachelor degrees, **holding racial composition fixed**
+
+## Least squares with multiple regression
+
+- How do we estimate the coefficients?
+- The same exact way as before: minimize prediction error!
+- Residuals (aka prediction error) with multiple predictors:
+- Find the coefficients that minimizes the sum of the squared residuals:
+
+$$SSR =\sum_{i=1}^{n} \hat\epsilon_i^2 = (Y_i - \alpha - \beta_1 X_{i1} - \beta_2 X_{i2})^2$$
+
+## Model fit with multiple predictors
+
+- $R^2$ mechanically increases when you add a variables to the regression.
+    - But this could be overfitting!!
+- Solution: penalize regression models with more variables.
+    - **Occam’s razor:** simpler models are preferred
+- **Adjusted $R^2$:** lowers regular $R^2$ for each additional covariate.
+    - If the added covariates doesn’t help predict, adjusted $R^2$ goes down!
+
+
+## Outputting regression results
+
+
+```{r, message=FALSE, warning=FALSE, results='hide'}
+library(stargazer)
+race.fit = lm(Trump ~ White, data=votes)
+educ.fit = lm(Trump ~ educ_bach, data=votes)
+mult.fit = lm(Trump ~ White + educ_bach, data=votes)
+stargazer(race.fit, educ.fit, mult.fit, header=FALSE)
+```
+
+
+## Table
+
+\tiny
+```{r, message=FALSE, warning=FALSE, results='asis', echo=FALSE}
+library(stargazer)
+library(Hmisc)
+race.fit = lm(Trump ~ White, data=votes)
+educ.fit = lm(Trump ~ educ_bach, data=votes)
+mult.fit = lm(Trump ~ White + educ_bach, data=votes)
+
+stargazer(race.fit, educ.fit, mult.fit, header=FALSE, 
+          dep.var.labels = "Percentage Vote for Trump",
+          title= "Regression Results", 
+        covariate.labels=c("Percent White Population","Percent with Bachelor Degree"), no.space=TRUE, omit.stat=c("LL","ser","f"))
+```
+\normalsize
+
+## Reading a Regression Table
+
+
+
+## Other resources...
+
+- https://data.library.virginia.edu/is-r-squared-useless/
+- https://medium.com/@erika.dauria/looking-at-r-squared-721252709098
+- https://medium.com/@vince.shields913/why-we-dont-really-care-about-the-r-squared-in-econometrics-social-science-593e2db0391f
+- http://svmiller.com/blog/2014/08/reading-a-regression-table-a-guide-for-students/
+- https://scholar.princeton.edu/sites/default/files/bstewart/files/lecture8slides.pdf
+- https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf
+

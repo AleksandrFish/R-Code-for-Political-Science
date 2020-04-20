@@ -1,0 +1,6338 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{metropolis}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Math Principles Slides},
+  pdfauthor={Aleksandr Fisher},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Math Principles Slides}
+\author{Aleksandr Fisher}
+\date{4/20/2020}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}[fragile]{Introduction}
+\protect\hypertarget{introduction}{}
+
+\begin{itemize}
+\item
+  Political scientists are interested in concepts such as participation,
+  voting, democracy, party discipline, alliance commitment, war, etc. If
+  scholars are to communicate meaningfully, they must be able to
+  understand what one another is arguing.
+\item
+  We assign variables and constants to concepts so that we may use them
+  in formal mathematical expressions. Both variables and constants are
+  frequently represented by an upper- or lowercase letter. \texttt{Y} or
+  \texttt{y} is often used to represent a concept that one wishes to
+  explain, and \texttt{X} or \texttt{x} is often used to represent a
+  concept that causes Y to take different values (i.e., vary).
+\item
+  The letter one chooses to represent a concept is arbitrary---one could
+  choose m or \texttt{z} or \texttt{h},etc. Thereare some conventions,
+  such as the one about \texttt{x} and \texttt{y} , but there are no
+  hard-and-fast rules here.
+\item
+  Thinking abstractly in terms of constants and variables is a first
+  step in developing clear theories and testable hypotheses.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Sets}
+\protect\hypertarget{sets}{}
+
+\begin{itemize}
+\tightlist
+\item
+  A set is just a collection of elements
+\item
+  The set of all natural numbers is denoted \texttt{N} , and any
+  variable n that is a natural number must come from this set
+\item
+  If we add negative numbers to the set of natural numbers, i.e., . . .
+  , − 3 , − 2 , − 1, then we get the set of all integers, denoted
+  \texttt{Z}.
+\item
+  All numbers that can be expressed as a ratio of two integers are
+  called rational numbers, and the set of these is denoted \texttt{Q}.
+\item
+  The set of all rational and irrational numbers together is known as
+  the real numbers and is denoted \texttt{R}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sets}
+\protect\hypertarget{sets-1}{}
+
+\begin{itemize}
+\item
+  For example, population is typically an element of Z, the set of all
+  positive integers, which is a subset of all integers.
+\item
+  Researchers who develop a formal model, game theoretic or otherwise,
+  must explicitly note the range of their variables, and we can use set
+  notation to describe whether they are discrete or continuous
+  variables.
+\item
+  A variable is discrete if each one of its possible values can be
+  associated with a single integer. We might assign a 1 for a female and
+  2 for male.
+\item
+  Continuous variables are those whose values cannot each be assigned a
+  single integer.
+\item
+  We typically assume that continuous variables are drawn from a subset
+  of the real numbers, though this is not necessary.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Sets}
+\protect\hypertarget{sets-2}{}
+
+\begin{itemize}
+\item
+  A solution set is the set of all solutions to some equation, and may
+  be discrete or continuous.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For example, the set of solutions to the equation
+    \(x^2 − 5 x +6 = 0\) is \{ 2 , 3 \} , a discrete set.
+  \end{itemize}
+\item
+  We term a sample space a set that contains all of the values that a
+  variable can take in the context of statistical inference.
+\item
+  When discussing individuals' actions in game theory, we instead use
+  the term strategy space for the same concept.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For example, if a player in a one-shot game can either
+    \texttt{(C)ooperate} with a partner for some joint goal or
+    \texttt{(D)efect} to achieve personal goals, then the strategy space
+    for that player is \{ C, D \}
+  \end{itemize}
+\item
+  This will make sense in context, as you study game theory.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sets}
+\protect\hypertarget{sets-3}{}
+
+\begin{itemize}
+\item
+  Finally, sets can be ordered or unordered. The ordered set \{ a, b, c
+  \} differs from \{ c, a, b \} , but the unordered set \{ a, b, c \} is
+  the same as \{ c, a, b \} .
+\item
+  That is, when sets are ordered, the order of the elements is
+  important. Political scientists
+\item
+  A set can be finite or infinite, countable or uncountable, bounded or
+  unbounded. All these terms mean what we would expect them to mean.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sets}
+\protect\hypertarget{sets-4}{}
+
+\begin{itemize}
+\item
+  A \textbf{finite set} is finite; that is, there are only so many
+  elements in the set, and no more
+\item
+  In contrast, there is no limit to the number of elements in an
+  \textbf{infinite set}
+\item
+  A \textbf{countable set} is one whose elements can be counted, i.e.,
+  each one can be associated with a natural number (or an integer)
+\item
+  An \textbf{uncountable set} does not have this property. Both Z and
+  the set of numbers from one to ten are countable, whereas the set of
+  all real numbers between zero and one is not.
+\item
+  A \textbf{bounded set} has finite size (but may have infinite
+  elements), while an unbounded set does not.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sets}
+\protect\hypertarget{sets-5}{}
+
+\begin{itemize}
+\item
+  Sets contain \textbf{elements}, so we need some way to indicate that a
+  given element is a member of a particular set
+\item
+  A ``funky E'' serves this purpose: \(x \in A\) states that `` x is an
+  element of the set A '' or `` x is in A .''
+\item
+  It is also convenient to use this notation to identify the range of,
+  say, a dichotomous dependent variable in a statistical analysis:
+  \(y \in \{0 , 1\}\). This means that y either can take a value of 0 or
+  a value of 1 .
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sets}
+\protect\hypertarget{sets-6}{}
+
+\begin{itemize}
+\item
+  The expression \(A \subset B\) (read ``A is a proper subset of B'')
+  implies that set B contains all the elements in A , plus at least one
+  more.
+\item
+  More formally, \(A \subset B\) if all x that are elements in A are
+  also elements in B.
+\item
+  \(A \subseteq B\) (read ``A is a subset of B''), in contrast, allows A
+  and B to be the same. We say that A is a proper subset of B in the
+  first case but not in the second.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sets}
+\protect\hypertarget{sets-7}{}
+
+\begin{itemize}
+\item
+  So the set of voters is a subset of the set of eligible voters, and is
+  most likely a proper subset, since we rarely experience full turnout
+\item
+  The empty set (or null set ) is the set with nothing in it and is
+  written ∅ . The universal set is the set that contains all elements.
+  This latter concept is particularly common in probability.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sets}
+\protect\hypertarget{sets-8}{}
+
+\begin{itemize}
+\item
+  Finally, sets can be ordered or unordered. The ordered set \{a, b, c\}
+  differs from \{c, a, b\} , but the unordered set \{a, b, c\} is the
+  same as \{c, a, b\} .
+\item
+  That is, when sets are ordered, the order of the elements is
+  important.
+\item
+  Political scientists primarily work with ordered sets. For example,
+  all datasets are ordered sets.
+\item
+  for more see:
+  \url{https://www.mathsisfun.com/sets/sets-introduction.html}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sets}
+\protect\hypertarget{sets-9}{}
+
+\begin{itemize}
+\item
+  That is, the first element in each set must refer to the first person
+  who was surveyed, the second element must refer to the second person,
+  and the 1,232nd element must refer to the 1,232nd person surveyed,
+  etc.
+\item
+  All data analyses use ordered sets. Similarly, all equilibrium
+  strategy sets in game theory are ordered according to player.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sets - Why Should I Care?}
+\protect\hypertarget{sets---why-should-i-care}{}
+
+\begin{itemize}
+\item
+  Sets are useful to political scientists for two reasons: (1) one needs
+  to understand sets before one can understand relations and functions,
+  and (2) sets are used widely in formal theory and in the presentation
+  of some areas of statistics (e.g., probability theory is often
+  developed using set theory).
+\item
+  They provide us with a more specific method for doing the type of
+  categorization that political scientists are always doing.
+\item
+  They also provide us with a conceptual tool that is useful for
+  developing other important ideas. So a basic familiarity with sets is
+  important for further study.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Operators}
+\protect\hypertarget{operators}{}
+
+\begin{itemize}
+\item
+  Some operators on variables have been familiar since early childhood:
+  addition (+), subtraction ( − ), multiplication ( ∗ or × or · or just
+  placing two variables adjacent to each other as in xy ), and division
+  ( ÷ or / ).
+\item
+  I assume you know how to perform these operations.
+\item
+  Exponentiation, or raising x to the power \(x^{a}\), is likely also
+  familiar.
+\item
+  Taking an n th root ( n √ x ), and perhaps finding a factorial (!) as
+  well.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Operators}
+\protect\hypertarget{operators-1}{}
+
+\begin{itemize}
+\item
+  Other useful basic operators include summation \(\sum_{t} x_{i}\),
+  which dictates that all the \(x_{i}\) indexed by i should be added.
+\item
+  Product \(\prod_{i} x_{i}\), which dictates that all the \(x_{i}\) be
+  multiplied.
+\item
+  These operators are common in empirical work, where each i corresponds
+  to a data point (or observation). Here are a couple of examples:
+\end{itemize}
+
+\[\sum_{t = 1}^{3} = x_{1} +  x_{2} +  x_{3} \]
+
+\[\prod_{x = 1}^{3} = x_{1}*x_{2}*x_{3} \]
+
+\end{frame}
+
+\begin{frame}{Operators}
+\protect\hypertarget{operators-2}{}
+
+\begin{itemize}
+\item
+  You may be less familiar with operators on sets, though they are no
+  less fundamental.
+\item
+  We consider six here: \textbf{differences}, \textbf{complements},
+  \textbf{intersections}, \textbf{unions}, \textbf{partitions}, and
+  \textbf{Cartesian products}.
+\item
+  for more on this see:
+  \url{https://www.probabilitycourse.com/chapter1/1_2_2_set_operations.php}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Operators}
+\protect\hypertarget{operators-3}{}
+
+\begin{itemize}
+\item
+  The \textbf{difference} between two sets A and B , denoted A ~B (read
+  ``A difference B''), is the set containing all the elements of A that
+  are not also in B : x ∈ A ~B if x ∈ A but \(x \notin B\) .
+\item
+  This set comes up a great deal in game theory when one is trying to
+  exclude individual players or strategies from consideration.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Operators}
+\protect\hypertarget{operators-4}{}
+
+\begin{itemize}
+\item
+  The \textbf{complement of a set}, denoted \(A^{'}\) or \(A^{C}\) , is
+  the set that contains the elements that are not contained in
+  \(A: x \in A^{c}\) if x is not an element of A.
+\item
+  The complement of the set of registered voters is the set of all
+  people who are not registered voters.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Operators}
+\protect\hypertarget{operators-5}{}
+
+\begin{itemize}
+\item
+  The \textbf{intersection} of two sets A and B , denoted A ∩ B (read ``
+  A intersection B ''), is the set of elements common to both sets.
+\item
+  In other words, x ∈ A ∩ B if x ∈ A and x ∈ B .
+\item
+  Thus, if set A consists of elected Democrats in the state of Florida
+  and set B consists of legislators in the Florida House of
+  Representatives, then the intersection of A and B is the set
+  containing all Democratic House members in Florida.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Operators}
+\protect\hypertarget{operators-6}{}
+
+\begin{itemize}
+\item
+  The \textbf{union} of two sets is written A ∪ B (read `` A union B '')
+  and is the set of all elements contained in either set.
+\item
+  In other words, x ∈ A ∪ B if x ∈ A or x ∈ B . Note that any x in both
+  sets is also in their union.
+\item
+  Continuing the example from above, the union of A and B is the set
+  composed of all elected Democrats in Florida and all House members in
+  Florida.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Operators}
+\protect\hypertarget{operators-7}{}
+
+\begin{itemize}
+\item
+  \textbf{Mutually exclusive sets} are sets with an intersection equal
+  to the empty set, i.e., sets with no elements in their intersection.
+\item
+  Two sets A are mutually exclusive or disjoint if they do not have any
+  shared elements; i.e., their intersection is the empty set, \(A∩B=∅\)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Operators}
+\protect\hypertarget{operators-8}{}
+
+\begin{itemize}
+\item
+  A \textbf{partition} is a bit more complex: it is the collection of
+  subsets whose union forms the set
+\item
+  The more elements a set has, the greater the number of partitions
+\item
+  Let's consider the following example, the set of candidates for the
+  2004 US presidential election who received national press coverage:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A = \{ Bush , Kerry , Nader \} .\\
+  \item
+    We can partition A into three subsets: \{Bush\} , \{Kerry\} ,
+    \{Nader\} ; or we can partition it into two subsets: \{Bush ,
+    Nader\} , \{Kerry\} ; or \{Kerry, Nader\} , \{Bush\} ; or \{Bush,
+    Kerry\} , \{Nader\} .
+  \item
+    Finally, the set itself is a partition: \{ Bush , Kerry , Nader \} .
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Operators}
+\protect\hypertarget{operators-9}{}
+
+\begin{itemize}
+\item
+  A \textbf{Cartesian product} is more complex still. Consider two sets
+  A and B , and let a ∈ A and b ∈ B .
+\item
+  Then the Cartesian product A × B is the set consisting of all possible
+  ordered pairs ( a, b ), where a ∈ A and b ∈ B .
+\item
+  For example, if A = \{ Female, Male \} and B = \{ Income over \$ 50k,
+  Income under \$ 50k \} , then the Cartesian product is the set of
+  cardinality four consisting of all possible ordered pairs: A × B = \{
+  (Female, Income over \$ 50k), (Female, Income under \$ 50k), (Male,
+  Income over \$ 50k), (Male, Income under \$ 50k) \}.
+\item
+  For example, If A = \{7, 8\} and B = \{2, 4, 6\}, find A × B.
+\end{itemize}
+
+\[A × B = {(7, 2); (7, 4); (7, 6); (8, 2); (8, 4); (8, 6)}\]
+
+\end{frame}
+
+\begin{frame}{Operators - Why Should I Care?}
+\protect\hypertarget{operators---why-should-i-care}{}
+
+\begin{itemize}
+\item
+  Operators on variables are essential; without them we could not even
+  add two numbers
+\item
+  They are also necessary for properly specifying functions of all sorts
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Relations}
+\protect\hypertarget{relations}{}
+
+\begin{itemize}
+\item
+  A mathematical relation allows one to compare constants, variables, or
+  expressions of these (or, if you prefer, concepts).
+\item
+  The symbols \textgreater{} , \textless{} , and = form the familiar
+  relations of arithmetic.
+\item
+  The most common relation we'll use, though, is a function. In this
+  context we want to know the mapping between sets A and B . In other
+  words, we want to know how the function transforms an element of A
+  into an element of B . In this case we call A the \textbf{domain} and
+  B the \textbf{range}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Levels of Measurement}
+\protect\hypertarget{levels-of-measurement}{}
+
+\begin{itemize}
+\tightlist
+\item
+  We now have most of the building blocks we need to describe
+  relationships between concepts. These in turn allow us to distinguish
+  among different levels of measurement: \textbf{nominal},
+  \textbf{ordinal}, \textbf{interval}, and \textbf{ratio}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Levels of Measurement - Nominal}
+\protect\hypertarget{levels-of-measurement---nominal}{}
+
+\begin{itemize}
+\item
+  \textbf{Nominal level measurement} does not establish mathematical
+  relationships among the values. In other words, it does not make sense
+  to assert that a case with a nominal value of 3 is greater than one
+  with a nominal value of 1, or that two cases with a nominal value of 2
+  are equal (e.g.~Gender or Race).
+\item
+  The numbers in the variable are used only to classify the data.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Levels of Measurement - Ordinal}
+\protect\hypertarget{levels-of-measurement---ordinal}{}
+
+\begin{itemize}
+\item
+  \textbf{Ordinal level measurement}, on the other hand, does imply
+  mathematical relationships among the values. More specifically, the
+  symbols \textless{} , ≤ , =, ≥ , and \textgreater{} have meaning for
+  ordinal level concepts (variables).
+\item
+  For example, a voting scholar might be interested in people's
+  self-placement on an ideological scale.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Levels of Measurement - Ordinal}
+\protect\hypertarget{levels-of-measurement---ordinal-1}{}
+
+\begin{itemize}
+\item
+  Ordinal measures have meaning up to ``greater than'' and ``less than''
+  operations, but they cannot be added or subtracted.
+\item
+  If one considers the example above, we might assign the numerical
+  values 1, 2, 3, 4, and 5 to the ideology scale, or we might assign the
+  numerical values − 3, 2, 7, 44, and 1,324.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Levels of Measurement - Intervals}
+\protect\hypertarget{levels-of-measurement---intervals}{}
+
+\begin{itemize}
+\item
+  \textbf{Interval level measures} have meaningful distances between
+  values: the intervals between numbers are constant across the range of
+  values.
+\item
+  This property is important because it makes addition and subtraction
+  meaningful.
+\item
+  One cannot meaningfully add or subtract variables with nominal or
+  ordinal values because the operation does not make sense.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Levels of Measurement - Discrete and Continous}
+\protect\hypertarget{levels-of-measurement---discrete-and-continous}{}
+
+\begin{itemize}
+\item
+  Interval levels measures may be \textbf{discrete} or
+  \textbf{continuous}.
+\item
+  Discrete variables with interval level measurement are integers (or
+  natural numbers).
+\item
+  For example, a common survey item is the feeling thermometer.
+\item
+  Most researchers submit that the respondent recognizes that a shift of
+  +10 points is the same anywhere on the scale. 19 That is, the distance
+  from 0 to 5 is equivalent to the distance from 26 to 31, from 47 to
+  52, from 83 to 88, etc.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Levels of Measurement - Ratio}
+\protect\hypertarget{levels-of-measurement---ratio}{}
+
+\begin{itemize}
+\item
+  \textbf{Ratio level variables} are interval level variables that have
+  a meaningful zero value.
+\item
+  The feeling thermometer variable has a zero value, but it does not
+  represent the absence of feeling.
+\item
+  Instead, it represents a very strong feeling: intense dislike. So zero
+  is not a meaningful point on the scale.
+\item
+  As such, while we can conduct meaningful addition and subtraction
+  operations with such variables, we cannot conduct meaningful
+  multiplication and division operations.
+\end{itemize}
+
+\#\#Levels of Measurement - Ratio
+
+\begin{itemize}
+\item
+  A good example of a ratio level scale is a public budget.
+\item
+  Imagine that a municipal government spends four times as much on
+  public safety as it does on public health. This is a ratio of 4:1.
+\item
+  Thus, if the city spends \$ 4.8 million on public safety, it must
+  spend \$ 1.2 million on public health.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Levels of Measurement}
+\protect\hypertarget{levels-of-measurement-1}{}
+
+\begin{itemize}
+\item
+  To return to the feeling thermometer example, if the value 0
+  represents intense negative affect (i.e., dislike), 50 indicates an
+  absence of affect (i.e., indifference), and 100 represents intense
+  positive affect, then 0 is not an absence of affect.
+\item
+  Thus, it is an interval level scale, not a ratio level scale, and we
+  cannot conclude that the first member of two pairs of respondents with
+  scores of 20 and 10, and 50 and 25, respectively, each have twice as
+  much affect for a candidate as the second member of each pair.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Levels of Measurement}
+\protect\hypertarget{levels-of-measurement-2}{}
+
+\begin{itemize}
+\item
+  However, we could rescale the feeling thermometer to make it centered
+  on zero, perhaps assigning the value of − 50 to intense negative
+  affect, 0 to the absence of affect (or indifference), and 50 to
+  intense positive affect.
+\item
+  Doing so would transform the level of measurement from interval to
+  ratio.
+\item
+  Examples of event counts that have been used in political science
+  include the number of seats a party holds in parliament, the number of
+  vetoes issued by an executive, the number of unanimous decisions by a
+  court, and the number of wars in which a country has participated.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Levels of Measurement}
+\protect\hypertarget{levels-of-measurement-3}{}
+
+\begin{itemize}
+\item
+  You have likely noticed that each level of measurement subsumes the
+  levels below it. That is, ordinal level measurement is also nominal,
+  and an interval measure has ordinal and nominal properties. This
+  suggests that whenever we have a concept at a high level of
+  measurement we can reconceptualize and remeasure it at a lower level
+  of measurement should we have cause to do so.
+\item
+  Without a firm grasp on levels of measurement one cannot be precise
+  about one's concepts, much less one's measures of one's concepts.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation}
+\protect\hypertarget{notation}{}
+
+\begin{itemize}
+\item
+  Operators take many forms, and are commonly used. We have already
+  discussedsome: +, − , × , / , x\^{}n , n √ x , , , !. Some of these
+  have multiple ways to represent them, others mean multiple things
+  depending on context.
+\item
+  One can also use the product operator \(\prod\) , to represent the
+  product of a , b , and c:
+\end{itemize}
+
+\[\prod_{a}^{c}\].
+
+\begin{itemize}
+\tightlist
+\item
+  One reads that as the product of a through c .
+\end{itemize}
+
+\[\prod_{x = 1}^{3} = x_{1}*x_{2}*x_{3} \]
+
+\end{frame}
+
+\begin{frame}{Notation - Product}
+\protect\hypertarget{notation---product}{}
+
+\begin{itemize}
+\tightlist
+\item
+  More typically, the product operator is used by indexing a variable
+  (this is accomplished by adding a subscript: \(x_{i}\)) and writing:.
+\end{itemize}
+
+\[\prod_{i = k}^{l} x_{i} \]
+
+\begin{itemize}
+\item
+  One reads that as the product of \(x_{i}\) over the range from i = k
+  through i = l .
+\item
+  When the product operator is used in an equation that is set apart
+  from the text, it looks like this:
+\end{itemize}
+
+\[\prod_{i = k}^{l} = x_{k}   * \dots * x_{l}\]
+
+\begin{itemize}
+\tightlist
+\item
+  The `` . . . '' here signals the reader to assume all interim values
+  are included in the product.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation - Sum}
+\protect\hypertarget{notation---sum}{}
+
+\begin{itemize}
+\item
+  The summation operator \(\sum\), can be used to represent the addition
+  of several numbers.
+\item
+  For example if we wanted to add together all member of a set indexed
+  by i, we can write \(\sum_{i}\).
+\item
+  One reads that as the \emph{sum over i}
+\item
+  Throught a range of values looks like this:
+\end{itemize}
+
+\[\sum_{i=k}^{l}x_{i}\]
+
+\begin{itemize}
+\item
+  One reads that as the \emph{sum of \(x_{i}\) over the range from i = k
+  through i = l}.
+\item
+  Set apart from the text in an equation, the summation operator looks
+  like this:
+
+  \[\sum_{i = k}^{l} = x_{k}   + \dots + x_{l}\]
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation}
+\protect\hypertarget{notation-1}{}
+
+\begin{itemize}
+\item
+  The exponential operator, \(x^{n}\) (read ``x to the nth power,'' or
+  ``x-squared'' when n = 2 and ``x-cubed'' when n = 3), represents the
+  power to which we raise the variable, x.
+\item
+  The root operator, \(n\sqrt{x}\) (read ``the nth root of x,'' or ``the
+  square root of x'' when n = 2 or ``the cube root of x'' when n = 3),
+  represents the root of x.
+\item
+  Factorial notation is used to indicate the product of a specific
+  sequence of numbers. Thus, n! = n × (n−1) × (n−2) . . . × 2 × 1. So 5!
+  = 5×4×3×2×1 = 120, and10!=10×9×\ldots3×2×1=3,628,800.
+\item
+  This notation is especially useful for calculating probabilities.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Notation}
+\protect\hypertarget{notation-2}{}
+
+\begin{itemize}
+\item
+  The derivative of \texttt{x} with respect to \texttt{t} is represented
+  by the operator \(\frac{dx}{ dt}\) .
+\item
+  The operator ∂ indicates the partial derivative, and \(\int\)
+  indicates the integral.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation}
+\protect\hypertarget{notation-3}{}
+
+\begin{itemize}
+\item
+  Sets, as we have seen, have a good deal of associated notation.
+\item
+  There are the set operators ∩, ∪, ×, and , plus the complement of A
+  (A\^{}c or A′).
+\item
+  There are also the empty set ∅, set membership ∈, set nonmembership
+  \(\notin\), proper subset ⊂, and subset ⊆. To these we add \textbar{}
+  , : , or ∋, which are each read as ``such that.''
+\item
+  These are typically used in the definition of a set. For example, we
+  define the set A = \{x ∈ B\textbar x ≤ 3\}, read as ``the set of all x
+  in B such that x is less than or equal to 3.''
+\item
+  In other words, the \textbar{} indicates the condition that defines
+  the set. It serves the same purpose in conditional probabilities
+  (P(A\textbar B)), as we will see
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation}
+\protect\hypertarget{notation-4}{}
+
+\begin{itemize}
+\item
+  Functions are typically written as f() or f(·), both of which imply
+  that f is a function of one or more variables and constants.
+\item
+  The ``·'' here is a placeholder for a variable or constant; do not
+  confuse it with its occasional use as a multiplication symbol.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation}
+\protect\hypertarget{notation-5}{}
+
+\begin{itemize}
+\item
+  Delimiters are used to indicate groups. Sometimes the groups are used
+  to identify the order of the operations that are to be performed:
+  \((x + x^{2})(x − z)\).
+\item
+  One performs the operations inside the innermost parentheses first and
+  then moves outward.
+\item
+  The open set (x1,xn) excludes the endpoint values x1 and xn, whereas
+  the closed set {[}x1,xn{]} includes the endpoint values x1 and xn.
+\item
+  Curly braces are used to denote set definitions, as above, or discrete
+  sets: \{x1 , x2 , . . . , xn \}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation}
+\protect\hypertarget{notation-6}{}
+
+\begin{itemize}
+\item
+  The symbol ∀ means ``for all,'' so ∀x ∈ A means the associated
+  statement applies for all x in the set A.
+\item
+  The symbol ∃ means ``there exists,'' typically used in the context of
+  ∃ some x ∈ A such that x \textless{} 3.
+\item
+  The symbol ⇒ is read as ``implies'' and is used as C ⇒ D, which means
+  that whenever statement C is true, D is too.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation}
+\protect\hypertarget{notation-7}{}
+
+\begin{itemize}
+\item
+  One can also use the reverse, C ⇐ D, which means that C is true if D
+  is true. The symbol ⇔ means that both implications are true and is
+  read as ``if and only if,'' so C ⇔ D means that C is true if D is
+  true, and only if D is true.
+\item
+  In other words, C and D are equivalent statements. The symbol ¬
+  denotes negation, so ¬C means statement C is not true. You will also
+  sometimes see ∼ C used to mean C is not true.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review}
+\protect\hypertarget{algebra-review}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Order of Operations} states that multiplication and division
+  are carried out before addition and subtraction
+\end{itemize}
+
+\[3*5 + 24/6 = 15 + 4 = 19\]
+
+\begin{itemize}
+\item
+  The \textbf{associative properties} state that (a+b)+c = a+(b+c) and
+  (a×b)×c = a × (b × c). In words, the properties indicate that the
+  grouping of terms does not affect the outcome of the operation.
+\item
+  The \textbf{commutative properties} state that a+b = b+a and a×b =
+  b×a. In words, the properties claim that the order of addition and
+  multiplication is irrelevant.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review}
+\protect\hypertarget{algebra-review-1}{}
+
+\begin{itemize}
+\item
+  The \textbf{distributive property} states that a(b + c) = ab + ac. In
+  words, the property says that multiplication distributes over addition
+  (and subtraction).
+\item
+  The \textbf{identity properties} state that there exists a zero such
+  that x + 0 = x and that there exists a one such that x×1 = x.
+\item
+  In other words, there exist values that leave x unchanged under
+  addition and multiplication (and subtraction and division,
+  respectively, as well). The inverse property states that there exists
+  a −x such that (−x) + x = 0.
+\item
+  There exist values that when added to any x produce the identity under
+  addition.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review}
+\protect\hypertarget{algebra-review-2}{}
+
+\begin{itemize}
+\item
+  It is useful to recall at this stage that division by zero is
+  undefined.
+\item
+  The expression x/0 = ∞ is true for any \(x\neq 0\), but is completely
+  undefined for x=0.
+\item
+  Other useful facts include that x=1x=x\^{}1 =1x\^{}1, and that x\^{}0
+  =1.
+\item
+  Recall also that multiplication by a variable with a negative value
+  changes the sign of the product: −1 × x = −x.
+\item
+  The product of two terms with negative signs is positive: (−x) · (−y)
+  = xy.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - More on Exponents}
+\protect\hypertarget{algebra-review---more-on-exponents}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Use of a negative exponent indicates the reciprocal of the base rasied
+  to the absolute value of the exponent
+\end{itemize}
+
+\[ a^{-n} = \frac{1}{a^{n}}\]
+\[ 10^{-3} = \frac{1}{10^{3}} = \frac{1}{1000} = .001\]
+
+\end{frame}
+
+\begin{frame}{Algebra Review - More on Exponents}
+\protect\hypertarget{algebra-review---more-on-exponents-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  When multiplying powers with the same base, simply add the exponenents
+\end{itemize}
+
+\[a^{x} * a^{y}= a^{x+y}\] \[10^{5} * 10^{-3}= 10^{2}\]
+
+\begin{itemize}
+\tightlist
+\item
+  When raising a base with an exponent to a further exponent, simply
+  multiply the exponenents
+\end{itemize}
+
+\[(2^{3})^{2}=(2*2*2)^{2} = \\  (2*2*2)*(2*2*2) =2^{6}\]
+
+\end{frame}
+
+\begin{frame}{Algebra Review - PEMDAS}
+\protect\hypertarget{algebra-review---pemdas}{}
+
+\begin{itemize}
+\item
+  The order of operations is also important and can trip people up. In
+  arithmetic and algebra the order of operations is parentheses,
+  exponents, multiplication, division, addition, subtraction.
+\item
+  A common mnemonic device people use to memorize order of operations is
+  PEMDAS, or Please Excuse My Dear Aunt Sally.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Ratio}
+\protect\hypertarget{algebra-review---ratio}{}
+
+\begin{itemize}
+\item
+  The ratio of two quantities is one divided by the other
+  \(\frac{x}{y}\) is the ratio of x to y.
+\item
+  Ratios are also written as x : y.
+\item
+  Keep in mind that one can only take the ratio of two variables
+  measured at a ratio level of measurement (i.e., there is a constant
+  scale between values, and a meaningful zero).
+\item
+  As an example, international relations scholars are often interested
+  in the ratio of military power between two countries
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Proportion}
+\protect\hypertarget{algebra-review---proportion}{}
+
+\begin{itemize}
+\item
+  The \textbf{proportion} of two variables, on the other hand, is the
+  amount one variable represents of the sum of itself and a second
+  variable: \(|\frac{x}{x+y}|\)
+\item
+  A proportion ranges from a minimum of 0 to a maximum of 1.
+\item
+  Students of budgetary politics are often interested in the proportion
+  of expenditures that is spent in a given category (e.g., health and
+  welfare, pork barrel politics, defense spending).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Percentage}
+\protect\hypertarget{algebra-review---percentage}{}
+
+\begin{itemize}
+\item
+  The \textbf{percentage} one variable represents of a total is the
+  proportion repre- sented over the range from 0 to 100.
+\item
+  In other words, the percentage is a linear transformation of the
+  proportion \(|\frac{x}{x+y}|\) × 100\%.
+\item
+  Many people find a percentage representation more intuitive than a
+  proportion representation, but they provide the same information.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Algebra Review - Percent Change}
+\protect\hypertarget{algebra-review---percent-change}{}
+
+\begin{itemize}
+\tightlist
+\item
+  You will also encounter the percentage change in a variable, which is
+  calculated as:
+\end{itemize}
+
+\[\frac{x_{t+1}-x_{t}}{x_{t}}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Where the subscript \texttt{t} indicates the first observation and the
+  subscript \texttt{t\ +\ 1} indicates the second observation.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Percent Change}
+\protect\hypertarget{algebra-review---percent-change-1}{}
+
+\begin{itemize}
+\item
+  For instance, according to the Center for Defense Information's
+  Almanac, the United States spent \$75.4 billion for military personnel
+  wages in 2001 and an estimated \$80.3 billion in 2002.
+\item
+  The expenditures in 2002 represented a \(6.5\%\) increase over 2001
+  expenditures: \(\frac{80.3−75.4}{75.4} ≃ 6.5\%\)
+\item
+  Note that the percentage change can range from −∞ to ∞
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Fractions}
+\protect\hypertarget{algebra-review---fractions}{}
+
+\begin{itemize}
+\item
+  You can only add the numerators of two or more fractions when the
+  denominators of each fraction are the same (i.e., you cannot add
+  fractions with different denominators).
+  \(\frac{4}{\beta} + \frac{\alpha}{\beta} = \frac{4+ \alpha}{\beta}\)
+\item
+  When two fractions have different denominators, such as
+  \(\frac{\beta}{4} + \frac{\alpha}{2}\), one must transform one or both
+  of the denominators to make addition possible: the numerators of all
+  fractions can be added once their denominators are made equal.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Fractions}
+\protect\hypertarget{algebra-review---fractions-1}{}
+
+\begin{itemize}
+\item
+  Unlike addition, multiplication does not require a common base, and
+  one does multiply both numerator and denominator.
+\item
+  Another common mistake people make when adding fractions is to assume
+  that all aspects of fractions follow the same rules of addition. For
+  example, they assert that \(\frac{1}{\delta + \theta}\) is equal to
+  \(\frac{1}{\delta} + \frac{1}{\theta}\). It is not.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Factoring}
+\protect\hypertarget{algebra-review---factoring}{}
+
+\begin{itemize}
+\item
+  Factoring involves rearranging the terms in an equation to make
+  further ma- nipulation possible or to reveal something of interest.
+  The goal is to make the expression simpler. One uses the properties
+  described above rather extensively when factoring.
+\item
+  A standard algebraic manipulation involves combining like terms in an
+  ex- pression. For example, to simplify
+  \(δ + δ^{2} + 4δ − 6δ^{2} + 18δ^{3}\), we combine all like terms. In
+  this case we combine all the δ terms that have the same exponent,
+  which gives us \(18δ^{3} − 5δ^{2} + 5δ\).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Factoring}
+\protect\hypertarget{algebra-review---factoring-1}{}
+
+\begin{itemize}
+\item
+  Another standard factoring manipulation involves separating a common
+  term from unlike ones.
+\item
+  We first establish what we want to pull out of the equation, then
+  apply the distributive property of multiplication in reverse.
+\item
+  For example, we might want to pull x out of the following:
+  \(3x + 4x^{2} = x(3 + 4x)\). Another example is
+  \(6x^{2} − 12x+2x^3 =2x(3x−6+x^{2})\).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Quadratic polynomials}
+\protect\hypertarget{algebra-review---quadratic-polynomials}{}
+
+\begin{itemize}
+\item
+  Quadratic polynomials are composed of a constant and a variable that
+  is both squared and raised to the power of one: \(x^2 − 2x + 3\), or
+  \(7 − 12x + 6x^2\).
+\item
+  Quadratic polynomials can be factored into the product of two terms:
+  (x±?)×(x±?), where you need to determine whether the sign is + or −,
+  and then replace the question marks with the proper values.
+\item
+  Consider the fraction:
+\end{itemize}
+
+\[\frac{x^2-1}{x-1}\]
+
+\end{frame}
+
+\begin{frame}{Algebra Review Quadratic polynomials}
+\protect\hypertarget{algebra-review-quadratic-polynomials}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Consider the expression:
+\end{itemize}
+
+\[\frac{3\lambda^4 + 3\lambda^3 + 6\lambda^2}{6\lambda^2 + 12\lambda}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Does \((δ + γ)^{2} = δ^{2} + γ^{2}?\)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - FOIL}
+\protect\hypertarget{algebra-review---foil}{}
+
+\begin{itemize}
+\item
+  \textbf{F}: Multiply the first terms: \[(2π+7)(4+3π)=2π×4=8π.\]
+\item
+  \textbf{O}: Multiply the outer terms:
+  \[(2π + 7)(4 + 3π) = 2π × 3π = 6π^2.\]
+\item
+  \textbf{I}: Multiply the inner terms: \[(2π+7)(4+3π)=4×7=28.\]
+\item
+  \textbf{L}: Multiply the last terms: \[(2π+7)(4+3π)=7×3π=21π.\]
+\item
+  Add terms to get \[8π+6π^2 +28+21π.\]
+\item
+  Finally, group like terms to get \[6π^2 + 29π + 28.\]
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Completing the Square}
+\protect\hypertarget{algebra-review---completing-the-square}{}
+
+\begin{itemize}
+\item
+  Many quadratic equations that you will face can be solved relatively
+  easily by \textbf{completing the square}.
+\item
+  The basic intuition for solving these is to isolate the variable and
+  its square and then add a value to each side of the equation to
+  ``complete the square.''
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Completing the Square}
+\protect\hypertarget{algebra-review---completing-the-square-1}{}
+
+\begin{itemize}
+\item
+  Start with a quadratic in your variable of interest (we'll say it's x)
+  and move the constant to the right-hand side. Divide through by the
+  coefficient on \(x^{2}\). So if you have:
+  \[2x^{2} − 4x − 2 = 0, \\ x^{2} − 2x = 1\].
+\item
+  Divide the coefficient on x by 2 and then square it. Add that value to
+  both sides of the equation. So now you have:
+  \(x^{2} − 2x + 1 = 1 + 1\).
+\item
+  Factor the left-hand side into a ``(x ± some term) squared'' form and
+  simplify the right-hand side. So now you have: \((x − 1)^{2} = 2\).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Completing the Square}
+\protect\hypertarget{algebra-review---completing-the-square-2}{}
+
+\begin{itemize}
+\item
+  Take the square root of both sides (remember that when you take the
+  square root of a number, the solution is always ±, because the square
+  of √ a negative number is a positive number). So now you have:
+  \(x − 1\) = ± \(\sqrt2\).
+\item
+  Solve for x. So the solutions are x=1+√2 and x = 1−√2
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Completing the Square}
+\protect\hypertarget{algebra-review---completing-the-square-3}{}
+
+\begin{itemize}
+\item
+  Completing the square is one method for solving a quadratic equation,
+  but it is not the only one, and you will sometimes encounter equations
+  that are rather complicated to solve by completing the square.
+\item
+  For example, if you are faced with \(x^{2} + √15x − 1 = 0\), you will
+  not want to calculate half of √15, and then square it, add it to both
+  sides, and try to factor the result. Instead, you will want to turn to
+  the quadratic equation and formula
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Quadratic Equation}
+\protect\hypertarget{algebra-review---quadratic-equation}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The general form of a quadratic equation is:
+\end{itemize}
+
+\[ax^2 +bx+c=0\]
+
+\begin{itemize}
+\tightlist
+\item
+  The general solutions to this equation are
+\end{itemize}
+
+\[x=\frac{−b± \sqrt(b^2−4ac)}{2a}\]
+
+\begin{itemize}
+\tightlist
+\item
+  You can go online and use a quadratic equation solver and plug in the
+  values for a, b, and c to verify the accuracy of your computations.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review}
+\protect\hypertarget{algebra-review-3}{}
+
+\begin{itemize}
+\item
+  Adding any number to each side of these relations will not change
+  them; this includes the inequalities. That is, inequalities have the
+  same addition and subtraction properties as equalities such that if x
+  \textgreater{} y, then x + a \textgreater{} y + a and x − a
+  \textgreater{} y − a.
+\item
+  For multiplication, if a is positive and x \textgreater{} y, then
+  ax\textgreater ay. If a is negative and x\textgreater y, then
+  ax\textless ay.
+\item
+  To summarize, this means that you flip the \textless{} or
+  \textgreater{} sign when multiplying or dividing by a negative.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algebra Review - Common Errors}
+\protect\hypertarget{algebra-review---common-errors}{}
+
+\begin{itemize}
+\item
+  Sign errors
+\item
+  Only changing one side or term in an equation
+\item
+  Not distributing
+\item
+  Distributing with radicals and exponents
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility}{}
+
+\begin{itemize}
+\item
+  Hagle (1995, p.~7) opines that ``functions are valuable to social
+  scientists because most relationships can be modelled in the form of a
+  function.''
+\item
+  We would add that functions are valuable for those political
+  scientists who want to make specific theoretical claims and/or use
+  statistics to test the implications of theories of politics.
+\item
+  In other words, functions are valuable because they are explicit: they
+  make very specific arguments about relationships. In addition,
+  functions play a key role in developing statistical models.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Variables, Functions, and Equations Review}
+\protect\hypertarget{variables-functions-and-equations-review}{}
+
+\begin{itemize}
+\item
+  A \textbf{coefficient} can be considered a synonym of factor - i.e.~an
+  element of a product. In practice they refer to the factor mulitiplied
+  by variables in regression equations. They are typically denotated
+  with Greek letters.
+\item
+  \[Y= \alpha + \beta_{1}X\]
+\item
+  Here, X and Y are variables and \(\alpha\) and \(\beta\) are
+  coefficients.
+\item
+  \textbf{Function} is a rule the assigns a unique number y, for each
+  value of a set of other numbers,x. We often write y=f(x)
+\item
+  A function is \textbf{monotonic} if the value of the function always
+  increases as the value of the independent variable increases or the
+  value of of the function always decreases.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-1}{}
+
+\begin{itemize}
+\item
+  Misguided notion that the key to developing sound theory is to master
+  a wide array of functions and then see which one applies to a given
+  theoretical or statistical problem
+\item
+  Learning to be able to translate verbal conjectures into graphs and/or
+  equations that represent those conjectures is a valuable skill to
+  develop. That skill is essential for anyone who wants to do formal
+  modeling.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-2}{}
+
+\begin{itemize}
+\item
+  The linear equation \(y = a + bx\) is the best-known and most
+  frequently used function in political science
+\item
+  You will hopefully recall the notation y = f(x), which is read ``y is
+  a function of x.''
+\item
+  For example, if we were given the explicit function y = 3x, then we
+  could map the values of y for any given set of x values.
+\item
+  In empirical work we typically refer to the x here as the independent
+  or exogenous variable and the y as the dependent or endogenous
+  variable, as it depends on and is affected by x
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-3}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Now consider the equation y = 3x. No matter what x values we plug into
+  the equation we get a unique value of y. As such, the equation is a
+  function.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(}\DecValTok{3}\OperatorTok{*}\NormalTok{x, }\DataTypeTok{from=}\DecValTok{1}\NormalTok{, }\DataTypeTok{to=}\DecValTok{50}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-1-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  If we can draw a vertical line at any point on the graph that
+  intersects the curve at more than one point, then the equation is not
+  a function.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-4}{}
+
+\begin{itemize}
+\item
+  Unfortunately, few (if any!) political relationships are so simple
+  that they can be described usefully as a function of one variable.
+\item
+  As such, we need to be able to use functions of two or more variables,
+  such as y = f(x1,x2,x3) or z = f(x,y).
+\item
+  Consider the function: y = 3xz
+\item
+  Another way of saying the same thing is that the relationship of x on
+  y is different (stronger or weaker) depending on the value of z.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-5}{}
+
+\begin{itemize}
+\item
+  In the equation y = a + bx:
+\item
+  The constant a is the intercept, or in terms of the graph, where the
+  function crosses the vertical (y) axis (i.e., the value of y when x =
+  0).
+\item
+  The constant b is the slope of the line, or the amount that y changes
+  given a one-unit increase in x.
+\item
+  That is, a one-unit increase in x produces a 1b-unit increase in y, a
+  three-unit increase in x produces a 3b-unit increase in y, etc.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-6}{}
+
+\begin{itemize}
+\item
+  Let pv represent the probability of voting and ed represent education
+  level: \(p_{v} = a+b(ed)\).
+\item
+  In this function a represents the likelihood that someone without any
+  formal education turns out to vote, and b indicates the impact of
+  education on the probability of voting.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-7}{}
+
+\begin{itemize}
+\item
+  Lets assume that : \(p_{v} = 1.215 + 0.134 × ed\).
+\item
+  The intercept of 1.215 makes little sense, but we ignore that for this
+  example.
+\item
+  Education measure has four categories: 0--8 years of education, 9--11
+  years, 12 years, and more than 12 years.
+\item
+  A slope (i.e., b) of 0.134 suggests that as we move from one category
+  to another (e.g., from 0--8 years to 9--11 years, or from 12 years to
+  more than 12 years), the probability that someone votes rises by
+  0.134.
+\item
+  So if this linear model and its results are accurate, the typical
+  adult with a college education has roughly a 0.4 greater probability
+  of voting in a US presidential election than the typical adult without
+  any high school education.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-8}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \(p_{v} = 1.215 + 0.134ed\).
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(}\FloatTok{1.215} \OperatorTok{+}\StringTok{ }\FloatTok{0.134}\OperatorTok{*}\NormalTok{x, }\DataTypeTok{from=}\DecValTok{0}\NormalTok{, }\DataTypeTok{to=}\DecValTok{4}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-2-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-9}{}
+
+\begin{itemize}
+\item
+  The linear equation states that the size of the impact of x on y is
+  constant across all values of x.
+\item
+  For example, in the above example the impact of x on y is roughly
+  0.13.
+\item
+  Since the relationship is linear, that means that a shift from 0--8
+  years of education to 9--11 years of education increases the
+  probability of voting in a national election by \(\sim\).13, and a
+  shift from 9--11 years to 12 years also produces an increase of
+  \(\sim\).13, as do shifts from 12 years of education to more than 12
+  years of education.
+\item
+  Nonlinear functions, which we discuss in the third subsection, specify
+  that the size of the impact of x on y varies across values of x.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-10}{}
+
+\begin{itemize}
+\item
+  Nonlinear functions are all those that are neither linear nor affine:
+  those functions that describe (the graph of) a curve that is not a
+  line.
+\item
+  For example, y = cos(x)
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(}\KeywordTok{cos}\NormalTok{(x), }\DataTypeTok{from=}\DecValTok{1}\NormalTok{, }\DataTypeTok{to=}\DecValTok{50}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-3-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Functions with exponent terms, including quadratics and other
+  polynomials, are the most commonly used nonlinear functions in
+  political science.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-11}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Nonlinear functions with exponents are of interest to political
+  scientists when we suspect that a variable x has an impact on y, but
+  that the strength of the impact is different for different values of
+  x.
+\end{itemize}
+
+\#\#Function, Relations, and Utility
+
+\begin{itemize}
+\tightlist
+\item
+  Consider the graphs of the functions \(y = x\) and \(y = x^{2}\)
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(}\DecValTok{1}\OperatorTok{*}\NormalTok{x, }\DataTypeTok{from=}\DecValTok{1}\NormalTok{, }\DataTypeTok{to=}\DecValTok{50}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-4-1.pdf}
+
+\end{frame}
+
+\begin{frame}[fragile]{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-12}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The slope of the curve for \(y = x^{2}\) is not constant: the impact
+  of x on y changes as we move along the x-axis.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(x}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DataTypeTok{from=}\DecValTok{1}\NormalTok{, }\DataTypeTok{to=}\DecValTok{5}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-5-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-13}{}
+
+\begin{itemize}
+\item
+  Below is a list of the algebraic rules that govern the manipulation of
+  exponents.
+\item
+  \textbf{Multiplication}: to calculate the product of two terms with
+  the same base one takes the sum of the two exponents:
+\end{itemize}
+
+\[x^{m} × x^{n} = x^{m+n}\]
+
+\begin{itemize}
+\tightlist
+\item
+  When the bases are different, you can simplify the expression only
+  when the exponents are the same.
+\end{itemize}
+
+\[x^{m} × z^{m} = (xz)^{m}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Last, when both the base and the exponent are different, you cannot
+  simplify to a single term. Thus, e.g.,
+  \[x^{m} × z^{n} \neq (xz)^{m+n}\]
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-14}{}
+
+\begin{itemize}
+\tightlist
+\item
+  To determine the \textbf{power of a power}, one multiplies the
+  exponents. For example:
+\end{itemize}
+
+\[(x^{m})^{n} = x^{mn}\]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Division}: to calculate the quotient of two terms with the
+  same base and different powers, one takes the difference of the
+  exponents:
+\end{itemize}
+
+\[\frac{x^{m}}{x^n}= x^{m-n}\]
+
+\begin{itemize}
+\tightlist
+\item
+  To see why this is so, recall that:
+\end{itemize}
+
+\[\frac{1}{x^n}= x^{-n}\]
+
+\end{frame}
+
+\begin{frame}[fragile]{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-15}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Quadratic functions describe a relationship where a variable (y) is a
+  function of the sum of another variable (x) and its square
+  (\(x^{2}\)).
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(x}\OperatorTok{+}\NormalTok{x}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DataTypeTok{from=}\DecValTok{0}\NormalTok{, }\DataTypeTok{to=}\DecValTok{50}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-6-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-16}{}
+
+\begin{itemize}
+\item
+  What sort of theoretical expectations might one want to sharpen by
+  stating them as a quadratic relationship?
+\item
+  Speaking generally, a quadratic function is quite useful for depicting
+  relationships where we think the impact of an independent variable is
+  positive (negative) for low values of the independent variable, flat
+  for middle-range values, and negative (positive) for high values.
+\item
+  Put differently, when one thinks that there is some (often unknown)
+  threshold at which the relationship between two concepts (variables)
+  switches (i.e., from positive to negative or from negative to
+  positive), one might consider whether the quadratic can represent our
+  conjecture.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-17}{}
+
+\begin{itemize}
+\item
+  For example, many scholars have hypothesized that rebellion will be
+  low in countries that exert little to no government coercion and in
+  countries that exhibit high levels of government coercion.
+\item
+  Where will one find rebellion? This conjecture suggests that it will
+  be highest among those countries that engage in mid-range levels of
+  coercion (e.g., Muller and Seligson, 1987).
+\item
+  If we let r represent rebellion and c represent coercion, then this
+  conjecture can be represented as follows:
+\end{itemize}
+
+\[r=\alpha+β_{1}c−β_{2}c^{2}\]
+
+\end{frame}
+
+\begin{frame}[fragile]{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-18}{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(}\DecValTok{4}\OperatorTok{*}\NormalTok{x}\OperatorTok{-}\NormalTok{x}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DataTypeTok{from=}\DecValTok{0}\NormalTok{, }\DataTypeTok{to=}\DecValTok{4}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-7-1.pdf}
+
+\end{frame}
+
+\begin{frame}[fragile]{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-19}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Higher-order polynomials are those possessing powers of x greater than
+  the reference. In this case, we are referring to the presence of cubed
+  and higher terms.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(}\OperatorTok{-}\NormalTok{x}\OperatorTok{+}\NormalTok{x}\OperatorTok{^}\DecValTok{2}\OperatorTok{-}\NormalTok{x}\OperatorTok{^}\DecValTok{3}\NormalTok{, }\DataTypeTok{from=}\DecValTok{0}\NormalTok{, }\DataTypeTok{to=}\FloatTok{2.5}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-8-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-20}{}
+
+\begin{itemize}
+\item
+  Some studies the relationship between the size of the majority party
+  and central government expenditures in parliamentary democracies.
+\item
+  A majority party is one that has at least 50\% of the seats in the
+  legislature and thus can govern without having to form a coalition
+  with other parties.
+\item
+  The basic underlying idea is that there are two different thresholds
+  at work between the number of seats the majority party holds in the
+  legislature and the size of government spending.
+\item
+  First, as the number of seats held by the majority party rises from a
+  bare majority (i.e., 51\% of the legislature), spending declines,
+  because it takes more and more legislators to defect and bring down
+  the government.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-21}{}
+
+\begin{itemize}
+\item
+  While expects an initial negative relationship as the size of the
+  majority party increases above a bare majority, they expects the
+  relationship to quickly become positive (perhaps at around 56\% of the
+  legislative seats).
+\item
+  Expenditures rise because the party has greater electoral safety and
+  thus can take greater risks of alienating other parties' constituents
+  by more greatly rewarding its own constituents.
+\item
+  Yet he does not argue that this incentive to spend more remains as
+  party size grows beyond the supermajority threshold (roughly 67\% of
+  the seats).
+\end{itemize}
+
+\[GovExp = α − β1(SizeMajParty) + \\ β2(SizeMajParty)^{2} − β3(SizeMajParty)^{3}\]
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-22}{}
+
+\begin{itemize}
+\item
+  \textbf{Logarithms} can be understood as the inverses of exponents
+  (and vice versa).
+\item
+  They can be used to transform an exponential function to a linear one,
+  or a linear function to a nonlinear one in which the impact of one
+  variable on another declines as the first variable rises in value.
+\item
+  The logarithm (or log) tells you how many times to multiply its base a
+  in order to get x, where a is a positive real number not equal to 1.
+\item
+  When \(log_{a}x= b\), then thus \(x = a^{b}\).
+\item
+  This lets us transition between logs and exponents readily.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{More on e}
+\protect\hypertarget{more-on-e}{}
+
+\begin{itemize}
+\item
+  E Is NOT Just A Number
+\item
+  \textbf{e is the base rate of growth shared by all continually growing
+  processes}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    e lets you take a simple growth rate (where all change happens at
+    the end of the year) and find the impact of compound, continuous
+    growth, where every nanosecond (or faster) you are growing just a
+    little bit.
+  \end{itemize}
+\item
+  Mathematically, if we have x splits then we get \(2^{x}\) times as
+  much stuff than when we started. With 1 split we have \(2^{1}\) or 2
+  times as much. With 4 splits we have \(2^{4} = 16\) times as much. As
+  a general formula:
+\end{itemize}
+
+\[\displaystyle{ growth = 2^x }\]
+
+\end{frame}
+
+\begin{frame}{More on e}
+\protect\hypertarget{more-on-e-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Said another way, doubling is 100\% growth. We can rewrite our formula
+  like this:
+\end{itemize}
+
+\[\displaystyle{ growth = (1 + 100\%)^x}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Of course, we can substitute any number (50\%, 25\%, 200\%) for 100\%
+  and get the growth formula for that new rate. So the general formula
+  for x periods of return is:
+\end{itemize}
+
+\[\displaystyle{growth = (1 + return)^x}\]
+
+\begin{itemize}
+\item
+  This just means we use our rate of return, (1 + return), ``x'' times.
+\item
+  This formula assumes growth happens in discrete steps
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{More on e}
+\protect\hypertarget{more-on-e-2}{}
+
+\begin{itemize}
+\item
+  But money is different. As soon as we earn a penny of interest, that
+  penny can start earning micro-pennies of its own. We don't need to
+  wait until we earn a complete dollar in interest --- fresh money
+  doesn't need to mature.
+\item
+  Let's turn our return into a formula. The growth of two half-periods
+  of 50\% is:
+\end{itemize}
+
+\[\displaystyle{growth = (1 + 100\%/2)^{2} = 2.25}\]
+
+\begin{itemize}
+\tightlist
+\item
+  We get a formula by using 3 periods in our growth equation:
+\end{itemize}
+
+\[\displaystyle{growth = (1 + 100\%/3)^3 = 2.37037...}\]
+
+\end{frame}
+
+\begin{frame}[fragile]{More on e}
+\protect\hypertarget{more-on-e-3}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Why not take even shorter time periods? How about every month, day,
+  hour, or even nanosecond? Will our returns skyrocket?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{efunction <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x, y) \{}
+\KeywordTok{return}\NormalTok{((}\DecValTok{1} \OperatorTok{+}\StringTok{ }\DecValTok{1}\OperatorTok{/}\NormalTok{x)}\OperatorTok{^}\NormalTok{x)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]{More on e}
+\protect\hypertarget{more-on-e-4}{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{efunction}\NormalTok{(}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2.25
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{efunction}\NormalTok{(}\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2.37037
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{efunction}\NormalTok{(}\DecValTok{1000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2.716924
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{efunction}\NormalTok{(}\DecValTok{1000000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2.71828
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}{More on e}
+\protect\hypertarget{more-on-e-5}{}
+
+\begin{itemize}
+\item
+  The numbers get bigger and converge around 2.718. Hey\ldots{} wait a
+  minute\ldots{} that looks like e!
+\item
+  e is defined to be that rate of growth if we continually compound
+  100\% return on smaller and smaller time periods:
+\end{itemize}
+
+\[\displaystyle{growth = e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Sure, you started out expecting to grow from 1 to 2 (that's a 100\%
+  increase, right?). But with each tiny step forward you create a little
+  dividend that starts growing on its own. When all is said and done,
+  you end up with e (2.718\ldots) at the end of 1 time period, not 2. e
+  is the maximum, what happens when we compound 100\% as much as
+  possible.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{More on e}
+\protect\hypertarget{more-on-e-6}{}
+
+\begin{itemize}
+\item
+  What if we grow at 50\% annually, instead of 100\%? Can we still use
+  e?
+\item
+  Let's see. The rate of 50\% compound growth would look like this:
+\end{itemize}
+
+\[\displaystyle{\lim_{n\to\infty} \left( 1 + \frac{.50}{n} \right)^n}\]
+
+\begin{itemize}
+\tightlist
+\item
+  What can we do here? Remember, 50\% is the total return, and n is the
+  number of periods to split the growth into for compounding. If we pick
+  n=50, we can split our growth into 50 chunks of 1\% interest:
+\end{itemize}
+
+\[\displaystyle{\left( 1 + \frac{.50}{50} \right)^{50} = \left( 1 + .01 \right)^{50}}\]
+
+\begin{itemize}
+\tightlist
+\item
+  What is the difference between the two numbers? Well, it's just half
+  the number of changes:
+\end{itemize}
+
+\[\displaystyle{\left( 1 + .01 \right)^{50} = \left( 1 + .01 \right)^{100/2} = \\ \left( \left( 1 + .01 \right)^{100}\right)^{1/2} = e^{1/2} }\]
+
+\end{frame}
+
+\begin{frame}{More on e}
+\protect\hypertarget{more-on-e-7}{}
+
+\begin{itemize}
+\item
+  This works in general: if we had a 300\% growth rate, we could break
+  it into 300 chunks of 1\% growth. This would be triple the normal
+  amount for a net rate of e3.
+\item
+  Suppose we have 300\% growth for 2 years. We'd multiply one year's
+  growth (e3) by itself:
+\end{itemize}
+
+\[\displaystyle{growth = \left(e^{3}\right)^{2} = e^{6}}\]
+
+\begin{itemize}
+\tightlist
+\item
+  And in general:
+\end{itemize}
+
+\[\displaystyle{growth = \left(e^{rate}\right)^{time} = e^{rate \cdot time}}\]
+
+\end{frame}
+
+\begin{frame}{More on e}
+\protect\hypertarget{more-on-e-8}{}
+
+\begin{itemize}
+\item
+  \(e^{x}\) can mean two things:
+
+  \begin{itemize}
+  \item
+    x is the number of times we multiply a growth rate: 100\% growth for
+    3 years is \(e^{3}\)
+  \item
+    x is the growth rate itself: 300\% growth for one year is \(e^{3}\)
+  \end{itemize}
+\item
+  When we write:
+\end{itemize}
+
+\[\displaystyle{e^x}\]
+
+\begin{itemize}
+\tightlist
+\item
+  The variable x is a combination of rate and time.
+\end{itemize}
+
+\[\displaystyle{x = rate \cdot time}\]
+
+\begin{itemize}
+\item
+  10 years of 3\% growth means 30 changes of 1\%. These changes happen
+  over 10 years, so you are growing continuously at 3\% per year.
+\item
+  1 period of 30\% growth means 30 changes of 1\%, but happening in a
+  single year. So you grow for 30\% a year and stop.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{More on e - interest rates}
+\protect\hypertarget{more-on-e---interest-rates}{}
+
+\begin{itemize}
+\item
+  Suppose I have \$120 in an account with 5\% interest. My bank is
+  generous and gives me the maximum possible compounding. How much will
+  I have after 10 years?
+\item
+  Our rate is 5\%, and we're lucky enough to compound continuously.
+  After 10 years, we get \(120 · e^{.05 · 10} = 197.85\).
+\item
+  Of course, most banks aren't nice enough to give you the best possible
+  rate. The difference between your actual return and the continuous one
+  is how much they don't like you.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Natural Log}
+\protect\hypertarget{natural-log}{}
+
+\begin{itemize}
+\item
+  \textbf{The natural log} gives you the time needed to reach a certain
+  level of growth.
+\item
+  e and the Natural Log are twins:
+
+  \begin{itemize}
+  \item
+    \(e^{x}\) is the amount of continuous growth after a certain amount
+    of time.
+  \item
+    Natural Log (ln) is the amount of time needed to reach a certain
+    level of continuous growth
+  \end{itemize}
+\item
+  Put another away \(e^{x}\) lets us plug in time and get growth.
+  \(ln(x)\) lets us plug in growth and get the time it would take.
+\item
+  For example:
+
+  \begin{itemize}
+  \item
+    \(e^{x}\)is 20.08. After 3 units of time, we end up with 20.08 times
+    what we started with.
+  \item
+    \(ln(20.08)\) is about 3. If we want growth of 20.08, we'd wait 3
+    units of time (again, assuming a 100\% continuous growth rate).
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Natural Log}
+\protect\hypertarget{natural-log-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  It doesn't take any time to grow from 1 to 1.
+\end{itemize}
+
+\[ln(1) = 0\]
+
+\begin{itemize}
+\item
+  Ok, how about a fractional value? How long to get 1/2 my current
+  amount?
+\item
+  Assuming you are growing continuously at 100\%, we know that ln(2) is
+  the amount of time to double. If we reverse it (i.e., take the
+  negative time) we'd have half of our current value.
+\end{itemize}
+
+\[ln(.5) = – ln(2) = -.693\]
+
+\begin{itemize}
+\item
+  Makes sense, right? If we go backwards .693 units (negative seconds,
+  let's say) we'd have half our current amount. In general, you can flip
+  the fraction and take the negative
+\item
+  ln(negative number) = undefined
+\item
+  For more:
+  \url{https://betterexplained.com/articles/demystifying-the-natural-logarithm-ln/}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-23}{}
+
+\begin{itemize}
+\item
+  Logs can be written in any base, though the most common are base 10
+  and the natural log. The base for the natural log is the e ≈ 2.7183
+  from the exponential function.
+\item
+  The natural log is usually identified with the notation ln, and log
+  base 10 is generally denoted log.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-24}{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(}\KeywordTok{log}\NormalTok{(x), }\DataTypeTok{from=}\DecValTok{1}\NormalTok{, }\DataTypeTok{to=}\DecValTok{8}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-11-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Note that the impact of x on y diminishes as x increases, but it never
+  becomes zero, and it never becomes negative.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-25}{}
+
+\begin{itemize}
+\item
+  Theoretically, the log functions are very appealing precisely because
+  of this property.
+\item
+  If you suspect, for example,that education increases the probability
+  of voting in national elections, but that each additional year of
+  education has a smaller impact on the probability of voting than the
+  preceding year's, then the log functions are good candidates to
+  represent that conjecture.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-26}{}
+
+\begin{itemize}
+\item
+  If \(p_{v}\) is ``probability of voting'' and ed is ``years of
+  education,'' then \(p_{v} = α+βed\) specifies a linear relationship
+  where an additional year of education has the same impact on the
+  probability of voting regardless of how many years of education one
+  has had.
+\item
+  By contrast, \(p_{v} = α + βed^{2}\) represents the claim that the
+  impact of education on the probability of voting rises the more
+  educated one becomes. Neither of these functional forms captures the
+  verbal conjecture.
+\item
+  But if we take the log of an integer variable such as ``years of
+  education,'' we transform the relationship between \(p_{v}\) and ed
+  from a linear one to a nonlinear one where the impact of an additional
+  year of education declines the more educated one becomes:
+  \(p_{v} = α + β(ln(ed))\).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-27}{}
+
+\begin{itemize}
+\item
+  Log is not defined for numbers less than or equal to zero
+\item
+  Second, the log of a product is equal to the sum of the logs of each
+  term, and the log of a ratio (or fraction) is the difference of the
+  logs of each term:
+\end{itemize}
+
+\[ln(x_{1} · x_{2}) = ln(x_{1}) + ln(x_{2}), \\ for : x_{1}, x_{2} > 0\]
+
+\[\frac{lnx_{1}}{lnx_{2}} =ln(x_{1})−ln(x_{1}), \\ for:  x1,x2>0\]
+
+\begin{itemize}
+\tightlist
+\item
+  Note that addition and subtraction of logs do not distribute: and
+\end{itemize}
+
+\[ln(x_{1} + x_{2}) \neq ln(x_{1}1) + ln(x_{2}) , for:  x_{1}, x_{2} > 0\]
+
+\[ln(x_{1} - x_{2}) \neq ln(x_{1}1) - ln(x_{2}) , for:  x_{1}, x_{2} > 0\]
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-28}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The log of a variable raised to a power is equal to the product of the
+  exponent value and the log of the variable:
+\end{itemize}
+
+\[ln(x^{b})=bln(x), for: x > 0\]
+
+\begin{itemize}
+\tightlist
+\item
+  Political scientists generally use log functions to represent
+  conjectures that anticipate a declining impact of some x over some y
+  as x increases in value
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility}
+\protect\hypertarget{function-relations-and-utility-29}{}
+
+\begin{itemize}
+\item
+  \textbf{Roots} (sometimes called \textbf{radicals}) are those numbers
+  represented by the radical symbol: √
+\item
+  Although roots do not play a large role in political science, one
+  encounters them from time to time.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility - Who Cares?}
+\protect\hypertarget{function-relations-and-utility---who-cares}{}
+
+\begin{itemize}
+\item
+  Multivariate functions are especially useful as few political
+  scientists suspect that much of politics can be usefully explained
+  with bivariate hypotheses (i.e., conjectures that say only one concept
+  is responsible for variation in another concept).
+\item
+  Let us briefly explain how one can move from verbal conjec- tures to
+  writing down more specific functions. We will work with the
+  probability of voting in a national election as an example. Suppose
+  one suspects that the probability that a registered voter will cast a
+  ballot will increase in response to (1) an individual's education
+  level, (2) partisan identification, (3) income, (4) age, and (5) the
+  closeness of the race.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Function, Relations, and Utility - Who Cares?}
+\protect\hypertarget{function-relations-and-utility---who-cares-1}{}
+
+\begin{itemize}
+\item
+  Implicit Function \(p_{v} = f(ed, p, i, a, c)\), where \(p_{v}\)
+  represents the probability of voting, \texttt{ed} represents
+  education, \texttt{p} represents partisan identification, \texttt{i}
+  represents income, \texttt{a} represents age, and \texttt{c}
+  represents closeness.
+\item
+  This equation is called the implicit functional form because it is not
+  specific: we do not know whether the variables have positive,
+  negative, linear, monotonic, or nonlinear effects on pv. All the
+  implicit function tells us is that they may have some effect
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility - Who Cares?}
+\protect\hypertarget{function-relations-and-utility---who-cares-2}{}
+
+\begin{itemize}
+\item
+  \(p_{v} = α+β1ed+β2p+β3i+β4a+β5c\), where α is the intercept (i.e.,
+  the expected value of pv when all of the explanatory variables have a
+  value of 0) and the \(β_{i}\) parameters represent the strength of the
+  impact that each explanatory variable has on voting probability.
+\item
+  Alternatively, we might conjecture that voting probability has a
+  linear relation with some variables and a nonlinear relation with
+  others.
+\item
+  For example, one might argue that the impact of education is greatest
+  at low levels (i.e., the difference between a fourth-grade and an
+  eighth-grade education has a larger impact on voting probability than
+  the difference between an eighth-grade and a twelfth-grade education,
+  and the difference between completing a high school degree and
+  completing a college degree has an even smaller impact).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility - Who Cares?}
+\protect\hypertarget{function-relations-and-utility---who-cares-3}{}
+
+\begin{itemize}
+\tightlist
+\item
+  In addition, one might contend that greater levels of income have an
+  even greater effect on voting probability. The following equation
+  represents those conjectures:
+\end{itemize}
+
+\[p_{v} = α + β1 ln(ed) + β2p  + \\ β3i^{2} + β4a + β5c\]
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility - Who Cares?}
+\protect\hypertarget{function-relations-and-utility---who-cares-4}{}
+
+\begin{itemize}
+\item
+  One might conjecture an interactive relationship among some of the
+  independent variables and probability of voting. There are many such
+  possibilities, but, for example, one could believe that the higher
+  one's level of education, the more the closeness of the race matters,
+  as one will pay more attention to the media's reporting on the race.
+\item
+  If this were true, we might expect a relationship like:
+\end{itemize}
+
+\[p_{v} = α+β1ed+β2p+β3i+\\β4a+β5c+β6(ed·c)\]
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility - Who Cares?}
+\protect\hypertarget{function-relations-and-utility---who-cares-5}{}
+
+\begin{itemize}
+\item
+  One might suspect that the relationship between each explanatory
+  variable and the explained variable grows with the value of the
+  explanatory variable, and that the strength of each relationship is
+  conditional on the values of the other explanatory variables.
+\item
+  One can represent such an argument as follows:
+\end{itemize}
+
+\[p_{v} = α·ed^{β1} ·p^{β2} · i^{β}3 · \\ a^{β4} ·c^{β5}\]
+
+\end{frame}
+
+\begin{frame}{Function, Relations, and Utility - Who Cares?}
+\protect\hypertarget{function-relations-and-utility---who-cares-6}{}
+
+\begin{itemize}
+\tightlist
+\item
+  We can take advantage of the relationship between exponents and logs
+  to rewrite that as:
+\end{itemize}
+
+\[lnp_{v} = ln(α)+β1 ln(ed)+β2(lnp)+ \\β3 ln(i)+β4 ln(a)+β5 ln(c)\]
+
+\begin{itemize}
+\item
+  Such a transformation is useful because while we cannot use common
+  statistical routines to estimate the β parameters in the first
+  representation, we can do so in the second representation.
+\item
+  Such a functional form are not usually observed in political science,
+  they are in economics.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Game Theory}
+\protect\hypertarget{game-theory}{}
+
+\begin{itemize}
+\item
+  Game theory is a tool for understanding strategic interactions between
+  political actors and developing theories about political behavior and
+  the effect of institutions.
+\item
+  The preferences of individual actors are foundational to game theory,
+  as one cannot understand how one responds to incentives and others'
+  actions without understanding what one actually wants.
+\item
+  Typically, individual preferences are represented by functions, and
+  the properties of these functions mirror the structure of one's
+  preferences in the same manner that the form of the function described
+  at the end of the last section matches one's theoretical expectations
+  about the probability that one votes.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sequences and Series}
+\protect\hypertarget{sequences-and-series}{}
+
+\begin{itemize}
+\item
+  A \textbf{sequence} is an ordered list of numbers. For example, \{1,
+  2, 3, 4 . . .\} is a sequence.
+\item
+  Sequences can be infinite (i.e., continue forever), as depicted above,
+  or they can be finite: \{2,1,3,1,4,1,5,1\}.
+\item
+  All sequences are countable, in that one can assign a natural number
+  to each element in the sequence.
+\item
+  A \textbf{series} is the sum of a sequence.
+\item
+  Put differently, a series is a sequence with addition operators
+  between each of the elements (e.g., \{1 + 2 + 3 + 4 + . . .\}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limits}
+\protect\hypertarget{limits}{}
+
+\begin{itemize}
+\item
+  A \textbf{limit} describes the behavior of a function, sequence, or
+  series of numbers as it approaches a given value.
+\item
+  The limit of a function can help us determine what the rate of change
+  of the function is, and knowing the rate of change is useful in both
+  statistics and formal models.
+\item
+  A limit of a sequence \(x_{i}\) is a number L such that
+  \(\lim_{x \to \infty}x_{i} = L\).
+\item
+  The expression is read as ``the limit of \(x_{i}\) as i approaches
+  infinity is L.''
+\item
+  \url{https://www.youtube.com/watch?v=oDAKKQuBtDo\&frags=pl\%2Cwn}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limits}
+\protect\hypertarget{limits-1}{}
+
+\begin{itemize}
+\item
+  We say a sequence (or series, or function) \textbf{converges} if it
+  has a finite limit, and \textbf{diverges} if it either has no limit or
+  has a limit of ±∞.
+\item
+  The \textbf{extreme values} of a set are the minimum and maximum
+  values in that set.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Limits}
+\protect\hypertarget{limits-2}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Consider the function \(3- (x-2)^{2}\) over the domain {[}0:4{]}. This
+  functional is \textbf{unimodal}, possessing a single maximum point,
+  and it is symmetric, meaning that the shape is mirrored on either side
+  of the line through the middle.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(}\DecValTok{3}\OperatorTok{-}\NormalTok{(x}\DecValTok{-2}\NormalTok{)}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DataTypeTok{from=}\DecValTok{0}\NormalTok{, }\DataTypeTok{to=}\DecValTok{4}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-12-1.pdf}
+
+\end{frame}
+
+\begin{frame}[fragile]{Limits}
+\protect\hypertarget{limits-3}{}
+
+\begin{itemize}
+\tightlist
+\item
+  An interesting function is \(f(x)= 1 + \frac{1}{x^{2}}\) over the
+  domain (0, \(\infty+\)).
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(}\DecValTok{1}\OperatorTok{+}\NormalTok{(}\DecValTok{1}\OperatorTok{/}\NormalTok{x}\OperatorTok{^}\DecValTok{2}\NormalTok{), }\DataTypeTok{from=}\DecValTok{0}\NormalTok{, }\DataTypeTok{to=}\DecValTok{20}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-13-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  A x gets larger it progressively gets closer to 1
+\end{itemize}
+
+\[\lim_{x \to \infty} f(x)=1\]
+
+\(\lim_{x \to 0+} f(x)=\infty\)
+
+\end{frame}
+
+\begin{frame}{Limits and Functions}
+\protect\hypertarget{limits-and-functions}{}
+
+\begin{itemize}
+\item
+  We are often interested in political science in the rate of change of
+  a function at a point. We briefly mentioned this above when discussing
+  the linear equation.
+\item
+  If y = α+βx, then the rate of change of y with x is given by β, and is
+  constant for all x.
+\item
+  This β is the important output of a statistical analysis, as it tells
+  us the degree to which the concept represented by x affects the
+  concept affected by y.
+\item
+  Discerning such relationships, of course, is central to research in
+  political science.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limits and Functions - Rate of Change}
+\protect\hypertarget{limits-and-functions---rate-of-change}{}
+
+\begin{itemize}
+\item
+  Let's try instead \(y = βx^{2}\). It turns out that the rate of change
+  of y with x now is given by 2βx, and so varies with the value of x.
+\item
+  In this case, y is changing increasingly fast with x as x increases.
+\item
+  The way we figure out the value of the slope at any point is to look
+  at the values of the function on both sides of a point x = c, but very
+  close to that point.
+\item
+  This difference tells us how much y changes for a small change in x.
+\item
+  As we make this change smaller and smaller (i.e., take the limit as it
+  goes to zero), we get a better and better approximation of the slope
+  at that point, which is exact at the limit.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limits and Functions - Maximum or Minimum}
+\protect\hypertarget{limits-and-functions---maximum-or-minimum}{}
+
+\begin{itemize}
+\item
+  Limits are also a building block in several other concepts that are
+  frequently used in political science.
+\item
+  The first is the maximum or minimum of a function. More specifically,
+  the limit is a stepping stone to understanding derivatives, and
+  derivatives are used to find maximum and minimum values of a function.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limits and Functions}
+\protect\hypertarget{limits-and-functions-1}{}
+
+\begin{itemize}
+\item
+  When might one want to know the minimum or maximum of a function? Some
+  theories assume that an actor wants to maximize something (e.g., their
+  power, utility, time in office, etc.).
+\item
+  If one writes down a function to describe the individual's power,
+  utility, time in office, etc., then one will be interested in limits
+  (and derivatives) to help one determine whether a maximum exists and
+  what it is.
+\item
+  One might want to minimize the predicted error in a regression or
+  maximize the likelihood of matching the data to the statistical model
+  that the researcher specified.
+
+  \begin{itemize}
+  \item
+    In statistics, \textbf{ordinary least squares (OLS)} is a type of
+    linear least squares method for estimating the unknown parameters in
+    a linear regression model.
+  \item
+    In statistics, \textbf{maximum likelihood estimation (MLE)} is a
+    method of estimating the parameters of a statistical model, given
+    observations. MLE attempts to find the parameter values that
+    maximize the likelihood function, given the observations.
+  \end{itemize}
+\end{itemize}
+
+\#\#Limits and Functions - Continuous and Discontinuous
+
+\begin{itemize}
+\tightlist
+\item
+  A \textbf{continuous function} is a function without sudden breaks in
+  it. When you draw the graph of a continuous function, you never need
+  to lift your pencil from the page.
+\item
+  Put differently, the graph of a continuous function forms an unbroken
+  curve, whereas the graph of a \textbf{discontinuous function} has at
+  least one break in it.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limits and Functions}
+\protect\hypertarget{limits-and-functions-2}{}
+
+\begin{itemize}
+\item
+  For example, best response correspondences in game theory, describe
+  what one player's optimal strategy (or strategies) is (are) given a
+  particular choice in strategy by the other player.
+\item
+  These are often discontinuous:
+\item
+  One strategy may be optimal for some subset of the other player's
+  strategy space, but a quite different one might be optimal for a
+  different subset.
+\item
+  For example, a particular distribution of the budget might be optimal
+  if each party bargains in good faith, but if one of the parties asks
+  for too much, the optimal response might abruptly drop to an offer of
+  nothing.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Introduction to Calculus}
+\protect\hypertarget{introduction-to-calculus}{}
+
+\begin{itemize}
+\item
+  What if the function is defined between two points? Let f(x) =
+  \(x^{2}\), now and consider x ∈ {[}1,2{]}.
+\item
+  For this function, f(1) = 1 and f(2) = 4, and we can still say that
+  moving from 1 to 2 results in a change of 3, but we can say a lot
+  more.
+\item
+  Differential calculus thus deals with the study of infinitesimally
+  small changes in a function.
+\item
+  The derivative of the function f(x) = 3x is 3, which is the slope
+  (rate of change) of the line y = 3x
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Introduction to Calculus}
+\protect\hypertarget{introduction-to-calculus-1}{}
+
+\begin{itemize}
+\item
+  But what if we had a derivative, and wanted to build back up a
+  function from it?
+\item
+  Well, we'd need to start at the smallest value of x about which we
+  cared and add up all the infinitesimal changes to f(x) that occurred
+  as we increased x from that point.
+\item
+  But how do we add infinitesimal things? The answer is the integral, or
+  antiderivative.
+\item
+  Integrating the function f′(x) = 3 returns the function f(x) = 3x + C,
+  where the C is a constant that has to be added because the derivative
+  doesn't contain information about the value of the function at x = 0,
+  so we don't know where to start adding infinitesimals.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{What is the Derivative?}
+\protect\hypertarget{what-is-the-derivative}{}
+
+\begin{itemize}
+\item
+  The \textbf{derivative} is the instantaneous rate of change of a
+  function. That's it.
+\item
+  Rate of change is certainly straightforward, but what is the
+  \emph{instantaneous rate of change}?
+\item
+  The first difference of a variable is the value of that variable at
+  time t minus the value of that variable at time t − 1, and it is a
+  measure of \emph{discrete change}.
+\item
+  \textbf{Discrete change}, then, is the first difference between two
+  observations. It is a measure of change in a variable across two
+  discrete moments in time.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{What is the Derivative?}
+\protect\hypertarget{what-is-the-derivative-1}{}
+
+\begin{itemize}
+\item
+  The difference \((x_{t+1} − x_{t})\) has a limitation: it can only
+  represent the rate of change over two discrete moments in time.
+\item
+  If we could evaluate the rate of change at a point on a function by
+  taking the limit of the difference as the interval gets smaller and
+  smaller, then that would tell us what the \textbf{instantaneous rate
+  of change} was at the point (or moment in time).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Secant and Tangents}
+\protect\hypertarget{secant-and-tangents}{}
+
+\begin{itemize}
+\tightlist
+\item
+  To figure out the discrete rate of change between any two points on
+  this line we look at the amount of change on the y-axis relative to a
+  particular amount of change on the x-axis.
+\end{itemize}
+
+\[m = \frac{f(x_{2}) -f(x_{1})}{x_{2}- x_{1}}=\frac{y_{2}- y_{1}}{x_{2}-x_{1}}\]
+
+\begin{itemize}
+\item
+  It is the equation for the slope of a line.
+\item
+  The rate of change between two discrete points is just the slope of
+  the line connecting those two points, known as a \textbf{secant}.
+\item
+  Conversly, for the function \(f(x) = x^{2}\), the secant drawn between
+  x = 1 and x = 2 is above the curve.
+\item
+  A line that intersects the function at x = 1 and has a slope equal to
+  the instantaneous rate of change of the function at x = 1 is known as
+  the \textbf{tangent}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{The Derivative, Formally}
+\protect\hypertarget{the-derivative-formally}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Baron Gottfried Wilhelm von Leibniz used the following notation to
+  identify the derivative of a function:
+\end{itemize}
+
+\[\frac{d}{dx}f(x)\]
+
+\begin{itemize}
+\item
+  This is read ``the derivative of f of x with respect to x.'' One might
+  say this more cumbersomely, but completely, as the instantaneous rate
+  of change in f of x with respect to x.
+\item
+  There is no difference between \(\frac{d}{dx}f(x)\) and f′(x); they
+  mean the same thing.
+\item
+  You may on occasion see Euler's differential operator D, indicating
+  that the derivative is Df(x).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limits and Derivatives}
+\protect\hypertarget{limits-and-derivatives}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Taking the difference between discrete points that are closer and
+  closer together (i.e., two values of x that are increasingly close in
+  value) resulted in determining this instantaneous rate of change, and
+  that doing so is effectively equivalent to taking the limit as this
+  difference goes to zero.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limits and Derivatives}
+\protect\hypertarget{limits-and-derivatives-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  To see how this works, start with the equation for the slope of the
+  secant:
+\end{itemize}
+
+\[m = \frac{f(x_{2}) -f(x_{1})}{x_{2}- x_{1}}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Now let \(x_{2} = x_{1} + h\), where h is any real number.
+\end{itemize}
+
+\[m = \frac{f(x_{1}+ h) -f(x_{1})}{h}\]
+
+\begin{itemize}
+\tightlist
+\item
+  All that we have to do now is make the difference between points
+  smaller and smaller until it approaches zero. That is, to get the
+  derivative we take the limit as h → 0:
+\end{itemize}
+
+\[ \lim_{h \to 0}\frac{f(x_{1}+ h) -f(x_{1})}{h}= \frac{d}{dx}f(x)\]
+
+\end{frame}
+
+\begin{frame}{Limits and Derivatives - Example}
+\protect\hypertarget{limits-and-derivatives---example}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Let's go through some examples to make this concrete, starting with
+  the linear function f(x) = 3x. We calculate its derivative by plugging
+  into the definition:
+\end{itemize}
+
+\[ \lim_{h \to 0}\frac{f(x_{1}+ h) -f(x_{1})}{h}= \\ \lim_{h \to 0}\frac{3(x_{1}+ h) - 3(x_{1})}{h} = \\ \lim_{h \to 0}\frac{3x_{1}+ 3h - 3x_{1}}{h} = 3\]
+
+\end{frame}
+
+\begin{frame}{Limits and Derivatives - Example}
+\protect\hypertarget{limits-and-derivatives---example-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Now let's do a slightly more complicated one, \(f(x) = x^{2}\). Again
+  we plug into the definition:
+\end{itemize}
+
+\[ \lim_{h \to 0}\frac{f(x + h) -f(x)}{h}= \\ \lim_{h \to 0}\frac{(x+ h)^{2} - x^{2}}{h} = \\ \lim_{h \to 0}\frac{x^{2}+2xh+h^{2}-x^{2}}{h}= \\
+\\ \lim_{h \to 0}\frac{2xh+h^{2}}{h}=
+\\ \lim_{h \to 0}2x+h = \\ 2x\]
+
+\end{frame}
+
+\begin{frame}{Limits and Derivatives - Partial Derivative}
+\protect\hypertarget{limits-and-derivatives---partial-derivative}{}
+
+\begin{itemize}
+\item
+  Let's extend our functions to consider two variables. Write these as f
+  (x, z). Examples would be \(f (x, z) = 3x^{2}z+2z\) or
+  \(y=\sqrt{x2 +z^{2}}\).
+\item
+  Say we want to know how y changes with x,holding z constant. This is a
+  fundamental question in both statistics and formal theory. We can find
+  this via what is known as the \textbf{partial derivative}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limits and Derivatives - Partial Derivative}
+\protect\hypertarget{limits-and-derivatives---partial-derivative-1}{}
+
+\begin{itemize}
+\item
+  Partial derivatives appear commonly in early statistics courses, which
+  is why we bring them up here. The context is usually of an empirical
+  model such as \[y = β0 +β1x+β2z+β3xz\].
+\item
+  Here we have both a direct dependence on x by itself, and an
+  interaction term with z. If we want to know how x affects y, holding z
+  constant, we need to take the partial derivative with respect to x.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limits and Derivatives - Partial Derivative}
+\protect\hypertarget{limits-and-derivatives---partial-derivative-2}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Since this treats z as a constant, this partial derivative is
+\end{itemize}
+
+\[\frac{\delta}{\delta x}f(x,z) = β_{1} +β_{3}z\].
+
+\begin{itemize}
+\item
+  When ∂x interpreting the effect of x on y, this is the expression of
+  interest, which varies with z.
+\item
+  Familiarity with the derivative permits greater precision in
+  presentation as well as greater flexibility in choice about what
+  results are of most interest given one's research question and
+  hypothesis
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Want to Learn More?}
+\protect\hypertarget{want-to-learn-more}{}
+
+\begin{itemize}
+\item
+  Daniel Kleitman's Calculus for Beginners and Artists site:
+  \url{http://www-math.mit.edu/~djk/calculus_beginners/}.
+\item
+  Dan Sloughter's online text: \url{http://math.furman.edu/}
+  \textasciitilde dcs/book/.
+\item
+  If you want a refresher, try Harvey Mudd College's Calculus Tutorial,
+  which includes review and quizzes:
+  \url{http://www.math.hmc.edu/calculus/tutorials/}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Rules of Differentiation - Addition \& Subtraction}
+\protect\hypertarget{rules-of-differentiation---addition-subtraction}{}
+
+\begin{itemize}
+\item
+  Rather than go back to the definition each time, it will help to have
+  some rules for the differentiation of specific functions and types of
+  functions we can call on.
+\item
+  \textbf{Sum Rule}
+\end{itemize}
+
+\[(f(x) + g(x))′ = f′(x) + g′(x)\]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Difference rule}
+\end{itemize}
+
+\[(f(x) − g(x))′ = f′(x) − g′(x)\]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Multiply by constant rule}
+\end{itemize}
+
+\[f′(ax) = af′(x)\]
+
+\end{frame}
+
+\begin{frame}{Rules of Differentiation - Chain Rule}
+\protect\hypertarget{rules-of-differentiation---chain-rule}{}
+
+\begin{itemize}
+\item
+  The rule for differentiating composite functions is known as the
+  \textbf{chain rule}: a composite function looks like \(g(f(x))\).
+\item
+  Take the derivative of the outer function (g of x) evaluated at the
+  inner function (f of x), then take the derivative of the inner
+  function (f of x), and multiply the two terms.
+\item
+  We can also write it as:
+\end{itemize}
+
+\[(g(f(x)))′ = g′(f(x))f′(x)\]
+
+\end{frame}
+
+\begin{frame}{Rules of Differentiation - Chain Rule}
+\protect\hypertarget{rules-of-differentiation---chain-rule-1}{}
+
+\begin{itemize}
+\item
+  The key concept here is that one can separate the derivative of a
+  composite function into two derivatives: one of the outer function,
+  evaluated at the inner function, and one of the inner function,
+  evaluated at x.
+\item
+  The major step in using the chain rule is to figure out how to assign
+  g(x) and f(x).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Rules of Differentiation - Products and Quotients}
+\protect\hypertarget{rules-of-differentiation---products-and-quotients}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The \textbf{product rule}:
+\end{itemize}
+
+\[(f(x)g(x))′ = f′(x)g(x) + f(x)g′(x)\]
+
+\begin{itemize}
+\tightlist
+\item
+  The \textbf{quotient rule}
+\end{itemize}
+
+\[ (\frac{f(x)}{g(x)})^{'} = \frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^{2}} \]
+
+\end{frame}
+
+\begin{frame}{Rules of Differentiation - Products and Quotients}
+\protect\hypertarget{rules-of-differentiation---products-and-quotients-1}{}
+
+\begin{itemize}
+\item
+  If we can just differentiate anything of the form \(x^{n}\), where n
+  is a rational number, we can address a large proportion of derivatives
+  in political science.
+\item
+  It turns out that it is easy to take this derivative. You might even
+  have guessed the pattern from earlier examples such as
+  \((x^3)′ = 3x^2\) and \((x^9)′ = 9x^8\). The \textbf{power rule} is:
+\end{itemize}
+
+\[ \frac{dx^{n}}{dx}= nx^{n-1}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Derivitive of a constant is 0
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Rules of Differentiation - Some More Rules}
+\protect\hypertarget{rules-of-differentiation---some-more-rules}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Exponential rule 1}
+\end{itemize}
+
+\[ \frac{de^{x}}{dx}= e^{x}\]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Exponential rule 2}
+\end{itemize}
+
+\[ \frac{da^{x}}{dx}= a^{x}(ln(a))\]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Logarithm rule 1}
+\end{itemize}
+
+\[ (ln(x))'= \frac{1}{x}\]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Logarithm rule 2}
+\end{itemize}
+
+\[ (log_{a}(x))'= \frac{1}{x(ln(a))}\]
+
+\end{frame}
+
+\begin{frame}{Derivitive Resources}
+\protect\hypertarget{derivitive-resources}{}
+
+see: \url{https://www.mathsisfun.com/calculus/derivatives-rules.html}
+
+see:
+\url{http://tutorial.math.lamar.edu/Classes/CalcI/DiffExpLogFcns.aspx}
+
+\end{frame}
+
+\begin{frame}{The Integral}
+\protect\hypertarget{the-integral}{}
+
+\begin{itemize}
+\item
+  What if we care less about change than about the net effect of change?
+  Say we had some continuous function that represented the marginal
+  change in voter turnout with respect to some aggregate measure of
+  education, and we wanted to know the total level of voter turnout for
+  all levels of education.
+\item
+  The integral of the marginal change function essentially adds up an
+  infinite number of infinitesimal changes in turnout to produce the
+  required total turnout function. This function specifies the level of
+  turnout at any amount of education.
+\item
+  The most common use of the integral in political science relates to
+  its connection to probability density functions, which describe the
+  chance of any particular value of a continuous function occurring.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{The Integral}
+\protect\hypertarget{the-integral-1}{}
+
+\begin{itemize}
+\item
+  The intuition behind finding the area under a curve is pretty
+  straightforward and is developed by thinking about finding the area
+  within geometric shapes for which the formula for the area is known.
+\item
+  The solution is to draw our shapes very thinly: as they become more
+  and more narrow, the divergence between the sum of their areas and the
+  area under the curve will shrink.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{The Integral}
+\protect\hypertarget{the-integral-2}{}
+
+\begin{itemize}
+\item
+  How does this work? If we let the width be denoted ∆x, then the area
+  of each rectangle is \(f(x_{i})∆x\), where \(f(x_{i})\) is the value
+  of the function at each (evenly spaced) point we have chosen.
+\item
+  The total area might then be written as \(\sum_{i}f(x_i)∆x\). We can
+  take the limit of this sum as ∆x → 0 to produce the true area.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{The Integral}
+\protect\hypertarget{the-integral-3}{}
+
+\begin{itemize}
+\tightlist
+\item
+  We call this limit the definite integral, and write it in general as:
+\end{itemize}
+
+\[\int_{a}^{b}f(x)dx\]
+
+\begin{itemize}
+\tightlist
+\item
+  The integral symbol looks like an S and is meant to remind you that it
+  is in essence a sum.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{The Integral}
+\protect\hypertarget{the-integral-4}{}
+
+\begin{itemize}
+\item
+  The dx in the integral tells you the variable of integration. It is
+  exactly analogous to the dx in the derivative. The f(x), or more
+  generally, the expression multiplying the dx, is known as the
+  \textbf{integrand}.
+\item
+  The a and b are the bounds (or limits) of integration. They tell you
+  the value of x at which to start and the value at which to stop.
+\item
+  If \(x^{2}\) is the integrand, a = 1 and b = 2 are the bounds of
+  integration, and the definite integral is \(\int_{a}^{b}x^{2}dx\).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Antiderivatives and the Indefinite Integral}
+\protect\hypertarget{antiderivatives-and-the-indefinite-integral}{}
+
+\begin{itemize}
+\item
+  If you add 3 and then subtract 3, you end up where you started.
+  Similarly, if you multiply by some non-zero number and then divide by
+  this same number, you end up where you started. So, in a sense, × and
+  ÷ are inverses of each other. We'll see that the derivative and the
+  \textbf{antiderivative} (aka indefinite integral) are similarly
+  related.
+\item
+  The antiderivative of f(x) is denoted F(x). That is, it's the capital
+  of the letter used to represent the function.
+\item
+  Start with f (x) = 1. What is its antiderivative?
+\item
+  Well, we know that the derivative of x is one. So \(F(x) = x\) is one
+  antiderivative.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Antiderivatives and the Indefinite Integral}
+\protect\hypertarget{antiderivatives-and-the-indefinite-integral-1}{}
+
+\begin{itemize}
+\item
+  It's not quite that easy, though. Take F (x) = x + 10. The derivative
+  of that is also one, as is the derivative of F (x) = x + 1, 000.
+\item
+  In general, because the derivative of a constant is zero, there are
+  lots (an infinite number, actually) of antiderivatives that all
+  produce the same f(x).
+\item
+  Luckily, they're all of the same form: \(F(x) = x + C\).
+\item
+  We call C the constant of integration, and it can be any constant
+  value (i.e., any value that does not depend on x).
+\item
+  The antiderivative of x is \(\frac{1}{2}x^2 + C\). (Don't forget the C
+  !)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Antiderivatives and the Indefinite Integral}
+\protect\hypertarget{antiderivatives-and-the-indefinite-integral-2}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The \textbf{fundamental theorem of calculus}
+\end{itemize}
+
+\[\int_{a}^{b}f(x)dx = F(b) - F(a)\]
+
+\begin{itemize}
+\item
+  In other words, the definite integral of a function from a to b is
+  equal to the antiderivative of that function evaluated at b minus the
+  same evaluated at a.
+\item
+  The theorem is fundamental because it bridges (or links) differential
+  and integral calculus.
+\item
+  We can make the connection even more clear with a little notation
+  \(\int_{a}^{b}f(x)dx = \left. F(x) \right|_{a}^{b}\) ,
+
+  \begin{itemize}
+  \tightlist
+  \item
+    where the vertical line means ``evaluate the antiderivative F(x) at
+    b, and subtract the antiderivative evaluated at a.''
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Antiderivatives and the Indefinite Integral - Example}
+\protect\hypertarget{antiderivatives-and-the-indefinite-integral---example}{}
+
+\begin{itemize}
+\item
+  Lets start with \(f(x) = x^{2}\). What's the antiderivative of this?
+\item
+  Well, we know that the derivative of \(x^{3}\) is \(3x^{2}\) from the
+  previous chapter, so an \(x^{3}\) will be involved.
+\item
+  If we further divide by 3 we'll get \(x^{2}\) without the 3 in front.
+  Thus, \(F(x) = \frac{1}{3}x^{3}\).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Antiderivatives and the Indefinite Integral - Example}
+\protect\hypertarget{antiderivatives-and-the-indefinite-integral---example-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Consequently, by the fundamental theorem of calculus,
+\end{itemize}
+
+\[\int_{1}^{2}x^{2}dx = F(2) - F(1) = \\
+\frac{1}{3}2^{3} - \frac{1}{3}1^{3} = \\
+\frac{8}{3}- \frac{1}{3} = \frac{7}{3}\]
+
+\ldots and that is the area under the curve of \(x^{2}\) between 1 and
+2.
+
+\end{frame}
+
+\begin{frame}{Antiderivatives and the Indefinite Integral - Who Cares}
+\protect\hypertarget{antiderivatives-and-the-indefinite-integral---who-cares}{}
+
+\begin{itemize}
+\item
+  One will encounter a number of statistical tables that report integral
+  values. For example, z-scores---which report the area between the mean
+  of a distribution and a point a selected distance from that mean under
+  the standard normal curve---are definite integrals.
+\item
+  When you look up z-score values in a table in the appendix of a
+  statistics text you are looking up the value of the difference between
+  the antiderivative when x = 0 (the mean in a standard normal
+  distribution) and the antiderivative at the point \emph{z} (i.e.,
+  \(\frac{X_{i} -\bar{X}}{s}\)),
+
+  \begin{itemize}
+  \tightlist
+  \item
+    where \(X_{i}\) is a given value of x, \(\bar{X}\) is the sample
+    mean, and \emph{s} is the standard deviation of the sample).
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Antiderivatives and the Indefinite Integral - Who Cares}
+\protect\hypertarget{antiderivatives-and-the-indefinite-integral---who-cares-1}{}
+
+\begin{itemize}
+\item
+  In formal theories, while some outcomes over which individuals may
+  have an interest are certain, it is more often true that there is some
+  level of uncertainty in the outcome, either because one is not sure
+  what others with whom one is interacting will do, or because the
+  payoffs themselves are variable.
+\item
+  We can describe the chance that any particular outcome occurs by a
+  probability distribution over outcomes. The expected value of the game
+  (or expected utility) is the definite integral over all possible
+  outcomes (or possible values of one's utility arising from different
+  outcomes), weighted by the chance that each outcome occurs, i.e., by
+  the probability distribution over outcomes.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Antiderivatives and the Indefinite Integral - Example Game
+Theory}
+\protect\hypertarget{antiderivatives-and-the-indefinite-integral---example-game-theory}{}
+
+\begin{itemize}
+\item
+  Assume that a bureaucrat must allocate money over two public works
+  projects, one fixing a bridge and one building a new road. The payoff
+  for the road might be known, but the payoff for the bridge is
+  stochastic, since it depends on the likelihood that the bridge will
+  collapse if it is not fixed.
+\item
+  In other words, the return on investment in the case of the bridge is
+  uncertain. To make things simpler, let the bureaucrat's decision be
+  dichotomous: either money gets allocated or it doesn't, and money can
+  only be allocated to one project.
+\item
+  How would we figure out which project gets the money?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Antiderivatives and the Indefinite Integral - Example Game
+Theory}
+\protect\hypertarget{antiderivatives-and-the-indefinite-integral---example-game-theory-1}{}
+
+\begin{itemize}
+\item
+  Let the payoff for the road be 2, and the payoff for the bridge be
+  uniformly distributed between −2 (if the bridge wouldn't have
+  collapsed anyway) and 8 (if the bridge were in immediate danger of
+  collapse).
+\item
+  A uniform distribution places equal probability on every outcome. A
+  rational actor will put money into the project with the greater
+  payoff, but which is greater?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Antiderivatives and the Indefinite Integral - Example Game
+Theory}
+\protect\hypertarget{antiderivatives-and-the-indefinite-integral---example-game-theory-2}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Here we assert that the expected value of a variable distributed
+  according to the uniform distribution provided in the problem is the
+  definite integral:
+\end{itemize}
+
+\[\frac{1}{8-(-2)}\int_{-2}^{8}xdx = \\
+\frac{1}{10}\frac{1}{2}(x^{2}) \left.\right|_{-2}^{8} = \\
+\frac{1}{20}(64-(4))=3\]
+
+\begin{itemize}
+\tightlist
+\item
+  This gives us the payoff we need. Since 3 \textgreater{} 2, the
+  bureaucrat should fix the bridge.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Rules of Integration}
+\protect\hypertarget{rules-of-integration}{}
+
+\begin{itemize}
+\item
+  Though you will largely rely on tables and statistical software to
+  compute in- tegrals of cumulative distribution functions, you will
+  have cause to compute integrals should you choose to delve further
+  into the underpinnings of statistical methodology.
+\item
+  For more:
+  \url{http://www.technologyuk.net/mathematics/integral-calculus/basic-rules-of-integration.shtml}
+\item
+  List of integrals:
+  \url{https://en.wikipedia.org/wiki/Lists_of_integrals}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Extrema in One Dimension}
+\protect\hypertarget{extrema-in-one-dimension}{}
+
+\begin{itemize}
+\item
+  A major motivation for computing the derivative is to find the maximum
+  or minimum of a function. Maxima and minima are both types of
+  \emph{extrema}.
+\item
+  Theorists often assume that an actor wants to maximize or minimize
+  something (e.g., power, utility, time in office, etc.).
+\item
+  Statistical analysis often hinges on locating the maximum or minimum
+  value of a function. Ordinary least squares (OLS) is a technique that
+  minimizes the squared error between the observed data and the
+  predicted values of a regression model. Maximum likelihood estimation
+  maximizes a likelihood function.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Extrema}
+\protect\hypertarget{extrema}{}
+
+\begin{itemize}
+\item
+  Maximum and minimum are concepts just as straightforward as you might
+  expect. They are the high and low points of a function, or the
+  ``peaks'' and ``valleys'' in the graph of a function.
+\item
+  A high point is called a \emph{maximum} and a low point is called a
+  \emph{minimum}. Together these two points are referred to as the
+  extrema of a function.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Extrema}
+\protect\hypertarget{extrema-1}{}
+
+\begin{itemize}
+\item
+  We say an extremum is \textbf{local} whenever it is the largest (or
+  smallest) value of the function over some interval of values in the
+  domain of the function, e.g., over some interval on the x-axis. So we
+  can have local maxima, and local minima.
+\item
+  A \textbf{global} extremum, in comparison, is the highest (or lowest)
+  point on the function
+\item
+  The \textbf{supremum} can be thought of as the least upper bound of
+  any set, and the \textbf{infimum} can be thought of as the greatest
+  lower bound of any set.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Extrema}
+\protect\hypertarget{extrema-2}{}
+
+\begin{itemize}
+\tightlist
+\item
+  For example, the function f(x) = (x−1)(x−3)(x−4) has two local extrema
+  between 1 and 4, one maximum and one minimum. But the function shoots
+  off to ∞ as x gets bigger than 4 and to −∞ as x gets less than 1, so
+  neither of these two local extrema is a global extremum if we expand
+  the range over which we're looking.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{((x}\DecValTok{-1}\NormalTok{)}\OperatorTok{*}\NormalTok{(x}\DecValTok{-3}\NormalTok{)}\OperatorTok{*}\NormalTok{(x}\DecValTok{-4}\NormalTok{), }\DataTypeTok{from=}\DecValTok{1}\NormalTok{, }\DataTypeTok{to=}\DecValTok{5}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-14-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Higher-order derivatives}
+\protect\hypertarget{higher-order-derivatives}{}
+
+\begin{itemize}
+\item
+  The first-order derivative is the instantaneous rate of change at a
+  specific point.
+\item
+  The second-order derivative is the rate of change of the instantaneous
+  rate of change. The third-order derivative is the rate of change of
+  the second-order derivative, and so on.
+\item
+  If \(\frac{df(x)}{dx}\) if a first derivitive, then
+  \(\frac{d^{2}f(x)}{dx^{2}}\) is a second derivative.
+\item
+  Similarly, if \(f′(x)\) is a first derivative, then \(f′′(x)\) is a
+  second derivative and \(f′′′(x)\) is a third derivative.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Higher-order derivatives - Example}
+\protect\hypertarget{higher-order-derivatives---example}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Let's consider the first derivative of:
+  \[y = f (x) = 2x^3: \frac{dy}{dx} = 6x^2\].
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Higher-order derivatives - Example}
+\protect\hypertarget{higher-order-derivatives---example-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The second-order derivative is
+  \[f′′(x) = \frac{d^{2}y}{dx^{2}} = (6x^2)′ = 12x\].
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Higher-order derivatives - Example}
+\protect\hypertarget{higher-order-derivatives---example-2}{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(}\DecValTok{2}\OperatorTok{*}\NormalTok{x}\OperatorTok{^}\DecValTok{3}\NormalTok{, }\DataTypeTok{from=}\OperatorTok{-}\DecValTok{5}\NormalTok{, }\DataTypeTok{to=}\DecValTok{5}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-15-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Higher-order derivatives}
+\protect\hypertarget{higher-order-derivatives-1}{}
+
+\begin{itemize}
+\item
+  What do higher-order derivatives represent conceptually?
+\item
+  In physics, where one is concerned with the motion of physical bodies
+  in space, the first derivative is the speed or velocity of an object,
+  its rate of change in position with respect to time.
+\item
+  The second derivative is the rate at which speed changes, which is
+  known more commonly as the acceleration of an object.
+\item
+  You will at times see this word used in reference to the second
+  derivative of variables in political science as well.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Higher-order derivatives}
+\protect\hypertarget{higher-order-derivatives-2}{}
+
+\begin{itemize}
+\item
+  The first derivative tells us in which direction it is trending: is it
+  increasing or decreasing?
+\item
+  The second derivative tells us the most basic curvature of the
+  function: is the rate at which it is increasing or decreasing getting
+  faster or slower?
+\item
+  Higher-order derivatives provide more nuanced information about the
+  shape of functions; however, we will typically find first and second
+  derivatives sufficient for our purposes.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Concavity and Convexity}
+\protect\hypertarget{concavity-and-convexity}{}
+
+\begin{itemize}
+\item
+  A function with a rate of increase that slows as the value of the
+  function gets bigger is an example of a \textbf{concave} function.
+\item
+  One with a rate of increase that speeds up as the value of the
+  function gets bigger is an example of a \textbf{convex} function.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Summary of methods}
+\protect\hypertarget{summary-of-methods}{}
+
+\begin{itemize}
+\item
+  Find f'(x)
+\item
+  Set f′(x∗) = 0 and solve for all \(x^{∗}\). These are stationary
+  points of the function.
+\item
+  Find f''(x)
+\item
+  For each stationary point \(x^{∗}\), substitute \(x^{∗}\) into f′′(x)
+
+  \begin{itemize}
+  \item
+    If f′′( \(x^{∗}\)) \textless{} 0, f(x) has a local maximum at
+    \(x^{∗}\).
+  \item
+    If f′′( \(x^{∗}\)) \textgreater{} 0, f(x) has a local minimum at
+    \(x^{∗}\).
+  \item
+    If f′′(\(x^{∗}\)) = 0, \(x^{∗}\) may be an inflection point. To
+    check this:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Calculate higher-order derivatives (f′′′(x) until you find the
+      first one that is non-zero at \(x^{∗}\). Call the order of this
+      derivative n.
+    \item
+      If n is odd, then this \(x^{∗}\) is an inflection point and not an
+      ex- tremum. Do not include it in further steps.
+    \item
+      If n is even and \(f^{(n)}(x^{∗})\) \textless{} 0, f(x) has a
+      local maximum at \(x^{∗}\).
+    \item
+      If n is even and \(f^{(n)}(x^{∗})\) \textgreater{} 0, f(x) has a
+      local minimum at \(x^{∗}\).
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Examples - Maximizing Utility}
+\protect\hypertarget{examples---maximizing-utility}{}
+
+\begin{itemize}
+\item
+  Let's assume that you have \$1 million that you could donate to a
+  campaign. Call the amount of money you choose to donate, in millions
+  of dollars, x.
+\item
+  Let's also assume that you get some nice benefit for donating, either
+  via feeling good about yourself or, more cynically, via future favors
+  expected, and that this benefit can be represented by the function x.
+\item
+  That is, you get the same benefit in terms of utility as the amount of
+  money you donate, x. Finally, let's assume that you could have done
+  other things with your money, so donating occasions an opportunity
+  cost that can be represented by \(x^{2}\).
+\item
+  Finally, let's assume x is measured in millions of dollars, so you can
+  donate any x ∈ {[}0, 1{]}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Example - Maximizing Utility}
+\protect\hypertarget{example---maximizing-utility}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Putting these assumptions together gives a utility function:
+\end{itemize}
+
+\[u(x) = x − x^{2}\]
+
+\begin{itemize}
+\item
+  The optimal choice for a donation maximizes this function in the
+  domain \([0, 1]\).
+\item
+  First, we find \(u′(x) = 1 − 2x\).
+\item
+  Second, we solve for
+\end{itemize}
+
+\[x^{∗}: 1−2x^{∗} =0⇒x^{*} = \frac{1}{2}\]
+
+\begin{itemize}
+\item
+  Third,we find \(u′′(x)=−2<0\).
+\item
+  This is negative for all x, so step four tells us we have a local
+  maximum.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Example - Maximizing Utility}
+\protect\hypertarget{example---maximizing-utility-1}{}
+
+So the global maximum occurs at a donation of \(x=\frac{1}{2}\) .
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{curve}\NormalTok{(x}\OperatorTok{-}\NormalTok{x}\OperatorTok{^}\DecValTok{2}\NormalTok{, }\DataTypeTok{from=}\DecValTok{0}\NormalTok{, }\DataTypeTok{to=}\DecValTok{1}\NormalTok{, , }\DataTypeTok{xlab=}\StringTok{"x"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-16-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Vectors and Matrices}
+\protect\hypertarget{vectors-and-matrices}{}
+
+\begin{itemize}
+\item
+  The algebra we learn school is called \emph{scalar algebra}, which is
+  to say algebra concerning single variables. Scalar algebra in this
+  usage is a subset of \emph{vector algebra}, which is itself a subset
+  of \emph{matrix algebra}.
+\item
+  Loosely speaking, vector algebra deals with one-dimensional
+  collections of variables, while matrix algebra deals with
+  two-dimensional collections of variables. Now, instead of a single
+  \emph{scalar x}, we might have the \emph{vector} \textbf{x}, which
+  contains the set of scalars \emph{x1,x2,\ldots,xi,\ldots,xn}, with
+  each \emph{xi} a different element of the vector x. Or we might have
+  the matrix \textbf{X,} which contains the set of vectors \textbf{x1, .
+  . . , xm}
+\item
+  One useful way to think about the three sets of algebras is that they
+  are nothing more than different means of representing variables that
+  we want to manipulate.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix - Notation}
+\protect\hypertarget{matrix---notation}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Any dataset you might use in political science is nothing more than a
+  large matrix, and as you will learn in statistics coursework, when you
+  estimate OLS regressions using such datasets, the computer actually
+  uses matrix algebra to calculate coefficient estimates and standard
+  errors.
+\end{itemize}
+
+\[ \begin{pmatrix}
+  1 & 2 &  3 \\
+  4 & 5 &  6 \\
+ \end{pmatrix}\]
+
+\begin{itemize}
+\item
+  A \emph{Matrix} is a rectangular array of numbers
+\item
+  \emph{Element entries} are the numbers that consitute a matrix
+\item
+  If we are considering matrix A,then the element in row \emph{i} and
+  column \emph{j} is given by \(a_{ij}\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We refer to the elements by their row and column number - in that
+    order
+  \item
+    Thus the (2,1) element in the above matrix is 4
+  \end{itemize}
+\item
+  A matrix that has \emph{n} rows and \emph{m} columns is said to be
+  ordered by \(n X m\)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix - Notation}
+\protect\hypertarget{matrix---notation-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  We often use a single letter as a label for a matrix such as
+  \textbf{A}
+\end{itemize}
+
+\[ A= \begin{pmatrix}
+  a & b  \\
+  c & d  \\
+ \end{pmatrix}\]
+
+\begin{itemize}
+\item
+  The most common notation is one in which we use a single letter with a
+  double subscript to designate elements.
+\item
+  For example \(B_{2*3}=((b_{ij}))\)
+\end{itemize}
+
+\[B =
+ \begin{pmatrix}
+  b_{1,1} & b_{1,2} & b_{1,3} \\
+  b_{2,1} & b_{2,2} & b_{2,3} \\
+ \end{pmatrix}\]
+
+\end{frame}
+
+\begin{frame}{Matrix - Notation}
+\protect\hypertarget{matrix---notation-2}{}
+
+\begin{itemize}
+\item
+  A \emph{row vector} looks like:
+  \[\begin{pmatrix}a & b & c \end{pmatrix}\]
+\item
+  A \emph{column vector} looks like:
+  \[\begin{pmatrix}a \\ b \\ c \end{pmatrix}\]
+\item
+  A vector is just a serial listing of numbers where the order matters.
+\item
+  Two matrices are equal if (a) they both have the same number of rows
+  and the same number of columns, and (b) their corresponding elements
+  are equal. This is called \emph{comformable}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix - Notation}
+\protect\hypertarget{matrix---notation-3}{}
+
+\begin{itemize}
+\tightlist
+\item
+  A square matrix is a matrix that has an equal number of columns and
+  rows, i.e., m = n.~For example,
+\end{itemize}
+
+\[B_{3*3} =
+ \begin{pmatrix}
+  b_{1,1} & b_{1,2} & b_{1,3} \\
+  b_{2,1} & b_{2,2} & b_{2,3} \\
+  b_{3,1} & b_{3,2} & b_{3,3} 
+ \end{pmatrix}\]
+
+\begin{itemize}
+\tightlist
+\item
+  A zero matrix is a square matrix in which all elements are 0
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix - Notation}
+\protect\hypertarget{matrix---notation-4}{}
+
+\begin{itemize}
+\item
+  The main \textbf{diagonal} of a matrix comprises the elements running
+  from the top left to the bottom right of the matrix.
+\item
+  A \textbf{diagonal matrix} is a square matrix in which all elements
+  other than those on the main diagonal are zero.
+\end{itemize}
+
+\[D_{3*3} =
+ \begin{pmatrix}
+  b_{1,1} & 0 & 0 \\
+  0 & b_{2,2} & 0 \\
+  0 & 0 & b_{3,3} 
+ \end{pmatrix}\]
+
+\end{frame}
+
+\begin{frame}{Matrix - Notation}
+\protect\hypertarget{matrix---notation-5}{}
+
+\begin{itemize}
+\item
+  An \textbf{identity matrix} is a diagonal matrix in which all elements
+  on the main diagonal are 1
+\item
+  The identity matrix is special because, when multiplied by another
+  matrix, it produces the original matrix back again (i.e., AI = IA = A)
+\end{itemize}
+
+\[I_{3*3} =
+  \begin{pmatrix}
+  1 & 0 & 0 \\
+  0 & 1 & 0 \\
+  0 & 0 & 1 
+ \end{pmatrix}\]
+
+\begin{itemize}
+\tightlist
+\item
+  For more see: \url{https://en.wikipedia.org/wiki/List_of_matrices}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix - Transposition}
+\protect\hypertarget{matrix---transposition}{}
+
+\begin{itemize}
+\item
+  When the \(i^{th}\) element of a column vector is entered as the
+  \(i^{th}\) element of a corresponding row vector (or vice versa) this
+  is called a \emph{transposition}.
+\item
+  Put simply, the transpose of a matrix is another matrix in which the
+  rows and columns have been switched, i.e., the rows of the first
+  matrix are written as columns in the second and the columns in the
+  first matrix are written as rows in the second. For example:
+\end{itemize}
+
+\(\begin{pmatrix} a & b & c \end{pmatrix}\) and
+\(\begin{pmatrix} a \\ b \\ c \end{pmatrix}\)
+
+\begin{itemize}
+\tightlist
+\item
+  The usual notation of the transpose of \emph{a} is \emph{a'} or
+  \emph{\(a^{T}\)}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix - Transposition}
+\protect\hypertarget{matrix---transposition-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Note that the transpose of a matrix has the same number of columns as
+  the original had rows, and the same number of rows as the original had
+  columns. So, for the example here, \(A_{2×3}\) becomes \(A^{T}_{3×2}\)
+\end{itemize}
+
+\[ A= \begin{pmatrix}
+  1 & 3 & 0 \\
+  -1 & 6 & 2  \\
+ \end{pmatrix}
+ , 
+A^{T}= \begin{pmatrix}
+ 1 & -1  \\
+  3 & 6   \\
+  0 & 2
+ \end{pmatrix}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Finding the coefficient estimates in OLS regression requires
+  transposition.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix - Transposition}
+\protect\hypertarget{matrix---transposition-2}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Operation of transposition can be applied to matrices
+\end{itemize}
+
+\[ A= \begin{pmatrix}
+  3 & 8  \\
+  4 & 1  \\
+ \end{pmatrix}
+ and
+ \begin{pmatrix}
+  3 & 4  \\
+  8 & 1  \\
+ \end{pmatrix}\]
+
+\end{frame}
+
+\begin{frame}{Matrix - Adding and Subtracting}
+\protect\hypertarget{matrix---adding-and-subtracting}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The sum of two \emph{n} by \emph{m} matrices is an \emph{n} by
+  \emph{m} matrix whose elements are the sum of the corresponding
+  elements of the original matrices. If
+\end{itemize}
+
+\[A =
+ \begin{pmatrix}
+  a_{1,1} & a_{1,2} & a_{1,3} \\
+  a_{2,1} & a_{2,2} & a_{2,3} \\
+ \end{pmatrix}\]
+
+\[B =
+ \begin{pmatrix}
+  b_{1,1} & b_{1,2} & b_{1,3} \\
+  b_{2,1} & b_{2,2} & b_{2,3} \\
+ \end{pmatrix}\]
+
+\[A+B =
+ \begin{pmatrix}
+  a_{1,1} + b_{1,1} & a_{1,2} + b_{1,2} & a_{1,3} + b_{1,3} \\
+  a_{2,1} +  b_{2,1} & a_{2,2} + b_{2,2} & a_{2,3} + b_{2,3}\\
+ \end{pmatrix}\]
+
+\end{frame}
+
+\begin{frame}{Matrix - Adding and Subtracting}
+\protect\hypertarget{matrix---adding-and-subtracting-1}{}
+
+\begin{itemize}
+\item
+  You can only add matrices if they are of the same order
+\item
+  Subtraction works the same way as addition
+\end{itemize}
+
+\[A+B =
+ \begin{pmatrix}
+  a_{1,1} - b_{1,1} & a_{1,2} - b_{1,2} & a_{1,3} - b_{1,3} \\
+  a_{2,1} -  b_{2,1} & a_{2,2} - b_{2,2} & a_{2,3} - b_{2,3}\\
+ \end{pmatrix}\]
+
+\end{frame}
+
+\begin{frame}{Matrix - Multiplication by a Scaler}
+\protect\hypertarget{matrix---multiplication-by-a-scaler}{}
+
+\begin{itemize}
+\tightlist
+\item
+  To multiply a regular number by a matrix, we multiply each element of
+  the matrix by the number. If \(K=2\) and
+\end{itemize}
+
+\[ A= \begin{pmatrix}
+  2 & 3  \\
+  1 & 4  \\
+ \end{pmatrix}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Then
+\end{itemize}
+
+\[ 2*A= \begin{pmatrix}
+  4 & 6  \\
+  2 & 8  \\
+ \end{pmatrix}\]
+
+\end{frame}
+
+\begin{frame}{Vector Representation of Systems of Linear Equations}
+\protect\hypertarget{vector-representation-of-systems-of-linear-equations}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Vector operations can be used to express a system of linear equations
+\end{itemize}
+
+\[2x+3y = 5\] \[3x+2y = 5\]
+
+\begin{itemize}
+\tightlist
+\item
+  We form three column vectors corresponding to the coefficients of x,
+  those of y, and the constant term
+\end{itemize}
+
+\[a = \begin{pmatrix} 2 \\ 3 \end{pmatrix}\]
+\[b = \begin{pmatrix} 3 \\ 2 \end{pmatrix}\]
+\[c = \begin{pmatrix} 5 \\ 5 \end{pmatrix}\]
+
+\end{frame}
+
+\begin{frame}{Vector Representation of Systems of Linear Equations}
+\protect\hypertarget{vector-representation-of-systems-of-linear-equations-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Now the given set of equations can be expressed compactly as
+  \(xa + yb = c\)
+\end{itemize}
+
+\[ \begin{pmatrix}
+   (2x+3y) \\ 
+ (3x+2y) 
+ \end{pmatrix}\]
+
+\[ = \begin{pmatrix} 5 \\ 5 \end{pmatrix}\]
+
+\end{frame}
+
+\begin{frame}{Inner Products}
+\protect\hypertarget{inner-products}{}
+
+\begin{itemize}
+\tightlist
+\item
+  For example
+\end{itemize}
+
+\[a = \begin{pmatrix} 1 & 2 & 4 \end{pmatrix}\]
+\[b = \begin{pmatrix} 2 & 4 & 3 \end{pmatrix}\]
+
+\begin{itemize}
+\item
+  Therefore the inner product of a and b is
+  \((1)(2) + (2)(4)+ (4)(3) = 22\)
+\item
+  For instance calculating the average height of 3 children can be done
+  by
+\end{itemize}
+
+\[\begin{pmatrix} \frac{1}{3} & \frac{1}{3} & \frac{1}{3} \end{pmatrix}* \begin{pmatrix} 34 \\ 45 \\ 37 \end{pmatrix}\]
+
+\end{frame}
+
+\begin{frame}{Matrix Multiplication}
+\protect\hypertarget{matrix-multiplication}{}
+
+\begin{itemize}
+\item
+  In order to be able to multiply two matrices, the number of columns in
+  the first must match the number of rows in the second matrix, e.g.,
+  \(A_{n×m}\) and \(B_{m×p}\). If this is not the case, the matrices
+  cannot be multiplied.
+\item
+  If A and B can be multiplied, however, the product is a matrix that
+  will have the same number of rows as the first matrix and the same
+  number of columns as the second matrix, i.e.,
+  \(A_{n×m}B_{m×p} = C_{n×p}\)
+\item
+  For example see:
+  \url{https://www.mathsisfun.com/algebra/matrix-multiplying.html}
+\item
+  The order in which the matrices are multiplied matters
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix Multiplication}
+\protect\hypertarget{matrix-multiplication-1}{}
+
+\begin{itemize}
+\item
+  Imagine a model with one dependent variable and three independent or
+  explanatory variables (plus the intercept term), e.g.,
+  \(y = a + b_{1}x_{1} + b_{2}x_{2} + b_{3}x_{3} + ε\).
+\item
+  Let's say you have thirty observations, in order to get reasonably
+  accurate coefficient estimates. To calculate just the coefficient
+  estimates will then, as part of the process, involve multiplying a
+  four-by-thirty matrix by a thirty-by-four matrix!
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Trace}
+\protect\hypertarget{trace}{}
+
+\begin{itemize}
+\item
+  The \textbf{trace} of an n × n square matrix is the sum of its
+  diagonal elements. Formally,
+  \(\sum_{i=l}^{n}Tr(A) = aii = a_{11} + a_{22} + . . . + a_{nn}\).
+\item
+  While the trace comes up rarely, you may see it in reference to
+  eigenvalues (an eigenvalue is defined as the amount of variance
+  explained by one more factor.)
+\item
+  \textbf{Factor analysis} is usually adopted in social scientific
+  studies for the purposes of: (1) reducing the number of variables; and
+  (2) detecting structure in the relationships between variables.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Determinant}
+\protect\hypertarget{determinant}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The \textbf{determinant} of a matrix is a commonly used function that
+  converts the matrix into a scalar. It tells us things about the matrix
+  that are useful in systems of linear equations
+\end{itemize}
+
+\[\begin{pmatrix}
+  a_{1,1} & a_{1,2}  \\
+  a_{2,1} & a_{2,2}
+\end{pmatrix}\]
+
+\begin{itemize}
+\item
+  The determinant of A is the difference of the diagonal products:
+  \(|A| = (a_{1,1} · a_{2,2}) − (a_{1,2} · a_{2,1}).\)
+\item
+  It gets more complicated for non 2X2 Matrices: see
+  \url{https://www.cliffsnotes.com/study-guides/algebra/linear-algebra/the-determinant/laplace-expansions-for-the-determinant}
+\item
+  The major use of determinants is to determine whether a matrix is
+  invertible (i.e., has a calculable inverse). When a matrix has a
+  non-zero determinant, we call it nonsingular, and it is invertible. If
+  the determinant of the matrix is zero, then the matrix is singular and
+  so is not invertible.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Inverse}
+\protect\hypertarget{inverse}{}
+
+\begin{itemize}
+\item
+  A square matrix that is not invertible is called singular; as noted
+  earlier, it has a determinant of zero.
+\item
+  An invertible square matrix is called nonsingular, and its determinant
+  is non-zero.
+\item
+  An \(n × n\) matrix, A, is invertible (only square matrices can be
+  inverted) if one can find a second \(n × n\) matrix, B, such that the
+  product AB and the product BA both produce the \(n × n\) identity
+  matrix, \(I_{n×n}\).
+\item
+  In such a situation, B is the inverse of A.
+\item
+  One denotes the inverse of a matrix by using a −1 superscript. So
+  \(A^{−1}\) is the inverse of A: \[A · A^{−1} = A^{−1} · A = I.\]
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Inverse}
+\protect\hypertarget{inverse-1}{}
+
+\begin{itemize}
+\item
+  To calculate by hand see:
+  \url{https://www.mathsisfun.com/algebra/matrix-inverse.html}
+\item
+  For Matrix:
+\end{itemize}
+
+\[\begin{pmatrix}
+  a_{1,1} & a_{1,2}  \\
+  a_{2,1} & a_{2,2}
+\end{pmatrix}\]
+
+\begin{itemize}
+\tightlist
+\item
+  The formula for the inverse is:
+\end{itemize}
+
+\[ A^{-1}=\frac{1}{|A|}\begin{pmatrix}
+  a_{2,2} & -a_{1,2}  \\
+ -a_{2,1} & a_{1,1}
+\end{pmatrix}\]
+
+\begin{itemize}
+\item
+  In words, swap the elements of the diagonal, take the negative of the
+  elements off the diagonal, and divide each element by the determinant
+  of the original matrix to get the inverse.
+\item
+  For more than 2 X X matrix see:
+  \url{https://www.mathsisfun.com/algebra/matrix-inverse-minors-cofactors-adjugate.html}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Why Should I Care?}
+\protect\hypertarget{why-should-i-care}{}
+
+\begin{itemize}
+\item
+  Regression coefficients might be presented in matrix form:
+  \[\beta = (X^{T} X)^{−1}X^{T} y\]
+\item
+  Here X is an \(n × m\) matrix of m independent variables each with n
+  associated data points, and \textbf{y} is an n-dimensional vector
+  corresponding to the dependent variable.
+\item
+  Matrix inversion can be used to compute these coefficients, which are
+  the objects of interest in regression.
+\item
+  intuitive explanation:
+  \url{https://betterexplained.com/articles/linear-algebra-guide/}
+\item
+  for more matrix and OLS:
+  \url{https://web.stanford.edu/~mrosenfe/soc_meth_proj3/matrix_OLS_NYU_notes.pdf}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix and Vector Transpose Properties}
+\protect\hypertarget{matrix-and-vector-transpose-properties}{}
+
+\begin{itemize}
+\item
+  \textbf{Inverse} \(\rightarrow (A^{T})^{T} = A\)
+\item
+  \textbf{Additive Property} \(\rightarrow (A+B)^{T} =  A^{T}+B^{T}\)
+\item
+  \textbf{Multiplicative Property} \(\rightarrow (AB)^{T} =B^{T}A^{T}\)
+\item
+  \textbf{Scaler multiplication} \(\rightarrow (cA)^{T} =cA^{T}\)
+\item
+  \textbf{Inverse Transpose} \(\rightarrow (A^{-1})^{T} = (A^{T})^{-1}\)
+\item
+  \textbf{If A is symmetric} \(\rightarrow A^{T}= A\)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix Determinant Properties}
+\protect\hypertarget{matrix-determinant-properties}{}
+
+\begin{itemize}
+\item
+  \textbf{Transpose property} \(\rightarrow det(A) = detA^{T}\)
+\item
+  \textbf{Identity matrix} \(\rightarrow det(I) = 1\)
+\item
+  \textbf{Multiplicative property}
+  \(\rightarrow det(AB) = det(A)det(B)\)
+\item
+  \textbf{Inverse property}
+  \(\rightarrow det(A^{-1}) = \frac{1}{det(A)}\)
+\item
+  \textbf{Scalar multiplication (n X n)}
+  \(\rightarrow det(cA) = c^{n}det(A)\)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix Determinant Properties}
+\protect\hypertarget{matrix-determinant-properties-1}{}
+
+\begin{itemize}
+\item
+  \textbf{Inverse property} \(\rightarrow (A^{-1})^{-1} = A\)
+\item
+  \textbf{Multiplicative property}
+  \(\rightarrow (BA)^{-1} = B^{-1}A^{-1}\)
+\item
+  \textbf{Scalar multiplication (n X n)}
+  \(\rightarrow (cA)^{-1} = c^{-1}A^{-1} \: if \: c \neq 0\)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Matrix and OLS Regression}
+\protect\hypertarget{matrix-and-ols-regression}{}
+
+\begin{itemize}
+\item
+  For calculating coefficients and standard errors manually in R using
+  matrices:
+  \url{https://the-tarzan.com/2011/06/13/calculate-ols-regression-manually-using-matrix-algebra-in-r/}
+\item
+  For another example see:
+  \url{http://faculty.cas.usf.edu/mbrannick/regression/regma.htm}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Introduction to Probability}
+\protect\hypertarget{introduction-to-probability}{}
+
+\begin{itemize}
+\item
+  You need to care about probability because it can help you develop
+  explicit statements about uncertainty.
+\item
+  Explicit statements about uncertainty are also necessary when
+  challenging theories empirically. In statistics you want to be able to
+  make a claim about the confidence of your findings; this requires the
+  formal use of uncertainty.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Classical Probability}
+\protect\hypertarget{classical-probability}{}
+
+\begin{itemize}
+\item
+  Classical probability is the theoretical analysis of events in the
+  absence of data.
+\item
+  When social scientists refer to events produced by random processes
+  they have a more precise meaning in mind: such events are
+  probabilistic (aka stochastic) as opposed to deterministic events.
+\item
+  In other words, for a random (or probabilistic or stochastic) event
+  one might be able to specify causal processes that alter the chance
+  that it occurs, but one cannot specify causal processes that guarantee
+  the event will occur, as would be the case for a deterministic event.
+\item
+  We use probability to build tools to describe and understand apparent
+  randomness. We often frame probability in terms of a \textbf{random
+  process} giving rise to an \textbf{outcome}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Classical Probability}
+\protect\hypertarget{classical-probability-1}{}
+
+\begin{itemize}
+\item
+  A \textbf{sample space} is the set of all possible outcomes: it is a
+  list of each event we might observe.
+\item
+  With outcome, event, and sample space defined, we can define the
+  classical probability of an event:
+\end{itemize}
+
+\[Pr(e) = \frac{No. \:of \:outcomes \: in\: event\: e}{No.\: of \: outcomes \: in \: the \: sample \: space}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Classical probability concerns the probability of events absent
+  reference to data.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Classical Probability}
+\protect\hypertarget{classical-probability-2}{}
+
+\begin{itemize}
+\item
+  As an example, we would determine the empirical probability that a
+  randomly selected Uruguayan voter cast his ballot for the Colorado
+  party in the June 2004 primary by looking at the vote share for each
+  party:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the EP-FA had 454,011 votes
+  \item
+    the NP had 440,774 votes
+  \item
+    Colorado had 159,280 votes
+  \end{itemize}
+\item
+  With 1,054,065 votes cast, the probability that a Uruguayan voter
+  selected at random voted for Colorado is
+  \[\frac{159,280}{159,280 + 454,011 + 440,774}=\frac{159,280}{1,054,065} \approx 0.15\]
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Probability - Law of Large Numbers}
+\protect\hypertarget{probability---law-of-large-numbers}{}
+
+\begin{itemize}
+\item
+  Probability can be illustrated by rolling a die many times. Let
+  \(p_{n}\) be the proportion of outcomes that are 1 after the first n
+  rolls. As the number of rolls increases, \(p_{n}\) will converge to
+  the probability of rolling a 1, p = 1/6. The tendency of \(p_{n}\) to
+  stabilize around p is described by the Law of Large Numbers.
+\item
+  \textbf{Law of Large Numbers}: As more observations are collected, the
+  proportion \(p_{n}\) of occurrences with a particular outcome
+  converges to the probability p of that outcome.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Simple and Compound Events}
+\protect\hypertarget{simple-and-compound-events}{}
+
+\begin{itemize}
+\item
+  A \textbf{simple event} is a single outcome that we represent as
+  having occurred to an individual or group. That is, we cannot break
+  down a simple event into constituent parts (i.e., multiple outcomes).
+\item
+  A \textbf{compound event}, on the other hand, is composed of two or
+  more simple events; we can break it down into constituent parts (i.e.,
+  outcomes).
+\item
+  Two events are \textbf{independent} if the probability that one occurs
+  does not change as a consequence of the other event's occurring.
+\item
+  Two events are \textbf{mutually exclusive} (or \textbf{disjoint}) when
+  one cannot occur if the other has occurred.
+\item
+  \textbf{Collective exhaustivity} is the characteristic that each and
+  every event fits into at least one of the categories.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Addition Rule of disjoint outcomes}
+\protect\hypertarget{addition-rule-of-disjoint-outcomes}{}
+
+\begin{itemize}
+\tightlist
+\item
+  When rolling a die, the outcomes 1 and 2 are disjoint, and we compute
+  the probability that one of these outcomes will occur by adding their
+  separate probabilities:
+\end{itemize}
+
+\[P (1 \ or \ 2) = P (1) + P (2) = 1/6 + 1/6 = 1/3\]
+
+\end{frame}
+
+\begin{frame}{Addition Rule of disjoint outcomes}
+\protect\hypertarget{addition-rule-of-disjoint-outcomes-1}{}
+
+\begin{itemize}
+\item
+  Statisticians rarely work with individual outcomes and instead
+  consider sets or collections of outcomes.
+\item
+  Let A represent the event where a die roll results in 1 or 2 and B
+  represent the event that the die roll is a 4 or a 6. We write A as the
+  set of outcomes \{1, 2\} and B = \{4, 6\}. These sets are commonly
+  called events. Because A and B have no elements in common, they are
+  disjoint events.
+\item
+  The Addition Rule applies to both disjoint outcomes and disjoint
+  events. The probability that one of the disjoint events A or B occurs
+  is the sum of the separate probabilities:
+\end{itemize}
+
+\[P (A \ or \ B) = P (A) + P (B) = 1/3 + 1/3 = 2/3\]
+
+\end{frame}
+
+\begin{frame}{General Addition Rule}
+\protect\hypertarget{general-addition-rule}{}
+
+\begin{itemize}
+\item
+  Let A represent the event that a randomly selected card is a diamond
+  and B represent the event that it is a face card.
+\item
+  How do we compute P(A or B)?
+\item
+  Events A and B are not disjoint -- the diamond cards J, Q, and K fall
+  into both categories -- so we cannot use the Addition Rule for
+  disjoint events.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{General Addition Rule}
+\protect\hypertarget{general-addition-rule-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  We start by adding the probabilities of the two events:
+\end{itemize}
+
+\[P(A) + P(B) = P(Diamond) + P(face card) = 13/52 + 12/52\]
+
+\begin{itemize}
+\tightlist
+\item
+  However, the three cards that are in both events were counted twice,
+  once in each probability. We must correct this double counting:
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{General Addition Rule}
+\protect\hypertarget{general-addition-rule-2}{}
+
+\[P(AorB) = P (Diamond \ or \ face \ card) = \\
+P (Diamond) + P (face \ card) -  P (Diamond \ and \ face card) = \\ 13/52 + 12/52 -  3/52 = \\
+22/52 = \\ 
+11/26\]
+
+\end{frame}
+
+\begin{frame}{General Addition Rule}
+\protect\hypertarget{general-addition-rule-3}{}
+
+If A and B are any two events, disjoint or not, then the probability
+that at least one of them will occur is:
+
+\[P(A \ or \ B)=P(A)+P(B)−P(A\ and \ B)\]
+
+\end{frame}
+
+\begin{frame}{Joint and Conditional Probabilities}
+\protect\hypertarget{joint-and-conditional-probabilities}{}
+
+\begin{itemize}
+\item
+  A \textbf{joint probability} is the probability of a compound event.
+  If the simple events of a compound event are independent, then their
+  joint probability is the product of the probabilities of each simple
+  event.
+\item
+  Thus, if the probability that a US voter drawn at random voted
+  Democratic is 0.47 and the probability that the temperature is 83
+  degrees is 0.15, then the joint probability is 0.47×0.15 ≈ 0.07.
+\item
+  The key point to take away is that the joint probability of
+  independent events is the probability of both events' occurring, and
+  we calculate it as the product of the probabilities of each individual
+  event.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Joint and Conditional Probabilities}
+\protect\hypertarget{joint-and-conditional-probabilities-1}{}
+
+\begin{itemize}
+\item
+  Two processes are \textbf{independent} if knowing the outcome of one
+  provides no useful information about the outcome of the other.
+\item
+  \textbf{Multiplication Rule} for independent processes: If A and B
+  represent events from two different and independent processes, then
+  the probability that both A and B occur can be calculated as the
+  product of their separate probabilities:
+\end{itemize}
+
+\[P(A \ and \ B)=P(A)*P(B)\]
+
+\end{frame}
+
+\begin{frame}{Joint and Conditional Probabilities}
+\protect\hypertarget{joint-and-conditional-probabilities-2}{}
+
+\begin{itemize}
+\item
+  Let us now consider the joint probability of mutually exclusive
+  compound events, for example the joint probability that a US voter
+  voted for the Democratic Party or that she voted for the Republican
+  Party.
+\item
+  The joint probability of two mutually exclusive events is not the
+  product of the simple probabilities.
+\item
+  Instead, it is the sum of the simple probabilities: given that p(yD) =
+  .4 and p(yR) = .5, p(yD or yR) = 0.4 + 0.5 = 0.9.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Joint and Conditional Probabilities}
+\protect\hypertarget{joint-and-conditional-probabilities-3}{}
+
+\begin{itemize}
+\item
+  It should be apparent to you that the joint probability of a set of
+  mutually exclusive, collectively exhaustive events is 1.0, since just
+  events make up the entire sample space.
+\item
+  Like mutually exclusive and collectively exhaustive events,
+  conditional events are not independent: the probability of one event
+  occurring is affected by whether another event occurs and is referred
+  to as a \textbf{conditional probability}. p(y\textbar x, z), which is
+  read ``the probability of y given x and z.''
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Conditional Probability}
+\protect\hypertarget{conditional-probability}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Conditional probability}: The conditional probability of the
+  outcome of interest A given condition B is computed as the following:
+\end{itemize}
+
+\[P(A|B) = \frac{P(A \ and \ B)}{P(B)}\]
+
+\end{frame}
+
+\begin{frame}{Why Should I Care?}
+\protect\hypertarget{why-should-i-care-1}{}
+
+\begin{itemize}
+\item
+  Because few events are truly independent, conditional probabilities
+  are central to understanding political phenomena.
+\item
+  Consider the linear model \(y = βx + ε\).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This means, in words, that the value of the dependent variable, y,
+    depends on the values of both the independent variable x and some
+    random variable ε.
+  \item
+    Here ε represents all the stuff we don't know about how y varies,
+    stuff that's not captured in the variance of x
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Why Should I Care?}
+\protect\hypertarget{why-should-i-care-2}{}
+
+\begin{itemize}
+\item
+  Let's say one had measured x and had a value for β, perhaps via
+  ordinary least squares (OLS) regression, and was interested in the
+  likelihood that y \textgreater{} 0.5.
+\item
+  Well, since \(y = βx+ε, Pr(y > 0.5|β,x) = Pr((ε+βx > 0.5)|β,x)\). If
+  one knows how ε is distributed, one knows the RHS of this equation,
+  and so knows the conditional probability that y exceeds one-half.
+\item
+  Note that this probability is conditional because it depends
+  fundamentally on the values of x and β.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation and Rules}
+\protect\hypertarget{notation-and-rules}{}
+
+\begin{itemize}
+\item
+  All probabilities lie between zero and one, so \(Pr(A) ∈ [0,1]\)
+\item
+  \(Pr(A|B)\) is the conditional probability of A on B. In other words,
+  it is the probability that A occurs given that B has already occurred.
+\item
+  If A and B are independent events, then the fact that B has already
+  occurred doesn't influence the probability that A will occur. So, for
+  independent events, \(P r(A|B) = P r(A)\).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation and Rules}
+\protect\hypertarget{notation-and-rules-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The symbols for set union \((∪)\) and intersection \((∩)\) also apply
+  to events. \(A∪B\) is the compound event where either A or B happens,
+  or both. Thus, we read \(A∪B\) as ``A or B.''
+\end{itemize}
+
+\[Pr(A ∪ B) = Pr(A) + P r(B) − Pr(A ∩ B).\]
+
+\begin{itemize}
+\item
+  The first two terms just tell us that the chance that either A or B
+  happens is closely related to the chance that each happens on its own.
+  The third term is there to avoid double counting.
+\item
+  That is, if A and B have some overlap---i.e., if they are not mutually
+  exclusive --- then when you add the probabilities that each occurs,
+  you are including twice in the sum the probability that the
+  overlapping part, \(A ∩ B\), occurs, so you need to subtract one of
+  those probabilities out.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation and Rules}
+\protect\hypertarget{notation-and-rules-2}{}
+
+\begin{itemize}
+\tightlist
+\item
+  When events are mutually exclusive that overlap is zero, though, so
+  you just get:
+\end{itemize}
+
+\[Pr(A ∪ B) = Pr(A) + Pr(B)\]
+
+\begin{itemize}
+\tightlist
+\item
+  For mutually exclusive events, \(Pr(B|A) = Pr(A|B) = 0\)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Notation and Rules}
+\protect\hypertarget{notation-and-rules-3}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \(A ∩ B\) is the compound event where both A and B happen. Thus, we
+  read \(A∩B\) as ``A and B.''
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Bayes Rule}
+\protect\hypertarget{bayes-rule}{}
+
+\begin{itemize}
+\item
+  Thomas Bayes, an English reverend who lived during the eighteenth
+  century, was responsible for a theorem that explains how one ought to
+  change one's mind in response to evidence about the world.
+\item
+  To introduce Bayes' rule we must distinguish between prior and
+  posterior beliefs.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A \textbf{prior belief} is the belief one has before new information
+    (evidence) is introduced.
+  \item
+    A \textbf{posterior belief} is the belief one holds subsequent to
+    the consideration of new information (evidence).
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Bayes Rule}
+\protect\hypertarget{bayes-rule-1}{}
+
+\begin{itemize}
+\item
+  Thus, if we use standard time notation, where t represents one moment
+  in time and t + 1 represents the subsequent moment in time, and use B
+  to represent a belief, then \(B_{t}\) is the prior belief and
+  \(B_{t+1}\) is the posterior belief if an event that provided new
+  information occurred at time t.
+\item
+  Some readers may find Corey Chivers's visualization of a Bayesian
+  updating process useful (\url{http://tinyurl.com/BayesUpdate})
+\item
+  see also:
+  \url{https://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Bayes Rule}
+\protect\hypertarget{bayes-rule-2}{}
+
+\[Pr(A|B) = \frac{Pr(B|A)Pr(A)}{Pr(B)}\]
+
+\begin{itemize}
+\item
+  For two events, A and B, Bayes' theorem allows you to figure out
+  p(A\textbar B) (the probability that event A happened, given that test
+  B was positive) from p(B\textbar A) (the probability that test B
+  happened, given that event A happened).
+\item
+  We want to know often A happens given that B happens, written
+  P(A\textbar B), when we know:
+\item
+  How often B happens given that A happens, written P(B\textbar A)
+\item
+  How likely A is on its own, written P(A)
+\item
+  How likely B is on its own, written P(B)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Bayes Rule - Example \#1}
+\protect\hypertarget{bayes-rule---example-1}{}
+
+\begin{itemize}
+\item
+  You might be interested in finding out a patient's probability of
+  having liver disease if they are an alcoholic. ``Being an alcoholic''
+  is the test (kind of like a litmus test) for liver disease.
+\item
+  \textbf{A} could mean the event ``Patient has liver disease.'' Past
+  data tells you that 10\% of patients entering your clinic have liver
+  disease. P(A) = 0.10.
+\item
+  \textbf{B} could mean the litmus test that ``Patient is an
+  alcoholic.'' Five percent of the clinic's patients are alcoholics.
+  P(B) = 0.05.
+\item
+  You might also know that among those patients diagnosed with liver
+  disease, 7\% are alcoholics. This is your \textbf{(B\textbar A)}: the
+  probability that a patient is alcoholic, given that they have liver
+  disease, is 7\%.
+\item
+  Bayes' theorem tells you: \(P(A|B) = (0.07 * 0.1)/0.05 = 0.14\)
+\item
+  In other words, if the patient is an alcoholic, their chances of
+  having liver disease is 0.14 (14\%). This is a large increase from the
+  10\% suggested by past data. But it's still unlikely that any
+  particular patient has liver disease.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Bayes Rule - Example \#2}
+\protect\hypertarget{bayes-rule---example-2}{}
+
+\textbf{Q. Given the following statistics, what is the probability that
+a woman has cancer if she has a positive mammogram result?}
+
+\begin{itemize}
+\tightlist
+\item
+  One percent of women over 50 have breast cancer.
+\item
+  Ninety percent of women who have breast cancer test positive on
+  mammograms.
+\item
+  Eight percent of women will have false positives.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Bayes Rule - Example \#2}
+\protect\hypertarget{bayes-rule---example-2-1}{}
+
+\begin{itemize}
+\item
+  Step 1: Assign events to A or X. You want to know what a woman's
+  probability of having cancer is, given a positive mammogram. For this
+  problem, actually having cancer is A and a positive test result is X.
+\item
+  Step 2: List out the parts of the equation (this makes it easier to
+  work the actual equation):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    P(A)=0.01
+  \item
+    P(\textasciitilde A)=0.99
+  \item
+    P(X\textbar A)=0.9
+  \item
+    P(X\textbar\textasciitilde A)=0.08
+  \end{itemize}
+\item
+  Step 3: Insert the parts into the equation and solve.
+\end{itemize}
+
+\[\frac{(0.9 * 0.01)}{((0.9 * 0.01) + (0.08 * 0.99))} = 0.10\]
+
+\end{frame}
+
+\begin{frame}{Bayes Rule - Alternative Notation}
+\protect\hypertarget{bayes-rule---alternative-notation}{}
+
+\[Pr(B|A) = \frac{Pr(B\bigcap A)}{Pr(B \bigcap A)+ Pr(B^{c} \bigcap A)}\]
+
+\end{frame}
+
+\begin{frame}{Bayes Rule - More Alternative Notation}
+\protect\hypertarget{bayes-rule---more-alternative-notation}{}
+
+\begin{itemize}
+\item
+  Consider the following conditional probability for variable 1 and
+  variable 2: \textbf{P(outcome A1 of variable 1 \textbar{} outcome B of
+  variable 2)}
+\item
+  Bayes' Theorem states that this conditional probability can be
+  identified as the following fraction:
+\end{itemize}
+
+\[=\frac{P(B|A1)P(A1)}{P(B|A1)P(A1)+P(B|A2)P(A2)+···+P(B|Ak)P(Ak)}\]
+
+\begin{itemize}
+\item
+  where A2, A3, \ldots, and Ak represent all other possible outcomes of
+  the first variable.
+\item
+  for more:
+  \url{https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Odds Ratio}
+\protect\hypertarget{odds-ratio}{}
+
+\begin{itemize}
+\item
+  One way in which probabilities frequently enter the reporting of
+  results is the odds ratio.
+\item
+  The odds of an event is defined as the ratio of the probability of the
+  event's occurring and the probability that it does not occur:
+\end{itemize}
+
+\[\frac{Pr(y)}{Pr(\sim y)}\]
+
+\begin{itemize}
+\item
+  The odds ratio provides a useful way to summarize the relationship
+  between the odds of two independent events and is foundational to
+  maximum likelihood statistics.
+\item
+  see also:
+  \url{https://www.students4bestevidence.net/a-beginners-guide-to-interpreting-odds-ratios-confidence-intervals-and-p-values-the-nuts-and-bolts-20-minute-tutorial/}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Relative Risk Ratio}
+\protect\hypertarget{relative-risk-ratio}{}
+
+\begin{itemize}
+\item
+  The relative risk ratio is the ratio of two probabilities and can be
+  quite useful for comparing relationships.
+\item
+  It is often useful to be able to summarize the risk of two groups to
+  some outcome.
+\item
+  A value of 1 indicates that the risks are equal across the pair. A
+  value below 1 indicates that the probability in the first part of the
+  ratio is smaller than the probability in the second part, while values
+  greater than 1 represent the opposite.
+\item
+  If the relative risk ratio for war is 1.95 for a pair of countries
+  with one major power relative to a pair in which neither is a major
+  power. That means that the country pairs with at least one major power
+  are nearly twice as likely to go to war as country pairs without a
+  major power (i.e., almost 2.0).
+\item
+  To convert a proportion into a percentage we multiply it by 100\%
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Discrete Ditributions}
+\protect\hypertarget{discrete-ditributions}{}
+
+\begin{itemize}
+\item
+  Causal process is not unique to individual members of the class or
+  population. Most causal theory in political science is probabilistic:
+  the hypothetical relationship between a causal variable X and a caused
+  variable Y is not expected to hold in every case.
+\item
+  Political scientists rarely (if ever) posit laws. Instead, we posit
+  probabilistic hypotheses about the impact of X on Y
+\item
+  Once we shift our attention away from specific individual members of a
+  class or population toward most members of a class or population, we
+  have already begun to think about distributions
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Random Variables}
+\protect\hypertarget{random-variables}{}
+
+\begin{itemize}
+\item
+  A \textbf{random variable} is a variable that can take some array of
+  values, with the probability that it takes any particular value
+  defined according to some random process.
+\item
+  The set of values the variable might take is the \textbf{distribution}
+  of the random variable.
+\item
+  Saying that the variables in our hypotheses (and many theories) are
+  random variables amounts to saying that we expect the value of each
+  variable in our hypotheses (and many theories) to be a draw from some
+  associated distribution.
+\item
+  The \textbf{realization} of a random variable is a particular value
+  that it takes
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Expectation}
+\protect\hypertarget{expectation}{}
+
+\begin{itemize}
+\tightlist
+\item
+  If X takes outcomes \(x_{1}, ..., x_{k}\) with probabilities
+  \(P(X = x_{1}), ..., P(X = x_{k})\), the expected value of X is the
+  sum of each outcome multiplied by its corresponding probability:
+\end{itemize}
+
+\[E(X) = x_{1}*P(X=x_{1})+···+x_{k}*(X=x_{k})\] - The expected value for
+a random variable represents the average outcome.
+
+\end{frame}
+
+\begin{frame}{General Variance}
+\protect\hypertarget{general-variance}{}
+
+\begin{itemize}
+\item
+  The variance and standard deviation can be used to describe the
+  variability of a random variable.
+\item
+  We first compute deviations from the mean \((x_i - \mu)\), squared
+  those deviations, and take an average to get the variance.
+\item
+  We take their sum weighted by their corresponding probabilities, just
+  like we did for the expectation. This weighted sum of squared
+  deviations equals the variance, and we calculate the standard
+  deviation by taking the square root of the variance
+\end{itemize}
+
+\[\sum_{j = 1}^{k} = (x_{j}-\mu)^{2}P(X=x_{j})  \] - The standard
+deviation of X, labeled, is the square root of the variance.
+
+\end{frame}
+
+\begin{frame}{Linear Combination of Random Variables}
+\protect\hypertarget{linear-combination-of-random-variables}{}
+
+\begin{itemize}
+\item
+  A \textbf{linear combination} of two random variables X and Y is a
+  fancy phrase to describe a combination
+\item
+  where a and b are some fixed numbers. To compute the average value of
+  a linear combination of random variables, plug in the average of each
+  individual random variable and compute the result:
+\end{itemize}
+
+\[a*(X)+b*(Y)\]
+
+\end{frame}
+
+\begin{frame}{Linear Combination of Random Variables}
+\protect\hypertarget{linear-combination-of-random-variables-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The variance of a linear combination of random variables may be
+  computed by squaring the constants, substituting in the variances for
+  the random variables, and computing the result:
+\end{itemize}
+
+\[Var(aX+bY)= a^{2}*Var(X) + b^{2}*Var(Y)\]
+
+\begin{itemize}
+\tightlist
+\item
+  This equation is valid as long as the random variables are independent
+  of each other.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Continuous Distribution}
+\protect\hypertarget{continuous-distribution}{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{source}\NormalTok{(}\StringTok{"http://www.openintro.org/stat/data/cdc.R"}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(cdc}\OperatorTok{$}\NormalTok{weight)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-17-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Continuous Distribution}
+\protect\hypertarget{continuous-distribution-1}{}
+
+\begin{itemize}
+\item
+  What is proportion of the sample is between 220 and 240 pounds? We can
+  calculate this by adding the area of the bins for the given range and
+  divide it by the total area of the histogram.
+\item
+  As more and more bars are added to a histogram, it takes on the
+  appearance of a smooth curve. This smooth curve represents the
+  probability density function (also called a density or a
+  distribution).
+\item
+  The key point here is that the area under a shaded portion of a
+  probability distribution is equal to the probability of the values in
+  that range.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Sampling Distribution}
+\protect\hypertarget{sampling-distribution}{}
+
+\begin{itemize}
+\item
+  A \textbf{sample distribution} is the distribution of values of a
+  variable resulting from the collection of actual data for a finite
+  number of cases
+\item
+  A \textbf{frequency distribution} is a count of the number of members
+  that have a specific value on a variable.
+\item
+  Thinking about specific examples is definitely a good place to begin
+  theory development, but having established a potential causal relation
+  from the example in question, one must move to thinking about all
+  members of the class or population in question and ask whether the
+  relationship might hold for most members most of the time
+\item
+  One can use histograms to get the relative frequency distribution of a
+  variable.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Data Generating Process}
+\protect\hypertarget{data-generating-process}{}
+
+\begin{itemize}
+\item
+  Rather than simply employ a statistical model off the shelf because
+  some- one put it there, we want to think about the political process
+  that produced the concept or variable that interests us and then use
+  the rules of probability theory to write down a function that
+  describes that process.
+\item
+  One reason we are interested in probability distributions is that they
+  are formal statements of our conjecture about the
+  \textbf{data-generating process (DGP)}.
+\item
+  If one wants to draw valid inferences (and there is little reason to
+  be interested in drawing an invalid inference), then one must match
+  the distributional assumptions of the statistical model to the
+  distribution of one's dependent variable.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Normal Distribution}
+\protect\hypertarget{normal-distribution}{}
+
+\begin{itemize}
+\item
+  Among all the distributions we see in practice, one is overwhelmingly
+  the most common. The symmetric, unimodal, bell curve is ubiquitous
+  throughout statistics.
+\item
+  Indeed it is so common, that people often know it as the normal curve
+  or normal distribution.
+\item
+  Variables such as SAT scores and heights of US adult males closely
+  follow the normal distribution.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Normal Distribution}
+\protect\hypertarget{normal-distribution-1}{}
+
+\begin{itemize}
+\item
+  The normal distribution model can be adjusted using two parameters:
+  mean and standard deviation.
+\item
+  As you can probably guess, changing the mean shifts the bell curve to
+  the left or right, while changing the standard deviation stretches or
+  constricts the curve.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Normal Distribution}
+\protect\hypertarget{normal-distribution-2}{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{seq}\NormalTok{(}\OperatorTok{-}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DataTypeTok{length=}\DecValTok{100}\NormalTok{)}
+\NormalTok{hx <-}\StringTok{ }\KeywordTok{dnorm}\NormalTok{(x)}
+\KeywordTok{plot}\NormalTok{(x, hx, }\DataTypeTok{type=}\StringTok{"l"}\NormalTok{, }\DataTypeTok{lty=}\DecValTok{1}\NormalTok{, }\DataTypeTok{xlab=}\StringTok{"x value"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"Density"}\NormalTok{, }\DataTypeTok{main=}\StringTok{"Normal Distribution"}\NormalTok{)}
+\KeywordTok{abline}\NormalTok{(}\DataTypeTok{h=}\DecValTok{0}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-18-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Normal Distribution}
+\protect\hypertarget{normal-distribution-3}{}
+
+\begin{itemize}
+\item
+  The normal distribution with mean 0 and standard deviation 1 is called
+  the standard normal distribution.
+\item
+  If a normal distribution has mean \(\mu\) and standard deviation
+  \(\sigma\) , we may write the distribution as:
+\end{itemize}
+
+\[N(\mu, \sigma)\]
+
+\begin{itemize}
+\tightlist
+\item
+  Because the mean and standard deviation describe a normal distribution
+  exactly, they are called the distribution's parameters.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Standardizing with Z scores}
+\protect\hypertarget{standardizing-with-z-scores}{}
+
+\begin{itemize}
+\item
+  The Z-score of an observation is defined as the number of standard
+  deviations it falls above or below the mean.
+\item
+  If the observation is one standard deviation above the mean, its
+  Z-score is 1. If it is 1.5 standard deviations below the mean, then
+  its Z-score is -1.5.
+\item
+  If x is an observation from a distribution N(μ, ), we define the
+  Z-score mathematically as:
+\end{itemize}
+
+\[z = \frac{(x – μ)}{σ}\]
+
+\end{frame}
+
+\begin{frame}{Standardizing with Z scores}
+\protect\hypertarget{standardizing-with-z-scores-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Using
+  \(\mu_{SAT} = 1500, \ \sigma_{SAT} = 300, and \ x_{Ann} = 1800\), we
+  find Ann's Z-score:
+\end{itemize}
+
+\[z = \frac{(x – μ)}{σ}= \frac{(1800 – 1500)}{300}= 1\]
+
+\begin{itemize}
+\tightlist
+\item
+  We can use Z-scores to roughly identify which observations are more
+  unusual than others. One observation \(x_1\) is said to be more
+  unusual than another observation \(x_2\) if the absolute value of its
+  Z-score is larger than the absolute value of the other observation's
+  Z-score.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Normal Probability Table}
+\protect\hypertarget{normal-probability-table}{}
+
+\begin{itemize}
+\tightlist
+\item
+  What if Ann wanted to know what percentile she falls in among all SAT
+  test-takers. Ann's percentile is the percentage of people who earned a
+  lower SAT score than Ann.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x<-}\KeywordTok{rnorm}\NormalTok{(}\DecValTok{100000}\NormalTok{,}\DataTypeTok{mean=}\DecValTok{1500}\NormalTok{, }\DataTypeTok{sd=}\DecValTok{300}\NormalTok{)}
+\KeywordTok{hist}\NormalTok{(x,}\DataTypeTok{breaks=}\DecValTok{150}\NormalTok{,}\DataTypeTok{xlim=}\KeywordTok{c}\NormalTok{(}\DecValTok{600}\NormalTok{,}\DecValTok{2400}\NormalTok{),}\DataTypeTok{freq=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-19-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Normal Probability Table}
+\protect\hypertarget{normal-probability-table-1}{}
+
+\begin{itemize}
+\item
+  We can use the normal model to find percentiles. A normal probability
+  table, which lists Z-scores and corresponding percentiles, can be used
+  to identify a percentile based on the Z-score (and vice versa).
+  Statistical software can also be used.
+\item
+  The normal probability table in most books gives the area to the left.
+  If you would like the area to the right, first find the area to the
+  left and then subtract this amount from one.
+\item
+  Use the Z-table to confirm that about 68\%, 95\%, and 99.7\% of
+  observations fall within 1, 2, and 3, standard deviations of the mean
+  in the normal distribution, respectively.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Evaluating the normal approximation}
+\protect\hypertarget{evaluating-the-normal-approximation}{}
+
+\begin{itemize}
+\item
+  There are two visual methods for checking the assumption of normality,
+  which can be implemented and interpreted quickly. The first is a
+  simple histogram with the best fitting normal curve overlaid on the
+  plot.
+\item
+  The sample mean̄ and standard deviation s are used as the parameters of
+  the best fitting normal curve. The closer this curve fits the
+  histogram, the more reasonable the normal model assumption.
+\item
+  Another more common method is examining a \textbf{normal probability
+  plot}. The closer the points are to a perfect straight line, the more
+  confident we can be that the data follow the normal model.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Evaluating the normal approximation}
+\protect\hypertarget{evaluating-the-normal-approximation-1}{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{eruption.lm <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(eruptions }\OperatorTok{~}\StringTok{ }\NormalTok{waiting, }\DataTypeTok{data=}\NormalTok{faithful)}
+\NormalTok{eruption.stdres <-}\StringTok{ }\KeywordTok{rstandard}\NormalTok{(eruption.lm)}
+\KeywordTok{qqnorm}\NormalTok{(eruption.stdres,}
+       \DataTypeTok{ylab=}\StringTok{"Standard Residuals"}\NormalTok{,}
+       \DataTypeTok{xlab=}\StringTok{"Normal Scores"}\NormalTok{,}
+       \DataTypeTok{main=}\StringTok{"Old Faithful"}\NormalTok{)}
+\KeywordTok{qqline}\NormalTok{(eruption.stdres)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Math-Principles_files/figure-beamer/unnamed-chunk-20-1.pdf}
+
+\end{frame}
+
+\begin{frame}{The Bernoulli Distribution}
+\protect\hypertarget{the-bernoulli-distribution}{}
+
+\begin{itemize}
+\item
+  The Bernoulli distribution describes randomly produced binary
+  variables and is generally introduced using the example of flipping
+  coins.
+\item
+  The Bernoulli distribution describes the frequency of two outcomes
+  over repeated observations.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{The Bernoulli Distribution}
+\protect\hypertarget{the-bernoulli-distribution-1}{}
+
+\begin{itemize}
+\item
+  A Bernoulli random variable has exactly two possible outcomes. We
+  typically label one of these outcomes a ``success'' and the other
+  outcome a ``failure''. We may also denote a success by 1 and a failure
+  by 0.
+\item
+  The Bernoulli distribution is built on an assumption that the
+  individual events are independent of one another (e.g., the outcome of
+  one flip of a fair coin does not influence the outcome of the
+  subsequent flip of a fair coin)
+\item
+  To get a graphical sense of what the binomial distribution looks like,
+  please point your browser to Balasubramanian Narasimhan's ``Binomial
+  Probabilities'' applet, available at
+  \url{http://www-stat.stanford.edu/~naras/jsm/} example5.html.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{The Bernoulli Distribution}
+\protect\hypertarget{the-bernoulli-distribution-2}{}
+
+\begin{itemize}
+\tightlist
+\item
+  If X is a random variable that takes value 1 with probability of
+  success p and 0 with probability 1-p, then X is a Bernoulli random
+  variable with mean and standard deviation:
+\end{itemize}
+
+\[ \mu = p\]
+
+\[\sigma=\sqrt{p(1-p)}\]
+
+\end{frame}
+
+\begin{frame}{Geometric Distribution}
+\protect\hypertarget{geometric-distribution}{}
+
+\begin{itemize}
+\tightlist
+\item
+  If the probability of a success in one trial is p and the probability
+  of a failure is 1-p, then the probability of finding the first success
+  in the nth trial is given by:
+\end{itemize}
+
+\[(1-p)^{n-1}p\]
+
+\begin{itemize}
+\tightlist
+\item
+  The geometric distribution, describes the waiting time until a success
+  for independent and identically distributed (iid) Bernoulli random
+  variables. In this case, the independence aspect just means the
+  individuals in the example don't affect each other, and identical
+  means they each have the same probability of success.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Geometric Distribution}
+\protect\hypertarget{geometric-distribution-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The mean (i.e.~expected value), variance, and standard deviation of
+  this wait time are given by:
+\end{itemize}
+
+\[\mu= \frac{1}{p} \\
+\sigma^{2}= \frac{1-p}{p^{2}} \\
+\sigma= \sqrt{\frac{1-p}{p^{2}}}\]
+
+\begin{itemize}
+\tightlist
+\item
+  This mathematical result is consistent with what we would expect
+  intuitively. If the probability of a success is high (e.g.~0.8), then
+  we don't usually wait very long for a success: 1/0.8 = 1.25 trials on
+  average. If the probability of a success is low (e.g.~0.1), then we
+  would expect to view many trials before we see a success: 1/0.1 = 10
+  trials.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Binomial Distribution}
+\protect\hypertarget{binomial-distribution}{}
+
+\begin{itemize}
+\item
+  The \textbf{binomial distribution} describes the probability of having
+  exactly \emph{k} successes in \emph{n} independent Bernoulli trials
+  with probability of a success \emph{p}
+\item
+  We apply the Multiplication Rule for independent events:
+\end{itemize}
+
+\[p^{k}(1-p)^{n-k}\]
+
+\end{frame}
+
+\begin{frame}{Combinations and Permutations}
+\protect\hypertarget{combinations-and-permutations}{}
+
+\begin{itemize}
+\item
+  A \textbf{combination} is a way of choosing k objects from n objects
+  when one does not care about the order in which one chooses the
+  objects.
+\item
+  A \textbf{permutation}, in comparison, is a way of choosing k objects
+  from n objects when one does care about the order in which one chooses
+  the objects.
+\item
+  Let's consider the set \{a, b, c, d, e, f \}. This set has n = 6
+  elements in it. How many ways are there to draw k = 2 elements from
+  this set (without replacing any letters) if we don't care about the
+  order in which we draw them?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Combinations and Permutations}
+\protect\hypertarget{combinations-and-permutations-1}{}
+
+\begin{itemize}
+\item
+  The expression \(\binom{n}{k}\) is to be read ``n choose k.''
+\item
+  In other words, take n things and choose k of them, ignoring the order
+  in which you choose them. It is the case that \(\binom{n}{k}\) =
+  \(\frac{n!}{k!(n-k)!}\)
+\item
+  So, for our example, we have n=6, k=2. This question is equivalent to
+  asking how many different combinations of two letters are in the set.
+  We can use:
+\end{itemize}
+
+\[\binom{6}{2} = \frac{6!}{2!4!} = \frac{6·5·4·3·2·1}{(2·1)(4·3·2·1)} = \frac{30}{2} = 15\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{choose}\NormalTok{(}\DecValTok{6}\NormalTok{,}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 15
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}{Combinations and Permutations}
+\protect\hypertarget{combinations-and-permutations-2}{}
+
+\begin{itemize}
+\item
+  What if we now cared about order?
+\item
+  There will always be more permutations than combinations, as ignoring
+  order always decreases the number of options that matter.
+\item
+  We can compute this more easily as well:
+  \[P(n, k) = \frac{n!}{(n-k)!}\]
+\item
+  The missing k! in the denominator allows us to ignore order in the
+  equation for combinations: the number of ways one can arrange k
+  objects is k!.
+\item
+  for more see:
+  \url{https://betterexplained.com/articles/easy-permutations-and-combinations/}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Binomial Distribution}
+\protect\hypertarget{binomial-distribution-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose the probability of a single trial being a success is p.~Then
+  the probability of observing exactly k successes in n independent
+  trials is given by
+\end{itemize}
+
+\[\binom{n}{k}  p^{k}(1-p)^{n-k} = \frac{n!}{k!(n-k)!} p^{k}(1-p)^{n-k}\]
+
+\begin{itemize}
+\tightlist
+\item
+  Additionally, the mean, variance, and standard deviation of the number
+  of observed successes are
+\end{itemize}
+
+\[\mu=np\\
+\sigma^{2}= np(1-p) \\
+\sigma=\sqrt{np(1-p)}\]
+
+\end{frame}
+
+\begin{frame}{Normal Approximation to the binomial distribution}
+\protect\hypertarget{normal-approximation-to-the-binomial-distribution}{}
+
+\begin{itemize}
+\item
+  The binomial formula is cumbersome when the sample size (n) is large,
+  particularly when we consider a range of observations. In some cases
+  we may use the normal distribution as an easier and faster way to
+  estimate binomial probabilities.
+\item
+  The normal approximation may be used when computing the range of many
+  possible successes.
+\item
+  Approximately 20\% of the US population smokes cigarettes. A local
+  government believed their community had a lower smoker rate and
+  commissioned a survey of 400 randomly selected individuals. The survey
+  found that only 59 of the 400 participants smoke cigarettes. If the
+  true proportion of smokers in the community was really 20\%, what is
+  the probability of observing 59 or fewer smokers in a sample of 400
+  people?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Normal Approximation to the binomial distribution}
+\protect\hypertarget{normal-approximation-to-the-binomial-distribution-1}{}
+
+\begin{itemize}
+\tightlist
+\item
+  The binomial distribution with probability of success p is nearly
+  normal when the sample size n is sufficiently large that np and n(1
+  -p) are both at least 10. The approximate normal distribution has
+  parameters corresponding to the mean and standard deviation of the
+  binomial distribution:
+\end{itemize}
+
+\[\mu=np \\
+\sigma = \sqrt{np(1-p)}\]
+
+\begin{itemize}
+\tightlist
+\item
+  How can we use the normal approximation to estimate the probability of
+  observing 59 or fewer smokers in a sample of 400, if the true
+  proportion of smokers is p = 0.20?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Normal Approximation to the binomial distribution}
+\protect\hypertarget{normal-approximation-to-the-binomial-distribution-2}{}
+
+\[np = 40*0.20 = 80 \\ 
+\sigma= \sqrt{0.2*400(0.80)}=8\]
+
+Compute the Z-score first:
+
+\[Z = \frac{59-80}{8} =  2.63\]
+
+\begin{itemize}
+\item
+  The corresponding left tail area is 0.0043.
+\item
+  for more see:
+  \url{http://www.statisticshowto.com/probability-and-statistics/binomial-theorem/binomial-distribution-formula/}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Event Count Distributions}
+\protect\hypertarget{event-count-distributions}{}
+
+\begin{itemize}
+\item
+  Many variables that political scientists have created are integer
+  counts of events: the number of bills passed by a legislature, the
+  number of wars in which a country has participated, the number of
+  executive vetoes, etc. Event counts frequently exhibit frequency
+  distributions consistent with those produced by a handful of
+  well-known probability distributions.
+\item
+  The Poisson distribution can be written as
+\end{itemize}
+
+\[Pr(observe \ k \ events)= \frac{\lambda^{k}e^{-\lambda}}{k!}\]
+
+\begin{itemize}
+\item
+  where k may take a value 0, 1, 2, and so on, and k! represents
+  k-factorial. The letter e = 2.718 is the base of the natural
+  logarithm. The mean and standard deviation of this distribution are
+  \(\lambda\) and \(\sqrt{\lambda}\), respectively
+\item
+  The goal is to produce a PMF that describes the number of times one
+  observes zero events, one event, two events, 3 events, etc., over a
+  fixed period of time (e.g., wars per century). The Poisson
+  distribution describes event counts produced by a process that meets
+  three criteria: integer count, independence, and a known mean.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Poisson distribution}
+\protect\hypertarget{poisson-distribution}{}
+
+\begin{itemize}
+\item
+  The Poisson distribution is often useful for estimating the number of
+  events in a large population over a unit of time. For instance,
+  consider each of the following events:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    having a heart attack
+  \item
+    getting married, and
+  \item
+    getting struck by lightning
+  \end{itemize}
+\item
+  The Poisson distribution helps us describe the number of such events
+  that will occur in a day for a fixed population if the individuals
+  within the population are independent.
+\item
+  see: \url{http://www.statisticshowto.com/poisson-distribution/}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Poisson distribution}
+\protect\hypertarget{poisson-distribution-1}{}
+
+\begin{itemize}
+\item
+  If there are twelve cars crossing a bridge per minute on average, find
+  the probability of having seventeen or more cars crossing the bridge
+  in a particular minute.
+\item
+  The probability of having sixteen or less cars crossing the bridge in
+  a particular minute is given by the function ppois.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ppois}\NormalTok{(}\DecValTok{16}\NormalTok{, }\DataTypeTok{lambda=}\DecValTok{12}\NormalTok{)   }\CommentTok{# lower tail }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.898709
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ppois}\NormalTok{(}\DecValTok{16}\NormalTok{, }\DataTypeTok{lambda=}\DecValTok{12}\NormalTok{, }\DataTypeTok{lower=}\OtherTok{FALSE}\NormalTok{)   }\CommentTok{# upper tail }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.101291
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Hence the probability of having seventeen or more cars crossing the
+  bridge in a minute is in the upper tail of the probability density
+  function. If there are twelve cars crossing a bridge per minute on
+  average, the probability of having seventeen or more cars crossing the
+  bridge in a particular minute is 10.1\%.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Event Count Distributions}
+\protect\hypertarget{event-count-distributions-1}{}
+
+\begin{itemize}
+\item
+  The individual events must be countable as whole numbers given a
+  period of time, and it cannot be possible to count the non-events. The
+  inability to count non-events may seem odd, but this is actually quite
+  common. For example, we might want to observe the number of wars
+  countries entered into during the twentieth century.
+\item
+  Recall that the Bernoulli and binomial distributions involve events
+  with binary countable outcomes: we can count the events and the
+  non-events. When we can only count the events, and not the non-events,
+  the Poisson distribution might be useful.
+\item
+  That said, many integer counts of events that interest political
+  scientists are expected to be related to one another by theory. For
+  example, it seems unlikely that bills passed in a legislature,
+  unanimous court decisions, wars, or executive vetoes are independent
+  of one another. And if we assume that the presence of one event either
+  raises or lowers the probability of another event in a given period of
+  time, then a variable measuring that event type would not be produced
+  by a Poisson process.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Event Count Distributions}
+\protect\hypertarget{event-count-distributions-2}{}
+
+\begin{itemize}
+\item
+  The negative binomial distribution is used when the number of
+  successes is fixed and we're interested in the number of failures
+  before reaching the fixed number of successes. An experiment which
+  follows a negative binomial distribution will satisfy the following
+  requirements:
+\item
+  The experiment consists of a sequence of independent trials.
+\item
+  Each trial has two possible outcomes, S or F.
+\item
+  The probability of success, Π = P(S), is constant from one trial to
+  another.
+\item
+  The experiment continues until a total of r successes are observed,
+  where r is fixed in advance.
+\item
+  One of the key features of the negative binomial distribution relative
+  to the Poisson distribution is that the mean and variance are not
+  constrained to equal one another.
+\item
+  King (1989) brought the negative binomial distribution to the
+  widespread attention of political scientists, and it has been
+  primarily used as a model of event counts when the mean and the
+  variance of the sample data are not equal. In this sense, Poisson
+  regression models tend to be viewed as special cases of negative
+  binomial statistical models.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{The t distribution}
+\protect\hypertarget{the-t-distribution}{}
+
+\begin{itemize}
+\item
+  t-distribution) is a probability distribution that is used to estimate
+  population parameters when the sample size is small and/or when the
+  population variance is unknown.
+\item
+  According to the central limit theorem, the sampling distribution of a
+  statistic (like a sample mean) will follow a normal distribution, as
+  long as the sample size is sufficiently large. Therefore, when we know
+  the standard deviation of the population, we can compute a z-score,
+  and use the normal distribution to evaluate probabilities with the
+  sample mean.
+\item
+  But sample sizes are sometimes small, and often we do not know the
+  standard deviation of the population. When either of these problems
+  occur, statisticians rely on the distribution of the t statistic (also
+  known as the t score), whose values are given by:
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{The t distribution}
+\protect\hypertarget{the-t-distribution-1}{}
+
+\(t = \frac{x - μ}{\frac{s}{\sqrt{(n)}}}\)
+
+\begin{itemize}
+\item
+  where x is the sample mean, μ is the population mean, s is the
+  standard deviation of the sample, and n is the sample size. The
+  distribution of the t statistic is called the t distribution or the
+  Student t distribution.
+\item
+  The t distribution allows us to conduct statistical analyses on
+  certain data sets that are not appropriate for analysis, using the
+  normal distribution.
+\end{itemize}
+
+see: \url{https://stattrek.com}
+
+\end{frame}
+
+\end{document}
