@@ -8,6 +8,20 @@ highlight: zenburn
 
 ---
 
+## What Does Probability Distribution Mean?
+
+- If we want to predict a variable accurately then the first task we need to perform is to understand the underlying behaviour of our target variable.
+
+- Determine the possible outcomes of the target variable 
+
+- Start assigning probabilities to the events (values)
+
+## Probability Distribution
+
+- We can throw a dice 10000 times and as there are 6 possible values that a dice can take, we can create 6 buckets. 
+- Start recording the number of occurrences for each value.
+- We can plot the chart and it will form a curve. This curve is known as probability distribution curve and the likelihood of the target variable getting a value is the probability distribution of the variable.
+
 ## You are getting very sleepy...
 
 - Students at Haverford average 6.80 hours of sleep per night 
@@ -36,11 +50,21 @@ knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-
 
 - This is an example of a one-sided hypothesis test because we are concerned with a change in only one direction
 
+
+
 ## Normal Distribution
 
 - The normal distribution is used to represent how data from a process is distributed defined by 
     - the mean, given the Greek letter $\mu$ (mu)
     - the standard deviation, given the letter $\sigma$ (sigma) 
+
+## Normal Distribution - Background
+
+- Firstly, the most important point to note is that the normal distribution is also known as the **Gaussian distribution**
+- It is named after _Carl Friedrich Gauss_
+- Normal distribution is simple and hence its simplicity makes it extremely popular.
+
+
 
 ## Normal Distribution
 
@@ -218,6 +242,98 @@ knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-
 
 - There are also alternative statistical techniques — like Bayesian analysis — that, in some ways, more directly evaluate a study’s results
 
+## Confidence Intervals
+
+- What if you’d like to know what percentage of people in the U.S. are night owls (people who stay up late at night). 
+
+- In order to obtain a completely right answer, you’d have to ask each person in the country this question, but polling over 300 million people isn’t very practical.
+
+## Confidence Intervals
+
+- Get a much smaller random sample of people and then find the percentage of night owls in that sample. 
+- Problem:  
+  - Not confident that this percentage is correct or how far off this number is from the right answer for the entire population. 
+  
+- So we’ll try to find an “interval” that provides the assertion:
+    - “I am 95% confident that the percentage of people in the U.S. are night owls is between 12% and %16.” 
+    - This declaration is based on what’s called a “confidence interval,” in this case 14 +/- 2 and the confidence is 95%.
+    
+## Confidence Intervals in Polls
+
+- When a pollster reports an estimate and a margin of error, in a way they’re reporting a 95% confidence interval. 
+- This means confidence intervals are a way of quantifying the uncertainty of an estimate. 
+- Further, if we take many different random samples, compute confidence intervals for each of those samples, 95% of those confidence intervals will be such that the population average would lie between those limits.
+
+## Polling Example
+
+- Candidate Gobermouch is leading in the polls over Candidate Fopdoodle, 48% to 43%, a difference of 5 percentage points. The poll's margin of error is 3%. 
+- Does Gobermouch have a lead over Fopdoodle that is outside the margin of error?
+
+## Confidence Intervals and Margin of Error
+
+- A margin of error of ± 3% means that Gobermouch's support could be as high as 51% but as low as 45%. 
+- Similarly, Fopdoodle's support could be as high as 46% but as low as 40%. 
+- Those ranges, more appropriately called "confidence intervals," overlap. 
+- Gobermouch's support is not "outside the margin of error."
+
+## Confidence Interval
+
+- A confidence interval (which is most often a "95% confidence interval") means that the "real answer" will fall within the calculated range 95% of the time
+- In other words, if the pollsters repeated their survey 100 times, 95 of the ranges they calculate would contain the "real answer" and 5 would not. That's right. 
+- Even the best pollsters will get it wrong 5% of the time. (And this does not take into consideration systematic bias in sampling.)
+
+## Confidence Intervals and Statistical Significance
+
+- In our example, Gobermouch is at 48% (with a confidence interval of 45% to 51%) and Fopdoodle is at 43% (with a confidence interval of 40% to 46%). 
+- However, "Is Gobermouch's lead over Fopdoodle _statistically significant_?" 
+- Different question and requires a different statistical approach.
+
+## Confidence Intervals and Statistical Significance
+
+- If we subtracted Fopdoodle's support from Gobermouch's (or vice versa), would the result be zero?" 
+- If the result is zero (or if the confidence interval contains zero), then there is no statistically significant difference
+- _You can't know this by simply determining if the confidence intervals for each candidate's support overlap_
+
+## Why Overlapping Confidence Intervals mean Nothing about Statistical Significance
+
+```{r, echo=FALSE, fig.cap="Correlation is NOT Causation", out.width = '70%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/overlap.png")
+```
+
+- “The confidence intervals of the two groups overlap, hence the difference is not statistically significant” — A lot of People
+
+## Overlapping confidence intervals/error bars say nothing about statistical significance.
+
+- When 95% confidence intervals for the means of two independent populations don’t overlap, there will indeed be a statistically significant difference between the means (at the 0.05 level of significance). 
+
+- However, the opposite is not necessarily true. CI’s may overlap, yet there may be a statistically significant difference between the means.
+
+## An example
+
+```{r, echo=FALSE, fig.cap="Correlation is NOT Causation", out.width = '70%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/confint1.png")
+```
+
+- Group Blue’s average age is 9 years with an error of 2.5 years. Group Green’s average age is 17, also with an error of 2.5 years.
+
+- The shaded regions show the 95% confidence intervals (CI).
+
+## Difference between groups
+
+```{r, echo=FALSE, fig.cap="Correlation is NOT Causation", out.width = '80%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/confint2.png")
+```
+
+## Difference between groups
+
+- Instead of building a distribution for each group, we build one distribution for the difference in mean age between groups.
+
+- If the 95% CI of the difference contains 0, then there is no difference in age between groups. If it doesn’t contain 0, then there is a statistically significant difference between groups.
+
+- As it turns out the difference is statistically significant, since the 95% CI (shaded region) doesn’t contain 0.
+
+
+
 ## For more see...
 
 - Slides based on:
@@ -229,3 +345,10 @@ knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-
   - https://www.vox.com/latest-news/2019/3/22/18275913/statistical-significance-p-values-explained
   
   - https://warwick.ac.uk/fac/soc/economics/staff/vetroeger/publications/pvaluedebate_vt1.pdf
+  
+- Confidence Intervals
+
+  - https://towardsdatascience.com/why-overlapping-confidence-intervals-mean-nothing-about-statistical-significance-48360559900a
+  - https://www.acsh.org/news/2019/12/14/election-polls-should-report-confidence-intervals-not-just-margins-error-14452
+  - https://www.cscu.cornell.edu/news/statnews/stnews73.pdf
+  - https://statisticsbyjim.com/hypothesis-testing/confidence-intervals-compare-means/

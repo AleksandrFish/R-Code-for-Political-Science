@@ -1,0 +1,1001 @@
+Income,Gender,Age,AgeRange,PoliticalAffiliation ,ApproveTrump,education,race,AgreeWhiteNationalists,RepublicansAgreeWhiteNationalists,Would you say that you love America?,DemocratsLoveAmerica,GovHelpPoor,WhitePeopleRacist,CivilWarNextDecade,hunting,kalesalad,VoteTheRockPres,VaderOrTrump
+192000,Female,35,35-44,Strong Republican,DK/REF,College degree,White,DK/REF,,Yes,40,Yes,No,Unlikely,No,No,No,Donald Trump
+54000,Female,58,55-64,Independent,Disapprove,Some college,White,DK/REF,,Yes,80,Yes,No,Likely,No,No,Yes,Darth Vader
+20000,Male,50,45-54,Not Strong Democrat,Approve,Other,White,Agree,10,Yes,60,Yes,Yes,Likely,Yes,No,Yes,Donald Trump
+21000,Female,40,35-44,Independent,Disapprove,College degree,White,DK/REF,,Yes,30,Yes,Yes,Likely,No,Yes,No,Darth Vader
+164000,Female,42,35-44,Strong Democrat,DK/REF,Graduate degree,Black,DK/REF,,Yes,,Yes,DK/REF,Unlikely,No,Yes,Yes,Darth Vader
+9000,Female,35,35-44,Strong Democrat,Disapprove,High school,Latino,Agree,50,Yes,100,Yes,Yes,Likely,No,No,No,Darth Vader
+43000,Female,82,65+,Strong Democrat,Disapprove,Some college,White,Disagree,70,Yes,75,No,Yes,Likely,No,No,No,Darth Vader
+33000,Female,36,35-44,Independent,Disapprove,College degree,Latino,DK/REF,70,Yes,100,Yes,No,Unlikely,No,No,DK/REF,Darth Vader
+91000,Female,74,65+,Not Strong Republican,Disapprove,College degree,White,Disagree,,Yes,75,No,No,Unlikely,Yes,Yes,No,Donald Trump
+43000,Female,41,35-44,DK/REF,Disapprove,College degree,White,Disagree,75,Yes,65,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+217000,Female,37,35-44,Strong Democrat,Disapprove,Graduate degree,Black,Disagree,10,Yes,100,Yes,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+103000,Female,72,65+,Not Strong Republican,Approve,Graduate degree,White,Disagree,20,Yes,20,Yes,No,Unlikely,No,No,No,Donald Trump
+30000,Female,35,35-44,Not Strong Democrat,Disapprove,High school,Latino,Disagree,30,Yes,80,Yes,No,Likely,No,Yes,No,Darth Vader
+30000,Female,48,45-54,Strong Democrat,Disapprove,Some college,White,Disagree,50,Yes,100,Yes,No,Likely,No,No,Yes,Darth Vader
+28000,Female,58,55-64,DK/REF,Disapprove,Graduate degree,White,Disagree,10,Yes,90,Yes,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+95000,Male,38,35-44,DK/REF,DK/REF,Some college,White,DK/REF,,Yes,50,No,No,Likely,Yes,Yes,DK/REF,Donald Trump
+66000,Male,30,25-34,Independent,Disapprove,College degree,Latino,Agree,50,Yes,50,Yes,No,Unlikely,No,No,No,Darth Vader
+49000,Male,43,35-44,Independent,DK/REF,Some college,White,DK/REF,,Yes,30,Yes,No,Likely,Yes,Yes,No,Donald Trump
+58000,Male,44,35-44,Independent,Approve,Graduate degree,White,Disagree,1,Yes,5,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+32000,Male,55,55-64,Strong Democrat,Disapprove,Some college,Latino,Agree,90,Yes,100,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+77000,Female,52,45-54,Strong Republican,Approve,Some college,White,Agree,,Yes,,Yes,No,Likely,No,No,DK/REF,Donald Trump
+21000,Female,57,55-64,Strong Democrat,Disapprove,Some college,Black,Disagree,35,Yes,100,Yes,No,Likely,No,No,DK/REF,DK/REF
+136000,Male,43,35-44,Independent,Approve,Some college,White,DK/REF,,Yes,50,Yes,No,DK/REF,Yes,Yes,No,Donald Trump
+129000,Male,37,35-44,Strong Republican,Approve,College degree,White,Disagree,1,Yes,70,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+65000,Female,63,55-64,Strong Democrat,Disapprove,High school,Black,Agree,50,Yes,75,Yes,Yes,Likely,No,No,No,Darth Vader
+33000,Female,43,35-44,Independent,Disapprove,Graduate degree,White,Disagree,10,Yes,90,Yes,Yes,Unlikely,No,DK/REF,DK/REF,DK/REF
+80000,Male,44,35-44,Independent,Approve,High school,White,DK/REF,5,Yes,5,Yes,No,Likely,Yes,Yes,Yes,Donald Trump
+22000,Female,44,35-44,Independent,DK/REF,Graduate degree,White,Disagree,50,Yes,,DK/REF,No,DK/REF,No,No,No,Donald Trump
+65000,Female,54,45-54,Strong Democrat,Disapprove,Some college,White,Disagree,60,Yes,100,Yes,No,Unlikely,No,Yes,Yes,Darth Vader
+118000,Female,35,35-44,Independent,Disapprove,Graduate degree,White,DK/REF,,Yes,100,Yes,No,Likely,No,Yes,DK/REF,DK/REF
+117000,Female,40,35-44,Not Strong Democrat,Disapprove,Graduate degree,White,Disagree,,Yes,100,Yes,No,Unlikely,Yes,Yes,No,DK/REF
+37000,Female,36,35-44,DK/REF,Disapprove,College degree,Other,Disagree,50,Yes,90,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+104000,Male,36,35-44,Strong Democrat,Disapprove,Some college,White,Disagree,30,Yes,100,Yes,No,Unlikely,No,No,No,Darth Vader
+144000,Male,36,35-44,Strong Republican,Approve,College degree,White,Disagree,5,Yes,100,No,No,Likely,No,Yes,Yes,Donald Trump
+42000,Male,43,35-44,Independent,Disapprove,Graduate degree,White,Disagree,10,Yes,80,Yes,No,Unlikely,No,No,No,Darth Vader
+252000,Female,41,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,25,Yes,75,Yes,No,Unlikely,Yes,Yes,No,DK/REF
+38000,Male,30,25-34,Strong Republican,Approve,Graduate degree,White,Disagree,5,Yes,2,No,No,Likely,Yes,No,No,Donald Trump
+212000,Male,43,35-44,Independent,Approve,Graduate degree,Latino,Disagree,0,Yes,99,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+44000,Female,65,65+,Strong Democrat,Disapprove,College degree,Black,Disagree,80,Yes,100,Yes,Yes,Unlikely,No,No,DK/REF,DK/REF
+27000,Male,30,25-34,Strong Democrat,Disapprove,College degree,Latino,Disagree,80,Yes,100,Yes,No,Unlikely,No,Yes,No,Donald Trump
+136000,Male,58,55-64,Strong Democrat,Disapprove,College degree,White,Disagree,8,Yes,100,No,No,Unlikely,No,No,DK/REF,DK/REF
+26000,Female,30,25-34,Not Strong Republican,Approve,High school,White,Disagree,50,Yes,50,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+142000,Male,33,25-34,Independent,Approve,College degree,Black,Disagree,,Yes,100,Yes,No,Unlikely,No,No,Yes,DK/REF
+33000,Female,63,55-64,Strong Democrat,DK/REF,High school,Black,Disagree,70,Yes,80,Yes,No,Likely,No,No,DK/REF,Darth Vader
+145000,Female,36,35-44,Not Strong Democrat,Approve,College degree,Black,Disagree,10,Yes,90,Yes,No,Likely,No,Yes,DK/REF,Darth Vader
+144000,Male,33,25-34,Strong Republican,Approve,High school,DK/REF,DK/REF,,Yes,30,No,No,Unlikely,Yes,No,No,Donald Trump
+72000,Male,37,35-44,Independent,Approve,College degree,Other,Disagree,80,Yes,90,Yes,No,Likely,Yes,Yes,No,Donald Trump
+132000,Male,40,35-44,Not Strong Republican,Approve,Graduate degree,White,Disagree,0,Yes,25,Yes,No,Unlikely,No,Yes,No,DK/REF
+32000,Female,56,55-64,Strong Democrat,Disapprove,High school,Black,Disagree,40,Yes,100,Yes,Yes,Likely,No,No,Yes,Darth Vader
+28000,Female,59,55-64,Independent,Approve,High school,White,Disagree,10,Yes,100,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+23000,Female,43,35-44,Independent,Disapprove,Some college,White,DK/REF,,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+57000,Female,40,35-44,Not Strong Democrat,Approve,Some college,White,DK/REF,50,Yes,100,Yes,No,Likely,Yes,Yes,Yes,Donald Trump
+142000,Female,51,45-54,Strong Democrat,Disapprove,Some college,White,Disagree,50,Yes,70,Yes,No,Unlikely,No,No,DK/REF,Darth Vader
+47000,Other,60,55-64,Independent,Approve,Graduate degree,White,DK/REF,,Yes,15,No,No,Unlikely,No,No,No,Donald Trump
+37000,Male,33,25-34,Strong Republican,Approve,College degree,White,DK/REF,15,Yes,40,No,No,Likely,Yes,Yes,DK/REF,Donald Trump
+19000,Male,52,45-54,Not Strong Democrat,Disapprove,High school,White,Disagree,90,Yes,80,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+62000,Male,38,35-44,Strong Democrat,Disapprove,College degree,White,Disagree,10,Yes,100,Yes,No,Unlikely,Yes,No,No,Darth Vader
+203000,Female,47,45-54,Strong Democrat,Disapprove,College degree,White,Disagree,25,Yes,80,Yes,Yes,Likely,No,No,No,Donald Trump
+5000,Female,41,35-44,Strong Democrat,Disapprove,High school,Black,Agree,,Yes,6,Yes,No,Unlikely,No,No,No,Darth Vader
+56000,Female,42,35-44,Not Strong Republican,Disapprove,High school,White,Disagree,50,Yes,40,Yes,No,Unlikely,No,Yes,No,Donald Trump
+147000,Female,41,35-44,Not Strong Republican,Disapprove,College degree,White,Disagree,20,Yes,95,Yes,No,Unlikely,No,No,No,DK/REF
+45000,Female,42,35-44,Not Strong Democrat,Disapprove,College degree,White,Disagree,85,Yes,90,Yes,Yes,Unlikely,No,No,DK/REF,Darth Vader
+82000,Female,37,35-44,Independent,Approve,College degree,White,DK/REF,,Yes,50,Yes,DK/REF,Likely,Yes,Yes,No,Donald Trump
+,Female,80,65+,Independent,Disapprove,College degree,White,Disagree,,Yes,100,DK/REF,No,Unlikely,No,No,No,DK/REF
+,Male,51,45-54,Independent,Approve,Some college,White,Disagree,50,Yes,50,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Male,30,25-34,Strong Republican,Approve,High school,White,Agree,50,Yes,25,No,No,Unlikely,Yes,No,No,Donald Trump
+,Female,20,18-24,Independent,Disapprove,High school,Black,Agree,0,Yes,70,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Female,48,45-54,Independent,Approve,Some college,White,Disagree,30,Yes,100,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Female,50,45-54,Strong Republican,Approve,College degree,White,Disagree,25,Yes,50,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,49,45-54,Strong Republican,Approve,High school,White,Agree,,Yes,40,Yes,No,Likely,Yes,No,No,Donald Trump
+,Male,28,25-34,Independent,Approve,Some college,White,DK/REF,50,Yes,90,No,No,Unlikely,Yes,No,Yes,Donald Trump
+,Female,53,45-54,Independent,Disapprove,High school,Black,Disagree,35,Yes,55,Yes,No,Likely,No,No,DK/REF,Darth Vader
+,Male,19,18-24,Independent,Disapprove,High school,Black,Disagree,70,Yes,50,Yes,Yes,Likely,No,No,Yes,Darth Vader
+,Female,57,55-64,Not Strong Democrat,Disapprove,College degree,White,Disagree,,Yes,100,Yes,No,Likely,No,No,DK/REF,Darth Vader
+,Male,24,18-24,Not Strong Republican,Approve,College degree,White,Disagree,30,Yes,95,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,74,65+,Independent,Disapprove,Some college,DK/REF,Disagree,60,Yes,50,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Female,62,55-64,Strong Democrat,Disapprove,Some college,White,Disagree,40,Yes,98,Yes,No,Unlikely,No,Yes,No,Darth Vader
+255000,Female,40,35-44,DK/REF,Disapprove,College degree,White,Disagree,50,Yes,,DK/REF,No,Unlikely,No,No,DK/REF,Donald Trump
+31000,Female,50,45-54,Strong Republican,Approve,High school,White,Disagree,,Yes,50,Yes,No,Likely,No,No,No,Donald Trump
+30000,Male,58,55-64,Strong Democrat,Disapprove,Graduate degree,White,Disagree,20,Yes,100,Yes,No,Unlikely,No,Yes,Yes,Darth Vader
+37000,Male,58,55-64,Not Strong Republican,Approve,Some college,White,Disagree,,Yes,,Yes,No,Unlikely,Yes,DK/REF,DK/REF,Donald Trump
+18000,Female,27,25-34,DK/REF,Disapprove,High school,White,Agree,50,No,70,Yes,No,Likely,No,No,Yes,Donald Trump
+39000,Female,47,45-54,Strong Democrat,Disapprove,College degree,Black,Disagree,55,Yes,95,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+34000,Female,36,35-44,Independent,Disapprove,Some college,White,Disagree,40,Yes,80,Yes,No,Unlikely,No,Yes,No,Darth Vader
+12000,Male,59,55-64,Independent,Disapprove,High school,White,Disagree,50,Yes,90,Yes,No,DK/REF,Yes,Yes,No,DK/REF
+173000,Male,40,35-44,Independent,Disapprove,College degree,White,Disagree,0,Yes,90,Yes,No,Unlikely,No,Yes,No,DK/REF
+38000,Female,38,35-44,Not Strong Democrat,Disapprove,High school,White,Disagree,20,Yes,100,Yes,No,Likely,Yes,Yes,DK/REF,Donald Trump
+67000,Male,35,35-44,Strong Republican,Approve,College degree,White,Disagree,20,Yes,20,Yes,No,Unlikely,No,No,No,Donald Trump
+21000,Other,35,35-44,Independent,Disapprove,Some college,White,Disagree,60,Yes,60,No,No,Unlikely,No,Yes,DK/REF,Darth Vader
+92000,Female,61,55-64,Independent,Approve,Some college,White,DK/REF,,Yes,,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+248000,Female,48,45-54,Not Strong Democrat,Approve,College degree,White,Disagree,5,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+95000,Female,40,35-44,DK/REF,DK/REF,College degree,White,DK/REF,,Yes,100,DK/REF,DK/REF,DK/REF,No,No,DK/REF,DK/REF
+31000,Female,44,35-44,Independent,Disapprove,Some college,Black,Disagree,80,Yes,50,Yes,No,Unlikely,No,No,No,DK/REF
+21000,Male,37,35-44,Strong Republican,Approve,College degree,White,Disagree,10,Yes,100,No,No,Likely,Yes,No,No,Donald Trump
+30000,Female,56,55-64,Independent,Disapprove,Graduate degree,White,Disagree,,Yes,,Yes,No,Likely,No,No,No,Darth Vader
+109000,Female,68,65+,DK/REF,Disapprove,High school,Black,DK/REF,,Yes,,No,DK/REF,Likely,Yes,No,No,DK/REF
+111000,Female,54,45-54,Strong Republican,Approve,Some college,White,DK/REF,70,No,80,No,No,Unlikely,Yes,Yes,No,Donald Trump
+47000,Female,76,65+,Strong Democrat,Approve,College degree,White,Disagree,0,Yes,100,Yes,No,Unlikely,No,No,Yes,DK/REF
+,Female,51,45-54,Independent,Disapprove,College degree,Black,Disagree,70,Yes,50,Yes,No,Unlikely,No,No,DK/REF,Darth Vader
+,Female,58,55-64,Independent,Disapprove,Some college,White,Disagree,40,Yes,60,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,60,55-64,Strong Republican,Approve,College degree,White,Disagree,0,Yes,100,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Female,51,45-54,Independent,DK/REF,High school,White,DK/REF,,Yes,,Yes,No,Unlikely,No,Yes,No,DK/REF
+,Female,30,25-34,Independent,Disapprove,Some college,White,Agree,80,Yes,87,Yes,Yes,Likely,No,Yes,Yes,Darth Vader
+,Male,76,65+,Not Strong Republican,Approve,High school,White,DK/REF,,Yes,25,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Male,30,25-34,Strong Democrat,Disapprove,Graduate degree,White,Disagree,50,Yes,95,Yes,No,Unlikely,Yes,No,No,Darth Vader
+,Male,20,18-24,Independent,Disapprove,Some college,White,Agree,35,Yes,75,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Female,46,45-54,Not Strong Democrat,Disapprove,College degree,White,Disagree,5,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+,Female,26,25-34,Independent,Disapprove,High school,White,Disagree,5,Yes,100,Yes,No,Likely,Yes,No,No,Darth Vader
+,Female,45,45-54,Strong Democrat,Disapprove,High school,White,Disagree,50,Yes,75,Yes,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+,Female,72,65+,Strong Democrat,Disapprove,High school,White,DK/REF,,Yes,75,No,Yes,Likely,No,No,Yes,Donald Trump
+,Male,21,18-24,Strong Democrat,Disapprove,Some college,White,Disagree,10,Yes,70,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Female,28,25-34,Not Strong Democrat,Approve,Some college,White,DK/REF,50,Yes,90,Yes,No,Likely,Yes,No,DK/REF,Donald Trump
+,Male,67,65+,Not Strong Republican,Approve,Some college,White,DK/REF,50,Yes,60,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,70,65+,Strong Republican,Approve,Some college,White,DK/REF,60,Yes,100,No,No,Likely,Yes,No,Yes,Donald Trump
+,Female,35,35-44,Strong Republican,Approve,Graduate degree,Other,Disagree,1,Yes,20,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Female,50,45-54,Strong Republican,Approve,College degree,Other,DK/REF,5,Yes,50,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,50,45-54,Not Strong Republican,Disapprove,Graduate degree,White,Agree,55,Yes,89,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,78,65+,Strong Republican,Approve,Some college,White,DK/REF,1,Yes,20,Yes,No,Likely,Yes,No,No,Donald Trump
+,Female,45,45-54,Independent,Disapprove,College degree,White,Disagree,60,Yes,100,Yes,Yes,Unlikely,No,Yes,No,Darth Vader
+,Male,37,35-44,Not Strong Republican,Approve,College degree,White,Disagree,0,Yes,50,No,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Female,53,45-54,Not Strong Democrat,Approve,High school,White,Disagree,50,Yes,100,Yes,Yes,Likely,No,No,No,Donald Trump
+,Male,49,45-54,Not Strong Democrat,Disapprove,High school,Latino,Disagree,50,Yes,80,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Other,25,25-34,DK/REF,Disapprove,Some college,White,Disagree,90,Yes,100,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,78,65+,Strong Republican,Approve,Graduate degree,White,Disagree,10,Yes,75,No,No,Unlikely,No,No,No,DK/REF
+,Female,71,65+,Independent,Approve,High school,Other,Agree,,Yes,100,Yes,Yes,Likely,No,No,No,DK/REF
+,Male,58,55-64,Independent,Approve,High school,Latino,Disagree,50,Yes,,Yes,No,Unlikely,No,No,No,Donald Trump
+153000,Female,34,25-34,Not Strong Republican,Approve,Graduate degree,White,Disagree,12,Yes,70,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+7000,Male,59,55-64,Strong Democrat,Disapprove,High school,Latino,Disagree,1,Yes,1,Yes,Yes,Unlikely,Yes,No,No,Darth Vader
+32000,Female,63,55-64,Strong Democrat,Disapprove,College degree,White,DK/REF,,Yes,100,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+15000,Female,67,65+,DK/REF,Disapprove,High school,Black,Disagree,,Yes,,Yes,No,DK/REF,No,No,DK/REF,DK/REF
+100000,Female,42,35-44,Strong Democrat,Disapprove,Some college,Black,Disagree,40,Yes,50,Yes,No,Likely,Yes,Yes,Yes,Darth Vader
+12000,Male,73,65+,Independent,Disapprove,College degree,Latino,Agree,75,Yes,100,Yes,No,Likely,No,Yes,No,DK/REF
+18000,Male,47,45-54,Independent,Approve,High school,White,Disagree,10,Yes,100,No,No,Unlikely,Yes,No,No,Donald Trump
+9000,DK/REF,76,65+,Independent,Disapprove,High school,Black,Disagree,,Yes,1,No,No,DK/REF,No,No,DK/REF,DK/REF
+9000,Female,44,35-44,Strong Republican,Approve,Some college,White,DK/REF,0,Yes,,Yes,No,Unlikely,No,No,No,Donald Trump
+34000,Male,72,65+,Not Strong Democrat,Approve,High school,White,Agree,,Yes,80,No,No,Unlikely,No,No,No,Donald Trump
+123000,Female,34,25-34,Strong Democrat,Disapprove,Graduate degree,White,Disagree,30,Yes,95,Yes,Yes,Unlikely,No,No,No,Darth Vader
+77000,Female,65,65+,Not Strong Democrat,DK/REF,High school,Black,Disagree,8,Yes,9,No,Yes,Likely,No,No,DK/REF,Donald Trump
+53000,Female,69,65+,Not Strong Republican,Disapprove,Some college,White,Disagree,10,Yes,90,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+12000,Female,44,35-44,Independent,Disapprove,College degree,White,Disagree,75,Yes,90,Yes,No,Unlikely,No,No,No,Donald Trump
+58000,Female,85,65+,Independent,DK/REF,Some college,White,DK/REF,,Yes,95,Yes,No,DK/REF,Yes,DK/REF,DK/REF,DK/REF
+5000,Female,30,25-34,Independent,Approve,High school,White,DK/REF,60,Yes,90,Yes,No,Likely,No,No,No,Donald Trump
+63000,Male,64,55-64,Strong Democrat,Disapprove,High school,White,Agree,0,Yes,100,Yes,No,Likely,Yes,Yes,Yes,Darth Vader
+52000,Female,38,35-44,Strong Democrat,Disapprove,College degree,White,Disagree,30,Yes,80,Yes,Yes,Likely,No,No,No,Darth Vader
+130000,Male,45,45-54,Strong Republican,Approve,Graduate degree,White,DK/REF,,Yes,0,DK/REF,No,Unlikely,Yes,No,No,Donald Trump
+,Female,52,45-54,Strong Republican,Approve,College degree,DK/REF,Disagree,10,Yes,40,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,49,45-54,Independent,Disapprove,Graduate degree,White,Disagree,20,Yes,90,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Female,73,65+,Strong Democrat,Approve,High school,White,Disagree,,Yes,,Yes,DK/REF,Likely,No,No,DK/REF,Donald Trump
+,Male,44,35-44,Independent,Disapprove,College degree,Black,Disagree,2,Yes,85,Yes,Yes,Unlikely,Yes,Yes,DK/REF,Darth Vader
+,Female,44,35-44,Independent,Disapprove,College degree,White,Disagree,75,Yes,100,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,71,65+,Strong Democrat,Disapprove,Some college,White,Disagree,,Yes,95,Yes,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+,Male,48,45-54,Strong Republican,Approve,Some college,White,DK/REF,,Yes,100,No,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,42,35-44,DK/REF,Approve,College degree,White,Disagree,10,Yes,95,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,48,45-54,Not Strong Republican,Approve,Some college,Other,Disagree,10,Yes,90,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,62,55-64,Independent,Approve,Other,White,DK/REF,,Yes,100,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,34,25-34,Independent,Approve,Some college,DK/REF,Disagree,26,Yes,100,Yes,No,Likely,Yes,No,Yes,Darth Vader
+,Male,54,45-54,DK/REF,Approve,Graduate degree,Latino,Disagree,10,Yes,25,No,No,Unlikely,No,Yes,No,Donald Trump
+,Female,70,65+,Strong Democrat,Disapprove,College degree,White,Disagree,40,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+,Male,61,55-64,Not Strong Republican,DK/REF,Graduate degree,Black,Disagree,0,Yes,90,Yes,No,Unlikely,No,No,No,Donald Trump
+61000,Male,38,35-44,Strong Democrat,Approve,High school,White,Agree,5,Yes,10,Yes,Yes,Likely,No,No,Yes,Darth Vader
+89000,Male,38,35-44,Independent,Disapprove,High school,White,Disagree,45,Yes,75,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+24000,Female,40,35-44,Independent,Disapprove,College degree,Black,Disagree,50,No,50,Yes,No,Likely,No,Yes,Yes,Darth Vader
+118000,Female,37,35-44,Strong Republican,Approve,College degree,White,Disagree,50,Yes,100,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+21000,Female,61,55-64,Independent,Disapprove,Some college,White,Disagree,,Yes,100,Yes,No,Likely,No,Yes,DK/REF,Darth Vader
+25000,Female,61,55-64,Strong Republican,Approve,High school,White,Disagree,0,Yes,30,No,No,Unlikely,No,No,No,Donald Trump
+7000,Male,72,65+,Strong Republican,DK/REF,High school,White,DK/REF,,Yes,100,Yes,Yes,Unlikely,No,No,No,DK/REF
+19000,Male,39,35-44,Strong Democrat,Disapprove,College degree,White,Disagree,40,Yes,95,Yes,No,Likely,Yes,Yes,Yes,Darth Vader
+5000,Female,35,35-44,Strong Democrat,Disapprove,Some college,Black,Agree,100,Yes,100,Yes,No,Likely,No,No,Yes,Darth Vader
+278000,Female,37,35-44,Not Strong Democrat,DK/REF,Graduate degree,Latino,Disagree,40,Yes,40,DK/REF,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+106000,Female,43,35-44,Not Strong Democrat,Approve,College degree,White,Disagree,75,Yes,75,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+10000,Female,58,55-64,Independent,Disapprove,High school,Other,Disagree,3,Yes,100,Yes,Yes,Likely,No,No,No,Darth Vader
+9000,Female,80,65+,Strong Democrat,DK/REF,Other,Black,DK/REF,,Yes,,Yes,Yes,DK/REF,No,Yes,DK/REF,DK/REF
+36000,Female,18,18-24,Independent,Disapprove,Some college,Latino,Disagree,0,Yes,50,Yes,Yes,Likely,No,No,No,DK/REF
+23000,Male,35,35-44,Independent,Approve,College degree,Other,Disagree,1,Yes,50,Yes,No,Unlikely,Yes,DK/REF,No,Donald Trump
+,Female,40,35-44,Strong Democrat,DK/REF,College degree,Black,Disagree,,Yes,,Yes,No,DK/REF,No,No,DK/REF,DK/REF
+,Female,46,45-54,Strong Democrat,Disapprove,College degree,White,Disagree,30,Yes,70,Yes,Yes,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,69,65+,Strong Democrat,DK/REF,Some college,Black,Disagree,,Yes,75,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Female,57,55-64,Strong Republican,Approve,Some college,White,Agree,30,Yes,60,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Female,72,65+,Independent,Disapprove,Graduate degree,White,Disagree,60,Yes,95,Yes,No,Likely,No,No,DK/REF,DK/REF
+,Male,22,18-24,Not Strong Republican,Disapprove,Some college,Asian,Disagree,20,No,80,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,66,65+,Not Strong Republican,Approve,College degree,White,Disagree,80,Yes,50,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Male,55,55-64,Strong Republican,Approve,College degree,White,Agree,50,Yes,50,Yes,No,Unlikely,Yes,DK/REF,No,Donald Trump
+,Female,32,25-34,Strong Democrat,Disapprove,College degree,White,Disagree,50,Yes,100,Yes,No,Likely,Yes,Yes,No,Darth Vader
+,Male,34,25-34,Not Strong Democrat,Disapprove,High school,Latino,Agree,7,Yes,7,Yes,No,Likely,No,DK/REF,DK/REF,Darth Vader
+,Female,31,25-34,Strong Democrat,Disapprove,Some college,Black,Disagree,75,Yes,90,Yes,No,Likely,No,No,Yes,Darth Vader
+,Female,67,65+,Strong Republican,Approve,Graduate degree,White,DK/REF,,Yes,20,No,No,Unlikely,Yes,DK/REF,No,Donald Trump
+,Male,23,18-24,Not Strong Republican,Disapprove,Some college,White,Disagree,75,Yes,90,Yes,Yes,Likely,Yes,No,No,Darth Vader
+,Male,42,35-44,Independent,Disapprove,High school,Latino,Disagree,,Yes,,Yes,Yes,Likely,No,Yes,No,Darth Vader
+,Male,25,25-34,DK/REF,Disapprove,College degree,Asian,Disagree,20,Yes,50,Yes,No,Unlikely,No,No,DK/REF,Darth Vader
+,DK/REF,25,25-34,DK/REF,Approve,Some college,White,DK/REF,,Yes,,Yes,No,DK/REF,Yes,DK/REF,No,DK/REF
+,Male,32,25-34,DK/REF,Disapprove,High school,White,Disagree,,Yes,90,No,No,Unlikely,Yes,No,No,Donald Trump
+,Male,18,18-24,Not Strong Democrat,DK/REF,DK/REF,Latino,DK/REF,40,Yes,50,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Female,81,65+,Independent,Disapprove,Some college,White,Agree,,Yes,50,Yes,No,Likely,Yes,Yes,DK/REF,DK/REF
+,Female,51,45-54,Independent,Approve,Some college,White,Disagree,,Yes,,Yes,No,Likely,No,No,No,Donald Trump
+,Female,44,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,30,Yes,70,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,48,45-54,Independent,Disapprove,Some college,White,Disagree,0,Yes,100,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Other,44,35-44,Independent,Disapprove,Graduate degree,White,Disagree,5,Yes,0,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,67,65+,Independent,Approve,College degree,White,Disagree,,Yes,0,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,25,25-34,Not Strong Democrat,Approve,Some college,Latino,Disagree,30,Yes,30,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Male,54,45-54,Strong Democrat,Disapprove,Some college,White,DK/REF,10,Yes,100,Yes,DK/REF,DK/REF,No,Yes,No,Darth Vader
+,Male,67,65+,Independent,Disapprove,College degree,Latino,Agree,35,Yes,80,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,49,45-54,Independent,Disapprove,Some college,White,Disagree,,Yes,100,Yes,No,Unlikely,No,DK/REF,DK/REF,Darth Vader
+,Male,37,35-44,Independent,Disapprove,Some college,Latino,Disagree,20,Yes,80,Yes,No,Likely,No,No,Yes,Darth Vader
+,Female,39,35-44,Independent,Disapprove,College degree,Asian,Disagree,25,Yes,100,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,32,25-34,Not Strong Democrat,Disapprove,College degree,White,Agree,75,Yes,50,Yes,Yes,Likely,Yes,No,Yes,Darth Vader
+,Female,55,55-64,Strong Democrat,Disapprove,Graduate degree,White,Disagree,40,Yes,98,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+,Male,49,45-54,Strong Republican,Approve,College degree,White,Disagree,10,Yes,90,Yes,No,Unlikely,Yes,No,Yes,Donald Trump
+,Male,68,65+,Not Strong Democrat,Approve,College degree,Black,Disagree,,No,50,No,Yes,Likely,Yes,No,No,Donald Trump
+,Male,57,55-64,Strong Republican,DK/REF,Some college,White,DK/REF,,Yes,80,No,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,39,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,65,No,50,Yes,No,Likely,No,Yes,No,Darth Vader
+,Female,52,45-54,Strong Democrat,Disapprove,Some college,White,Disagree,70,Yes,70,Yes,No,Likely,No,No,Yes,Darth Vader
+,Female,67,65+,DK/REF,Approve,High school,White,DK/REF,,Yes,,No,No,Unlikely,No,No,DK/REF,Donald Trump
+,Female,45,45-54,Strong Democrat,Disapprove,Some college,Latino,Disagree,90,Yes,95,Yes,No,DK/REF,No,Yes,DK/REF,Darth Vader
+,Male,35,35-44,Strong Republican,Approve,College degree,White,Disagree,20,Yes,30,No,No,Unlikely,Yes,No,No,Donald Trump
+,Male,35,35-44,Strong Republican,Approve,Some college,White,Disagree,0,Yes,100,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,30,25-34,Strong Democrat,Disapprove,Some college,Black,DK/REF,79,Yes,85,Yes,No,Likely,Yes,No,No,Darth Vader
+,Female,46,45-54,DK/REF,Disapprove,College degree,Other,Disagree,,Yes,,Yes,DK/REF,DK/REF,No,Yes,No,DK/REF
+,Female,30,25-34,Not Strong Democrat,Disapprove,College degree,White,Disagree,60,Yes,100,Yes,Yes,Likely,No,Yes,No,Darth Vader
+,Female,30,25-34,Not Strong Democrat,Disapprove,Some college,Latino,Disagree,80,Yes,,Yes,No,Likely,No,Yes,No,Darth Vader
+,Male,20,18-24,Independent,Disapprove,College degree,White,Disagree,1,Yes,100,Yes,No,Unlikely,Yes,Yes,No,DK/REF
+,Female,29,25-34,Strong Democrat,Disapprove,College degree,White,DK/REF,,Yes,60,Yes,No,Unlikely,Yes,Yes,Yes,Darth Vader
+,Female,22,18-24,Strong Democrat,Disapprove,Graduate degree,White,Disagree,40,Yes,85,Yes,Yes,Unlikely,No,No,DK/REF,Donald Trump
+,Female,62,55-64,Independent,Approve,College degree,White,Disagree,25,Yes,100,Yes,No,Likely,Yes,No,No,Donald Trump
+,Female,76,65+,Strong Democrat,Disapprove,Graduate degree,White,Disagree,60,Yes,90,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,25,25-34,Strong Republican,Approve,College degree,White,Disagree,1,Yes,10,No,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,35,35-44,Not Strong Democrat,Approve,Some college,White,DK/REF,50,Yes,20,Yes,No,Likely,Yes,No,Yes,Darth Vader
+,Female,27,25-34,Not Strong Democrat,Disapprove,College degree,White,Disagree,30,Yes,75,Yes,No,Likely,No,DK/REF,Yes,Donald Trump
+,Female,66,65+,Not Strong Republican,Approve,Graduate degree,White,Disagree,95,Yes,100,DK/REF,No,Likely,No,Yes,No,Donald Trump
+,Male,20,18-24,Independent,Approve,High school,White,Disagree,0,Yes,2,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Male,32,25-34,Strong Democrat,Disapprove,College degree,Black,Disagree,25,Yes,95,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,50,45-54,Independent,DK/REF,Graduate degree,Black,DK/REF,,Yes,,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+,Male,50,45-54,Independent,Approve,High school,White,Disagree,10,Yes,100,Yes,No,Unlikely,Yes,No,DK/REF,Darth Vader
+,Female,58,55-64,Independent,Disapprove,High school,White,DK/REF,,Yes,95,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+,Male,64,55-64,Strong Republican,Approve,High school,White,Disagree,,Yes,90,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Male,58,55-64,Independent,Disapprove,College degree,White,Disagree,50,Yes,45,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,72,65+,Strong Republican,Approve,High school,White,Disagree,0,Yes,,Yes,No,Unlikely,Yes,No,Yes,Donald Trump
+,Male,18,18-24,Not Strong Democrat,Disapprove,College degree,Black,Disagree,9,Yes,98,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Female,67,65+,Independent,Approve,Graduate degree,White,Disagree,10,Yes,80,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,51,45-54,Not Strong Republican,Disapprove,Graduate degree,White,Disagree,10,Yes,30,Yes,No,Unlikely,No,No,No,DK/REF
+,Female,43,35-44,Strong Republican,Approve,Some college,White,Disagree,,Yes,100,Yes,No,Unlikely,Yes,No,Yes,Donald Trump
+,Male,60,55-64,Independent,Approve,College degree,White,Disagree,2,Yes,90,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,46,45-54,Strong Republican,Approve,College degree,White,Disagree,1,Yes,50,No,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,46,45-54,Independent,DK/REF,Some college,White,Disagree,,Yes,,Yes,No,Likely,No,Yes,Yes,Donald Trump
+,Male,32,25-34,Independent,Approve,High school,Black,Agree,60,Yes,70,No,No,Likely,No,No,Yes,Darth Vader
+,Female,23,18-24,DK/REF,Approve,Graduate degree,White,DK/REF,0,Yes,0,No,DK/REF,DK/REF,Yes,No,No,Darth Vader
+,Male,21,18-24,Strong Republican,Approve,High school,Black,Disagree,34,No,25,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Male,77,65+,Strong Republican,Approve,Some college,White,Disagree,10,Yes,25,No,No,DK/REF,Yes,No,Yes,Donald Trump
+,Male,23,18-24,Independent,Disapprove,College degree,Asian,Disagree,100,No,100,Yes,Yes,Unlikely,Yes,No,Yes,Darth Vader
+,Male,22,18-24,DK/REF,DK/REF,College degree,Asian,Disagree,1,Yes,10,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Male,67,65+,Not Strong Democrat,Approve,Graduate degree,White,Disagree,,Yes,90,DK/REF,No,Likely,Yes,Yes,DK/REF,Donald Trump
+,Female,73,65+,Independent,Disapprove,Graduate degree,White,DK/REF,,Yes,,DK/REF,No,DK/REF,No,Yes,DK/REF,Darth Vader
+,Male,29,25-34,Not Strong Democrat,Disapprove,Some college,White,Disagree,40,Yes,100,Yes,No,Likely,Yes,No,No,Donald Trump
+,Male,55,55-64,DK/REF,DK/REF,Graduate degree,DK/REF,Disagree,98,No,100,Yes,No,DK/REF,Yes,No,Yes,Darth Vader
+,Female,26,25-34,Not Strong Democrat,Disapprove,College degree,White,Disagree,50,Yes,80,Yes,Yes,Likely,No,Yes,No,Donald Trump
+,Male,64,55-64,Strong Republican,Approve,Graduate degree,White,Disagree,5,Yes,60,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Male,49,45-54,Strong Republican,Approve,Graduate degree,Black,Disagree,10,Yes,10,No,No,Likely,Yes,Yes,No,Donald Trump
+,Female,53,45-54,Strong Republican,Approve,College degree,White,Disagree,10,Yes,50,No,No,DK/REF,No,Yes,DK/REF,Donald Trump
+,Male,33,25-34,Strong Democrat,Disapprove,Graduate degree,White,Disagree,20,Yes,100,Yes,No,Unlikely,No,Yes,No,DK/REF
+,Male,60,55-64,Independent,Approve,High school,White,Disagree,10,Yes,80,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,38,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,40,Yes,70,Yes,No,Unlikely,Yes,Yes,DK/REF,Darth Vader
+,Male,21,18-24,Independent,Disapprove,High school,Latino,Disagree,30,Yes,33,Yes,No,Likely,No,No,DK/REF,Darth Vader
+,Male,38,35-44,Independent,DK/REF,High school,Asian,Disagree,35,Yes,60,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,50,45-54,Independent,Approve,High school,White,Disagree,10,Yes,90,No,No,Likely,Yes,No,No,Donald Trump
+,Male,74,65+,Independent,Disapprove,Graduate degree,Asian,Agree,,Yes,51,Yes,No,Unlikely,No,No,No,Darth Vader
+,DK/REF,20,18-24,DK/REF,DK/REF,Graduate degree,Asian,DK/REF,0,DK/REF,99,DK/REF,No,Unlikely,DK/REF,Yes,DK/REF,DK/REF
+,Female,36,35-44,Strong Republican,Approve,College degree,White,Disagree,,Yes,90,No,No,Likely,Yes,Yes,DK/REF,Donald Trump
+,Male,26,25-34,Strong Republican,Approve,College degree,White,Disagree,50,Yes,25,DK/REF,No,Likely,Yes,No,DK/REF,Donald Trump
+,Male,34,25-34,DK/REF,DK/REF,College degree,Latino,DK/REF,,Yes,,DK/REF,No,DK/REF,Yes,DK/REF,DK/REF,DK/REF
+,Male,19,18-24,Not Strong Democrat,Disapprove,College degree,White,DK/REF,,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,18,18-24,Independent,Approve,High school,Latino,Disagree,5,Yes,98,No,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,21,18-24,Independent,DK/REF,Some college,White,DK/REF,0,No,70,Yes,No,Unlikely,No,Yes,Yes,Darth Vader
+,Male,25,25-34,Strong Republican,Approve,High school,White,DK/REF,50,Yes,100,Yes,No,Likely,Yes,No,Yes,Darth Vader
+,Female,27,25-34,Strong Democrat,Disapprove,High school,Other,Disagree,45,Yes,100,Yes,No,Unlikely,No,No,No,Darth Vader
+,Female,20,18-24,Strong Republican,Disapprove,High school,Black,Disagree,75,Yes,50,Yes,Yes,Likely,No,No,Yes,Darth Vader
+,Other,26,25-34,Strong Republican,Approve,Some college,White,Disagree,,Yes,1,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Male,26,25-34,Independent,Disapprove,Graduate degree,Black,Disagree,80,Yes,100,Yes,No,Unlikely,Yes,No,Yes,Darth Vader
+,Male,30,25-34,Independent,Disapprove,Graduate degree,Asian,Agree,,Yes,,Yes,No,Unlikely,Yes,No,No,DK/REF
+,Male,19,18-24,Not Strong Republican,Disapprove,Some college,White,Disagree,56,Yes,50,Yes,No,Likely,No,No,Yes,Darth Vader
+,Other,33,25-34,Strong Republican,Disapprove,Graduate degree,White,Disagree,5,Yes,100,No,No,Unlikely,Yes,Yes,No,Darth Vader
+,Female,30,25-34,Not Strong Republican,Approve,Graduate degree,White,Agree,75,Yes,100,Yes,Yes,Likely,No,Yes,Yes,Donald Trump
+,Female,19,18-24,Strong Republican,DK/REF,Graduate degree,White,DK/REF,42,Yes,20,Yes,No,Unlikely,No,No,DK/REF,Darth Vader
+,Female,33,25-34,Independent,DK/REF,Graduate degree,Latino,Disagree,,Yes,70,No,Yes,Unlikely,No,No,Yes,Darth Vader
+,Male,27,25-34,DK/REF,Disapprove,College degree,Black,Disagree,,Yes,,Yes,No,DK/REF,No,Yes,No,DK/REF
+,Male,30,25-34,Independent,Disapprove,High school,Latino,DK/REF,,Yes,30,Yes,Yes,Unlikely,No,No,No,Darth Vader
+,Male,18,18-24,DK/REF,DK/REF,Some college,White,DK/REF,13,Yes,67,Yes,No,Unlikely,Yes,No,Yes,Darth Vader
+,Male,70,65+,Strong Republican,Approve,Some college,White,Disagree,10,Yes,100,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Female,74,65+,Independent,Disapprove,College degree,White,Disagree,,Yes,,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+,Female,43,35-44,Independent,Approve,College degree,Asian,Disagree,20,Yes,100,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,36,35-44,Strong Republican,Approve,College degree,Other,DK/REF,,Yes,40,DK/REF,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Other,35,35-44,Independent,Disapprove,College degree,Latino,Disagree,,Yes,80,Yes,No,Likely,Yes,Yes,DK/REF,DK/REF
+,Female,21,18-24,Independent,DK/REF,College degree,Black,Disagree,,Yes,100,Yes,No,Unlikely,Yes,No,No,DK/REF
+,Male,43,35-44,DK/REF,Disapprove,Some college,White,Disagree,,Yes,100,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,43,35-44,Not Strong Republican,Approve,College degree,White,Disagree,,Yes,70,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,77,65+,Strong Democrat,Disapprove,High school,White,DK/REF,,Yes,100,Yes,No,Likely,No,No,No,Darth Vader
+,Male,38,35-44,Independent,Disapprove,Graduate degree,Other,DK/REF,70,DK/REF,70,Yes,DK/REF,Likely,Yes,No,No,Darth Vader
+59000,Male,51,45-54,Independent,Approve,College degree,Asian,Disagree,0,Yes,40,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+7000,Male,40,35-44,DK/REF,Disapprove,High school,Latino,Agree,80,Yes,70,Yes,No,Unlikely,No,No,No,DK/REF
+73000,Female,34,25-34,Strong Democrat,Disapprove,College degree,White,Agree,30,Yes,30,Yes,No,Likely,Yes,No,Yes,Darth Vader
+14000,Female,59,55-64,Strong Democrat,Disapprove,Some college,Black,Disagree,100,Yes,100,Yes,No,Likely,No,No,DK/REF,Darth Vader
+77000,Female,33,25-34,Not Strong Republican,DK/REF,College degree,DK/REF,Disagree,70,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+146000,Male,39,35-44,Independent,Disapprove,Graduate degree,Other,Disagree,10,Yes,100,Yes,Yes,Unlikely,No,Yes,Yes,Donald Trump
+40000,Female,61,55-64,Strong Democrat,Disapprove,Graduate degree,White,Disagree,,Yes,100,Yes,No,Unlikely,Yes,No,DK/REF,DK/REF
+105000,Male,38,35-44,Strong Democrat,DK/REF,College degree,White,DK/REF,,Yes,,No,No,Likely,No,No,DK/REF,DK/REF
+80000,Male,78,65+,Strong Democrat,Approve,College degree,White,Disagree,,Yes,100,Yes,No,Unlikely,Yes,DK/REF,Yes,Donald Trump
+49000,Female,46,45-54,Strong Democrat,Disapprove,College degree,Black,Disagree,50,Yes,99,Yes,Yes,Likely,No,No,Yes,DK/REF
+87000,Male,44,35-44,Independent,Approve,College degree,White,Agree,50,Yes,50,Yes,Yes,Unlikely,Yes,Yes,No,Donald Trump
+137000,Other,90,65+,Independent,Disapprove,College degree,DK/REF,Disagree,50,Yes,75,Yes,No,Unlikely,No,No,No,DK/REF
+62000,Female,64,55-64,Independent,DK/REF,Graduate degree,White,Disagree,50,Yes,85,Yes,Yes,Unlikely,No,Yes,DK/REF,Donald Trump
+55000,Female,44,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,10,Yes,100,Yes,No,Unlikely,Yes,Yes,Yes,Darth Vader
+191000,Male,41,35-44,Independent,Disapprove,Graduate degree,White,Disagree,30,No,70,Yes,No,Unlikely,No,Yes,No,DK/REF
+24000,Male,47,45-54,Not Strong Republican,Approve,Some college,White,Disagree,5,Yes,50,Yes,No,Likely,Yes,No,Yes,Donald Trump
+70000,Female,37,35-44,Strong Democrat,Disapprove,Some college,Black,Disagree,75,Yes,90,Yes,No,Likely,No,Yes,No,DK/REF
+85000,Male,18,18-24,DK/REF,Approve,Graduate degree,DK/REF,Disagree,2,Yes,30,Yes,No,Unlikely,No,Yes,No,Donald Trump
+42000,Female,83,65+,Independent,Disapprove,High school,Black,Disagree,0,Yes,0,Yes,Yes,Likely,No,No,No,Darth Vader
+401000,Male,39,35-44,Strong Republican,Approve,Graduate degree,White,Disagree,1,Yes,70,Yes,No,Unlikely,Yes,DK/REF,DK/REF,Donald Trump
+135000,Male,70,65+,Strong Republican,Approve,Graduate degree,DK/REF,Disagree,100,Yes,20,No,No,Likely,No,DK/REF,No,Donald Trump
+46000,Male,37,35-44,Strong Democrat,Approve,High school,White,Agree,50,Yes,100,No,No,Likely,Yes,No,No,Donald Trump
+26000,Female,34,25-34,Independent,Disapprove,High school,White,Disagree,,Yes,,Yes,No,Likely,No,No,Yes,Darth Vader
+156000,Female,43,35-44,Strong Republican,Approve,Some college,White,Disagree,0,Yes,95,Yes,No,Unlikely,No,Yes,No,Donald Trump
+118000,Female,45,45-54,Not Strong Republican,Approve,Other,Latino,Disagree,20,Yes,90,Yes,Yes,Likely,Yes,No,No,Donald Trump
+141000,Other,40,35-44,DK/REF,Approve,College degree,DK/REF,Disagree,0,Yes,20,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+27000,Male,34,25-34,Independent,Approve,Some college,White,Disagree,,Yes,100,Yes,No,Unlikely,Yes,No,No,Donald Trump
+75000,Other,20,18-24,DK/REF,DK/REF,Other,White,DK/REF,10,Yes,99,Yes,DK/REF,Unlikely,Yes,Yes,No,DK/REF
+39000,Male,41,35-44,Strong Republican,Approve,Graduate degree,White,Disagree,23,Yes,77,Yes,No,Unlikely,No,No,No,Donald Trump
+15000,Female,51,45-54,Strong Democrat,Disapprove,High school,Black,DK/REF,,Yes,,Yes,No,Unlikely,No,Yes,No,DK/REF
+18000,Male,24,18-24,DK/REF,Approve,High school,White,DK/REF,,Yes,70,No,No,Unlikely,Yes,DK/REF,Yes,Donald Trump
+16000,Male,23,18-24,Independent,Disapprove,Some college,White,Disagree,5,Yes,65,Yes,Yes,Likely,Yes,Yes,Yes,Darth Vader
+,Female,39,35-44,DK/REF,Disapprove,Graduate degree,Asian,Agree,,Yes,50,Yes,No,Unlikely,No,No,No,Darth Vader
+,Male,55,55-64,DK/REF,DK/REF,Other,Asian,DK/REF,,Yes,,DK/REF,Yes,Unlikely,No,No,Yes,DK/REF
+,Male,66,65+,Independent,Disapprove,High school,White,Disagree,0,Yes,10,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Male,74,65+,Strong Democrat,Disapprove,High school,Black,Agree,70,Yes,80,No,No,Likely,Yes,Yes,No,Donald Trump
+,Male,37,35-44,DK/REF,DK/REF,College degree,Asian,DK/REF,60,Yes,80,Yes,No,Unlikely,No,DK/REF,DK/REF,DK/REF
+,Male,58,55-64,Strong Republican,Approve,High school,White,DK/REF,,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+,Male,66,65+,Strong Republican,Approve,Some college,White,Disagree,,Yes,75,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,DK/REF,40,35-44,Strong Republican,Approve,College degree,White,Agree,,Yes,50,No,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,67,65+,Independent,Approve,High school,White,DK/REF,10,Yes,25,Yes,No,Likely,No,No,No,Donald Trump
+,Female,20,18-24,Not Strong Republican,Disapprove,High school,White,Disagree,40,Yes,94,Yes,No,Likely,No,No,Yes,Darth Vader
+,Female,25,25-34,Independent,Disapprove,Some college,White,DK/REF,,Yes,75,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Female,50,45-54,Strong Republican,Approve,College degree,White,DK/REF,,Yes,80,No,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,45,45-54,Independent,Disapprove,Graduate degree,White,Disagree,60,Yes,100,Yes,Yes,Unlikely,No,No,No,Darth Vader
+,Male,60,55-64,Independent,Disapprove,Some college,Other,Disagree,60,Yes,100,Yes,No,Likely,Yes,No,No,Darth Vader
+,Male,24,18-24,DK/REF,DK/REF,High school,Other,DK/REF,75,No,75,Yes,Yes,Likely,No,No,No,Donald Trump
+,Male,46,45-54,Not Strong Democrat,Disapprove,Some college,Black,Disagree,10,Yes,100,No,No,Unlikely,No,Yes,No,Donald Trump
+,Male,29,25-34,Strong Republican,Approve,College degree,White,DK/REF,,Yes,0,No,No,Unlikely,No,No,No,Donald Trump
+,Female,22,18-24,Independent,Disapprove,High school,Latino,Agree,60,Yes,70,Yes,No,Likely,No,Yes,No,Darth Vader
+,Female,35,35-44,Independent,Approve,High school,White,DK/REF,,Yes,,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Female,19,18-24,Not Strong Republican,Approve,Some college,Other,Disagree,60,Yes,30,Yes,No,Likely,No,No,No,Donald Trump
+,Other,24,18-24,DK/REF,Disapprove,College degree,DK/REF,Disagree,50,Yes,99,Yes,No,Unlikely,Yes,No,No,Darth Vader
+,Female,75,65+,Strong Democrat,Disapprove,Graduate degree,White,Disagree,60,Yes,100,Yes,No,Unlikely,Yes,No,DK/REF,DK/REF
+,Female,59,55-64,Independent,Disapprove,High school,White,Disagree,25,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+,Male,25,25-34,DK/REF,Approve,Some college,Other,DK/REF,,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,46,45-54,Independent,DK/REF,Graduate degree,White,Disagree,10,Yes,99,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,66,65+,DK/REF,Approve,Some college,White,Disagree,0,Yes,100,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,61,55-64,Strong Republican,Disapprove,Graduate degree,White,Disagree,,Yes,100,Yes,No,Unlikely,No,Yes,No,DK/REF
+,Female,53,45-54,Independent,Disapprove,Some college,White,Disagree,,Yes,,Yes,Yes,Likely,Yes,No,Yes,Darth Vader
+,Female,48,45-54,DK/REF,DK/REF,Other,Latino,DK/REF,,Yes,,Yes,Yes,Likely,No,No,DK/REF,Donald Trump
+,Female,55,55-64,Strong Democrat,Disapprove,Some college,Black,Disagree,65,Yes,90,No,No,Likely,No,Yes,No,Darth Vader
+,Male,67,65+,Strong Democrat,Disapprove,College degree,White,Disagree,20,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+150000,Female,35,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,10,Yes,75,Yes,No,Unlikely,Yes,Yes,Yes,Darth Vader
+78000,Male,50,45-54,Strong Democrat,Disapprove,Graduate degree,Black,Disagree,60,Yes,90,Yes,Yes,Unlikely,No,No,Yes,DK/REF
+53000,Female,76,65+,Strong Democrat,Disapprove,Some college,Black,Disagree,60,Yes,100,Yes,No,Unlikely,No,No,No,DK/REF
+60000,Female,70,65+,Not Strong Republican,Approve,High school,Black,Agree,50,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+51000,Male,40,35-44,DK/REF,Approve,College degree,Black,Disagree,0,Yes,100,Yes,No,Unlikely,No,No,Yes,Donald Trump
+137000,Male,40,35-44,Independent,Disapprove,Graduate degree,White,Disagree,5,Yes,90,Yes,No,Unlikely,No,No,Yes,Donald Trump
+126000,Male,42,35-44,Independent,Disapprove,College degree,DK/REF,Disagree,,No,,Yes,Yes,Unlikely,No,No,DK/REF,DK/REF
+22000,Male,48,45-54,Independent,Approve,High school,White,Agree,10,Yes,100,Yes,No,Unlikely,Yes,No,No,Donald Trump
+45000,Male,45,45-54,Independent,Disapprove,Some college,Other,Disagree,5,Yes,85,Yes,No,Unlikely,Yes,Yes,Yes,Darth Vader
+33000,Male,83,65+,Strong Democrat,Disapprove,High school,Black,Disagree,80,Yes,80,Yes,No,Likely,No,No,No,DK/REF
+129000,Male,38,35-44,Not Strong Republican,Disapprove,Graduate degree,White,Disagree,10,Yes,50,Yes,No,Unlikely,No,Yes,No,Donald Trump
+28000,Female,53,45-54,Strong Democrat,Disapprove,College degree,Black,Disagree,100,Yes,86,Yes,Yes,Likely,No,No,DK/REF,Darth Vader
+21000,Male,41,35-44,Strong Republican,Approve,High school,White,Disagree,20,Yes,40,Yes,No,Unlikely,Yes,No,Yes,Donald Trump
+30000,Female,74,65+,Independent,DK/REF,High school,Latino,Disagree,,Yes,5,Yes,DK/REF,Unlikely,No,Yes,No,DK/REF
+,Male,73,65+,Not Strong Republican,Approve,Graduate degree,White,Disagree,1,Yes,50,Yes,No,Unlikely,Yes,Yes,No,DK/REF
+,Female,27,25-34,Independent,Approve,Some college,Black,DK/REF,75,Yes,75,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Female,49,45-54,Independent,Disapprove,College degree,White,Disagree,20,Yes,90,Yes,No,Unlikely,Yes,Yes,No,DK/REF
+,Male,62,55-64,Independent,Approve,Some college,White,Disagree,75,Yes,80,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,21,18-24,Independent,Disapprove,Some college,Latino,Disagree,40,Yes,60,Yes,No,Likely,Yes,Yes,No,Darth Vader
+,Female,33,25-34,Independent,Disapprove,College degree,White,Disagree,50,Yes,10,Yes,Yes,Likely,No,Yes,No,Darth Vader
+,Male,50,45-54,DK/REF,Approve,High school,White,Disagree,,Yes,4,Yes,No,Likely,Yes,No,DK/REF,Donald Trump
+,Male,47,45-54,Strong Republican,Approve,High school,White,DK/REF,10,Yes,40,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+9000,Female,70,65+,DK/REF,Disapprove,Graduate degree,Asian,Disagree,2,Yes,50,Yes,Yes,Likely,No,No,DK/REF,DK/REF
+,Male,53,45-54,Strong Republican,Approve,Graduate degree,White,DK/REF,,Yes,90,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Male,26,25-34,Independent,Disapprove,High school,White,Disagree,80,Yes,40,Yes,Yes,Unlikely,No,Yes,No,Darth Vader
+,Female,29,25-34,Strong Democrat,Disapprove,Graduate degree,White,Disagree,10,No,50,Yes,Yes,Likely,No,Yes,No,Darth Vader
+,Female,24,18-24,Not Strong Democrat,Disapprove,College degree,White,Disagree,80,Yes,90,Yes,No,Likely,Yes,Yes,No,DK/REF
+25000,Female,19,18-24,Strong Democrat,Disapprove,Some college,Latino,Disagree,30,Yes,22,Yes,Yes,Likely,No,No,No,DK/REF
+97000,Female,44,35-44,Strong Democrat,Disapprove,College degree,White,Disagree,30,Yes,85,Yes,No,Unlikely,No,No,No,Darth Vader
+21000,Male,20,18-24,Strong Democrat,Disapprove,Some college,White,Disagree,70,Yes,90,Yes,No,Unlikely,No,No,Yes,DK/REF
+152000,Male,45,45-54,Not Strong Republican,Approve,Graduate degree,White,Disagree,10,Yes,40,No,No,Unlikely,Yes,Yes,Yes,Donald Trump
+6000,Female,34,25-34,Independent,Disapprove,Some college,White,Disagree,38,Yes,80,Yes,Yes,Likely,Yes,No,DK/REF,Darth Vader
+79000,Male,42,35-44,Independent,Approve,Some college,White,Disagree,10,Yes,80,Yes,No,Unlikely,No,Yes,No,Donald Trump
+52000,Male,42,35-44,Strong Republican,Approve,High school,White,Agree,70,Yes,60,Yes,Yes,Likely,Yes,Yes,Yes,Donald Trump
+58000,Male,48,45-54,Not Strong Republican,Approve,College degree,White,Disagree,60,Yes,50,Yes,No,Unlikely,Yes,No,No,Donald Trump
+28000,Male,33,25-34,Strong Democrat,Disapprove,Some college,White,Disagree,80,Yes,100,Yes,Yes,Unlikely,Yes,Yes,No,Darth Vader
+37000,Female,32,25-34,Not Strong Democrat,Disapprove,Some college,Latino,Disagree,100,Yes,65,Yes,Yes,Likely,No,No,DK/REF,Darth Vader
+41000,Male,99,65+,DK/REF,Approve,College degree,White,Disagree,0,Yes,100,DK/REF,No,Unlikely,Yes,Yes,No,Donald Trump
+14000,Male,42,35-44,Not Strong Democrat,Disapprove,Graduate degree,White,Disagree,40,Yes,80,Yes,No,Likely,No,Yes,No,Darth Vader
+193000,Male,47,45-54,Independent,Approve,Graduate degree,White,Disagree,1,Yes,60,Yes,No,Unlikely,No,Yes,No,Donald Trump
+89000,Female,42,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,5,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+50000,Female,19,18-24,DK/REF,Approve,High school,White,DK/REF,,Yes,80,Yes,Yes,Unlikely,No,No,DK/REF,Donald Trump
+66000,Male,30,25-34,Strong Republican,Approve,College degree,White,Disagree,99,Yes,2,No,No,Unlikely,No,No,No,Donald Trump
+55000,Male,43,35-44,Independent,Disapprove,Some college,Latino,Disagree,20,Yes,,No,No,Unlikely,Yes,Yes,No,Darth Vader
+42000,Male,75,65+,DK/REF,Disapprove,High school,Latino,Disagree,55,Yes,100,Yes,Yes,Likely,No,No,DK/REF,DK/REF
+322000,Female,66,65+,Strong Democrat,Disapprove,Graduate degree,Black,Disagree,50,Yes,90,Yes,No,Unlikely,No,Yes,Yes,DK/REF
+24000,Male,35,35-44,Strong Republican,Approve,College degree,White,Disagree,0,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+50000,Male,44,35-44,Strong Democrat,Disapprove,College degree,Latino,Disagree,15,Yes,85,Yes,No,Unlikely,Yes,Yes,No,DK/REF
+16000,Female,74,65+,Strong Democrat,Disapprove,High school,Latino,Disagree,0,Yes,,Yes,No,Likely,No,No,Yes,Darth Vader
+13000,Male,34,25-34,Independent,Disapprove,Graduate degree,Black,Disagree,46,Yes,86,Yes,No,Likely,No,Yes,No,Darth Vader
+16000,Female,34,25-34,Independent,Disapprove,High school,Latino,Disagree,50,Yes,80,Yes,Yes,Likely,No,No,Yes,Darth Vader
+118000,Female,34,25-34,Not Strong Democrat,Disapprove,Other,Latino,Disagree,25,Yes,80,Yes,No,Unlikely,No,No,Yes,Donald Trump
+9000,Female,63,55-64,Strong Democrat,Disapprove,Graduate degree,Black,Disagree,60,Yes,90,Yes,No,Likely,No,Yes,DK/REF,DK/REF
+53000,Female,47,45-54,Strong Republican,Approve,Some college,Latino,Disagree,0,Yes,20,No,No,Unlikely,No,Yes,No,Donald Trump
+80000,Male,76,65+,Strong Republican,Approve,Some college,White,Disagree,10,Yes,60,No,No,Unlikely,No,Yes,No,Donald Trump
+57000,Female,29,25-34,Strong Republican,Approve,Some college,White,Disagree,5,Yes,10,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+91000,Female,37,35-44,Independent,DK/REF,Some college,White,DK/REF,,Yes,,Yes,DK/REF,DK/REF,No,No,DK/REF,DK/REF
+107000,Female,47,45-54,Independent,Approve,Graduate degree,White,DK/REF,,Yes,50,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+190000,Male,44,35-44,Independent,Approve,College degree,White,Disagree,5,Yes,50,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+33000,Male,72,65+,Independent,Disapprove,Graduate degree,Black,Disagree,5,Yes,95,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+6000,Female,54,45-54,Strong Democrat,Disapprove,Some college,Black,Disagree,100,Yes,100,Yes,No,Likely,No,Yes,DK/REF,Darth Vader
+32000,Other,42,35-44,Strong Republican,Approve,Graduate degree,White,DK/REF,,Yes,30,No,No,Likely,DK/REF,Yes,Yes,Donald Trump
+37000,Female,38,35-44,Independent,Disapprove,High school,White,DK/REF,80,Yes,100,Yes,No,Likely,No,No,No,Darth Vader
+124000,Male,39,35-44,Independent,DK/REF,Some college,Latino,Disagree,60,Yes,80,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+27000,Female,54,45-54,DK/REF,Disapprove,High school,DK/REF,DK/REF,30,Yes,50,Yes,Yes,Likely,No,No,Yes,Darth Vader
+90000,Female,30,25-34,Independent,DK/REF,Graduate degree,White,DK/REF,,Yes,5,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+7000,Female,35,35-44,Independent,DK/REF,College degree,White,DK/REF,,Yes,,Yes,No,Likely,Yes,No,DK/REF,DK/REF
+6000,Male,30,25-34,DK/REF,Approve,High school,Latino,DK/REF,,Yes,,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+86000,Female,41,35-44,Strong Democrat,Disapprove,High school,Black,Disagree,80,Yes,100,Yes,No,Likely,No,No,Yes,Darth Vader
+31000,Male,31,25-34,Strong Republican,Approve,College degree,White,Disagree,30,Yes,90,Yes,No,Unlikely,Yes,No,Yes,Donald Trump
+49000,Male,18,18-24,Strong Republican,Approve,High school,White,Agree,65,Yes,15,Yes,No,Unlikely,No,No,No,Donald Trump
+61000,Female,47,45-54,Strong Democrat,Disapprove,High school,Latino,DK/REF,70,Yes,90,Yes,No,Unlikely,No,No,No,DK/REF
+90000,Female,45,45-54,Strong Republican,DK/REF,College degree,White,Disagree,,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+16000,Female,70,65+,Strong Democrat,Disapprove,Some college,Black,Disagree,,Yes,,Yes,No,Likely,No,Yes,Yes,Darth Vader
+67000,Male,33,25-34,Independent,Approve,Other,White,Disagree,,Yes,75,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+47000,Male,65,65+,Independent,Disapprove,Graduate degree,White,Disagree,25,Yes,60,Yes,No,Unlikely,No,No,No,DK/REF
+265000,Male,40,35-44,Strong Republican,Approve,College degree,White,Disagree,1,Yes,50,Yes,No,Unlikely,No,Yes,No,Donald Trump
+119000,Male,40,35-44,Not Strong Republican,Approve,High school,White,DK/REF,0,Yes,50,No,No,Unlikely,No,No,No,Donald Trump
+83000,Male,65,65+,Strong Republican,Approve,Graduate degree,White,Disagree,1,Yes,75,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+5000,Male,53,45-54,Independent,Disapprove,High school,Black,Agree,90,Yes,80,Yes,Yes,Likely,No,No,DK/REF,DK/REF
+129000,Female,72,65+,Independent,Disapprove,High school,White,Disagree,50,Yes,50,Yes,No,Likely,Yes,Yes,Yes,Darth Vader
+52000,Male,59,55-64,Strong Republican,Disapprove,Some college,White,Disagree,50,Yes,50,Yes,No,Likely,Yes,Yes,No,Darth Vader
+25000,Female,50,45-54,DK/REF,DK/REF,College degree,White,Disagree,,Yes,,Yes,DK/REF,Unlikely,No,DK/REF,DK/REF,DK/REF
+22000,Female,45,45-54,Strong Democrat,Disapprove,High school,Black,Disagree,,Yes,50,Yes,No,Likely,No,Yes,Yes,Darth Vader
+26000,Female,65,65+,Strong Democrat,Disapprove,High school,Black,DK/REF,,Yes,,Yes,Yes,Likely,No,No,DK/REF,DK/REF
+47000,Female,70,65+,DK/REF,Disapprove,College degree,White,DK/REF,,Yes,,DK/REF,No,DK/REF,No,DK/REF,DK/REF,DK/REF
+75000,Male,44,35-44,Not Strong Democrat,Disapprove,Graduate degree,Asian,Disagree,,Yes,99,No,No,Unlikely,No,No,No,Darth Vader
+,Male,43,35-44,Strong Republican,Approve,Graduate degree,White,Disagree,45,Yes,100,Yes,No,Unlikely,Yes,No,No,DK/REF
+,Female,32,25-34,Independent,Approve,College degree,White,DK/REF,,Yes,100,No,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Female,66,65+,Strong Democrat,Disapprove,Some college,DK/REF,DK/REF,30,Yes,100,Yes,No,Likely,Yes,Yes,No,Darth Vader
+,Male,39,35-44,Independent,Approve,College degree,White,DK/REF,,Yes,75,No,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Female,20,18-24,DK/REF,DK/REF,High school,White,DK/REF,,Yes,,DK/REF,No,DK/REF,DK/REF,No,DK/REF,DK/REF
+,Male,18,18-24,DK/REF,DK/REF,High school,Asian,DK/REF,,Yes,80,Yes,No,Unlikely,No,No,No,Darth Vader
+,Male,29,25-34,DK/REF,Approve,Graduate degree,Asian,Disagree,,Yes,,Yes,No,Unlikely,No,No,Yes,Darth Vader
+,Male,32,25-34,Independent,Disapprove,College degree,Latino,Disagree,50,Yes,80,Yes,No,Unlikely,No,No,DK/REF,Darth Vader
+,Male,74,65+,Independent,Approve,Some college,White,Disagree,,Yes,40,Yes,No,Unlikely,No,No,No,Donald Trump
+,Male,56,55-64,Not Strong Republican,Approve,High school,White,Disagree,,Yes,100,Yes,Yes,Unlikely,Yes,DK/REF,DK/REF,Donald Trump
+,Female,46,45-54,Strong Republican,Approve,Some college,White,Agree,,Yes,,Yes,DK/REF,Likely,No,Yes,Yes,Donald Trump
+,Male,30,25-34,Independent,Disapprove,Graduate degree,White,Disagree,10,Yes,10,Yes,Yes,Unlikely,No,Yes,DK/REF,Donald Trump
+,Female,69,65+,Not Strong Democrat,Disapprove,High school,White,Disagree,,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+,Female,54,45-54,Independent,Approve,High school,White,Disagree,70,Yes,30,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,32,25-34,Independent,Approve,College degree,White,Disagree,25,Yes,90,Yes,No,Unlikely,Yes,No,No,Donald Trump
+52000,DK/REF,71,65+,Strong Democrat,Approve,College degree,Black,Agree,,Yes,70,Yes,Yes,Likely,Yes,No,No,Darth Vader
+,Male,44,35-44,Strong Democrat,DK/REF,Some college,Black,DK/REF,,Yes,95,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Male,24,18-24,Independent,DK/REF,High school,Asian,Disagree,75,DK/REF,80,No,No,Likely,No,No,Yes,DK/REF
+,Female,60,55-64,DK/REF,Approve,High school,White,Disagree,70,Yes,,Yes,No,Likely,No,Yes,DK/REF,Donald Trump
+,Male,32,25-34,Independent,Disapprove,Some college,White,Disagree,65,Yes,40,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+,Male,43,35-44,Independent,Approve,Some college,Black,DK/REF,,Yes,,Yes,No,Likely,Yes,No,DK/REF,Donald Trump
+,Female,62,55-64,Strong Republican,Approve,College degree,White,Disagree,10,Yes,80,No,DK/REF,Likely,Yes,Yes,DK/REF,Donald Trump
+,Female,24,18-24,Not Strong Republican,DK/REF,College degree,White,DK/REF,,Yes,,DK/REF,No,DK/REF,No,No,Yes,DK/REF
+,Male,75,65+,Independent,Approve,High school,White,Disagree,,Yes,5,No,No,Unlikely,Yes,No,Yes,Donald Trump
+109000,Male,45,45-54,Not Strong Democrat,Disapprove,Graduate degree,White,Disagree,10,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+40000,Female,25,25-34,Independent,DK/REF,College degree,Latino,Disagree,80,Yes,95,Yes,No,Unlikely,No,Yes,No,Darth Vader
+5000,Female,30,25-34,Independent,Disapprove,High school,Latino,Disagree,50,Yes,90,Yes,No,Likely,No,No,No,Darth Vader
+40000,Female,50,45-54,Strong Democrat,Disapprove,Some college,Latino,Disagree,,DK/REF,,No,No,Unlikely,No,No,No,DK/REF
+39000,Female,74,65+,Not Strong Democrat,Disapprove,Some college,Latino,Disagree,,Yes,,Yes,Yes,Unlikely,Yes,DK/REF,Yes,DK/REF
+21000,Male,32,25-34,Independent,DK/REF,High school,Latino,Disagree,50,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+9000,Female,83,65+,Strong Democrat,Disapprove,Some college,White,Agree,,Yes,,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+132000,Female,34,25-34,Strong Democrat,Disapprove,Graduate degree,White,Disagree,30,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+98000,Male,38,35-44,Strong Democrat,Disapprove,College degree,White,Disagree,70,Yes,99,Yes,No,Likely,Yes,No,DK/REF,Darth Vader
+130000,Male,35,35-44,DK/REF,Approve,Graduate degree,Black,Disagree,10,Yes,,No,No,Unlikely,Yes,Yes,No,Donald Trump
+236000,Female,44,35-44,Not Strong Democrat,Disapprove,Graduate degree,White,Disagree,30,Yes,100,Yes,No,Unlikely,No,Yes,No,Darth Vader
+132000,Male,36,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,45,Yes,60,Yes,Yes,Unlikely,Yes,No,No,Donald Trump
+105000,Female,40,35-44,Strong Democrat,Approve,Graduate degree,White,Disagree,2,Yes,50,Yes,No,Unlikely,No,Yes,No,Donald Trump
+37000,Male,38,35-44,Independent,Approve,Graduate degree,White,Disagree,5,Yes,90,No,No,Unlikely,No,No,No,Donald Trump
+47000,Male,33,25-34,Not Strong Democrat,Approve,Some college,White,DK/REF,,Yes,,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+31000,Female,31,25-34,Independent,Disapprove,Some college,DK/REF,Disagree,65,No,50,Yes,No,Likely,No,No,Yes,Darth Vader
+121000,Female,36,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,10,No,50,Yes,Yes,Unlikely,Yes,Yes,No,DK/REF
+,Male,55,55-64,Not Strong Republican,Disapprove,Some college,White,Disagree,50,Yes,50,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,33,25-34,Independent,Disapprove,College degree,Latino,DK/REF,,Yes,90,No,No,Unlikely,No,Yes,No,Donald Trump
+,Female,71,65+,Strong Republican,Approve,College degree,White,DK/REF,,Yes,60,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Female,36,35-44,Independent,Approve,Some college,White,Disagree,40,Yes,90,No,No,Likely,No,Yes,DK/REF,DK/REF
+,Male,26,25-34,Not Strong Republican,Approve,College degree,White,DK/REF,,Yes,50,Yes,No,Likely,Yes,No,No,Donald Trump
+,Male,50,45-54,Strong Democrat,Disapprove,College degree,Black,Disagree,70,Yes,100,Yes,No,Unlikely,Yes,No,No,Darth Vader
+,Female,42,35-44,Not Strong Republican,Approve,High school,White,Disagree,,Yes,95,Yes,DK/REF,Likely,No,No,No,Donald Trump
+,Male,62,55-64,Independent,DK/REF,High school,White,DK/REF,,Yes,100,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+,Female,38,35-44,Independent,DK/REF,College degree,White,DK/REF,65,Yes,70,Yes,No,Likely,No,Yes,No,Darth Vader
+,Male,56,55-64,Strong Democrat,Approve,DK/REF,White,DK/REF,,Yes,,Yes,No,Likely,Yes,No,DK/REF,Donald Trump
+,Male,22,18-24,Independent,Disapprove,College degree,White,Disagree,10,Yes,70,Yes,No,Unlikely,No,No,Yes,Darth Vader
+,Female,64,55-64,Strong Democrat,Disapprove,College degree,White,Disagree,75,No,90,No,No,Likely,No,Yes,DK/REF,DK/REF
+,Male,25,25-34,Independent,Approve,High school,White,Agree,,Yes,80,Yes,No,Unlikely,Yes,No,Yes,Darth Vader
+,Male,81,65+,DK/REF,Disapprove,College degree,DK/REF,Disagree,,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+,Male,18,18-24,Not Strong Republican,Approve,Some college,White,Disagree,15,Yes,50,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Female,41,35-44,Strong Republican,Approve,College degree,White,Disagree,95,Yes,99,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,56,55-64,Independent,Approve,Some college,White,Disagree,0,Yes,50,Yes,No,Likely,Yes,Yes,DK/REF,Donald Trump
+,Other,92,65+,Not Strong Republican,Approve,Some college,White,Agree,,Yes,80,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+53000,Female,35,35-44,Independent,Disapprove,Graduate degree,Black,Disagree,75,Yes,95,Yes,No,Unlikely,No,Yes,No,Darth Vader
+65000,Female,65,65+,Independent,Approve,College degree,Latino,DK/REF,50,Yes,35,Yes,No,Unlikely,No,DK/REF,DK/REF,Donald Trump
+17000,Male,41,35-44,Independent,Disapprove,High school,White,Disagree,50,No,64,Yes,Yes,Likely,No,No,No,Darth Vader
+129000,Male,38,35-44,Not Strong Democrat,Disapprove,College degree,White,Disagree,8,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+69000,Male,44,35-44,Not Strong Republican,Approve,College degree,White,DK/REF,,Yes,50,No,No,Unlikely,Yes,Yes,No,Donald Trump
+8000,Female,66,65+,Strong Republican,Approve,High school,Latino,DK/REF,50,Yes,10,Yes,No,Likely,No,No,DK/REF,Donald Trump
+143000,Female,66,65+,Strong Democrat,Disapprove,High school,Latino,Disagree,,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+79000,Male,38,35-44,Independent,Disapprove,College degree,Latino,Disagree,30,Yes,40,Yes,No,Likely,No,Yes,No,Donald Trump
+96000,Female,46,45-54,Independent,Approve,Some college,White,DK/REF,,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+80000,Male,35,35-44,DK/REF,Approve,College degree,White,Disagree,12,Yes,50,Yes,No,Unlikely,Yes,No,Yes,Darth Vader
+7000,Male,41,35-44,Strong Democrat,Disapprove,Graduate degree,White,Agree,50,Yes,85,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+19000,Female,32,25-34,Strong Democrat,Disapprove,High school,White,Disagree,50,Yes,95,Yes,No,Likely,Yes,No,No,Darth Vader
+78000,Male,37,35-44,Strong Republican,Approve,Some college,White,Disagree,1,Yes,100,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+64000,Female,52,45-54,Not Strong Republican,Disapprove,Some college,Black,Disagree,3,Yes,5,Yes,Yes,Unlikely,No,No,Yes,Darth Vader
+124000,Male,44,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,80,Yes,100,Yes,No,Unlikely,Yes,No,Yes,Darth Vader
+172000,Female,65,65+,Independent,Disapprove,Graduate degree,White,Disagree,30,Yes,100,Yes,No,Unlikely,No,No,Yes,Darth Vader
+172000,Female,59,55-64,DK/REF,DK/REF,Graduate degree,DK/REF,DK/REF,,DK/REF,,DK/REF,DK/REF,DK/REF,Yes,DK/REF,DK/REF,DK/REF
+50000,Male,34,25-34,Independent,Approve,High school,White,Disagree,70,Yes,10,Yes,Yes,Likely,Yes,No,Yes,Donald Trump
+178000,Male,37,35-44,Not Strong Democrat,Disapprove,Graduate degree,White,Disagree,15,Yes,85,Yes,No,Unlikely,Yes,No,No,Donald Trump
+216000,Female,42,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,,Yes,,Yes,No,DK/REF,No,Yes,DK/REF,DK/REF
+43000,Male,36,35-44,Independent,Approve,College degree,White,Disagree,20,Yes,100,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+96000,Female,64,55-64,Strong Democrat,Disapprove,College degree,White,Disagree,50,Yes,80,Yes,Yes,Unlikely,No,Yes,Yes,DK/REF
+179000,Male,37,35-44,Strong Democrat,Disapprove,College degree,Black,DK/REF,40,Yes,75,Yes,No,Unlikely,No,Yes,No,Darth Vader
+101000,Female,38,35-44,Independent,Disapprove,Graduate degree,White,Disagree,10,Yes,99,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+82000,Female,42,35-44,Strong Democrat,Disapprove,Graduate degree,Black,Disagree,50,Yes,50,Yes,No,Likely,No,Yes,DK/REF,Darth Vader
+62000,Male,55,55-64,Independent,Disapprove,Graduate degree,Black,Agree,50,Yes,90,Yes,Yes,Unlikely,No,No,No,Darth Vader
+42000,Female,40,35-44,Independent,Disapprove,College degree,White,Disagree,70,Yes,25,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Female,46,45-54,Independent,Disapprove,Graduate degree,White,Disagree,85,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+,Male,76,65+,Strong Republican,Approve,Graduate degree,White,DK/REF,,Yes,,Yes,Yes,Likely,No,No,DK/REF,Donald Trump
+,Female,62,55-64,Independent,Disapprove,College degree,White,Disagree,35,Yes,90,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,48,45-54,Not Strong Republican,Approve,High school,White,Disagree,20,Yes,90,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Male,25,25-34,Not Strong Republican,Approve,High school,White,DK/REF,,Yes,75,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Male,58,55-64,Strong Republican,Approve,High school,White,Disagree,5,Yes,60,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,38,35-44,Independent,Disapprove,Other,White,DK/REF,,Yes,,Yes,No,Likely,No,No,DK/REF,DK/REF
+,Male,70,65+,Independent,Approve,High school,White,DK/REF,,Yes,,Yes,Yes,Likely,Yes,DK/REF,DK/REF,Donald Trump
+,Other,35,35-44,Independent,Approve,College degree,Latino,Agree,100,Yes,3,Yes,Yes,Likely,No,No,Yes,Darth Vader
+,Male,67,65+,DK/REF,Disapprove,Some college,White,DK/REF,,Yes,,Yes,No,DK/REF,Yes,DK/REF,DK/REF,Darth Vader
+,Male,64,55-64,Independent,DK/REF,Other,Black,Agree,,Yes,55,Yes,No,Unlikely,Yes,Yes,Yes,Darth Vader
+,Male,63,55-64,Independent,Approve,High school,White,Disagree,5,Yes,30,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Male,38,35-44,Strong Democrat,Disapprove,Some college,Black,Disagree,65,Yes,90,Yes,Yes,Likely,Yes,No,No,DK/REF
+,Male,24,18-24,Not Strong Republican,Approve,Some college,Other,Disagree,,Yes,70,No,No,Unlikely,Yes,No,No,Donald Trump
+,Male,52,45-54,Strong Republican,Approve,College degree,White,Disagree,50,Yes,65,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,50,45-54,DK/REF,Approve,High school,Latino,Agree,50,Yes,100,Yes,No,Likely,No,No,No,Darth Vader
+,Male,32,25-34,Independent,DK/REF,Graduate degree,White,Disagree,12,Yes,88,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,DK/REF,43,35-44,Independent,Disapprove,College degree,DK/REF,Disagree,75,DK/REF,50,Yes,No,Likely,Yes,No,No,Darth Vader
+,Male,30,25-34,Not Strong Democrat,Disapprove,College degree,White,Disagree,30,Yes,100,Yes,No,Unlikely,No,No,Yes,Darth Vader
+,Female,19,18-24,Independent,Disapprove,High school,DK/REF,Agree,50,Yes,20,Yes,Yes,Likely,No,Yes,Yes,Darth Vader
+,Female,26,25-34,Independent,DK/REF,Some college,White,Agree,76,Yes,83,Yes,No,Likely,Yes,Yes,No,DK/REF
+,Female,23,18-24,Strong Democrat,Disapprove,Some college,White,Disagree,25,No,90,Yes,Yes,Unlikely,No,No,Yes,Donald Trump
+,Male,52,45-54,Independent,Approve,College degree,Latino,Disagree,50,Yes,50,Yes,No,Likely,No,Yes,No,Donald Trump
+,Male,22,18-24,Independent,Disapprove,Some college,White,Disagree,5,Yes,75,Yes,Yes,Unlikely,Yes,Yes,No,Darth Vader
+,Female,85,65+,Strong Republican,Approve,High school,White,DK/REF,20,No,50,No,No,Likely,No,Yes,Yes,Donald Trump
+,Male,65,65+,Independent,Disapprove,College degree,Other,Agree,25,Yes,50,Yes,Yes,Likely,Yes,Yes,No,DK/REF
+,Male,84,65+,Independent,Approve,College degree,White,Disagree,40,Yes,50,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,42,35-44,Not Strong Republican,Approve,College degree,DK/REF,DK/REF,,Yes,,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,54,45-54,Independent,Disapprove,College degree,White,Disagree,10,Yes,90,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+13000,Female,64,55-64,Not Strong Democrat,Disapprove,High school,Latino,Disagree,40,Yes,,No,Yes,Unlikely,No,No,No,Darth Vader
+77000,Female,19,18-24,Independent,Disapprove,High school,Other,Agree,35,Yes,25,No,Yes,Likely,No,No,Yes,Darth Vader
+10000,Female,25,25-34,Independent,Disapprove,Some college,Latino,Disagree,45,Yes,60,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+24000,Female,19,18-24,DK/REF,Disapprove,Some college,Latino,DK/REF,65,Yes,79,Yes,No,Likely,No,No,Yes,Darth Vader
+24000,Male,70,65+,Independent,Disapprove,Some college,Black,Disagree,70,Yes,100,Yes,No,DK/REF,No,No,Yes,Darth Vader
+178000,Male,44,35-44,Not Strong Democrat,Disapprove,College degree,White,Disagree,5,Yes,90,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+42000,Female,40,35-44,Independent,DK/REF,College degree,White,Disagree,90,Yes,90,Yes,No,Unlikely,Yes,No,Yes,DK/REF
+124000,Male,44,35-44,Independent,Disapprove,Graduate degree,White,Disagree,30,Yes,45,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+6000,Male,42,35-44,Independent,Disapprove,College degree,Latino,Agree,90,Yes,100,Yes,No,Likely,Yes,No,Yes,Darth Vader
+60000,Female,69,65+,Independent,Disapprove,High school,White,Disagree,,Yes,50,Yes,No,Likely,No,No,DK/REF,DK/REF
+200000,Female,44,35-44,Strong Republican,Approve,College degree,White,Disagree,40,Yes,100,Yes,No,Unlikely,No,Yes,No,Donald Trump
+236000,Female,44,35-44,Strong Republican,Disapprove,Graduate degree,White,Disagree,10,Yes,60,No,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+39000,Female,34,25-34,Independent,Disapprove,High school,White,Disagree,20,Yes,100,Yes,No,Likely,No,No,No,Darth Vader
+157000,Male,71,65+,Strong Republican,Approve,Graduate degree,White,Disagree,10,Yes,70,Yes,No,Unlikely,No,Yes,No,Donald Trump
+138000,Female,39,35-44,Not Strong Republican,DK/REF,College degree,White,DK/REF,,Yes,90,Yes,No,Likely,No,Yes,No,DK/REF
+227000,Male,61,55-64,Strong Democrat,Disapprove,College degree,White,Disagree,80,Yes,95,Yes,Yes,Likely,Yes,Yes,DK/REF,Darth Vader
+107000,Male,29,25-34,Strong Republican,Approve,Graduate degree,White,Disagree,5,Yes,80,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+89000,Male,41,35-44,Independent,DK/REF,High school,White,DK/REF,,Yes,95,Yes,No,Likely,Yes,No,DK/REF,Donald Trump
+84000,Male,30,25-34,Not Strong Republican,Approve,College degree,White,DK/REF,,Yes,70,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+57000,Male,39,35-44,DK/REF,DK/REF,Other,White,DK/REF,,Yes,,Yes,No,Unlikely,Yes,No,No,DK/REF
+11000,Female,74,65+,Independent,Approve,High school,White,DK/REF,85,Yes,90,Yes,No,Unlikely,No,No,No,DK/REF
+200000,Male,41,35-44,Not Strong Republican,Approve,College degree,White,Disagree,5,Yes,50,No,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+105000,Female,40,35-44,DK/REF,Approve,College degree,White,Disagree,25,Yes,75,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+35000,Female,25,25-34,Independent,Disapprove,Some college,Latino,Agree,,Yes,80,Yes,Yes,Likely,No,No,No,DK/REF
+61000,Female,40,35-44,Not Strong Democrat,Disapprove,College degree,DK/REF,Disagree,50,Yes,100,Yes,Yes,Likely,Yes,Yes,Yes,Donald Trump
+57000,Female,47,45-54,Independent,Approve,Some college,White,Disagree,,Yes,,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+264000,Female,37,35-44,DK/REF,DK/REF,College degree,White,DK/REF,0,Yes,0,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+69000,Male,64,55-64,Strong Democrat,Disapprove,College degree,White,Disagree,50,Yes,100,Yes,No,Likely,Yes,Yes,No,Darth Vader
+,Female,37,35-44,DK/REF,DK/REF,Some college,White,Disagree,,Yes,,DK/REF,No,DK/REF,No,Yes,DK/REF,DK/REF
+,Male,37,35-44,Independent,DK/REF,College degree,White,DK/REF,,Yes,,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Female,65,65+,Independent,Disapprove,Other,White,DK/REF,10,Yes,50,Yes,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+,Female,18,18-24,Not Strong Democrat,Disapprove,Some college,Latino,Disagree,50,Yes,70,Yes,No,Likely,No,No,No,Donald Trump
+,Female,38,35-44,DK/REF,DK/REF,Graduate degree,Latino,Disagree,40,Yes,90,Yes,Yes,Unlikely,No,DK/REF,DK/REF,DK/REF
+,Female,27,25-34,Independent,Disapprove,College degree,Asian,DK/REF,,Yes,,Yes,DK/REF,Unlikely,No,No,DK/REF,Darth Vader
+,Other,25,25-34,DK/REF,Disapprove,Graduate degree,DK/REF,DK/REF,90,Yes,100,Yes,No,Unlikely,No,Yes,No,DK/REF
+,Female,41,35-44,Independent,Disapprove,College degree,Latino,Disagree,10,Yes,90,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,44,35-44,Independent,Disapprove,College degree,White,Disagree,25,Yes,98,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,70,65+,Not Strong Republican,Approve,Graduate degree,White,Disagree,,Yes,9,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Male,70,65+,Strong Republican,Approve,College degree,White,Disagree,4,Yes,60,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,33,25-34,Independent,Disapprove,High school,White,Disagree,,No,0,Yes,No,DK/REF,Yes,No,Yes,Darth Vader
+,Other,29,25-34,Independent,Approve,College degree,White,Agree,50,Yes,0,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Male,80,65+,Not Strong Republican,Approve,High school,White,Disagree,,Yes,90,Yes,No,Likely,Yes,No,Yes,Donald Trump
+,Male,29,25-34,Independent,Disapprove,College degree,White,Disagree,30,Yes,90,Yes,No,Unlikely,No,No,No,Darth Vader
+,Female,45,45-54,Strong Democrat,Disapprove,Graduate degree,White,Disagree,1,Yes,100,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+,Male,29,25-34,Strong Republican,Approve,Some college,White,Disagree,,Yes,,No,No,Unlikely,Yes,No,Yes,Donald Trump
+,Male,52,45-54,Independent,Approve,Graduate degree,White,Disagree,5,Yes,50,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,61,55-64,Strong Democrat,Disapprove,College degree,White,DK/REF,100,Yes,95,Yes,No,Likely,No,Yes,No,Darth Vader
+,Male,21,18-24,Independent,Disapprove,College degree,White,Disagree,0.1,Yes,5,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Male,37,35-44,Not Strong Democrat,DK/REF,College degree,Latino,Disagree,40,Yes,87,Yes,No,Likely,Yes,No,DK/REF,Donald Trump
+,Female,72,65+,Strong Republican,Approve,College degree,White,DK/REF,,Yes,,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,61,55-64,Not Strong Republican,Approve,High school,Latino,Agree,60,Yes,45,No,No,Unlikely,No,No,No,Donald Trump
+,Female,47,45-54,Not Strong Republican,Disapprove,College degree,Other,Disagree,50,Yes,80,Yes,No,Unlikely,Yes,Yes,Yes,Darth Vader
+,Male,70,65+,Not Strong Democrat,Approve,Other,White,Disagree,0.5,Yes,95,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,24,18-24,Independent,DK/REF,College degree,Black,Disagree,1,Yes,99,Yes,No,Unlikely,No,No,No,Darth Vader
+,Male,43,35-44,Strong Republican,Approve,College degree,White,Agree,0,Yes,50,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Female,76,65+,Independent,Disapprove,Some college,White,DK/REF,,Yes,75,Yes,No,Likely,No,No,No,DK/REF
+,Female,27,25-34,Not Strong Democrat,Disapprove,Other,White,Disagree,35,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+,Male,70,65+,Strong Democrat,Disapprove,Graduate degree,White,Disagree,20,Yes,95,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,24,18-24,Independent,Approve,Some college,White,Disagree,5,Yes,10,No,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,57,55-64,Not Strong Republican,Approve,College degree,Black,Disagree,30,Yes,80,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Female,69,65+,Strong Republican,Approve,Graduate degree,White,Disagree,20,Yes,10,No,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,51,45-54,Independent,DK/REF,High school,Asian,DK/REF,,Yes,,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+,Male,86,65+,Not Strong Republican,Approve,Some college,White,Agree,70,Yes,70,Yes,No,Likely,Yes,Yes,Yes,Donald Trump
+,Female,58,55-64,Independent,Approve,College degree,White,Disagree,90,Yes,90,No,Yes,Unlikely,No,Yes,No,Donald Trump
+,Female,29,25-34,Strong Republican,Approve,Graduate degree,White,Disagree,0,Yes,85,No,No,Unlikely,No,No,Yes,Donald Trump
+,Male,59,55-64,Independent,Disapprove,Some college,White,Disagree,30,Yes,90,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,50,45-54,Strong Republican,Approve,Some college,Other,Disagree,0,Yes,50,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,28,25-34,Independent,Approve,Some college,White,Agree,96,Yes,48,Yes,No,Unlikely,No,No,No,Donald Trump
+,Male,35,35-44,Independent,Disapprove,College degree,White,Disagree,,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+,Female,73,65+,Independent,Disapprove,Some college,White,Disagree,50,Yes,100,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Female,27,25-34,Independent,DK/REF,College degree,White,DK/REF,5,Yes,,Yes,No,DK/REF,No,Yes,No,DK/REF
+,Female,30,25-34,DK/REF,DK/REF,College degree,White,DK/REF,,Yes,,Yes,DK/REF,DK/REF,No,No,DK/REF,DK/REF
+,Male,56,55-64,Not Strong Republican,Disapprove,Some college,White,Disagree,,Yes,30,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,22,18-24,Not Strong Democrat,Disapprove,College degree,Latino,Disagree,70,Yes,100,Yes,No,Likely,No,No,Yes,Donald Trump
+,Male,70,65+,Strong Democrat,Disapprove,Graduate degree,DK/REF,Disagree,,Yes,100,Yes,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+,Male,20,18-24,Independent,Disapprove,College degree,Latino,Disagree,,Yes,70,Yes,No,Likely,No,Yes,Yes,Donald Trump
+,Male,72,65+,Strong Democrat,DK/REF,High school,White,DK/REF,,Yes,,Yes,DK/REF,Unlikely,No,No,Yes,Darth Vader
+,Male,24,18-24,Strong Democrat,Disapprove,Some college,White,Disagree,20,Yes,70,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Female,47,45-54,Not Strong Republican,Approve,Graduate degree,White,DK/REF,10,Yes,70,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,18,18-24,Independent,Disapprove,High school,White,Disagree,4,Yes,98,Yes,No,Likely,No,No,Yes,Darth Vader
+,Female,22,18-24,Not Strong Democrat,Disapprove,High school,Latino,Disagree,50,Yes,65,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Male,58,55-64,Strong Democrat,Disapprove,College degree,White,Disagree,40,Yes,70,Yes,No,Unlikely,No,Yes,Yes,DK/REF
+,Male,70,65+,Independent,Disapprove,College degree,DK/REF,Disagree,,Yes,95,Yes,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+,Male,50,45-54,Independent,DK/REF,Some college,Asian,Disagree,,Yes,,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+,Female,45,45-54,Independent,Approve,Some college,White,DK/REF,,Yes,,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Female,40,35-44,Independent,Disapprove,High school,White,Agree,40,Yes,40,Yes,No,Likely,No,No,Yes,Darth Vader
+,Male,43,35-44,Independent,DK/REF,College degree,Black,DK/REF,,Yes,,DK/REF,No,DK/REF,No,No,Yes,DK/REF
+,Female,20,18-24,Not Strong Democrat,Disapprove,Some college,Latino,Disagree,75,Yes,38,Yes,Yes,Likely,No,No,Yes,Darth Vader
+,Male,46,45-54,Independent,Disapprove,Graduate degree,White,Disagree,,Yes,90,Yes,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+,Male,18,18-24,Strong Democrat,Disapprove,High school,Latino,Disagree,5,Yes,99,Yes,No,DK/REF,No,Yes,DK/REF,Darth Vader
+,Male,25,25-34,Independent,Disapprove,Graduate degree,White,Disagree,50,No,50,Yes,Yes,Unlikely,Yes,Yes,No,Darth Vader
+,Female,59,55-64,Independent,Approve,Graduate degree,White,Disagree,,Yes,80,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Female,58,55-64,Not Strong Democrat,Disapprove,Graduate degree,White,Disagree,10,Yes,99,Yes,Yes,Likely,No,Yes,No,Darth Vader
+,Female,20,18-24,Not Strong Democrat,Approve,Some college,Latino,Disagree,20,Yes,60,Yes,No,Likely,No,Yes,DK/REF,DK/REF
+,Female,29,25-34,DK/REF,Disapprove,Graduate degree,White,Disagree,15,No,92,Yes,No,Unlikely,No,No,No,Donald Trump
+,Female,32,25-34,Not Strong Democrat,Disapprove,Some college,Asian,Disagree,5,Yes,95,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,53,45-54,DK/REF,DK/REF,Graduate degree,Other,DK/REF,,Yes,100,Yes,No,Unlikely,DK/REF,No,DK/REF,Donald Trump
+,Male,35,35-44,Independent,Approve,High school,Latino,Agree,50,Yes,100,Yes,Yes,Unlikely,No,No,No,Donald Trump
+,Female,25,25-34,Not Strong Republican,Approve,Some college,White,Disagree,50,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+,Female,25,25-34,Strong Democrat,Disapprove,College degree,White,Disagree,10,Yes,95,Yes,No,Unlikely,No,No,Yes,Darth Vader
+,Male,38,35-44,Strong Democrat,Disapprove,Graduate degree,Black,Disagree,,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+,Male,68,65+,Strong Democrat,Disapprove,High school,White,Agree,,Yes,100,Yes,No,Likely,Yes,No,No,Darth Vader
+,Female,26,25-34,Strong Democrat,Disapprove,Graduate degree,White,Disagree,35,Yes,75,Yes,DK/REF,Unlikely,No,Yes,No,Darth Vader
+,Female,37,35-44,Independent,Disapprove,Some college,Asian,Agree,,Yes,80,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,57,55-64,DK/REF,Disapprove,College degree,White,DK/REF,,Yes,70,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Female,38,35-44,Independent,Disapprove,Graduate degree,White,Disagree,15,Yes,100,Yes,No,Unlikely,No,Yes,No,DK/REF
+,Male,23,18-24,Independent,Disapprove,High school,White,Disagree,30,No,50,Yes,DK/REF,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,54,45-54,Independent,DK/REF,High school,Latino,Disagree,,Yes,,No,DK/REF,DK/REF,No,Yes,Yes,DK/REF
+,Female,35,35-44,Independent,Disapprove,Graduate degree,White,Disagree,5,Yes,80,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,73,65+,Strong Republican,Approve,High school,White,Disagree,,Yes,100,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,20,18-24,Independent,Disapprove,Some college,Latino,Disagree,5,Yes,80,Yes,No,Unlikely,No,Yes,Yes,Darth Vader
+,Male,63,55-64,Independent,Disapprove,High school,Latino,Agree,50,Yes,80,Yes,Yes,Likely,Yes,Yes,Yes,Darth Vader
+,Female,55,55-64,Independent,Disapprove,High school,Asian,Agree,,Yes,50,No,No,Likely,No,No,DK/REF,DK/REF
+,Male,46,45-54,Not Strong Democrat,Disapprove,College degree,White,Disagree,70,Yes,100,Yes,Yes,Unlikely,Yes,No,No,Donald Trump
+,Other,32,25-34,Not Strong Democrat,Disapprove,Graduate degree,Black,Disagree,92,Yes,90,Yes,DK/REF,Likely,No,No,Yes,Darth Vader
+93000,Male,18,18-24,Independent,Disapprove,High school,Latino,Disagree,46,Yes,64,Yes,Yes,Likely,No,Yes,Yes,Darth Vader
+34000,Female,35,35-44,Strong Democrat,Disapprove,Some college,Black,Disagree,5,Yes,100,Yes,No,Likely,No,No,Yes,Darth Vader
+,Male,45,45-54,Not Strong Democrat,Disapprove,College degree,White,Disagree,20,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+,Male,30,25-34,Not Strong Republican,Approve,Graduate degree,White,Disagree,10,Yes,80,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,19,18-24,DK/REF,Disapprove,Some college,Black,Disagree,0,No,0,Yes,Yes,Likely,No,No,No,DK/REF
+,Female,20,18-24,Independent,Approve,Some college,White,Agree,60,Yes,100,No,Yes,Unlikely,Yes,Yes,No,Donald Trump
+,Male,43,35-44,Independent,Disapprove,Some college,Other,Disagree,95,Yes,90,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+,Female,61,55-64,Not Strong Republican,Approve,College degree,White,Disagree,10,Yes,95,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Male,26,25-34,DK/REF,DK/REF,College degree,Asian,DK/REF,30,Yes,60,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+,Male,67,65+,Strong Republican,Approve,Some college,White,Disagree,5,Yes,40,No,No,Unlikely,Yes,No,No,Donald Trump
+,Female,21,18-24,Not Strong Democrat,Disapprove,Some college,White,Disagree,70,Yes,70,Yes,Yes,Unlikely,No,Yes,Yes,Darth Vader
+,Male,73,65+,Strong Republican,Disapprove,Graduate degree,White,Disagree,25,Yes,50,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Female,62,55-64,Strong Democrat,Disapprove,College degree,Black,Disagree,80,Yes,100,Yes,No,Likely,No,Yes,DK/REF,DK/REF
+,Male,56,55-64,Not Strong Democrat,Disapprove,High school,Black,Disagree,0,No,65,Yes,Yes,Likely,No,No,Yes,Darth Vader
+,Female,37,35-44,Not Strong Democrat,Disapprove,Graduate degree,White,Disagree,50,Yes,60,Yes,Yes,Unlikely,No,Yes,No,Donald Trump
+,Female,34,25-34,Not Strong Republican,DK/REF,Graduate degree,White,Disagree,22,Yes,90,Yes,No,Likely,Yes,Yes,Yes,Donald Trump
+,Female,34,25-34,Not Strong Republican,Approve,College degree,Asian,Disagree,20,Yes,30,Yes,No,Unlikely,No,No,No,Donald Trump
+,Male,18,18-24,Strong Democrat,Disapprove,Some college,Asian,Disagree,30,Yes,90,Yes,No,Unlikely,No,No,No,Darth Vader
+,Female,51,45-54,Strong Democrat,Disapprove,Some college,Black,Disagree,60,Yes,80,Yes,No,Likely,No,Yes,Yes,Darth Vader
+,Female,39,35-44,DK/REF,Disapprove,College degree,Latino,Disagree,50,Yes,50,Yes,No,DK/REF,No,Yes,No,Darth Vader
+,Female,38,35-44,Strong Republican,Approve,High school,White,Disagree,2,Yes,90,Yes,No,Likely,No,Yes,Yes,Donald Trump
+,Female,57,55-64,Strong Democrat,Disapprove,Some college,Other,Disagree,75,Yes,80,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,39,35-44,Not Strong Republican,Approve,Some college,DK/REF,DK/REF,,Yes,,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Male,99,65+,Independent,Approve,Graduate degree,Latino,DK/REF,0,Yes,90,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Female,71,65+,DK/REF,DK/REF,High school,White,DK/REF,,Yes,,DK/REF,DK/REF,DK/REF,No,No,DK/REF,DK/REF
+,Male,26,25-34,Not Strong Republican,Approve,Some college,White,Disagree,40,Yes,90,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Female,25,25-34,Independent,Disapprove,High school,White,Disagree,,Yes,20,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+,Female,35,35-44,Independent,DK/REF,Graduate degree,White,Disagree,,Yes,80,Yes,Yes,Likely,Yes,Yes,DK/REF,Donald Trump
+,Male,34,25-34,Strong Democrat,Disapprove,Graduate degree,White,Disagree,30,Yes,50,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+,Other,67,65+,Independent,Approve,Other,DK/REF,Agree,10,Yes,63,Yes,Yes,Unlikely,Yes,Yes,Yes,Donald Trump
+,Male,57,55-64,Strong Republican,Approve,College degree,White,DK/REF,50,Yes,0,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,73,65+,Independent,DK/REF,College degree,White,DK/REF,,Yes,20,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+,Male,26,25-34,Independent,Disapprove,College degree,Latino,Disagree,40,Yes,50,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,70,65+,Not Strong Democrat,Disapprove,High school,Black,Disagree,70,Yes,95,No,No,Likely,Yes,No,DK/REF,Darth Vader
+,Male,55,55-64,Not Strong Democrat,Disapprove,College degree,Asian,Disagree,40,Yes,100,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Female,43,35-44,Not Strong Democrat,Disapprove,High school,Black,Disagree,50,No,15,Yes,Yes,Likely,No,No,No,DK/REF
+,Male,68,65+,Independent,Disapprove,High school,White,Disagree,50,Yes,100,Yes,No,Unlikely,Yes,No,No,Darth Vader
+,Male,54,45-54,Strong Democrat,Disapprove,Some college,Black,Disagree,80,Yes,75,Yes,No,Likely,No,No,No,Darth Vader
+,Female,21,18-24,Strong Democrat,Disapprove,Some college,White,Disagree,40,No,60,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,55,55-64,Independent,Approve,Graduate degree,White,Disagree,10,Yes,50,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,18,18-24,Not Strong Democrat,DK/REF,High school,White,DK/REF,67,Yes,83,Yes,No,Likely,No,Yes,Yes,Donald Trump
+,Male,69,65+,Strong Democrat,Disapprove,High school,Black,Disagree,10,Yes,95,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+,Male,39,35-44,Not Strong Republican,Approve,Graduate degree,White,Disagree,,Yes,95,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,55,55-64,Independent,Approve,Graduate degree,White,Disagree,,Yes,99,No,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,61,55-64,Not Strong Republican,Approve,Some college,White,Disagree,25,Yes,75,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,24,18-24,Strong Republican,Approve,Graduate degree,White,Disagree,5,Yes,98,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,24,18-24,Independent,Disapprove,Graduate degree,White,Disagree,1,Yes,99,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Male,22,18-24,Strong Republican,Approve,Some college,White,DK/REF,,Yes,5,Yes,No,Likely,Yes,Yes,Yes,Donald Trump
+,Female,56,55-64,Strong Democrat,Disapprove,College degree,Asian,Disagree,20,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+,Female,30,25-34,Independent,Disapprove,College degree,White,Disagree,75,Yes,80,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+,Male,46,45-54,Strong Republican,Approve,High school,White,Agree,50,Yes,5,No,No,Likely,No,Yes,Yes,Donald Trump
+,Female,73,65+,Strong Republican,Approve,Graduate degree,White,Disagree,5,Yes,50,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Female,31,25-34,Independent,Disapprove,Graduate degree,White,Disagree,7,Yes,90,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+,Male,28,25-34,Not Strong Democrat,Disapprove,College degree,White,Disagree,10,Yes,90,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Female,51,45-54,DK/REF,Disapprove,High school,Black,Disagree,,Yes,,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+,Female,60,55-64,Not Strong Republican,Disapprove,College degree,Other,Disagree,,Yes,,Yes,No,Likely,No,Yes,No,Darth Vader
+,Male,25,25-34,Independent,Disapprove,Some college,Latino,DK/REF,10,Yes,100,Yes,No,Unlikely,No,No,No,DK/REF
+,Female,55,55-64,Independent,Disapprove,College degree,White,Disagree,5,Yes,85,Yes,No,Unlikely,No,No,No,Donald Trump
+,Female,42,35-44,Independent,Disapprove,College degree,White,Disagree,60,Yes,80,Yes,No,Likely,No,Yes,Yes,Darth Vader
+,Male,57,55-64,Not Strong Democrat,Disapprove,Some college,White,Disagree,100,Yes,100,Yes,No,Likely,No,No,No,DK/REF
+,Female,61,55-64,Independent,Disapprove,Some college,White,Disagree,2,Yes,98,Yes,No,Likely,Yes,Yes,No,Darth Vader
+,Female,51,45-54,Not Strong Democrat,DK/REF,Graduate degree,White,Disagree,25,Yes,75,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+,Male,47,45-54,DK/REF,Disapprove,High school,White,Disagree,,Yes,70,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Male,69,65+,Independent,DK/REF,Other,DK/REF,DK/REF,0,Yes,100,No,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,42,35-44,Independent,Approve,College degree,Latino,Disagree,5,Yes,50,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,49,45-54,Independent,DK/REF,Graduate degree,White,Disagree,5,Yes,25,No,No,Unlikely,Yes,No,No,DK/REF
+,Other,27,25-34,Independent,Disapprove,Some college,White,Disagree,25,Yes,5,Yes,No,Unlikely,Yes,Yes,Yes,Darth Vader
+,Female,73,65+,Independent,Disapprove,Graduate degree,White,Disagree,10,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Female,70,65+,Strong Republican,Approve,College degree,White,DK/REF,,Yes,,Yes,No,DK/REF,Yes,Yes,No,DK/REF
+,Male,19,18-24,Independent,DK/REF,High school,Black,DK/REF,,Yes,,Yes,DK/REF,DK/REF,No,No,DK/REF,DK/REF
+,Male,63,55-64,Strong Republican,Approve,High school,White,Disagree,,Yes,40,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Male,29,25-34,Not Strong Republican,DK/REF,Some college,White,DK/REF,,Yes,100,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Male,67,65+,DK/REF,Disapprove,College degree,Black,Disagree,75,Yes,75,Yes,Yes,Unlikely,No,No,No,DK/REF
+,Male,38,35-44,DK/REF,Approve,Other,White,DK/REF,2,Yes,0,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,41,35-44,Independent,Disapprove,College degree,White,Disagree,,Yes,100,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Male,46,45-54,Independent,Disapprove,Some college,White,Disagree,25,Yes,95,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Female,73,65+,Strong Republican,Approve,Graduate degree,White,Disagree,1,Yes,5,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Female,31,25-34,Strong Republican,Approve,Other,White,DK/REF,90,Yes,80,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Male,26,25-34,Strong Republican,Approve,College degree,White,Agree,85,Yes,20,Yes,No,Likely,Yes,No,No,Donald Trump
+,Male,46,45-54,Independent,Disapprove,Some college,White,Disagree,40,Yes,90,Yes,No,Unlikely,No,No,No,DK/REF
+,Female,50,45-54,Independent,Disapprove,Other,DK/REF,Agree,50,Yes,100,Yes,No,Unlikely,No,No,Yes,Darth Vader
+,Female,51,45-54,Strong Republican,Approve,Some college,White,DK/REF,50,Yes,100,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Male,32,25-34,Independent,Approve,High school,Latino,Agree,85,Yes,95,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Female,54,45-54,Independent,Disapprove,Graduate degree,White,Disagree,30,Yes,95,Yes,No,Unlikely,No,Yes,DK/REF,DK/REF
+,Female,66,65+,Strong Democrat,Disapprove,Graduate degree,White,DK/REF,,Yes,100,Yes,No,DK/REF,No,No,No,Darth Vader
+,Female,81,65+,Independent,Approve,College degree,White,Disagree,,Yes,100,Yes,Yes,Unlikely,Yes,Yes,No,Donald Trump
+,Male,74,65+,Independent,Approve,College degree,White,Disagree,2,Yes,0,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,99,65+,Independent,DK/REF,High school,Black,DK/REF,,Yes,80,Yes,DK/REF,DK/REF,No,No,DK/REF,DK/REF
+,Male,41,35-44,Not Strong Democrat,Disapprove,Graduate degree,White,Disagree,20,Yes,85,Yes,No,Unlikely,No,No,No,Donald Trump
+,Male,48,45-54,Independent,Approve,Graduate degree,White,Disagree,50,Yes,75,Yes,Yes,Likely,Yes,No,No,Donald Trump
+,Male,23,18-24,Strong Democrat,Disapprove,Graduate degree,Latino,Disagree,65,Yes,70,Yes,Yes,Likely,Yes,No,No,Darth Vader
+,Female,37,35-44,Strong Democrat,Disapprove,College degree,Other,Disagree,70,No,50,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,60,55-64,Strong Republican,Approve,Graduate degree,Other,DK/REF,,Yes,5,Yes,No,Likely,No,No,No,Donald Trump
+,Male,82,65+,Strong Democrat,Disapprove,Graduate degree,White,DK/REF,70,Yes,85,Yes,No,Unlikely,No,No,No,Darth Vader
+,Female,36,35-44,Strong Democrat,Disapprove,College degree,DK/REF,Disagree,50,Yes,100,Yes,No,DK/REF,No,Yes,Yes,Darth Vader
+,Male,37,35-44,Strong Democrat,Disapprove,Some college,Latino,Disagree,15,Yes,75,Yes,No,Unlikely,No,No,Yes,Darth Vader
+,Female,60,55-64,Independent,Approve,Some college,White,Agree,50,Yes,75,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Female,27,25-34,Not Strong Democrat,Disapprove,High school,Latino,Disagree,70,Yes,85,Yes,Yes,Likely,No,No,No,Darth Vader
+,Male,43,35-44,Independent,Approve,Some college,White,Disagree,0,Yes,2,Yes,No,Likely,Yes,Yes,Yes,Darth Vader
+,Female,47,45-54,Independent,DK/REF,Some college,Latino,DK/REF,50,Yes,75,Yes,No,Likely,No,No,DK/REF,Donald Trump
+,Female,26,25-34,Strong Republican,Approve,College degree,White,Disagree,5,Yes,100,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Female,18,18-24,Not Strong Democrat,Disapprove,Some college,White,Disagree,30,Yes,50,Yes,No,Likely,No,No,No,Donald Trump
+,Female,31,25-34,Strong Democrat,Approve,College degree,White,Agree,60,Yes,100,Yes,No,Likely,Yes,Yes,Yes,Donald Trump
+,Male,29,25-34,Independent,DK/REF,Some college,White,DK/REF,40,Yes,60,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,40,35-44,Independent,Disapprove,College degree,White,Disagree,20,Yes,80,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Male,33,25-34,Independent,Disapprove,Graduate degree,White,Disagree,30,Yes,90,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,28,25-34,Independent,DK/REF,Some college,Black,Disagree,50,Yes,100,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+,Male,52,45-54,Strong Democrat,Disapprove,High school,Black,Disagree,,Yes,50,Yes,No,Likely,Yes,Yes,Yes,Darth Vader
+,Male,53,45-54,Strong Republican,Approve,Graduate degree,DK/REF,DK/REF,98,Yes,10,No,No,Likely,No,No,No,Donald Trump
+,Female,57,55-64,Strong Republican,Disapprove,High school,Black,Disagree,,Yes,,Yes,Yes,Likely,No,No,DK/REF,Darth Vader
+,Female,60,55-64,Strong Republican,Approve,College degree,White,Disagree,50,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,26,25-34,Independent,DK/REF,Graduate degree,Asian,Agree,,Yes,,No,No,Unlikely,No,No,Yes,Donald Trump
+,DK/REF,38,35-44,DK/REF,Disapprove,Some college,DK/REF,Disagree,,DK/REF,,Yes,Yes,DK/REF,Yes,Yes,DK/REF,Darth Vader
+,Male,59,55-64,Strong Democrat,Approve,College degree,Latino,DK/REF,80,Yes,95,Yes,No,Unlikely,Yes,No,Yes,Donald Trump
+,Female,63,55-64,Strong Democrat,Disapprove,Graduate degree,White,Disagree,25,Yes,100,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Female,48,45-54,Strong Republican,Approve,Graduate degree,White,Disagree,1,Yes,80,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Female,58,55-64,Strong Republican,Approve,Graduate degree,Latino,DK/REF,,Yes,20,No,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,30,25-34,Not Strong Democrat,Disapprove,High school,Latino,Disagree,,Yes,90,Yes,No,Unlikely,No,No,Yes,Darth Vader
+,Male,32,25-34,Independent,Disapprove,Graduate degree,White,Disagree,,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+,Female,66,65+,Not Strong Democrat,Approve,High school,White,Agree,75,Yes,99,Yes,Yes,Unlikely,No,No,No,Donald Trump
+,Male,59,55-64,Not Strong Republican,Approve,Some college,White,Disagree,5,Yes,98,Yes,No,Likely,Yes,No,No,Donald Trump
+,Female,59,55-64,Independent,DK/REF,High school,White,DK/REF,50,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Female,74,65+,DK/REF,DK/REF,High school,White,DK/REF,,Yes,,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+,Male,40,35-44,Strong Republican,Approve,Some college,White,DK/REF,,Yes,90,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Male,39,35-44,Strong Democrat,Disapprove,Some college,Black,Disagree,,Yes,,No,No,Likely,DK/REF,Yes,DK/REF,DK/REF
+,Female,72,65+,DK/REF,Approve,Some college,White,DK/REF,,Yes,,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+,Female,43,35-44,Strong Democrat,Disapprove,Graduate degree,White,Disagree,35,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+,Other,35,35-44,DK/REF,Approve,Graduate degree,Other,DK/REF,50,Yes,2,DK/REF,No,Unlikely,Yes,No,DK/REF,DK/REF
+,Male,69,65+,Independent,Disapprove,High school,Latino,Disagree,,Yes,50,No,Yes,Likely,No,Yes,DK/REF,Donald Trump
+,Female,26,25-34,DK/REF,DK/REF,Graduate degree,White,DK/REF,,Yes,,Yes,No,DK/REF,No,No,DK/REF,Donald Trump
+,Male,49,45-54,Independent,Approve,College degree,White,Disagree,20,Yes,5,No,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,54,45-54,Not Strong Democrat,Disapprove,College degree,Black,Disagree,40,Yes,90,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,51,45-54,Independent,DK/REF,College degree,Asian,DK/REF,60,Yes,80,Yes,DK/REF,DK/REF,Yes,Yes,Yes,Darth Vader
+,Female,42,35-44,DK/REF,Disapprove,Some college,White,Disagree,,No,,Yes,Yes,Likely,Yes,Yes,No,Darth Vader
+,Female,35,35-44,DK/REF,DK/REF,Graduate degree,White,DK/REF,,Yes,,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Female,25,25-34,DK/REF,DK/REF,Graduate degree,Black,DK/REF,,DK/REF,,Yes,Yes,DK/REF,No,No,No,DK/REF
+,Male,50,45-54,Independent,Disapprove,Graduate degree,Asian,Agree,70,Yes,80,Yes,No,Likely,No,Yes,Yes,Darth Vader
+,Female,24,18-24,Not Strong Democrat,Disapprove,High school,Black,Agree,30,Yes,50,Yes,No,Likely,No,Yes,No,Darth Vader
+,Male,33,25-34,Strong Republican,Approve,Some college,White,Agree,80,Yes,100,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,30,25-34,Independent,Disapprove,College degree,White,Disagree,5,Yes,60,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,76,65+,Independent,DK/REF,Graduate degree,White,DK/REF,,Yes,90,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,47,45-54,Independent,Approve,College degree,White,DK/REF,,Yes,,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+,Female,29,25-34,Independent,DK/REF,Some college,Black,Disagree,45,Yes,57,Yes,Yes,Likely,No,No,Yes,Darth Vader
+,Male,60,55-64,Independent,Approve,Some college,White,DK/REF,50,Yes,20,Yes,No,Likely,Yes,Yes,No,Donald Trump
+,Male,62,55-64,Strong Democrat,Disapprove,Graduate degree,White,Disagree,,Yes,100,Yes,No,Unlikely,Yes,No,No,DK/REF
+,Female,52,45-54,DK/REF,Disapprove,College degree,White,DK/REF,,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+,Male,27,25-34,Not Strong Democrat,Disapprove,High school,Black,Disagree,100,Yes,100,Yes,No,Likely,No,No,Yes,Darth Vader
+,Male,34,25-34,Independent,Approve,College degree,DK/REF,Disagree,0.01,Yes,5,DK/REF,No,Unlikely,No,Yes,Yes,DK/REF
+,Male,50,45-54,Not Strong Republican,Approve,High school,White,Disagree,70,Yes,5,No,No,Likely,Yes,No,Yes,Donald Trump
+,Female,28,25-34,Independent,Disapprove,Graduate degree,White,DK/REF,60,Yes,30,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Male,40,35-44,Not Strong Democrat,Disapprove,Some college,Latino,Disagree,,Yes,70,No,No,Likely,No,No,Yes,Darth Vader
+,Male,73,65+,Not Strong Republican,Approve,Some college,White,DK/REF,,Yes,50,No,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,25,25-34,Strong Democrat,Disapprove,College degree,White,Disagree,10,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+,Female,37,35-44,Not Strong Democrat,Disapprove,College degree,Asian,Disagree,100,Yes,100,Yes,No,Likely,Yes,Yes,No,Darth Vader
+,Male,60,55-64,DK/REF,DK/REF,Graduate degree,Black,DK/REF,,Yes,100,Yes,DK/REF,Unlikely,Yes,Yes,DK/REF,DK/REF
+,Female,29,25-34,Not Strong Democrat,Disapprove,High school,White,Disagree,70,Yes,100,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+,Male,41,35-44,Not Strong Democrat,Disapprove,College degree,Black,Disagree,65,Yes,62,Yes,Yes,Likely,No,No,DK/REF,Darth Vader
+,Male,32,25-34,Independent,Disapprove,Graduate degree,White,Disagree,20,Yes,40,Yes,No,Unlikely,Yes,Yes,Yes,Darth Vader
+,Male,36,35-44,DK/REF,DK/REF,Some college,DK/REF,Disagree,1,Yes,90,DK/REF,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Male,65,65+,Strong Democrat,Disapprove,Some college,Black,Disagree,50,Yes,100,Yes,No,Likely,Yes,Yes,Yes,Darth Vader
+,Female,42,35-44,Strong Democrat,Disapprove,College degree,DK/REF,DK/REF,,Yes,,Yes,DK/REF,Likely,No,Yes,No,DK/REF
+,Female,38,35-44,Independent,Disapprove,Graduate degree,White,Disagree,20,Yes,100,Yes,No,Unlikely,No,Yes,DK/REF,Darth Vader
+,Male,27,25-34,Independent,Disapprove,Some college,Latino,DK/REF,16,Yes,35,Yes,No,Likely,Yes,No,No,Darth Vader
+,Male,87,65+,Strong Republican,Approve,Some college,White,Disagree,,Yes,70,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Female,62,55-64,Strong Democrat,Disapprove,College degree,White,Disagree,70,Yes,100,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,35,35-44,Strong Republican,Approve,College degree,White,Disagree,50,Yes,80,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,65,65+,Independent,Disapprove,High school,Latino,Disagree,,Yes,15,Yes,Yes,Likely,Yes,No,Yes,Darth Vader
+,Male,60,55-64,Strong Democrat,Disapprove,College degree,Other,Disagree,75,Yes,100,Yes,No,Unlikely,Yes,No,Yes,DK/REF
+,Female,70,65+,Independent,Approve,Graduate degree,DK/REF,DK/REF,,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,80,65+,Not Strong Democrat,Approve,College degree,White,Disagree,,Yes,,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Female,18,18-24,Strong Republican,Approve,High school,White,Disagree,50,Yes,100,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,71,65+,Strong Republican,Approve,Some college,White,Disagree,0,No,75,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,33,25-34,DK/REF,Approve,College degree,DK/REF,DK/REF,,Yes,30,No,Yes,DK/REF,Yes,Yes,Yes,Donald Trump
+,Female,56,55-64,Strong Democrat,Disapprove,High school,White,Disagree,20,Yes,99,Yes,No,Unlikely,Yes,No,No,Darth Vader
+,Female,40,35-44,Independent,Disapprove,Some college,White,Disagree,80,Yes,95,Yes,No,Likely,No,No,No,Darth Vader
+,Female,79,65+,Not Strong Democrat,DK/REF,Graduate degree,White,DK/REF,,Yes,90,Yes,No,Unlikely,No,DK/REF,DK/REF,Darth Vader
+,Female,26,25-34,Independent,Disapprove,Graduate degree,Asian,Disagree,50,Yes,80,Yes,No,Unlikely,No,No,DK/REF,DK/REF
+,Female,39,35-44,Strong Democrat,Disapprove,College degree,White,Disagree,20,Yes,75,Yes,Yes,Unlikely,No,Yes,No,Donald Trump
+,Female,50,45-54,Strong Democrat,Disapprove,Some college,Black,Disagree,5,Yes,85,Yes,No,Unlikely,No,Yes,Yes,Darth Vader
+,Female,31,25-34,Independent,Disapprove,College degree,White,Disagree,80,Yes,100,Yes,No,Likely,Yes,No,No,Darth Vader
+,Male,51,45-54,Independent,Disapprove,Graduate degree,Black,Disagree,95,Yes,70,Yes,Yes,Likely,Yes,Yes,No,Darth Vader
+,Female,47,45-54,Independent,Disapprove,High school,White,DK/REF,,Yes,,Yes,No,Likely,Yes,No,Yes,Darth Vader
+,Male,41,35-44,Independent,DK/REF,College degree,White,Disagree,64,Yes,70,No,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Female,42,35-44,DK/REF,DK/REF,Graduate degree,Asian,DK/REF,,Yes,,DK/REF,DK/REF,DK/REF,No,Yes,DK/REF,DK/REF
+,Female,55,55-64,Independent,Disapprove,Some college,White,Disagree,,Yes,,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Female,20,18-24,Independent,Disapprove,High school,Latino,Disagree,49,Yes,85,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,60,55-64,Not Strong Democrat,Disapprove,High school,White,Disagree,30,Yes,100,Yes,No,Unlikely,Yes,Yes,DK/REF,Darth Vader
+,Male,59,55-64,DK/REF,Disapprove,Some college,White,Disagree,30,Yes,80,Yes,No,Unlikely,No,No,DK/REF,Darth Vader
+,Male,19,18-24,Not Strong Democrat,Disapprove,Some college,Latino,Disagree,5,Yes,60,Yes,No,Unlikely,Yes,No,No,Darth Vader
+,Male,18,18-24,Not Strong Democrat,Disapprove,High school,White,Disagree,7,Yes,93,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Male,51,45-54,Independent,Approve,Some college,Latino,Disagree,,Yes,,DK/REF,No,DK/REF,Yes,Yes,No,DK/REF
+,Male,18,18-24,Independent,Disapprove,Some college,Latino,Disagree,75,Yes,100,Yes,No,Likely,No,No,Yes,Darth Vader
+,Female,74,65+,Strong Republican,Approve,College degree,White,Agree,,Yes,,Yes,No,DK/REF,No,No,No,Donald Trump
+,Male,21,18-24,Independent,Disapprove,Some college,Black,Disagree,50,Yes,90,Yes,No,DK/REF,No,No,No,Darth Vader
+,Male,42,35-44,Independent,Disapprove,College degree,White,Disagree,20,Yes,100,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,55,55-64,Strong Democrat,Disapprove,College degree,Black,Disagree,,Yes,2,Yes,Yes,DK/REF,Yes,No,No,DK/REF
+,Female,64,55-64,Independent,Disapprove,Graduate degree,DK/REF,Disagree,,Yes,,Yes,No,DK/REF,Yes,Yes,DK/REF,DK/REF
+,Male,38,35-44,Independent,Approve,College degree,White,DK/REF,,Yes,,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Male,65,65+,Not Strong Republican,Approve,Graduate degree,Asian,Disagree,5,Yes,95,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,37,35-44,Strong Republican,Approve,College degree,White,Disagree,1,Yes,75,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Male,65,65+,Strong Democrat,Disapprove,High school,Black,Disagree,50,Yes,75,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+,Male,60,55-64,Independent,Disapprove,Some college,White,Disagree,40,No,50,Yes,No,Unlikely,Yes,No,Yes,DK/REF
+,Female,22,18-24,Strong Republican,Approve,Graduate degree,Asian,Disagree,30,Yes,20,No,No,Unlikely,Yes,No,No,Donald Trump
+,Female,35,35-44,Independent,Disapprove,Other,Black,Disagree,75,Yes,95,Yes,DK/REF,Unlikely,No,Yes,No,Donald Trump
+,Female,66,65+,Independent,Approve,Some college,DK/REF,DK/REF,,Yes,20,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Female,62,55-64,Independent,Disapprove,Graduate degree,White,Disagree,,No,75,Yes,No,Unlikely,No,DK/REF,DK/REF,Darth Vader
+,Female,40,35-44,Strong Republican,DK/REF,Some college,White,DK/REF,,Yes,50,Yes,No,Unlikely,No,Yes,Yes,Darth Vader
+,Male,90,65+,Strong Democrat,Disapprove,Some college,White,Disagree,,Yes,90,Yes,No,Unlikely,Yes,No,DK/REF,DK/REF
+,Male,54,45-54,Strong Republican,Approve,College degree,White,Disagree,15,Yes,98,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Female,59,55-64,Strong Democrat,Disapprove,High school,Black,Disagree,40,Yes,100,Yes,No,Likely,Yes,Yes,DK/REF,Darth Vader
+,Female,51,45-54,Strong Democrat,Disapprove,Graduate degree,Asian,Disagree,,Yes,100,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Male,68,65+,Not Strong Republican,Approve,Some college,White,Disagree,10,Yes,0,No,No,Likely,No,No,No,Donald Trump
+,Male,70,65+,Strong Democrat,Disapprove,High school,White,Agree,40,Yes,,Yes,Yes,Unlikely,Yes,No,No,Darth Vader
+,Male,54,45-54,Strong Democrat,Disapprove,College degree,Black,Disagree,75,Yes,100,Yes,No,Unlikely,Yes,Yes,Yes,Darth Vader
+,Female,45,45-54,Independent,DK/REF,High school,White,Agree,,Yes,80,Yes,No,Likely,Yes,No,No,DK/REF
+,Male,53,45-54,Strong Democrat,Approve,High school,White,Agree,70,Yes,70,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+,Male,67,65+,DK/REF,DK/REF,College degree,White,DK/REF,,Yes,,Yes,No,DK/REF,Yes,Yes,DK/REF,Darth Vader
+,Female,49,45-54,Independent,Disapprove,College degree,White,DK/REF,,Yes,,Yes,DK/REF,Unlikely,Yes,Yes,DK/REF,DK/REF
+,Male,19,18-24,Independent,Disapprove,College degree,White,Disagree,15,Yes,60,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Female,30,25-34,Independent,Disapprove,Some college,Latino,Disagree,70,Yes,80,Yes,Yes,Unlikely,No,Yes,No,DK/REF
+,Male,21,18-24,Independent,Disapprove,Some college,White,Disagree,30,Yes,70,Yes,No,Unlikely,No,No,No,Donald Trump
+,Female,41,35-44,DK/REF,Approve,High school,White,Disagree,100,Yes,100,Yes,No,Unlikely,Yes,No,Yes,Donald Trump
+,Male,24,18-24,Not Strong Republican,Disapprove,College degree,White,Disagree,10,Yes,100,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Male,61,55-64,Independent,Approve,High school,White,Agree,0,Yes,50,Yes,No,Likely,No,Yes,Yes,Donald Trump
+,Female,54,45-54,Strong Democrat,Disapprove,Some college,White,Disagree,50,Yes,100,Yes,No,Unlikely,No,Yes,Yes,Darth Vader
+,Male,78,65+,Strong Democrat,Disapprove,Some college,White,Disagree,25,Yes,100,Yes,No,Unlikely,Yes,No,No,Darth Vader
+,Female,37,35-44,DK/REF,Disapprove,Graduate degree,Asian,Disagree,60,Yes,100,No,No,Unlikely,No,No,DK/REF,Donald Trump
+,Female,22,18-24,Independent,DK/REF,College degree,Latino,DK/REF,,Yes,,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+,Female,23,18-24,Strong Democrat,Disapprove,College degree,White,Disagree,20,Yes,90,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,19,18-24,Independent,Disapprove,High school,Black,Disagree,35,Yes,100,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Female,64,55-64,Strong Republican,Approve,High school,White,DK/REF,50,Yes,80,Yes,Yes,Likely,No,Yes,DK/REF,Donald Trump
+,Female,20,18-24,Independent,Approve,Graduate degree,Black,Disagree,50,Yes,99,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Female,54,45-54,Independent,Approve,Graduate degree,White,Disagree,0,Yes,25,Yes,No,Unlikely,No,Yes,Yes,Donald Trump
+,Male,66,65+,Strong Democrat,Approve,College degree,DK/REF,DK/REF,,Yes,10,No,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Female,30,25-34,Independent,Disapprove,Graduate degree,Black,Disagree,90,Yes,85,Yes,Yes,Likely,No,Yes,No,Darth Vader
+,Female,70,65+,Independent,Disapprove,College degree,Black,Disagree,20,Yes,100,Yes,No,Likely,No,Yes,DK/REF,DK/REF
+,Female,43,35-44,Not Strong Democrat,Disapprove,Some college,Asian,Disagree,80,Yes,100,Yes,No,Likely,No,No,DK/REF,Darth Vader
+,Male,59,55-64,Not Strong Republican,Disapprove,College degree,White,Disagree,20,Yes,90,Yes,No,Unlikely,Yes,Yes,No,DK/REF
+,Male,37,35-44,Strong Republican,Approve,College degree,Latino,Disagree,2,Yes,95,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Female,37,35-44,Independent,Disapprove,Graduate degree,White,Disagree,20,Yes,95,Yes,No,Unlikely,No,Yes,No,Donald Trump
+,Female,79,65+,Strong Democrat,Disapprove,Some college,Black,Disagree,,Yes,10,Yes,Yes,Likely,No,Yes,DK/REF,Darth Vader
+,Male,49,45-54,Independent,Disapprove,Some college,Black,Disagree,100,Yes,100,Yes,No,Likely,No,Yes,Yes,Darth Vader
+,Male,46,45-54,Strong Democrat,Disapprove,Graduate degree,White,Disagree,66,Yes,95,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Female,33,25-34,DK/REF,DK/REF,Some college,White,DK/REF,,Yes,,Yes,No,DK/REF,No,DK/REF,DK/REF,Donald Trump
+,Female,34,25-34,Strong Democrat,Disapprove,College degree,Black,Disagree,75,Yes,75,Yes,No,Likely,No,Yes,No,Darth Vader
+,Male,74,65+,Strong Republican,Approve,Graduate degree,White,Disagree,0,Yes,100,Yes,No,Unlikely,No,DK/REF,DK/REF,Donald Trump
+,Other,57,55-64,Strong Republican,Approve,College degree,Latino,Disagree,1,Yes,10,No,No,Unlikely,No,DK/REF,Yes,Darth Vader
+,Female,55,55-64,Strong Democrat,Disapprove,Graduate degree,White,Disagree,80,Yes,100,Yes,Yes,Unlikely,No,Yes,No,DK/REF
+,Male,56,55-64,Independent,Disapprove,High school,Asian,DK/REF,,Yes,99,Yes,No,Unlikely,No,DK/REF,DK/REF,DK/REF
+,Male,33,25-34,Independent,Disapprove,College degree,Asian,Disagree,50,Yes,25,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Female,28,25-34,Independent,Disapprove,High school,Latino,Disagree,58,Yes,48,Yes,Yes,Unlikely,No,No,No,Darth Vader
+,Female,53,45-54,Independent,Disapprove,Graduate degree,Asian,Disagree,50,Yes,70,Yes,Yes,Unlikely,No,Yes,Yes,Darth Vader
+,Female,40,35-44,Strong Democrat,Disapprove,College degree,Latino,Disagree,60,Yes,90,Yes,No,Likely,No,Yes,No,DK/REF
+,Female,56,55-64,Strong Republican,Approve,High school,White,DK/REF,,Yes,95,Yes,Yes,Unlikely,No,No,Yes,Donald Trump
+,Female,36,35-44,Independent,Disapprove,College degree,Latino,Disagree,80,Yes,65,Yes,Yes,Likely,No,Yes,No,DK/REF
+,Female,25,25-34,Independent,DK/REF,Some college,White,DK/REF,50,Yes,50,Yes,No,Unlikely,No,No,No,Darth Vader
+,Female,60,55-64,Strong Democrat,Disapprove,Graduate degree,Black,Disagree,99,Yes,100,Yes,No,DK/REF,No,Yes,DK/REF,DK/REF
+,Female,43,35-44,Strong Democrat,Disapprove,College degree,Latino,Disagree,10,Yes,90,Yes,No,Likely,No,Yes,No,Darth Vader
+,Male,40,35-44,Independent,Disapprove,Some college,White,Disagree,10,Yes,95,Yes,No,Unlikely,Yes,No,DK/REF,Donald Trump
+,Male,38,35-44,Independent,Approve,College degree,White,Disagree,5,Yes,40,No,No,Likely,Yes,No,Yes,Donald Trump
+,Male,23,18-24,Independent,Approve,College degree,Black,Disagree,5,Yes,100,Yes,No,DK/REF,No,No,No,Donald Trump
+,Female,48,45-54,Strong Republican,Approve,College degree,White,DK/REF,60,Yes,100,Yes,No,Likely,No,No,Yes,Donald Trump
+,Male,52,45-54,Independent,Approve,Graduate degree,White,Disagree,,Yes,95,Yes,No,DK/REF,No,Yes,DK/REF,Donald Trump
+,Female,60,55-64,Strong Republican,Approve,Graduate degree,White,DK/REF,,Yes,,No,No,Unlikely,DK/REF,Yes,DK/REF,Donald Trump
+,Male,40,35-44,DK/REF,DK/REF,Some college,White,DK/REF,,Yes,,Yes,Yes,Likely,Yes,Yes,DK/REF,Darth Vader
+,Male,59,55-64,Independent,Approve,High school,White,Disagree,70,Yes,100,No,No,DK/REF,Yes,No,Yes,Donald Trump
+,Female,75,65+,Independent,Approve,Graduate degree,White,Disagree,,Yes,,Yes,No,Unlikely,No,No,No,Donald Trump
+,Male,68,65+,Independent,Approve,College degree,Asian,Disagree,,Yes,,Yes,No,Unlikely,Yes,Yes,DK/REF,Donald Trump
+,Other,30,25-34,DK/REF,Approve,Graduate degree,DK/REF,DK/REF,,Yes,,DK/REF,No,DK/REF,Yes,Yes,DK/REF,DK/REF
+,Female,48,45-54,Strong Democrat,Disapprove,College degree,Latino,Disagree,100,Yes,100,Yes,No,Unlikely,No,No,No,Darth Vader
+,Male,32,25-34,DK/REF,DK/REF,Graduate degree,Asian,DK/REF,,Yes,,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Female,21,18-24,Not Strong Republican,Disapprove,Graduate degree,White,Disagree,3,Yes,99,Yes,No,Unlikely,Yes,No,No,Donald Trump
+,Female,19,18-24,Independent,DK/REF,Some college,White,DK/REF,20,Yes,20,DK/REF,No,Unlikely,Yes,Yes,DK/REF,DK/REF
+,Other,33,25-34,Independent,Disapprove,Graduate degree,Other,Disagree,100,Yes,100,Yes,Yes,Likely,No,Yes,Yes,Darth Vader
+,Male,30,25-34,Independent,Disapprove,College degree,White,Disagree,,Yes,100,Yes,No,Unlikely,Yes,No,Yes,Darth Vader
+,Male,20,18-24,Independent,Disapprove,High school,White,Agree,5,Yes,90,Yes,No,Unlikely,No,No,No,Donald Trump
+,Female,41,35-44,Strong Republican,Approve,Other,White,Disagree,30,Yes,30,No,No,Likely,Yes,Yes,DK/REF,Donald Trump
+,Male,82,65+,Independent,Disapprove,High school,Latino,Disagree,,No,82,Yes,No,Likely,Yes,No,No,Darth Vader
+,Male,28,25-34,Not Strong Democrat,Disapprove,Some college,Latino,Disagree,80,Yes,60,Yes,No,Likely,Yes,No,No,DK/REF
+,Male,37,35-44,Not Strong Republican,DK/REF,Graduate degree,White,Disagree,5,Yes,60,No,No,Unlikely,No,Yes,DK/REF,DK/REF
+,Male,62,55-64,Independent,Disapprove,High school,White,Disagree,28,Yes,72,Yes,Yes,Likely,Yes,No,No,Darth Vader
+,Male,55,55-64,Not Strong Republican,Approve,High school,White,Disagree,30,Yes,100,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,27,25-34,Not Strong Republican,Disapprove,Some college,White,Disagree,80,Yes,70,No,No,Unlikely,No,Yes,No,Darth Vader
+,Male,21,18-24,Not Strong Democrat,Disapprove,High school,Black,Disagree,70,Yes,70,Yes,No,Unlikely,No,No,Yes,Donald Trump
+,Male,57,55-64,Independent,Approve,Some college,Asian,Disagree,60,Yes,100,Yes,No,Unlikely,Yes,No,Yes,Donald Trump
+,Male,38,35-44,Independent,Disapprove,Graduate degree,White,Disagree,5,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,40,35-44,Independent,Disapprove,Some college,Latino,Disagree,10,Yes,100,DK/REF,No,Unlikely,Yes,No,Yes,Donald Trump
+,Male,33,25-34,Independent,Disapprove,High school,Latino,Disagree,80,Yes,100,Yes,No,Unlikely,No,No,No,Donald Trump
+,Female,59,55-64,Strong Democrat,Disapprove,College degree,Black,Disagree,65,Yes,75,Yes,No,Likely,No,No,Yes,DK/REF
+,Female,42,35-44,Independent,Approve,High school,Other,Disagree,,Yes,100,Yes,Yes,Likely,No,No,No,Donald Trump
+,Male,37,35-44,Independent,Approve,High school,White,DK/REF,100,Yes,100,Yes,No,DK/REF,Yes,No,No,Donald Trump
+,Male,30,25-34,Independent,Disapprove,Graduate degree,Black,Disagree,2,Yes,,Yes,No,Likely,No,No,DK/REF,Darth Vader
+,Male,45,45-54,Not Strong Republican,Approve,College degree,Latino,DK/REF,,Yes,20,No,No,Unlikely,Yes,No,No,Donald Trump
+,Female,62,55-64,Independent,Disapprove,Graduate degree,White,Disagree,1,Yes,100,Yes,No,Unlikely,No,Yes,No,DK/REF
+,Female,68,65+,Independent,Disapprove,Some college,White,Disagree,30,Yes,95,Yes,No,Unlikely,Yes,Yes,No,Darth Vader
+,Male,70,65+,Strong Republican,Approve,Graduate degree,White,Disagree,1,Yes,90,Yes,No,Unlikely,No,Yes,DK/REF,Donald Trump
+,Male,67,65+,Strong Democrat,Disapprove,High school,Black,DK/REF,,Yes,10,Yes,No,Unlikely,No,No,No,Donald Trump
+,Female,78,65+,Strong Democrat,Disapprove,Some college,Black,Disagree,100,Yes,100,Yes,Yes,DK/REF,No,Yes,No,DK/REF
+,Male,34,25-34,Independent,Disapprove,Some college,White,DK/REF,90,Yes,100,Yes,No,Unlikely,No,Yes,No,Darth Vader
+,Female,18,18-24,Strong Democrat,Disapprove,Some college,White,Disagree,80,Yes,40,Yes,Yes,Likely,Yes,Yes,No,DK/REF
+,Female,36,35-44,Independent,Disapprove,Graduate degree,White,Disagree,30,Yes,80,Yes,No,Unlikely,No,Yes,No,DK/REF
+,Other,24,18-24,DK/REF,Disapprove,Some college,White,DK/REF,50,No,60,Yes,Yes,Unlikely,No,Yes,No,Donald Trump
+,Female,23,18-24,Independent,Approve,Some college,White,Disagree,54,Yes,37,Yes,No,Likely,No,No,DK/REF,Donald Trump
+,Male,47,45-54,Strong Republican,Approve,College degree,Other,Disagree,0,Yes,100,DK/REF,No,Unlikely,No,Yes,Yes,Donald Trump
+,Female,62,55-64,DK/REF,DK/REF,High school,Asian,Agree,,Yes,,Yes,DK/REF,Unlikely,No,Yes,Yes,Darth Vader
+,Female,52,45-54,Not Strong Democrat,Disapprove,College degree,White,Disagree,,Yes,50,Yes,Yes,Unlikely,No,No,DK/REF,Donald Trump
+,Male,56,55-64,Strong Republican,Approve,Some college,White,Disagree,5,Yes,75,Yes,No,Unlikely,Yes,Yes,No,Donald Trump
+,Male,48,45-54,Independent,Disapprove,High school,White,Agree,,Yes,,Yes,No,Likely,Yes,No,DK/REF,DK/REF
+,Female,39,35-44,Not Strong Republican,Approve,College degree,White,Disagree,10,Yes,50,Yes,No,Likely,No,Yes,Yes,Donald Trump
+,Male,55,55-64,Independent,DK/REF,College degree,White,Disagree,5,Yes,95,Yes,No,Unlikely,Yes,Yes,No,DK/REF
+,Female,38,35-44,Strong Democrat,Disapprove,Some college,Black,Disagree,92,Yes,88,Yes,No,Likely,No,No,DK/REF,Darth Vader
+,Male,53,45-54,Independent,Disapprove,High school,White,Agree,50,Yes,75,Yes,No,Likely,Yes,No,Yes,Darth Vader
+,Female,33,25-34,DK/REF,Disapprove,High school,Asian,Disagree,80,Yes,100,Yes,Yes,Likely,No,No,DK/REF,Darth Vader
+,Female,39,35-44,Strong Republican,DK/REF,Some college,Latino,Disagree,,Yes,,Yes,No,Unlikely,No,Yes,Yes,Darth Vader
+,Female,27,25-34,DK/REF,DK/REF,Some college,White,Disagree,,Yes,,Yes,No,Unlikely,Yes,Yes,Yes,Donald Trump
+,Female,43,35-44,Strong Democrat,Disapprove,Some college,Black,Disagree,50,Yes,75,Yes,No,Unlikely,No,No,No,DK/REF
+,Female,73,65+,Strong Democrat,Approve,High school,White,Agree,100,Yes,,Yes,Yes,Likely,No,Yes,Yes,Donald Trump
+,Female,48,45-54,Independent,Approve,College degree,White,DK/REF,5,Yes,75,Yes,No,Likely,Yes,No,DK/REF,Donald Trump
+,Male,23,18-24,DK/REF,DK/REF,Some college,Asian,DK/REF,,Yes,50,Yes,No,Unlikely,No,No,DK/REF,Donald Trump
+,Female,54,45-54,Not Strong Democrat,Disapprove,College degree,Black,Disagree,45,Yes,100,Yes,No,Likely,No,Yes,No,Darth Vader
+,Female,55,55-64,Strong Democrat,Disapprove,College degree,Black,Disagree,85,Yes,100,Yes,No,Unlikely,No,No,No,Darth Vader
+,Female,33,25-34,Strong Republican,Approve,College degree,White,Agree,100,Yes,0,Yes,No,Likely,No,Yes,No,Donald Trump
+,Female,35,35-44,Independent,Disapprove,Some college,White,Disagree,10,No,90,No,No,Likely,No,No,DK/REF,DK/REF
+,Female,51,45-54,Strong Republican,Approve,Some college,White,DK/REF,,Yes,,DK/REF,No,DK/REF,Yes,Yes,DK/REF,Donald Trump
+,Female,69,65+,Independent,Disapprove,DK/REF,White,Agree,,Yes,100,Yes,No,Likely,No,No,No,Darth Vader

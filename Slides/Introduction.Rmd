@@ -62,6 +62,32 @@ inferences
     - Is the United States polarizing?
     - Is global terrorism increasing?
     - Is Russia an autocracy?
+
+## Description = "What?"
+
+- A common feature of descriptive research and descriptive research questions is a focus on what questions
+
+    - What is this?
+    - What other things are (un)like this?
+    - What features does this have?
+    - What people, institutions, and ideas does this involve?
+    - Where is this? When is this? What happened before and after?
+    - Examples?
+  
+## Beyond Description
+
+- Sequencing
+- Characterisation of processes
+- Policy, content, or discourse analysis
+- Conceptualisation
+- Causal hypothesis generation
+
+## What makes something a cause?
+
+```{r, echo=FALSE, fig.cap="", out.width = '100%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/causation.jpg")
+```
+
     
 ## Causal Inference
 

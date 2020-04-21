@@ -150,6 +150,7 @@ other variable is?
     - High correlation: data cluster tightly around a line.
 
 
+
 ## Relationship
 
 - **Covariance**: provides a measure of the strength of the correlation between two or more sets of random variates.
@@ -217,11 +218,84 @@ knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-
   - They may be linked by a different thing
   - Or it could be random chance!
 
+## Correlation is not causation
+
+- Any correlation is potentially causal
+    - X might cause Y
+    - Y might cause X
+    - X and Y might be caused by Z
+    - X and Y might cause Z
+    - There may be no causal relationship
+
 ## Spurious Correlations
 
 ```{r, echo=FALSE, fig.cap="Correlation is NOT Causation", out.width = '80%'}
 knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/cage.png")
 ```
+
+## Naive Causal Inference
+
+- Correlations are not necessarily causal
+
+- Our mind thinks they are because humans are not very good at the kind of
+causal inference problems that social scientists care about
+
+- Instead, we’re good at understanding **physical causality**
+
+## Physical Causality
+
+- Action and reaction
+- Example:
+    - Picture a ball resting on top of a hill
+    - What happens if I push the ball?
+- Features:
+    - Observable
+    - Single-case
+    - Deterministic
+    - Monocausal
+    
+## Pre-Post Change Heuristic
+
+- Our intuition about causation relies too heavily on simple comparisons of
+pre-post change in outcomes before and after something happens
+- Why can this be wrong?
+
+## Flaws in causal inference from pre-post comparisons
+
+- Maturation or trends
+- Regression to the mean
+- Selection
+- Simultaneous historical changes
+- Instrumentation changes
+- Monitoring changes behaviour
+
+## Maturation or trends
+
+- Is a shift in an outcome before and after a policy change the impact of the policy or a small part of a longer time trend?
+- Example:
+
+## Regression to the mean
+
+- Is a shift in an outcome before and after a policy change the impact of the policy or a function of statistical variation?
+- Example:
+
+## Selection
+
+- Is a shift in an outcome before and after a policy the impact of the policy or the result of the policy being implemented when outcomes are extreme?
+
+
+## Simultaneous changes
+
+- Is the shift in an outcome before and after a policy the impact of the policy or the result of a simultaneous historical shift?
+
+## Instrumentation changes
+
+- Is the shift in an outcome before and after a policy the impact of the policy or a change in how the outcome is measured?
+
+## Monitoring changes behaviour
+
+- Is the shift in an outcome before and after a policy the impact of the policy or a change in response to measuring the outcome per se?
+
 ## Examples
 
 - Age and conservatism
@@ -562,3 +636,5 @@ ggplot(happ2019) +
   aes(x=Score, y=GDP.per.capita)+
   geom_point()
 ```
+
+

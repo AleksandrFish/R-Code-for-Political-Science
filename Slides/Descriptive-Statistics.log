@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.26)  17 APR 2020 09:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.26)  21 APR 2020 09:26
 entering extended mode
 **./Descriptive-Statistics.tex
 (Descriptive-Statistics.tex
@@ -1404,20 +1404,42 @@ Overfull \vbox (48.13469pt too high) detected at line 617
  <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
 For Slides/ans.png>] [22
 
+] [23
+
 ]
 <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
-or Slides/cage.png, id=174, 2087.8pt x 823.075pt>
+or Slides/cage.png, id=180, 2087.8pt x 823.075pt>
 File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
 ges For Slides/cage.png Graphic file (type png)
 <use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
 es For Slides/cage.png>
 Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
--Science/Slides/Images For Slides/cage.png  used on input line 649.
+-Science/Slides/Images For Slides/cage.png  used on input line 674.
 (pdftex.def)             Requested size: 245.81032pt x 96.90599pt.
-[23
+[24
 
  <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
-For Slides/cage.png>] [24
+For Slides/cage.png>] [25
+
+] [26
+
+] [27
+
+] [28
+
+] [29
+
+] [30
+
+] [31
+
+] [32
+
+] [33
+
+] [34
+
+] [35
 
 ]
 \openout4 = `Descriptive-Statistics.vrb'.
@@ -1427,9 +1449,9 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
 .
 ("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [25
+)) [36
 
-] [26
+] [37
 
 ]
 \openout4 = `Descriptive-Statistics.vrb'.
@@ -1441,57 +1463,57 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 16.
 ("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmtt.fd"
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [27
+)) [38
 
 ]
 \openout4 = `Descriptive-Statistics.vrb'.
 
-(Descriptive-Statistics.vrb) [28
+(Descriptive-Statistics.vrb) [39
 
 ]
 \openout4 = `Descriptive-Statistics.vrb'.
 
-(Descriptive-Statistics.vrb) [29
+(Descriptive-Statistics.vrb) [40
 
 ]
 \openout4 = `Descriptive-Statistics.vrb'.
 
-(Descriptive-Statistics.vrb) [30
+(Descriptive-Statistics.vrb) [41
 
 ]
 \openout4 = `Descriptive-Statistics.vrb'.
 
-(Descriptive-Statistics.vrb) [31
+(Descriptive-Statistics.vrb) [42
 
 ]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-12-1.pdf, id=238, 722
+<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-12-1.pdf, id=305, 722
 .7pt x 505.89pt>
 File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-12-1.pdf Graphic
  file (type pdf)
 <use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-12-1.pdf>
 Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-12-1.pdf  used on input line 930.
+nk-12-1.pdf  used on input line 1117.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 930
+Overfull \vbox (3.35876pt too high) detected at line 1117
  []
 
-[32
+[43
 
  <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-12-1.pdf>]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-13-1.pdf, id=250, 722
+<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-13-1.pdf, id=318, 722
 .7pt x 505.89pt>
 File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-13-1.pdf Graphic
  file (type pdf)
 <use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-13-1.pdf>
 Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-13-1.pdf  used on input line 938.
+nk-13-1.pdf  used on input line 1125.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 938
+Overfull \vbox (3.35876pt too high) detected at line 1125
  []
 
-[33
+[44
 
  <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-13-1.pdf>]
 \openout4 = `Descriptive-Statistics.vrb'.
@@ -1499,81 +1521,81 @@ Overfull \vbox (3.35876pt too high) detected at line 938
 (Descriptive-Statistics.vrb
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 28.
-) [34
+) [45
 
 ]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-15-1.pdf, id=269, 722
+<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-15-1.pdf, id=337, 722
 .7pt x 505.89pt>
 File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-15-1.pdf Graphic
  file (type pdf)
 <use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-15-1.pdf>
 Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-15-1.pdf  used on input line 996.
+nk-15-1.pdf  used on input line 1183.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 996
+Overfull \vbox (3.35876pt too high) detected at line 1183
  []
 
-[35
+[46
 
- <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-15-1.pdf>] [36
+ <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-15-1.pdf>] [47
 
 ]
 \openout4 = `Descriptive-Statistics.vrb'.
 
-(Descriptive-Statistics.vrb) [37
+(Descriptive-Statistics.vrb) [48
 
 ]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-17-1.pdf, id=295, 722
+<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-17-1.pdf, id=362, 722
 .7pt x 505.89pt>
 File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-17-1.pdf Graphic
  file (type pdf)
 <use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-17-1.pdf>
 Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-17-1.pdf  used on input line 1059.
+nk-17-1.pdf  used on input line 1246.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 1059
+Overfull \vbox (3.35876pt too high) detected at line 1246
  []
 
-[38
+[49
 
  <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-17-1.pdf>]
 \openout4 = `Descriptive-Statistics.vrb'.
 
-(Descriptive-Statistics.vrb) [39
+(Descriptive-Statistics.vrb) [50
 
 ]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-19-1.pdf, id=314, 722
+<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-19-1.pdf, id=382, 722
 .7pt x 505.89pt>
 File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-19-1.pdf Graphic
  file (type pdf)
 <use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-19-1.pdf>
 Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-19-1.pdf  used on input line 1106.
+nk-19-1.pdf  used on input line 1293.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 1106
+Overfull \vbox (3.35876pt too high) detected at line 1293
  []
 
-[40
+[51
 
  <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-19-1.pdf>]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-20-1.pdf, id=327, 722
+<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-20-1.pdf, id=395, 722
 .7pt x 505.89pt>
 File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-20-1.pdf Graphic
  file (type pdf)
 <use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-20-1.pdf>
 Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-20-1.pdf  used on input line 1113.
+nk-20-1.pdf  used on input line 1300.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 1113
+Overfull \vbox (3.35876pt too high) detected at line 1300
  []
 
-[41
+[52
 
- <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-20-1.pdf>] [42
+ <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-20-1.pdf>] [53
 
 ]
 \openout4 = `Descriptive-Statistics.vrb'.
@@ -1603,18 +1625,18 @@ Overfull \hbox (17.8306pt too wide) in paragraph at lines 36--36
  []
 
 )
-Overfull \vbox (4.10757pt too high) detected at line 1176
+Overfull \vbox (4.10757pt too high) detected at line 1363
  []
 
-[43
+[54
 
-] [44
+] [55
 
 ]
 \openout4 = `Descriptive-Statistics.vrb'.
 
 (Descriptive-Statistics.vrb
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-22-1.pdf, id=359, 722
+<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-22-1.pdf, id=427, 722
 .7pt x 505.89pt>
 File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-22-1.pdf Graphic
  file (type pdf)
@@ -1623,50 +1645,119 @@ Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
 nk-22-1.pdf  used on input line 12.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 )
-Overfull \vbox (16.85034pt too high) detected at line 1218
+Overfull \vbox (16.85034pt too high) detected at line 1405
  []
 
-[45
+[56
 
  <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-22-1.pdf>]
 \openout4 = `Descriptive-Statistics.vrb'.
 
 (Descriptive-Statistics.vrb
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 7.
-) [46
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 9.
+) [57
 
 ]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-24-1.pdf, id=377, 722
+<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-24-1.pdf, id=447, 722
 .7pt x 505.89pt>
 File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-24-1.pdf Graphic
  file (type pdf)
 <use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-24-1.pdf>
 Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-24-1.pdf  used on input line 1242.
+nk-24-1.pdf  used on input line 1433.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 1242
+Overfull \vbox (3.35876pt too high) detected at line 1433
  []
 
-[47
+[58
 
  <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-24-1.pdf>]
-<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-25-1.pdf, id=389, 722
+<Descriptive-Statistics_files/figure-beamer/unnamed-chunk-25-1.pdf, id=459, 722
 .7pt x 505.89pt>
 File: Descriptive-Statistics_files/figure-beamer/unnamed-chunk-25-1.pdf Graphic
  file (type pdf)
 <use Descriptive-Statistics_files/figure-beamer/unnamed-chunk-25-1.pdf>
 Package pdftex.def Info: Descriptive-Statistics_files/figure-beamer/unnamed-chu
-nk-25-1.pdf  used on input line 1249.
+nk-25-1.pdf  used on input line 1440.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 1249
+Overfull \vbox (3.35876pt too high) detected at line 1440
  []
 
-[48
+[59
 
- <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-25-1.pdf>]
+ <./Descriptive-Statistics_files/figure-beamer/unnamed-chunk-25-1.pdf>] [60
+
+] [61
+
+] [62
+
+] [63
+
+] [64
+
+] [65
+
+] [66
+
+] [67
+
+]
+<C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
+or Slides/overlap.png, id=521, 1176.395pt x 690.58pt>
+File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
+ges For Slides/overlap.png Graphic file (type png)
+<use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
+es For Slides/overlap.png>
+Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
+-Science/Slides/Images For Slides/overlap.png  used on input line 1617.
+(pdftex.def)             Requested size: 215.09868pt x 126.26952pt.
+
+Overfull \vbox (2.41693pt too high) detected at line 1617
+ []
+
+[68
+
+ <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
+For Slides/overlap.png (PNG copy)>] [69
+
+]
+<C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
+or Slides/confint1.png, id=535, 571.13374pt x 402.50375pt>
+File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
+ges For Slides/confint1.png Graphic file (type png)
+<use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
+es For Slides/confint1.png>
+Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
+-Science/Slides/Images For Slides/confint1.png  used on input line 1651.
+(pdftex.def)             Requested size: 215.09839pt x 151.58955pt.
+
+Overfull \vbox (34.68533pt too high) detected at line 1651
+ []
+
+[70
+
+ <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
+For Slides/confint1.png (PNG copy)>]
+<C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
+or Slides/confint2.png, id=543, 626.34pt x 420.57124pt>
+File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
+ges For Slides/confint2.png Graphic file (type png)
+<use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
+es For Slides/confint2.png>
+Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
+-Science/Slides/Images For Slides/confint2.png  used on input line 1660.
+(pdftex.def)             Requested size: 245.82942pt x 165.06816pt.
+[71
+
+ <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
+For Slides/confint2.png (PNG copy)>] [72
+
+] [73
+
+]
 \tf@nav=\write6
 \openout6 = `Descriptive-Statistics.nav'.
 
@@ -1676,18 +1767,18 @@ Overfull \vbox (3.35876pt too high) detected at line 1249
 \tf@snm=\write8
 \openout8 = `Descriptive-Statistics.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1251.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1251.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1693.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1693.
 (Descriptive-Statistics.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1251.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1251.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1693.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1693.
  ) 
 Here is how much of TeX's memory you used:
- 27639 strings out of 480932
- 539807 string characters out of 2898969
- 780473 words of memory out of 3000000
- 42681 multiletter control sequences out of 15000+200000
- 589467 words of font info for 84 fonts, out of 3000000 for 9000
+ 27831 strings out of 480932
+ 544275 string characters out of 2898969
+ 780545 words of memory out of 3000000
+ 42765 multiletter control sequences out of 15000+200000
+ 593791 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,13n,95p,1825b,574s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1
@@ -1710,10 +1801,11 @@ fb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lm
 tk10.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /lm/lmtt10.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/lm/lmtt8.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmtti10.pfb>
-Output written on Descriptive-Statistics.pdf (48 pages, 820605 bytes).
+ype1/public/lm/lmtt9.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/lm/lmtti10.pfb>
+Output written on Descriptive-Statistics.pdf (73 pages, 946006 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 150 named destinations out of 1000 (max. 500000)
- 10358 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 678 PDF objects out of 1000 (max. 8388607)
+ 228 named destinations out of 1000 (max. 500000)
+ 12421 words of extra memory for PDF output out of 14400 (max. 10000000)
 
