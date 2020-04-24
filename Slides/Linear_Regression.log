@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.26)  20 APR 2020 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.26)  24 APR 2020 15:16
 entering extended mode
-**./Linear-Regression.tex
-(Linear-Regression.tex
+**./Linear_Regression.tex
+(Linear_Regression.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06>
 ("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\beamer.cl
@@ -1052,8 +1052,8 @@ end-pdfmode.def"
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count334
 \l__pdf_internal_box=\box80
-) (Linear-Regression.aux)
-\openout1 = `Linear-Regression.aux'.
+) (Linear_Regression.aux)
+\openout1 = `Linear_Regression.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
 LaTeX Font Info:    ... okay on input line 147.
@@ -1235,7 +1235,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(Linear-Regression.nav)
+(Linear_Regression.nav)
 Overfull \vbox (44.55624pt too high) detected at line 148
  []
 
@@ -1249,9 +1249,9 @@ File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [2
 
 ]
-\openout4 = `Linear-Regression.vrb'.
+\openout4 = `Linear_Regression.vrb'.
 
-(Linear-Regression.vrb
+(Linear_Regression.vrb
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 4.
 ("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
@@ -1292,12 +1292,12 @@ Overfull \hbox (17.8306pt too wide) in paragraph at lines 34--34
 ] [4
 
 ]
-<Linear-Regression_files/figure-beamer/unnamed-chunk-2-1.pdf, id=44, 722.7pt x 
+<Linear_Regression_files/figure-beamer/unnamed-chunk-2-1.pdf, id=44, 722.7pt x 
 505.89pt>
-File: Linear-Regression_files/figure-beamer/unnamed-chunk-2-1.pdf Graphic file 
+File: Linear_Regression_files/figure-beamer/unnamed-chunk-2-1.pdf Graphic file 
 (type pdf)
-<use Linear-Regression_files/figure-beamer/unnamed-chunk-2-1.pdf>
-Package pdftex.def Info: Linear-Regression_files/figure-beamer/unnamed-chunk-2-
+<use Linear_Regression_files/figure-beamer/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: Linear_Regression_files/figure-beamer/unnamed-chunk-2-
 1.pdf  used on input line 236.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
@@ -1306,7 +1306,7 @@ Overfull \vbox (3.35876pt too high) detected at line 236
 
 [5
 
- <./Linear-Regression_files/figure-beamer/unnamed-chunk-2-1.pdf>]
+ <./Linear_Regression_files/figure-beamer/unnamed-chunk-2-1.pdf>]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
 258.
 ("C:\Users\afisher\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
@@ -1382,86 +1382,88 @@ For Slides/correlation2.png>] [8
 
 ] [9
 
+] [10
+
 ]
 <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
-or Slides/ymxb.png, id=89, 281.05pt x 180.675pt>
+or Slides/ymxb.png, id=95, 281.05pt x 180.675pt>
 File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
 ges For Slides/ymxb.png Graphic file (type png)
 <use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
 es For Slides/ymxb.png>
 Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
--Science/Slides/Images For Slides/ymxb.png  used on input line 325.
+-Science/Slides/Images For Slides/ymxb.png  used on input line 342.
 (pdftex.def)             Requested size: 276.57642pt x 177.79912pt.
-[10
+[11
 
  <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
-For Slides/ymxb.png>] [11
-
-] [12
+For Slides/ymxb.png>] [12
 
 ] [13
 
+] [14
+
 ]
-<Linear-Regression_files/figure-beamer/unnamed-chunk-5-1.pdf, id=117, 722.7pt x
+<Linear_Regression_files/figure-beamer/unnamed-chunk-5-1.pdf, id=123, 722.7pt x
  505.89pt>
-File: Linear-Regression_files/figure-beamer/unnamed-chunk-5-1.pdf Graphic file 
+File: Linear_Regression_files/figure-beamer/unnamed-chunk-5-1.pdf Graphic file 
 (type pdf)
-<use Linear-Regression_files/figure-beamer/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: Linear-Regression_files/figure-beamer/unnamed-chunk-5-
-1.pdf  used on input line 431.
+<use Linear_Regression_files/figure-beamer/unnamed-chunk-5-1.pdf>
+Package pdftex.def Info: Linear_Regression_files/figure-beamer/unnamed-chunk-5-
+1.pdf  used on input line 448.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 431
+Overfull \vbox (3.35876pt too high) detected at line 448
  []
 
-[14
-
- <./Linear-Regression_files/figure-beamer/unnamed-chunk-5-1.pdf>]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 465.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 465.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 465.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 465.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 465.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 465.
 [15
+
+ <./Linear_Regression_files/figure-beamer/unnamed-chunk-5-1.pdf>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 482.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 482.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 482.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 482.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 482.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 482.
+[16
 
 ]
 <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
-or Slides/linearregression.jpg, id=138, 1284.8pt x 722.7pt>
+or Slides/linearregression.jpg, id=144, 1284.8pt x 722.7pt>
 File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
 ges For Slides/linearregression.jpg Graphic file (type jpg)
 <use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
 es For Slides/linearregression.jpg>
 Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
--Science/Slides/Images For Slides/linearregression.jpg  used on input line 473.
+-Science/Slides/Images For Slides/linearregression.jpg  used on input line 490.
 
 (pdftex.def)             Requested size: 307.28006pt x 172.84503pt.
-[16
+[17
 
  <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
 For Slides/linearregression.jpg>]
-\openout4 = `Linear-Regression.vrb'.
+\openout4 = `Linear_Regression.vrb'.
 
-(Linear-Regression.vrb) [17
+(Linear_Regression.vrb) [18
 
 ]
-\openout4 = `Linear-Regression.vrb'.
+\openout4 = `Linear_Regression.vrb'.
 
-(Linear-Regression.vrb
+(Linear_Regression.vrb
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 8.
-) [18
+) [19
 
 ]
-\openout4 = `Linear-Regression.vrb'.
+\openout4 = `Linear_Regression.vrb'.
 
-(Linear-Regression.vrb
+(Linear_Regression.vrb
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 12.
 
@@ -1476,234 +1478,424 @@ Overfull \hbox (14.6392pt too wide) in paragraph at lines 36--36
  
  []
 
-) [19
-
-] [20
+) [20
 
 ] [21
 
+] [22
+
 ]
-<Linear-Regression_files/figure-beamer/unnamed-chunk-11-1.pdf, id=178, 722.7pt 
+<Linear_Regression_files/figure-beamer/unnamed-chunk-11-1.pdf, id=184, 722.7pt 
 x 505.89pt>
-File: Linear-Regression_files/figure-beamer/unnamed-chunk-11-1.pdf Graphic file
+File: Linear_Regression_files/figure-beamer/unnamed-chunk-11-1.pdf Graphic file
  (type pdf)
-<use Linear-Regression_files/figure-beamer/unnamed-chunk-11-1.pdf>
-Package pdftex.def Info: Linear-Regression_files/figure-beamer/unnamed-chunk-11
--1.pdf  used on input line 592.
+<use Linear_Regression_files/figure-beamer/unnamed-chunk-11-1.pdf>
+Package pdftex.def Info: Linear_Regression_files/figure-beamer/unnamed-chunk-11
+-1.pdf  used on input line 609.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 592
- []
-
-[22
-
- <./Linear-Regression_files/figure-beamer/unnamed-chunk-11-1.pdf>]
-<Linear-Regression_files/figure-beamer/unnamed-chunk-12-1.pdf, id=190, 722.7pt 
-x 505.89pt>
-File: Linear-Regression_files/figure-beamer/unnamed-chunk-12-1.pdf Graphic file
- (type pdf)
-<use Linear-Regression_files/figure-beamer/unnamed-chunk-12-1.pdf>
-Package pdftex.def Info: Linear-Regression_files/figure-beamer/unnamed-chunk-12
--1.pdf  used on input line 599.
-(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
-
-Overfull \vbox (3.35876pt too high) detected at line 599
+Overfull \vbox (3.35876pt too high) detected at line 609
  []
 
 [23
 
- <./Linear-Regression_files/figure-beamer/unnamed-chunk-12-1.pdf>]
-\openout4 = `Linear-Regression.vrb'.
-
-(Linear-Regression.vrb
-<Linear-Regression_files/figure-beamer/unnamed-chunk-13-1.pdf, id=207, 722.7pt 
+ <./Linear_Regression_files/figure-beamer/unnamed-chunk-11-1.pdf>]
+<Linear_Regression_files/figure-beamer/unnamed-chunk-12-1.pdf, id=196, 722.7pt 
 x 505.89pt>
-File: Linear-Regression_files/figure-beamer/unnamed-chunk-13-1.pdf Graphic file
+File: Linear_Regression_files/figure-beamer/unnamed-chunk-12-1.pdf Graphic file
  (type pdf)
-<use Linear-Regression_files/figure-beamer/unnamed-chunk-13-1.pdf>
-Package pdftex.def Info: Linear-Regression_files/figure-beamer/unnamed-chunk-13
--1.pdf  used on input line 30.
+<use Linear_Regression_files/figure-beamer/unnamed-chunk-12-1.pdf>
+Package pdftex.def Info: Linear_Regression_files/figure-beamer/unnamed-chunk-12
+-1.pdf  used on input line 616.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
-)
-Overfull \vbox (229.1636pt too high) detected at line 632
+
+Overfull \vbox (3.35876pt too high) detected at line 616
  []
 
 [24
 
- <./Linear-Regression_files/figure-beamer/unnamed-chunk-13-1.pdf>]
-\openout4 = `Linear-Regression.vrb'.
+ <./Linear_Regression_files/figure-beamer/unnamed-chunk-12-1.pdf>]
+\openout4 = `Linear_Regression.vrb'.
 
-(Linear-Regression.vrb) [25
-
-]
-\openout4 = `Linear-Regression.vrb'.
-
-(Linear-Regression.vrb) [26
-
-]
-<Linear-Regression_files/figure-beamer/unnamed-chunk-16-1.pdf, id=233, 722.7pt 
+(Linear_Regression.vrb
+<Linear_Regression_files/figure-beamer/unnamed-chunk-13-1.pdf, id=213, 722.7pt 
 x 505.89pt>
-File: Linear-Regression_files/figure-beamer/unnamed-chunk-16-1.pdf Graphic file
+File: Linear_Regression_files/figure-beamer/unnamed-chunk-13-1.pdf Graphic file
  (type pdf)
-<use Linear-Regression_files/figure-beamer/unnamed-chunk-16-1.pdf>
-Package pdftex.def Info: Linear-Regression_files/figure-beamer/unnamed-chunk-16
--1.pdf  used on input line 699.
+<use Linear_Regression_files/figure-beamer/unnamed-chunk-13-1.pdf>
+Package pdftex.def Info: Linear_Regression_files/figure-beamer/unnamed-chunk-13
+-1.pdf  used on input line 30.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
-
-Overfull \vbox (3.35876pt too high) detected at line 699
+)
+Overfull \vbox (229.1636pt too high) detected at line 649
  []
 
-[27
+[25
 
- <./Linear-Regression_files/figure-beamer/unnamed-chunk-16-1.pdf>]
-\openout4 = `Linear-Regression.vrb'.
+ <./Linear_Regression_files/figure-beamer/unnamed-chunk-13-1.pdf>]
+\openout4 = `Linear_Regression.vrb'.
 
-(Linear-Regression.vrb)
-Overfull \vbox (7.08752pt too high) detected at line 737
+(Linear_Regression.vrb) [26
+
+]
+\openout4 = `Linear_Regression.vrb'.
+
+(Linear_Regression.vrb) [27
+
+]
+<Linear_Regression_files/figure-beamer/unnamed-chunk-16-1.pdf, id=239, 722.7pt 
+x 505.89pt>
+File: Linear_Regression_files/figure-beamer/unnamed-chunk-16-1.pdf Graphic file
+ (type pdf)
+<use Linear_Regression_files/figure-beamer/unnamed-chunk-16-1.pdf>
+Package pdftex.def Info: Linear_Regression_files/figure-beamer/unnamed-chunk-16
+-1.pdf  used on input line 716.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+
+Overfull \vbox (3.35876pt too high) detected at line 716
  []
 
 [28
 
-]
-<Linear-Regression_files/figure-beamer/unnamed-chunk-18-1.pdf, id=251, 722.7pt 
-x 505.89pt>
-File: Linear-Regression_files/figure-beamer/unnamed-chunk-18-1.pdf Graphic file
- (type pdf)
-<use Linear-Regression_files/figure-beamer/unnamed-chunk-18-1.pdf>
-Package pdftex.def Info: Linear-Regression_files/figure-beamer/unnamed-chunk-18
--1.pdf  used on input line 744.
-(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+ <./Linear_Regression_files/figure-beamer/unnamed-chunk-16-1.pdf>]
+\openout4 = `Linear_Regression.vrb'.
 
-Overfull \vbox (3.35876pt too high) detected at line 744
+(Linear_Regression.vrb)
+Overfull \vbox (7.08752pt too high) detected at line 754
  []
 
 [29
 
- <./Linear-Regression_files/figure-beamer/unnamed-chunk-18-1.pdf>] [30
-
 ]
-\openout4 = `Linear-Regression.vrb'.
-
-(Linear-Regression.vrb)
-Overfull \vbox (1.40091pt too high) detected at line 835
- []
-
-[31
-
-]
-<Linear-Regression_files/figure-beamer/unnamed-chunk-20-1.pdf, id=276, 722.7pt 
+<Linear_Regression_files/figure-beamer/unnamed-chunk-18-1.pdf, id=257, 722.7pt 
 x 505.89pt>
-File: Linear-Regression_files/figure-beamer/unnamed-chunk-20-1.pdf Graphic file
+File: Linear_Regression_files/figure-beamer/unnamed-chunk-18-1.pdf Graphic file
  (type pdf)
-<use Linear-Regression_files/figure-beamer/unnamed-chunk-20-1.pdf>
-Package pdftex.def Info: Linear-Regression_files/figure-beamer/unnamed-chunk-20
--1.pdf  used on input line 842.
+<use Linear_Regression_files/figure-beamer/unnamed-chunk-18-1.pdf>
+Package pdftex.def Info: Linear_Regression_files/figure-beamer/unnamed-chunk-18
+-1.pdf  used on input line 761.
 (pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-Overfull \vbox (3.35876pt too high) detected at line 842
+Overfull \vbox (3.35876pt too high) detected at line 761
+ []
+
+[30
+
+ <./Linear_Regression_files/figure-beamer/unnamed-chunk-18-1.pdf>] [31
+
+]
+\openout4 = `Linear_Regression.vrb'.
+
+(Linear_Regression.vrb)
+Overfull \vbox (1.40091pt too high) detected at line 852
  []
 
 [32
 
- <./Linear-Regression_files/figure-beamer/unnamed-chunk-20-1.pdf>] [33
+]
+<Linear_Regression_files/figure-beamer/unnamed-chunk-20-1.pdf, id=282, 722.7pt 
+x 505.89pt>
+File: Linear_Regression_files/figure-beamer/unnamed-chunk-20-1.pdf Graphic file
+ (type pdf)
+<use Linear_Regression_files/figure-beamer/unnamed-chunk-20-1.pdf>
+Package pdftex.def Info: Linear_Regression_files/figure-beamer/unnamed-chunk-20
+-1.pdf  used on input line 859.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
 
-] [34
+Overfull \vbox (3.35876pt too high) detected at line 859
+ []
+
+[33
+
+ <./Linear_Regression_files/figure-beamer/unnamed-chunk-20-1.pdf>] [34
+
+] [35
 
 ]
 <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
-or Slides/rsquared.png, id=305, 1405.25pt x 279.0425pt>
+or Slides/rsquared.png, id=311, 1405.25pt x 279.0425pt>
 File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
 ges For Slides/rsquared.png Graphic file (type png)
 <use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
 es For Slides/rsquared.png>
 Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
--Science/Slides/Images For Slides/rsquared.png  used on input line 919.
+-Science/Slides/Images For Slides/rsquared.png  used on input line 936.
 (pdftex.def)             Requested size: 307.29047pt x 61.0191pt.
-[35
+[36
 
  <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
 For Slides/rsquared.png (PNG copy)>]
-\openout4 = `Linear-Regression.vrb'.
+\openout4 = `Linear_Regression.vrb'.
 
-(Linear-Regression.vrb) [36
-
-] [37
+(Linear_Regression.vrb) [37
 
 ] [38
 
 ] [39
 
+] [40
+
 ]
 <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
-or Slides/rsquaredadj.png, id=337, 1405.25pt x 676.5275pt>
+or Slides/rsquaredadj.png, id=343, 1405.25pt x 676.5275pt>
 File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
 ges For Slides/rsquaredadj.png Graphic file (type png)
 <use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
 es For Slides/rsquaredadj.png>
 Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
--Science/Slides/Images For Slides/rsquaredadj.png  used on input line 1042.
+-Science/Slides/Images For Slides/rsquaredadj.png  used on input line 1061.
 (pdftex.def)             Requested size: 215.08832pt x 103.54965pt.
 
-Overfull \vbox (23.81242pt too high) detected at line 1042
+Overfull \vbox (23.81242pt too high) detected at line 1061
  []
 
-[40
+[41
 
  <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
-For Slides/rsquaredadj.png (PNG copy)>] [41
-
-] [42
+For Slides/rsquaredadj.png (PNG copy)>] [42
 
 ] [43
 
 ] [44
 
+] [45
+
 ]
-\openout4 = `Linear-Regression.vrb'.
+\openout4 = `Linear_Regression.vrb'.
 
-(Linear-Regression.vrb) [45
-
-] [46
+(Linear_Regression.vrb) [46
 
 ] [47
 
 ] [48
 
-]
-\openout4 = `Linear-Regression.vrb'.
-
-(Linear-Regression.vrb) [49
+] [49
 
 ]
+\openout4 = `Linear_Regression.vrb'.
 
-Package hyperref Warning: Ignoring empty anchor on input line 1312.
+(Linear_Regression.vrb) [50
 
-[50
+]
 
-] [51
+Package hyperref Warning: Ignoring empty anchor on input line 1331.
+
+[51
+
+] [52
+
+] [53
+
+]
+<C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
+or Slides/linear1.png, id=427, 803.0pt x 215.80624pt>
+File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
+ges For Slides/linear1.png Graphic file (type png)
+<use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
+es For Slides/linear1.png>
+Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
+-Science/Slides/Images For Slides/linear1.png  used on input line 1362.
+(pdftex.def)             Requested size: 245.82747pt x 66.06612pt.
+[54
+
+ <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
+For Slides/linear1.png (PNG copy)>]
+<C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
+or Slides/qqplot.png, id=434, 466.74374pt x 289.08pt>
+File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
+ges For Slides/qqplot.png Graphic file (type png)
+<use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
+es For Slides/qqplot.png>
+Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
+-Science/Slides/Images For Slides/qqplot.png  used on input line 1383.
+(pdftex.def)             Requested size: 245.83467pt x 152.25888pt.
+
+Overfull \vbox (98.48158pt too high) detected at line 1383
+ []
+
+[55
+
+ <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
+For Slides/qqplot.png (PNG copy)>] [56
+
+] [57
+
+]
+<C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
+or Slides/autocorrelation.jpg, id=455, 526.96875pt x 389.455pt>
+File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
+ges For Slides/autocorrelation.jpg Graphic file (type jpg)
+<use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
+es For Slides/autocorrelation.jpg>
+Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
+-Science/Slides/Images For Slides/autocorrelation.jpg  used on input line 1456.
+
+(pdftex.def)             Requested size: 245.83397pt x 181.68301pt.
+
+Overfull \vbox (108.49658pt too high) detected at line 1456
+ []
+
+[58
+
+ <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
+For Slides/autocorrelation.jpg>]
+<C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images F
+or Slides/hom.png, id=463, 536.31947pt x 210.7241pt>
+File: C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Ima
+ges For Slides/hom.png Graphic file (type png)
+<use C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Imag
+es For Slides/hom.png>
+Package pdftex.def Info: C:/Users/afisher/Documents/R Code/R-Code-for-Political
+-Science/Slides/Images For Slides/hom.png  used on input line 1465.
+(pdftex.def)             Requested size: 276.5554pt x 108.66077pt.
+[59
+
+ <C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images 
+For Slides/hom.png>]
+\openout4 = `Linear_Regression.vrb'.
+
+(Linear_Regression.vrb) [60
+
+]
+\openout4 = `Linear_Regression.vrb'.
+
+(Linear_Regression.vrb
+Overfull \hbox (14.6392pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## lm(formula = Trump ~ White + educ_bach, data = votes)[]
+ 
+ []
+
+
+Overfull \hbox (8.89047pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## (Intercept) 35.85222    1.15817   30.96   <2e-16 ***[] 
+
+ []
+
+
+Overfull \hbox (8.89047pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## White        0.52450    0.01235   42.47   <2e-16 ***[] 
+
+ []
+
+
+Overfull \hbox (8.89047pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## educ_bach   -0.86257    0.02208  -39.06   <2e-16 ***[] 
+
+ []
+
+
+Overfull \hbox (66.3778pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## Signif. codes:  0 \TS1/lmtt/m/n/10.95 '\T1/lmtt/m/n/10.
+95 ***\TS1/lmtt/m/n/10.95 ' \T1/lmtt/m/n/10.95 0.001 \TS1/lmtt/m/n/10.95 '\T1/l
+mtt/m/n/10.95 **\TS1/lmtt/m/n/10.95 ' \T1/lmtt/m/n/10.95 0.01 \TS1/lmtt/m/n/10.
+95 '\T1/lmtt/m/n/10.95 *\TS1/lmtt/m/n/10.95 ' \T1/lmtt/m/n/10.95 0.05 \TS1/lmtt
+/m/n/10.95 '\T1/lmtt/m/n/10.95 .\TS1/lmtt/m/n/10.95 ' \T1/lmtt/m/n/10.95 0.1 \T
+S1/lmtt/m/n/10.95 ' ' \T1/lmtt/m/n/10.95 1[] 
+ []
+
+
+Overfull \hbox (37.63414pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## Residual standard error: 10.88 on 3109 degrees of freed
+om[] 
+ []
+
+
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## Multiple R-squared:  0.5174, Adjusted R-squared:  0.517
+1[] 
+ []
+
+
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## F-statistic:  1667 on 2 and 3109 DF,  p-value: < 2.2e-1
+6[] 
+ []
+
+
+Overfull \hbox (60.62907pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ##                    Value   p-value                   De
+cision[] 
+ []
+
+
+Overfull \hbox (60.62907pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## Global Stat        902.3 0.000e+00 Assumptions NOT sati
+sfied![] 
+ []
+
+
+Overfull \hbox (60.62907pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## Skewness           235.6 0.000e+00 Assumptions NOT sati
+sfied![] 
+ []
+
+
+Overfull \hbox (60.62907pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## Kurtosis           570.0 0.000e+00 Assumptions NOT sati
+sfied![] 
+ []
+
+
+Overfull \hbox (60.62907pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## Link Function       36.5 1.527e-09 Assumptions NOT sati
+sfied![] 
+ []
+
+
+Overfull \hbox (60.62907pt too wide) in paragraph at lines 39--39
+[]\T1/lmtt/m/n/10.95 ## Heteroscedasticity  60.2 8.549e-15 Assumptions NOT sati
+sfied![] 
+ []
+
+)
+Overfull \vbox (321.4449pt too high) detected at line 1522
+ []
+
+[61
+
+]
+<Linear_Regression_files/figure-beamer/unnamed-chunk-33-1.pdf, id=485, 722.7pt 
+x 505.89pt>
+File: Linear_Regression_files/figure-beamer/unnamed-chunk-33-1.pdf Graphic file
+ (type pdf)
+<use Linear_Regression_files/figure-beamer/unnamed-chunk-33-1.pdf>
+Package pdftex.def Info: Linear_Regression_files/figure-beamer/unnamed-chunk-33
+-1.pdf  used on input line 1529.
+(pdftex.def)             Requested size: 307.2923pt x 215.1046pt.
+
+Overfull \vbox (3.35876pt too high) detected at line 1529
+ []
+
+[62
+
+ <./Linear_Regression_files/figure-beamer/unnamed-chunk-33-1.pdf>]
+Overfull \vbox (71.51027pt too high) detected at line 1556
+ []
+
+[63
 
 ]
 \tf@nav=\write6
-\openout6 = `Linear-Regression.nav'.
+\openout6 = `Linear_Regression.nav'.
 
 \tf@toc=\write7
-\openout7 = `Linear-Regression.toc'.
+\openout7 = `Linear_Regression.toc'.
 
 \tf@snm=\write8
-\openout8 = `Linear-Regression.snm'.
+\openout8 = `Linear_Regression.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1335.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1335.
-(Linear-Regression.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1335.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1335.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1558.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1558.
+(Linear_Regression.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1558.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1558.
  ) 
 Here is how much of TeX's memory you used:
- 27703 strings out of 480932
- 539735 string characters out of 2898969
- 782291 words of memory out of 3000000
- 42715 multiletter control sequences out of 15000+200000
- 618059 words of font info for 113 fonts, out of 3000000 for 9000
+ 27821 strings out of 480932
+ 544264 string characters out of 2898969
+ 789363 words of memory out of 3000000
+ 42778 multiletter control sequences out of 15000+200000
+ 618498 words of font info for 117 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,13n,95p,1820b,574s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mat
@@ -1730,9 +1922,9 @@ pe1/public/lm/lmtt10.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/lm/lmtt8.pfb><C:/Users/afisher/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/lm/lmtt9.pfb><C:/Users/afisher/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/lm/lmtti10.pfb>
-Output written on Linear-Regression.pdf (51 pages, 2015172 bytes).
+Output written on Linear_Regression.pdf (63 pages, 3188343 bytes).
 PDF statistics:
- 523 PDF objects out of 1000 (max. 8388607)
- 153 named destinations out of 1000 (max. 500000)
- 16492 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 192 named destinations out of 1000 (max. 500000)
+ 16517 words of extra memory for PDF output out of 17280 (max. 10000000)
 

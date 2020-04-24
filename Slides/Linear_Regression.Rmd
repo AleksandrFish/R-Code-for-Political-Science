@@ -72,6 +72,10 @@ $$r = \frac{{}\sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y})}
 knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/correlation2.png")
 ```
 
+## Linear Regression Model
+
+- The word ‘Linear’ appears to be something related to the straight line while - - The word ‘Regression’ means A technique for determining the statistical relationship between two or more variables.
+- _Linear Regression is all about finding an equation of a line that almost fits the given data so that it can predict the future values_
 
 ## Linear Regression Model
 
@@ -86,6 +90,8 @@ $$y =mx +b$$
   - x = how far along
   - m = Slope or Gradient (how steep the line is)
   - b = the Y Intercept (where the line crosses the Y axis)
+
+
 
 ## Linear Regression Model
 
@@ -577,6 +583,101 @@ stargazer(race.fit, educ.fit, mult.fit, header=FALSE,
 ## Reading a Regression Table
 
 
+## Assumptions of OLS
+
+
+## Linearity
+
+- **Linearity**: there must be a linear relationship between the independent (feature) variable and the dependent (target) variable
+    - We can test for linearity with scatterplots
+
+```{r, echo=FALSE, fig.cap="", out.width = '80%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/linear1.png")
+```
+
+## Normality
+
+- Does _NOT_ mean that the independent variable is normally distributed
+
+- The **normality** assumption means that the **residuals** that result from the linear regression model should be normally distributed.
+
+- Can diagnose with a Q-Q plot
+
+```{r, echo=FALSE, fig.cap="We are looking for our dots (blue) to roughly align with the red line.", out.width = '80%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/qqplot.png")
+```
+
+## Multicollinearity
+
+- **Multicollinearity** is a state of very high inter-correlations or inter-associations among the independent variables.
+
+- Multicollinearity can be tested with correlation matrix
+
+- When features are correlated, changes in one feature in turn shifts another feature/features. 
+    - The stronger the correlation, the more difficult it is to change one feature without changing another
+    - It becomes difficult for the model to estimate the relationship between each feature and the target independently because the features tend to change in unison.
+
+## Homoscedasticity
+
+- **Heteroscedasticity** refers to the circumstance in which the dependent variable is unequal across the range of values of the predictor(s).
+
+- What this means is that if you were to plot the residuals against the independent variable, it should be roughly symmetric around the x-axis and it should be consistently spread across the predictor values.
+
+- The consistent spread means that a specific predictor value is not a stronger influence on the model because the residuals vary with these values.
+
+## Autocorrelation
+
+- When the residuals are dependent on each other, there is **autocorrelation** 
+    - This factor is visible in the case of stock prices when the price of a stock is not independent of its previous one.
+
+- Way to verify the existence of autocorrelation is the Durbin-Watson test
+
+```{r, echo=FALSE, fig.cap="We are looking for our dots (blue) to roughly align with the red line.", out.width = '80%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/autocorrelation.jpg")
+```
+
+## Homoscedasticity
+
+```{r, echo=FALSE, fig.cap="We are looking for our dots (blue) to roughly align with the red line.", out.width = '90%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/hom.png")
+```
+
+## Testing OLS Assumptions in R
+
+```{r, message=FALSE, warning=FALSE, results='hide', fig.keep='none'}
+library(gvlma)
+model = lm(Trump ~ White + educ_bach, data=votes)
+summary(gvlma(model))
+par(mar=c(1,1,1,1))
+plot(gvlma(model))
+```
+
+## Testing OLS Assumptions in R
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(gvlma)
+model = lm(Trump ~ White + educ_bach, data=votes)
+summary(gvlma(model))
+```
+
+## Testing OLS Assumptions in R
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, results='hide'}
+library(gvlma)
+model = lm(Trump ~ White + educ_bach, data=votes)
+summary(gvlma(model))
+par(mar=c(1,1,1,1))
+plot(gvlma(model))
+```
+
+## Logistic Regression
+
+- Logistic regression uses math to evaluate the chances of something happening or not happening. It allows us to answer any “yes or no” questions.
+
+- Logistic regression can be binary or multinomial (we'll focus on binary)
+    - The dependent variable should be dichotomous in nature (yes or no)
+    - There should be no outliers in the data
+    - There should be no high correlations (multicollinearity) among the predictors
 
 ## Other resources...
 
@@ -586,4 +687,6 @@ stargazer(race.fit, educ.fit, mult.fit, header=FALSE,
 - http://svmiller.com/blog/2014/08/reading-a-regression-table-a-guide-for-students/
 - https://scholar.princeton.edu/sites/default/files/bstewart/files/lecture8slides.pdf
 - https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf
-
+- https://towardsdatascience.com/everything-you-need-to-know-about-linear-regression-b791e8f4bd7a
+- https://towardsdatascience.com/rip-correlation-introducing-the-predictive-power-score-3d90808b9598
+- https://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/

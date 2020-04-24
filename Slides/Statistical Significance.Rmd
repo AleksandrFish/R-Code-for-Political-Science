@@ -51,7 +51,6 @@ knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-
 - This is an example of a one-sided hypothesis test because we are concerned with a change in only one direction
 
 
-
 ## Normal Distribution
 
 - The normal distribution is used to represent how data from a process is distributed defined by 
