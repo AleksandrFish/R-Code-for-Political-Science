@@ -1,0 +1,14 @@
+---
+title: "Prediction"
+author: "Aleksandr Fisher"
+date: "4/15/2020"
+output: beamer_presentation
+theme: focus
+latex_engine: xelatex
+highlight: zenburn
+---
+
+
+## R Markdown
+
+- We will use a nice R package called `pollstR`, which scrapes the data from Huffington Post:

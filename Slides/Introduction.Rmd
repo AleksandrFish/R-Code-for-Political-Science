@@ -9,7 +9,6 @@ theme: metropolis
 highlight: zenburn
 ---
 
-
 ## Empirical Political Science
 
 - Politics is full of claims
@@ -84,7 +83,7 @@ inferences
 
 ## What makes something a cause?
 
-```{r, echo=FALSE, fig.cap="", out.width = '100%'}
+```{r, echo=FALSE, fig.cap="", out.width = '70%'}
 knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/causation.jpg")
 ```
 
@@ -320,36 +319,15 @@ political attitudes.
 
 ## Now for some R...    
 
+## Why R
 
+- R is the most comprehensive statistical analysis package, as new technology and ideas often appear first in R.
+- R is an open-source that’s why you can run R anywhere any time, and even sell it under conditions of the license.
+- It is cross-platform which runs on many operating systems. It’s best for GNU/Linux and Microsoft Windows.
+- In R, everyone is welcomed to provide bug fixes, code enhancements, and new packages.
+- Jobs are nice
 
-## Looking at the Data (dim and glimpse)
-
-\tiny
-```{r}
-## Cyanide and Happiness 2017 Politics Poll
-```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-library(ggplot2)
-library(tidyverse)
-library(ggthemes)
-# read in CSV ( File path should have "/" slashes)
-cah = read.csv('C:/Users/afisher/Documents/R Code/Resources/Data/Pulse of the Nation/201710cah_clean.csv')
-
-# dim
-dim(cah) # number of rows, number of columns
-
-# glimpse
-glimpse(cah) #observations, variables, and variable type
-```
-\normalsize
-
-## Looking at the Data (head)
-
-\tiny
-```{r}
-# head
-head(cah) # first 6 observations
-```
-\normalsize
+# Section 1.3: Introduction to R
 
 ##  Numbers as data
 
@@ -398,26 +376,234 @@ y
 - Don't forget to check and set your working directory
 - R can't find files that aren't there
 
-## Getting the Basics
+## Arithmetic Operations
 
-- The Behavioral Risk Factor Surveillance System (BRFSS) is an annual telephone survey of 350,000 people in the United States. The BRFSS Web site contains a complete description of the survey, including the research questions that motivate the study and many interesting results derived from the data.
-
-```{r,  message=FALSE, warning=FALSE, fig.keep = 'none'}
-library(tidyverse)
-source("http://www.openintro.org/stat/data/cdc.R")
-CDC <- tbl_df(cdc)
-class(cdc)
+\footnotesize
+```{r}
+5 + 3
+5 - 3
+5 / 3
+5 ^ 3
+5 * (10 - 3)
+sqrt(4)
 ```
+\normalsize
 
-## Explore the data
+## Objects
 
-- You can see and inspect the data set comfortably in RStudio with the View() command, which invokes a spreadsheet-style data viewer on a matrix-like R object.
+\footnotesize
+```{r}
+
+result <- 5 + 3
+result
+print(result)
+result <- 5 - 3
+result
+
+alex <- "instructor"
+alex
+alex <- "instructor and author"
+alex
+```
+\normalsize
+
+## Objects
+
+\footnotesize
+```{r}
+Result <- "5"
+Result
+result
+
+class(result)
+Result
+class(Result)
+class(sqrt)
+```
+\normalsize
+
+## Vectors
 
 \tiny
 ```{r}
-CDC
+world.pop <- c(2525779, 3026003, 3691173, 4449049, 5320817, 6127700, 6916183)
+world.pop
+
+pop.first <- c(2525779, 3026003, 3691173)
+pop.second <- c(4449049, 5320817, 6127700, 6916183)
+pop.all <- c(pop.first, pop.second)
+pop.all
+
+world.pop[2]
+world.pop[c(2, 4)] 
+world.pop[c(4, 2)] 
+world.pop[-3]
 ```
 \normalsize
+
+## Vectors
+
+\footnotesize
+```{r}
+pop.million <- world.pop / 1000
+pop.million
+
+pop.rate <- world.pop / world.pop[1]
+pop.rate
+
+pop.increase <- world.pop[-1] - world.pop[-7]
+percent.increase <- (pop.increase / world.pop[-7]) * 100
+percent.increase
+percent.increase[c(1, 2)] <- c(20, 22)
+percent.increase
+```
+\normalsize
+
+##  Functions
+
+\footnotesize
+```{r}
+length(world.pop)  
+min(world.pop)     
+max(world.pop)     
+range(world.pop)   
+mean(world.pop)    
+sum(world.pop) / length(world.pop) 
+```
+\normalsize
+
+##  Functions
+
+\footnotesize
+```{r}
+year <- seq(from = 1950, to = 2010, by = 10)
+year
+
+seq(to = 2010, by = 10, from = 1950)
+
+seq(from = 2010, to = 1950, by = -10)
+2008:2012
+2012:2008
+```
+\normalsize
+
+##  Functions
+
+\footnotesize
+```{r}
+names(world.pop) 
+names(world.pop) <- year
+names(world.pop)
+world.pop
+```
+\normalsize
+
+##  Functions
+
+\footnotesize
+```{r}
+## myfunction <- function(input1, input2, ..., inputN) {
+## 
+##     DEFINE `output' USING INPUTS
+## 
+##     return(output)
+## }
+
+my.summary <- function(x){ # function takes one input
+  s.out <- sum(x)
+  l.out <- length(x)
+  m.out <- s.out / l.out
+  out <- c(s.out, l.out, m.out) # define the output
+  names(out) <- c("sum", "length", "mean") # add labels
+  return(out) # end function by calling output
+}
+```
+\normalsize
+
+## Functions
+
+\footnotesize
+```{r}
+z <- 1:10
+my.summary(z)
+my.summary(world.pop)
+```
+\normalsize
+
+##  Data Files
+
+```{r, eval = FALSE}
+# setwd("qss/INTRO")
+# getwd()
+```
+
+## Reading Files
+
+- R can read files of many types and formats
+
+- Usually, data are either in `.csv` or `.Rdata` format
+
+- R can also read Excel spreadsheets with the `readxl` package
+
+\tiny
+```{r}
+# Read in csv
+# name_object <- read.csv("data_path/file.csv")
+UNpop <- read.csv('C:/Users/afisher/Documents/R Code/qss/INTRO/UNpop.csv') 
+
+# Get type of object
+class(UNpop)
+
+# Names of columns
+names(UNpop)
+
+# Number of rows
+nrow(UNpop)
+
+# Number of columns
+ncol(UNpop)
+
+# Dimensions
+dim(UNpop)
+
+# Summary of numeric columns
+summary(UNpop)
+```
+\normalsize
+
+## Grabbing Data
+
+```{r}
+
+# extract the column called "world.pop"
+UNpop[, "world.pop"] 
+# alternative way to extract column
+UNpop$world.pop 
+# extract the first three rows (and all columns)
+UNpop[c(1, 2, 3),]
+# extract the first three rows of the "year" column
+UNpop[1:3, "year"]   
+
+## take elements 1, 3, 5, ... of the "world.pop" variable
+UNpop$world.pop[seq(from = 1, to = nrow(UNpop), by = 2)]
+
+world.pop <- c(UNpop$world.pop, NA)
+world.pop
+mean(world.pop)
+mean(world.pop, na.rm = TRUE)
+```
+
+## Saving Objects
+```{r, eval = FALSE}
+## save.image("qss/INTRO/Chapter1.RData")
+
+## save(UNpop, file = "Chapter1.RData")
+## save(world.pop, year, file = "qss/INTRO/Chapter1.RData")
+
+## write.csv(UNpop, file = "UNpop.csv")
+
+## load("Chapter1.RData")
+```
 
 ## Explore the data
 
@@ -462,6 +648,17 @@ CDC
 
 - `install.packages(c("dplyr", "ggplot2", "devtools"))`
 
+## R Scripts
+
+- Why should we write scripts?
+
+  - Save time: automate boring tasks
+
+  - Reproducibility
+
+  - Allow complex tasks to be performed in small steps
+
+  - Faster to run
 
 ## Loading R Packages
 
@@ -477,172 +674,6 @@ library(ggplot2)
 
 - NOTE: Do not put the package name in quotes!
 
-## Arbuthnot Dataset
-
-- The Arbuthnot data set refers to Dr. John Arbuthnot, an 18th century physician, writer, and mathematician. He was interested in the ratio of newborn boys to newborn girls, so he gathered the baptism records for children born in London for every year from 1629 to 1710. We can view the data by typing its name into the console.
-
-- Read data from online with the code below:
-
-```{r}
-source("http://www.openintro.org/stat/data/arbuthnot.R")
-```
-
-## Look as Data
-
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-dim(arbuthnot) #get number of rows and columns
-glimpse(arbuthnot) #get the structure of the data
-```
-\normalsize
-
-## Look as Data
-
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-names(arbuthnot)
-#We can access the data in a single column of a data frame separately.
-arbuthnot$boys
-```
-\normalsize
-
-
-## Plot Data - Base R
-
-
-```{r,  message=FALSE, warning=FALSE, results='hide', fig.keep = 'none'}
-plot(x = arbuthnot$year, y = arbuthnot$girls)
-```
-
-\tiny
-```{r, warnings=FALSE, message=FALSE, echo=FALSE}
-plot(x = arbuthnot$year, y = arbuthnot$girls)
-```
-\normalsize
-
-## Plot Data - qplot R
-
-- R has some powerful functions for making graphics. We can create a simple plot of the number of girls baptized per year with qplot.
-
-
-```{r,  message=FALSE, warning=FALSE, results='hide', fig.keep = 'none'}
-qplot(x = year, y = girls, data = arbuthnot)
-```
-
-## Plot Data - qplot R
-
-\tiny
-```{r, warnings=FALSE, message=FALSE, echo=FALSE}
-qplot(x = year, y = girls, data = arbuthnot)
-```
-
-## Plot Data - line graph
-
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-plot(x = arbuthnot$year, y = arbuthnot$girls, type = "l")
-```
-\normalsize
-
-## Plot Data - line graph
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-qplot(x = year, y = girls, data = arbuthnot, geom = "line")
-
-```
-\normalsize
-
-## Manipulating Data - Creating New Variables
-
-- Now, suppose we want to plot the total number of baptisms. To compute this, we could use the fact that R is really just a big calculator. We can type in mathematical expressions like
-
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-
-5218 + 4683
-
-arbuthnot$boys + arbuthnot$girls
-```
-\normalsize
-
-## Manipulating Data - Creating New Variables (mutate)
-
-- We’ll be using this new vector to generate some plots, so we’ll want to save it as a permanent column in our data frame.
-
-
-```{r, warnings=FALSE, message=FALSE}
-arbuthnot <- arbuthnot %>%
-  mutate(total = boys + girls)
-```
-
-## Piping Operator
-
-- The `%>%` operator is called the piping operator. It takes the output of the previous expression and pipes it into the first argument of the function in the following one. To continue our analogy with mathematical functions, `x %>% f(y)` is equivalent to `f(x, y)`.
-
-## Piping Operator
-
-- __A note on piping:__ Note that we can read these three lines of code as the following:
-
-- "Take the arbuthnot dataset and pipe it into the mutate function. Mutate the arbuthnot data set by creating a new variable called total that is the sum of the variables called boys and girls. 
-
-- Then assign the resulting dataset to the object called arbuthnot, i.e. overwrite the old arbuthnot dataset with the new one containing the new variable."
-
-## Manipulating Data - Adding in plot
-
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-plot(arbuthnot$year, arbuthnot$boys + arbuthnot$girls, type = "l")
-```
-\normalsize
-
-## Manipulating Data - Adding in qplot
-
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-qplot(x = year, y = total, data = arbuthnot, geom = "line")
-```
-\normalsize
-
-## Manipulating Data - creating ratios
-
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-5218 / 4683
-```
-\normalsize
-
-## Manipulating Data - creating ratios
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-arbuthnot$boys / arbuthnot$girls
-
-arbuthnot <- arbuthnot %>%
-  mutate(boy_to_girl_ratio = boys / girls)
-```
-\normalsize
-
-## Manipulating Data - ratios using mutate
-
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-arbuthnot <- arbuthnot %>%
-  mutate(boy_ratio = boys / total)
-```
-\normalsize
-
-## Manipulating Data - True/False
-
-\tiny
-```{r, warnings=FALSE, message=FALSE}
-arbuthnot$boys > arbuthnot$girls
-```
-\normalsize
-
-## Manipulating Data
-
-- Make a plot that displays the boy-to-girl ratio for every year in the data set. What do you see? Does Arbuthnot’s observation about boys being born in greater proportion than girls hold up in the U.S.? Include the plot in your response.
-
-- In what year did we see the most total number of births in the U.S.? 
 
 ## Adding Labels to our plots
 
@@ -658,59 +689,33 @@ arbuthnot$boys > arbuthnot$girls
 - Can also use:
     - `+xlab("x axis name"` and `+ylab("y axis name")`
 
-## Adding Labels to our plots
+
+
+## Looking at the Data (dim and glimpse)
 
 \tiny
-```{r, warnings=FALSE, message=FALSE, results='hide',fig.keep='none'}
-arbuthnot %>% ggplot(aes(year, total)) +
-        geom_line() +
-        xlab("Year") + ylab("Baptized children (boys and girls)") +
-        ggtitle("Baptized children, born in London. Recorded by Dr. John Arbuthnot.")
+```{r}
+## Cyanide and Happiness 2017 Politics Poll
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(ggplot2)
+library(tidyverse)
+library(ggthemes)
+# read in CSV ( File path should have "/" slashes)
+cah = read.csv('C:/Users/afisher/Documents/R Code/Resources/Data/Pulse of the Nation/201710cah_clean.csv')
+
+# dim
+dim(cah) # number of rows, number of columns
+
+# glimpse
+glimpse(cah) #observations, variables, and variable type
 ```
 \normalsize
 
-## Adding Labels to our plots
-
-\footnotesize
-```{r, warnings=FALSE, message=FALSE, echo=FALSE}
-arbuthnot %>% ggplot(aes(year, total)) +
-        geom_line() +
-        xlab("Year") + ylab("Baptized children (boys and girls)") +
-        ggtitle("Baptized children, born in London. Recorded by Dr. John Arbuthnot.")
-```
-\normalsize
-
-## Ratio Plot
-
-- Similarly to how we computed the total number of births, we can compute different kinds of ratios (boys to girls, boys to total, girls to total).
+## Looking at the Data (head)
 
 \tiny
-```{r, warnings=FALSE, message=FALSE, results='hide',fig.keep='none'}
-arbuthnot <- arbuthnot %>%
-  mutate(boy_to_girl_ratio = boys / girls)
-
-arbuthnot %>% 
-        ggplot(aes(year, boy_to_girl_ratio)) +
-        geom_line() +
-        xlab("Year") + ylab("Baptized ratio (boys to girls)") +
-        ggtitle("Baptized children, born in London. Recorded by Dr. John Arbuthnot.")
+```{r}
+# head
+head(cah) # first 6 observations
 ```
 \normalsize
-
-
-## Ratio Plot
-
-\tiny
-```{r, warnings=FALSE, message=FALSE, echo=FALSE}
-arbuthnot <- arbuthnot %>%
-  mutate(boy_to_girl_ratio = boys / girls)
-
-arbuthnot %>% 
-        ggplot(aes(year, boy_to_girl_ratio)) +
-        geom_line() +
-        xlab("Year") + ylab("Baptized ratio (boys to girls)") +
-        ggtitle("Baptized children, born in London. Recorded by Dr. John Arbuthnot.")
-```
-\normalsize
-
-

@@ -1,0 +1,28 @@
+---
+title: "Reading Slides"
+author: "Aleksandr Fisher"
+latex_engine: xelatex
+output:
+  beamer_presentation: default
+  slidy_presentation: default
+theme: metropolis
+highlight: zenburn
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## How do you measure 'democracy'
+
+- Billions spent on democracy promotion
+- Eyeball test:
+    - North Korea ... nope
+    - Norway ... sure
+    - Russia ... probably not?
+
+## Different measures, different conclusions
+
+```{r, echo=FALSE, fig.cap="", out.width = '100%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/russia_dem.jpg")
+```

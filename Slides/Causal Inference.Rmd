@@ -3,7 +3,7 @@ title: "Causality"
 author: "Aleksandr Fisher"
 date: "4/15/2020"
 output: beamer_presentation
-theme: metropolis
+theme: focus
 latex_engine: xelatex
 highlight: zenburn
 ---
@@ -39,6 +39,14 @@ pre-post change in outcomes before and after something happens
 outcomes
 - No causation without manipulation: **immutable characteristics**
 
+
+## Formalizing the logic
+
+- The causal effect of the treatment T is the difference in Y with and without T
+
+$$ Y(T=1) - Y(T=0) $$
+
+- We can never observe Y where T = 1 and T = 0 at the same time!
 
 ## How do we draw causal inference?
 
@@ -189,6 +197,16 @@ and unobserved).
 group if they had control.
 
 
+## Randomisation
+
+- Randomisation ensures the treatment is not correlated with any other variable
+
+- Randomisation generates balance between treatment and control groups
+
+- Treatment and control groups identical on average
+
+- Allows us to estimate the average treatment effect simply as a difference in means
+
 ## Potential problems with RCTs
 
 - **Placebo effects:**
@@ -198,6 +216,13 @@ any effect.
 - **Hawthorne effects:**
   - Respondents act differently just knowing that they are under study
 
+## Internal versus external validity
+
+- RCTs have very strong internal validity, that is, there is very little chance the result is derived from causes other than the treatment
+
+- However, they may not generalise well. Why?
+    - Samples may not reflect the whole population of interest
+    - Treatment may be unrealistic
 ## Balance Checking
 
 -  Can we determine if randomization “worked”?
@@ -227,8 +252,11 @@ group on **pretreatment variable**.
 - Question: can we effectively persuade people to change their minds?
 - Two randomized control trials in Los Angeles (2013)
 - Timed around the Supreme Court decision to legalize gay marriage in CA
-- LaCour & Green (2015). “When contact changes minds: An experiment of
-transmission of support for gay equality.” _Science_.
+- LaCour, M. J., and D. P. Green. 2014. “When Contact Changes Minds: An Experiment on Transmission of Support for Gay Equality.” _Science_ 346(6215): 1366–69.
+
+## Study overview
+
+- Canvassers were given a script leading to conversations that averaged about twenty minutes. A distinctive feature of this study is that _gay and straight canvassers were randomly assigned to households and canvassers revealed whether they were straight or gay in the course of the conversation_. The experiment aims to test the **contact hypothesis**, which contends that out-group hostility (towards gays in this case) diminishes when people from different groups interact with one another.
 
 ## Study Design
 
@@ -237,6 +265,18 @@ transmission of support for gay equality.” _Science_.
   - same-sex marriage vs. recycling scripts (20 min conversation)
   - a total of 4 treatments: 2 × 2 factorial design
   - control group: no canvassing.
+
+## Variables
+
+- `study` Study (1 or 2)
+
+- `treatment` Treatment assignment: `No contact`, `Same-Sex Marriage Script by Gay Canvasser`, `Same-Sex Marriage Script by Straight Canvasser`, `Recycling Script by Gay Canvasser`, and `Recycling Script by Straight Canvasser`
+
+- `wave` Survey wave (1-7). Note that Study 2 lacks wave 5 and 6.
+
+- `ssm` Support for gay marriage (1 to 5).
+
+    - Higher scores indicate more support.
 
 ## Study Design
 
@@ -250,8 +290,17 @@ married but the law prohibits it.
 same-sex marriage.
 - Why use an “unrelated” survey? ~ **Hawthorne effect**
 
+# Changing Minds on Gay Marriage
 
-## The Data
+## Changing Minds on Gay Marriage
+
+- Using the baseline interview wave before the treatment is administered `(wave == 1)`, examine whether randomisation was properly conducted. Base your analysis on the three groups of Study 1:
+
+  - 'Same-Sex Marriage Script by Gay Canvasser'
+  - 'Same-Sex Marriage Script by Straight Canvasser'
+  - 'No Contact.'
+
+## Load and Filter Data
 
 \tiny
 ```{r, message=FALSE, warning=FALSE}
@@ -263,18 +312,37 @@ str(gay)
 gay = gay %>%
   filter(study == 1)
 
-#Subsert to Wave 1
 wave1 = gay %>%
-  filter(wave==1)
+  filter(wave == 1)
 
-#Subsert to Wave 1
-wave7 = gay %>%
-  filter(wave==7)
+# Subset by treatment, wave, and study
+w1_gay = gay %>%
+  filter(wave==1 & treatment == "Same-Sex Marriage Script by Gay Canvasser")
 
+w1_straight = gay %>%
+  filter(wave==1  & treatment == "Same-Sex Marriage Script by Straight Canvasser")
+
+w1_control = gay %>%
+  filter(wave==1 & treatment == "No Contact")
 
 ```
 \normalsize
 
+## Get Mean support by group
+
+\tiny
+```{r}
+
+# Mean support in gay canvasser group before treatment
+mean(w1_gay$ssm)
+
+# Mean support in straight canvasser group before treatment
+mean(w1_straight$ssm)
+
+# Mean support in control group before treatment
+mean(w1_control$ssm)
+```
+\normalsize
 
 ## Mean by treatment
 
@@ -282,7 +350,7 @@ wave7 = gay %>%
 tapply(wave1$ssm, wave1$treatment, mean)
 ```
 
-## Plots of treatments
+## Plotting support for gay marriage across treatments
 
 ```{r, message=FALSE, warning=FALSE, results='hide', fig.keep='none'}
 library(ggplot2)
@@ -296,7 +364,7 @@ ggplot(means, aes(x = treatment, y = mean)) +
     coord_flip()
 ```
 
-## Plots of treatments
+## Plotting support for gay marriage across treatments
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE, out.width = '90%'}
 
@@ -338,12 +406,66 @@ ggplot(gay_summary, aes(treatment, mean_ssm)) +
          y = "Support for Gay Marriage")
 ```
 
+## Changing Minds on Gay Marriage
+
+- The second wave of survey was implemented two months after the canvassing. Using Study 1, estimate the average treatment effects of gay and straight canvassers on support for same-sex marriage, separately `(wave == 2)`. Give a brief interpretation of the results.
+
+## Treatment Effect in Wave 2
+
+\tiny
+```{r}
+w2_gay = gay %>%
+  filter(wave==2 & treatment == "Same-Sex Marriage Script by Gay Canvasser")
+
+w2_straight = gay %>%
+  filter(wave==2  & treatment == "Same-Sex Marriage Script by Straight Canvasser")
+
+w2_control = gay %>%
+  filter(wave==2 & treatment == "No Contact")
+
+# ATE for gay canvassers
+mean(w2_gay$ssm) - mean(w2_control$ssm)
+
+# ATE for straight canvassers
+mean(w2_straight$ssm) - mean(w2_control$ssm)
+```
+\normalsize
+
+## What did we learn
+
+- Approval of gay marriage increased on average by 0.1 for gay canvassers and by 0.122 for straight canvassers.
+
+- Do results persist over time?
+
+## Treatment effects in Wave 7
+
+\tiny
+```{r}
+w7_gay = gay %>%
+  filter(wave==7 & treatment == "Same-Sex Marriage Script by Gay Canvasser")
+
+w7_straight = gay %>%
+  filter(wave==7  & treatment == "Same-Sex Marriage Script by Straight Canvasser")
+
+w7_control = gay %>%
+  filter(wave==7 & treatment == "No Contact")
+
+# ATE for gay canvassers
+mean(w7_gay$ssm) - mean(w7_control$ssm)
+
+# ATE for straight canvassers
+mean(w7_straight$ssm) - mean(w7_control$ssm)
+```
+\normalsize
+
+- Approval of gay marriage increased on average by 0.059 for gay canvassers and by -0.043 for straight canvassers. The results show that the effect for gay canvassers is persistent over time.
+
 ## Any Lasting Effects?
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 gay = read.csv("C:/Users/afisher/Documents/R Code/qss/CAUSALITY/gay.csv")
 gay_waves = gay %>%
-  filter(study == 1 & treatment %in% c("No Contact", 'Same-Sex Marriage Script by Gay Canvasser'))
+  filter(study == 1 & treatment %in% c("Same-Sex Marriage Script by Straight Canvasser", 'Same-Sex Marriage Script by Gay Canvasser'))
 gay_summary = gay_waves %>%
   group_by(treatment, wave) %>%  
   dplyr::summarise(mean_ssm =mean(ssm),  
@@ -353,7 +475,7 @@ gay_summary = gay_waves %>%
 
 
 pd <- position_dodge(0.2) # move them .05 to the left and right
-ggplot(gay_summary, aes(x=wave, y=mean_ssm, colour=treatment, group=treatment)) + 
+ggplot(gay_summary, aes(x=wave, y=mean_ssm, colour=treatment, group=treatment)) +
   geom_errorbar(aes(ymin = mean_ssm - 1.96*SE_ssm, 
                     ymax = mean_ssm + 1.96*SE_ssm,), width=0.2, position=pd)  +
   geom_point(position=pd, size=3, shape=21, fill="white") + # 21 is filled circle
@@ -394,6 +516,33 @@ improve external validity
   - $Y_{control}$  not a good proxy for $Y_{i}(0)$ in treated group.
   - one type: **selection bias** from self-selection into treatment
 
+## Observational Studies
+
+- Why is it harder to make causal inference with observational data?
+
+- **Confounders/confounding variables:** variables that are associated both with the treatment and the outcome
+
+- If the treatment is not independent from pre-treatment variables, we cannot be sure about what causes what
+
+## Examples of Confounders
+
+- Are incumbents more likely to win elections?
+    - Maybe, but they also receive more campaign donations
+
+- Are democratic countries more peaceful than authoritarian ones?
+    - Maybe, but they also tend to be richer
+
+- **Selection bias:** groups are not directly comparable
+
+## Observational Studies
+
+- Pre-treatment variables have to be controlled for, that is, _held constant_ in the analysis
+
+- **Statistical control:** we use statistical methods to create balance between treatment and control and emulate an experiment as best as we can. E.g:
+
+  - Instrumental variables (IV)
+  - Regression discontinuity designs (RDD)
+  - Differences-in-differences (DD/DiD/Diff-in-diff)
 
 ## Statistical Control
 
@@ -410,9 +559,12 @@ unmeasured confounding
 ## Difference in difference (DID)
 
 - Key idea: use the before-and-after difference of **control group** to infer what would have happend to **treatment group** without treatment.
+- Requires data for two time periods (before and after treatment) and at least two units
 - **Parallel time trend assumption**
   - Example:
   - Threat to inference: non-parallel trends
+
+- https://www.youtube.com/watch?v=dSlCBJSh96w&feature=youtu.be
 
 ## For more see...
 

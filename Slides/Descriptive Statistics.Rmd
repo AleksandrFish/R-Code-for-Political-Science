@@ -2,12 +2,16 @@
 title: "Descriptive Statistics"
 author: "Aleksandr Fisher"
 output: beamer_presentation
-theme: metropolis
+theme: focus
 latex_engine: xelatex
 highlight: zenburn
-
+header-includes:
+   - \usepackage{animate}
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(size = "footnotesize")
+```
 
 ## Plan
 
@@ -149,7 +153,14 @@ other variable is?
     - Negative correlation: when X is big, Y is small
     - High correlation: data cluster tightly around a line.
 
+## Whats is a strong correlation?
 
+- In social sciences, usually we consider
+
+    - lower than 0.3 = weak
+    - between 0.3 and 0.5 = moderate
+    - higher than 0.5 = strong
+    - (but don't quote me on that!)
 
 ## Relationship
 
@@ -502,6 +513,8 @@ main = "Distribution of Respondent's Age")
 - “Whiskers” represents either:
     - 1.5 × IQR or max/min of the data, whichever is tinyer.
     - Points beyond whiskers are outliers
+
+
     
 ## Boxplot
 
@@ -616,7 +629,8 @@ plot(happ2019$Score, happ2019$GDP.per.capita, xlab = 'Score', ylab="GDP per capi
 ## ggplot
 ggplot(happ2019) +
   aes(x=Score, y=GDP.per.capita)+
-  geom_point()
+  geom_point()+
+  theme_classic()
 ```
 \normalsize
 ## Base R - Scatterplot
@@ -636,5 +650,430 @@ ggplot(happ2019) +
   aes(x=Score, y=GDP.per.capita)+
   geom_point()
 ```
+
+
+
+# Tables and Missing Data in R
+
+## Tables in R
+
+\footnotesize
+```{r}
+
+# Read File
+afghan <- read.csv("C:/Users/afisher/Documents/R Code/qss/MEASUREMENT/afghan.csv")
+
+# Column names
+names(afghan)
+
+# Tables
+table(ISAF = afghan$violent.exp.ISAF,
+      Taliban = afghan$violent.exp.taliban)
+```
+\normalsize
+
+## Table in R: prop.table()
+
+We can also use prop.table() to see the proportion of cases in each cell
+
+We have to include table() within parentheses too:
+
+\footnotesize
+```{r}
+prop.table(table(ISAF = afghan$violent.exp.ISAF,
+                 Taliban = afghan$violent.exp.taliban))
+```
+\normalsize
+
+## Round Function
+
+- Since we're already using nested functions, we can also use round() to round the values in each cell
+
+- Notice the `, 2` in the code below. It indicates that we will round the numbers up to two significant digits
+
+\footnotesize
+```{r}
+round(prop.table(table(ISAF = afghan$violent.exp.ISAF,
+                       Taliban = afghan$violent.exp.taliban)), 2)
+```
+\normalsize
+
+## Missing Data
+
+- Not all individuals answer to surveys
+
+- Two types of non-response:
+
+    - Individual non-response
+    - Item non-response
+
+- Both tend to bias the results
+
+- So it is very important that we know where (and think about why) we see gaps in our data
+
+## Missing Data in R
+
+- R has a special code for missing data, `NA`
+
+- Since `NA` is only used for missing observations, we can count their numbers with `is.na()`
+
+\footnotesize
+```{r}
+head(afghan$income, 10)
+
+# number of missings
+sum(is.na(afghan$income)) 
+
+# proportion of missings
+round(mean(is.na(afghan$income)), 2) 
+```
+\normalsize
+
+## Missing Data
+
+- Some R function don't work if there's missing data
+
+- We add `na.rm = TRUE` to the code
+
+\footnotesize
+```{r}
+# Victims of Taliban violence
+sum(is.na(afghan$violent.exp.taliban))
+
+# Mean violance by taliban
+mean(afghan$violent.exp.taliban)
+
+# Mean violance by taliban
+round(mean(is.na(afghan$income)), 2) 
+```
+\normalsize
+
+- Why do you think we have missing data here?
+
+## Missing Data in R
+
+- You can also visualise the number of missing observations with `summary()`
+
+```{r}
+summary(afghan$violent.exp.taliban)
+sum(is.na(afghan$violent.exp.taliban))
+```
+
+# Data Visualization
+
+## Bar Plots
+
+- Bar plots are used to visualise **factor/character variables**
+
+- Proportion of observations in each category as the height of each bar
+
+- Options:
+
+    - `main = "Title"`
+    - `xlab = "X label"`
+    - `ylab = "Y label"`
+    - `xlim = c(number, number)` limits for the x variable
+    - `ylim = c(number, number)` limits for the y variable
+    - `names.arg = c("Bars labels")` - in the same order of the variable
+    - `horiz = TRUE` for horizontal plots
+    - `cols` = "colour name" bar colour (see: )
+
+- You can use `barplot()` with `prop.table()` instead of pie charts
+
+## Barplots
+
+
+```{r, fig.keep='none', results='asis'}
+employed.ptable <- prop.table(table(afghan$employed))
+employed.ptable
+
+barplot(employed.ptable,
+        names.arg = c("Unemployed", "Employed"), 
+        main = "Proportion of Employed Afghanis",
+        xlab = "Employment",
+        ylab = "Proportion",
+        ylim = c(0, 0.6))
+```
+
+
+## Barplots
+
+```{r, echo=FALSE}
+barplot(employed.ptable,
+        names.arg = c("Unemployed", "Employed"), 
+        main = "Proportion of Employed Afghanis",
+        xlab = "Employment",
+        ylab = "Proportion",
+        ylim = c(0, 0.6))
+```
+
+## Horizontal Bar plot
+
+\footnotesize
+```{r, fig.keep='none', results='asis'}
+barplot(employed.ptable,
+        names.arg = c("Unemployed", "Employed"), # 0 and 1, respectively
+        main = "Proportion of Employed Afghanis",
+        ylab = "Employment", # change the axes
+        xlab = "Proportion", 
+        xlim = c(0, 0.7), # now it's xlim 
+        horiz = TRUE,     # because the plot is horizontal
+        col = "brown")
+```
+\normalsize
+
+## Horizontal Bar plot
+
+```{r, echo=FALSE}
+barplot(employed.ptable,
+        names.arg = c("Unemployed", "Employed"), # 0 and 1, respectively
+        main = "Proportion of Employed Afghanis",
+        ylab = "Employment", # change the axes
+        xlab = "Proportion", 
+        xlim = c(0, 0.7), # now it's xlim 
+        horiz = TRUE,     # because the plot is horizontal
+        col = "brown")
+```
+
+
+## Histogram
+
+- We use histograms to display the distribution of a numeric variable
+
+- Numeric variables are binned into groups
+
+    - Histograms shows the density of each bin
+
+    - Important: Height is share of observations in bin divided by bin size
+
+- We care less about the density of each bin than about the distribution of the variable as a whole
+
+- Area of each bar is the share of observations that fall into that bin
+
+- Area of all bins sum to one
+
+## Histogram
+
+- Many options are similar to those of `barplot()`: `main`, `xlab`, `ylim`, `col`
+
+- We can also add `freq = FALSE` to show the density of each histograms
+
+- `breaks` = changes the size of the bins
+
+- Densities are useful to compare different distributions
+
+- _Densities are not percentages_: "percentage per horizontal unit"
+
+## Histogram in R
+
+```{r, fig.keep='none'}
+hist(afghan$age,
+     main = "Histogram - Age",
+     xlab = "Age",
+     xlim = c(0, 0.04),
+     freq = FALSE,
+     col = "darkorange2")
+```
+
+## Histogram in R
+
+```{r, echo=FALSE}
+hist(afghan$age,
+     main = "Histogram - Age",
+     xlab = "Age",
+     freq = FALSE,
+     col = "darkorange2")
+```
+
+## Histogram in R
+
+- We can also add text and fitted lines to all R plots
+
+- Use `text()` and `abline()` after `hist()`
+
+```{r, fig.keep='none'}
+hist(afghan$age,
+     main = "Histogram - Age",
+     xlab = "Age",
+     xlim = c(0, 0.04),
+     freq = FALSE,
+     col = "darkorange2")
+## add a text label at (x, y) = (35, 0.35)
+text(x = 35, y = 0.035, "median")
+## add a vertical line representing median
+abline(v = median(afghan$age))
+```
+
+## Histogram in R
+
+```{r, echo=FALSE}
+hist(afghan$age,
+     main = "Histogram - Age",
+     xlab = "Age",
+     freq = FALSE,
+     col = "darkorange2")
+## add a text label at (x, y) = (35, 0.35)
+text(x = 35, y = 0.035, "median")
+## add a vertical line representing median
+abline(v = median(afghan$age))
+```
+
+## Box Plots
+
+- Like histograms, box plots also display the distribution of a numeric variable
+
+- Box plots show the median, quartiles, and IQR
+
+- Useful to compare different distributions side-by-side
+
+- It is also useful to identify outliers, that is, data points that are above 1.5 times the **interquartile range (IQR)**
+
+- `boxplot()`
+
+## Box Plots
+
+- `boxplot()` also has a series of optional arguments:
+
+    - `main`, `ylab`, `ylim`, `col`
+    - `formula = y ~ group`, `y` is numeric variable and `group` is a factor
+    
+## Quantiles
+
+\footnotesize
+```{r, fig.keep='none'}
+median(afghan$age)
+quantile(afghan$age, probs = c(0, .25, .5, .75, 1))
+boxplot(afghan$age, main = "Distribution of age", ylab = "Age", ylim = c(10, 80))
+```
+\normalsize
+
+## Box Plots
+
+```{r, echo=FALSE}
+boxplot(afghan$age, main = "Distribution of age", ylab = "Age", ylim = c(10, 80))
+```
+
+
+## Box Plot
+
+- But box plots provide an easy way to compare multiple observations at a time
+
+- Similar to `tapply()`
+
+\footnotesize
+```{r, fig.keep='none'}
+
+tapply(afghan$age, afghan$province, median, na.rm = TRUE)
+
+boxplot(afghan$age ~ afghan$province,
+        main = "Age Distribution by Province", ylab = "Age", col = "grey")
+
+```
+\normalsize
+
+## Boxplot by group
+```{r, echo=FALSE}
+boxplot(afghan$age ~ afghan$province,
+        main = "Age Distribution by Province", ylab = "Age", col = "grey")
+
+```
+
+# Survey Sampling
+
+## Survey Sampling
+
+```{r, echo=FALSE, fig.cap="", out.width = '90%'}
+knitr::include_graphics("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Slides/Images For Slides/polls.png")
+```
+
+- Most polls only interview several hundred voters
+- Goal: infer what 200 million voters are thinking
+
+## The 1936 Literary Digest Poll
+
+- Mail questionnaire to 10 million people
+
+- Final sample size: over 2.3 million returned
+
+- Addresses came from phone books and club memberships
+
+- The young Gallup used 50,000 respondents
+
+- Predicted FDR would get 43% of the vote... actually recieved 62%
+
+## WTF went wrong?
+
+- Biased sample:
+
+    - slanted toward middle- and upper-class voters, and by default to exclude lower-income voters
+    - people who respond to surveys are different from people who don't
+    
+- Two morals of the story:
+
+    - A badly chosen big sample is muc worse than a well-chosen small sample
+    - Watch out for selection bias and nonresponse bias.
+    
+## Quota Sampling vs. Random Sampling
+
+- **Quota sampling:** Sample certain groups until quota is filled
+
+    - Problem: Unobservables can bias the results
+
+- **Random sampling:** Random draws without replacement from the population
+
+    - Everybody has the same chance of being in the sample
+
+    - Problem: none, sample is unbiased ( in theory...)!
+    
+## Random Sampling
+
+- Not every single sample will match all characteristics of the population exactly
+
+- But as the number of samples gets larger (say 1000 samples of 1000 respondents), on average the samples would be representative
+
+- Polls are associated with uncertainty: plus or minus a number
+
+- But getting a random sample is hard
+
+## Why is this hard
+
+- Problems of telephone survey
+
+    - Random digit dialing from phone book
+    - Wealthy individuals have higher chances of being called
+    - Caller ID screening (unit non-response)
+    
+- Problems of internet survey
+
+    - Non-probability sampling
+    - Cheap but non-representative
+    - Young, urban, rich groups are overrepresented
+    - Requires statistical corrections (usually weights)
+    
+## Social Desirability Bias
+
+- Respondents sometimes do not state their true preferences
+
+- Examples: support for drug use, abortion, etc
+
+- Under- or overestimation of true proportion
+
+## List Experiments
+
+- List experiments can minimise the problem
+
+- Grant anonymity to respondents
+
+- Control group sees a list of statements
+
+- Treatment group sees the same list plus a sensitive item
+
+- Assuming that respondents don't lie and that both groups would answer the same number of non-sensitive items, we can infer their true preferences
+
+## List Experiments
+
+- https://statmodeling.stat.columbia.edu/2014/04/23/thinking-list-experiment-heres-list-reasons-think/
+
+
 
 

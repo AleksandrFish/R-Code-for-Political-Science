@@ -1,0 +1,370 @@
+---
+name: Aleksandr Fisher
+# position: "Data Analyst, College Board"
+# aboutme: Ph.D. Political Science
+address: ""
+phone: 267 337 5263
+email: "aleksandr.jr.fisher@gmail.com"
+twitter: aleksandrfisher
+github: AleksandrFish
+linkedin: aleksandrfisher
+headcolor: 414141
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tidyr)
+library(dplyr)
+library(readr)
+library(glue)
+library(tibble)
+library(lubridate)
+library(here)
+library(scales)
+# jobs <- read_csv(here::here("data", "jobs.csv")) %>%
+#   fill(Start, End, What, With, Where, Tag) %>%  
+#   mutate(Start = mdy(Start),
+#          End = mdy(End)) %>% 
+#   mutate(When = case_when(
+#     is.na(End) ~ glue("{year(Start)}--Present") %>% as.character(),
+#     year(Start) == year(End) ~ year(End) %>% as.character(),
+#     TRUE ~ glue("{year(Start)}--{year(End)}") %>% as.character()
+#   ))
+# 
+# funding <- read_delim(here::here("data", "funding.txt"), delim = "\t")
+# 
+# education <- read_delim(here::here("data", "education.txt"), delim = "\t") %>%
+#   fill(Start, End, What, With, Where, Tag) %>%  
+#   mutate(Start = mdy(Start),
+#          End = mdy(End)) %>% 
+#   mutate(When = case_when(
+#     is.na(End) ~ glue("{year(Start)}--Present") %>% as.character(),
+#     year(Start) == year(End) ~ year(End) %>% as.character(),
+#     TRUE ~ glue("{year(Start)}--{year(End)}") %>% as.character()
+#   ))
+# 
+# pubs <- read_delim(here::here("data", "pubs.txt"), delim = "\t")
+```
+
+
+
+# Education
+```{r edu}
+# education %>% 
+#   arrange(desc(Start)) %>% 
+#   detailed_entries(
+#     what = What,
+#     when = When,
+#     with = With,
+#     where = Where,
+#     why = Why
+#   )
+```
+
+**<span style="font-size:1em;">George Washington University</span>** \hfill _Washington, DC_  
+Ph.D. in Political Science  \hfill _2019_
+
+**<span style="font-size:1em;">George Washington University</span>** \hfill _Washington, DC_  
+M.A in Political Science  \hfill _2017_
+
+**<span style="font-size:1em;">Temple University</span>** \hfill _Philadelphia, PA_  
+B.A. in History and Political Science \hfill _2014_
+
+
+# Experience
+```{r jobs}
+# jobs %>% 
+#   arrange(desc(Start)) %>% 
+#   detailed_entries(
+#     what = What,
+#     when = When,
+#     with = With,
+#     where = Where,
+#     why = Why
+#   )
+```
+
+**<span style="font-size:1em;"> The College Board </span>** \hfill _Newtown, PA_  
+Data Analyst \hfill _Jan. 2020 - Present_  
+
+ - Developed SAS and Python code that increased productivity and accuracy of the quality management processes related to the SAT, PSAT 10, and PSAT 8/9
+ - Built a web application in Python/Flask to automate the creation of excel spreadsheets that tracks how College Board products align with state standards, reduced process time by dozens of hours every month
+ - Created new archives or archive features that added significant value to psychometric work
+ 
+ **<span style="font-size:1em;"> George Washington University </span>** \hfill _Washington, DC_  
+Ph.D. Candidate \hfill _Sept. 2014 - Dec. 2019_  
+
+- Designed, implemented, and analyzed five survey experiments in the U.S. and Russia to identify the causal effect of exposure to foreign disinformation; results published in academic journal
+- Aggregated and cleaned cross-national survey data in 50 countries from 2012 to 2017 using R and Stata to compare changes in countries’ international influence; results published in academic journal
+- Conducted a large-scale (N~2,000) survey experiment in the United States to test how presidents can talk themselves out of foreign policy esclations, results published in an academic journal and the _Washington Post_
+
+**<span style="font-size:1em;">Insight Data Science</span>** \hfill _New York, NY_  
+Data Science Fellow \hfill _Sept. 2019 - Nov 2019_  
+
+- Built an end-to-end product in Python/Flask for an early-stage startup in three weeks that predicts
+respondents’ severity of depression from text inputs using a random forest model
+- Cleaned unstructured text data using Pandas and NLTK, created predictive features using tf-idf and sentiment
+analysis, and compared machine learning models using scikit-learn
+- Predicted people’s level of depression within 2 points on a 16-point clinically verified scale, doubling the
+accuracy of a baseline model
+ 
+ 
+# Academic Positions
+```{r teaching}
+# jobs %>% 
+#   arrange(desc(Start)) %>% 
+#   detailed_entries(
+#     what = What,
+#     when = When,
+#     with = With,
+#     where = Where,
+#     why = Why
+#   )
+``` 
+
+**<span style="font-size:1em;">Haverford College</span>** \hfill _Haverford, PA_  
+Assistant Professor \hfill _Sept. 2020 - Dec. 2020_  
+
+- Designed and instructed _Introduction to Quanitative Methods for Political Science_ which included
+lessons on causal inference, regression, and data manipulaton/visualization in **R** (Undergraduate students)
+
+**<span style="font-size:1em;">Jefferson University</span>** \hfill _Philadelphia, PA_  
+Instructor \hfill _Jan. 2019 - May 2019_  
+
+- Designed and instructed two sections of _Debating Global Issues_, which included lessons on economic globalization, development, and regime change (Undergraduate students)
+ 
+
+**<span style="font-size:1em;">George Washington University</span>** \hfill _Washington, DC_  
+Instructor \hfill _Sept. 2018 - August. 2018_  
+
+- Designed and instructed a summer course _Science, Technology, and Politics_, which explored the influence of AI on political processes
+(Undergraduate students)
+- Led a 4-day course reviewing fundamental math principles including probability and hypothesis tests; instruction in basic **R** (Doctoral students)
+- Teaching assistant for _Introduction to Empirical Political Analysis_ (Doctoral students)
+- Teaching assistant for _Nonlinear Models_ (Doctoral students)
+- Led discussion sections for _Introduction to Comparative Politics_ (Undergraduate students)
+ 
+
+# Peer Reviewed Publications
+```{r pubs}
+# pubs %>% 
+#   arrange(desc(date)) %>% 
+#   detailed_entries(
+#     what = title,
+#     when = date,
+#     with = authors,
+#     where = journal,
+#     why = paste(volume, pages)
+#   ) 
+# tmp <- vector(mode = "list", length = nrow(pubs))
+# 
+# for (i in seq(1, length(tmp))) {
+#   a1 <- pubs[i, ]
+#   if (a1$pages == " ") {
+#     tmp[[i]] <- paste0(a1$authors, 
+#                   " (",
+#                   a1$date,
+#                   "), ", 
+#                   a1$title, 
+#                   ", ", 
+#                   a1$journal, 
+#                   ", ", 
+#                   a1$volume)
+#     
+#   } else {
+#     tmp[[i]] <- paste0(a1$authors, 
+#                   " (",
+#                   a1$date,
+#                   "), ", 
+#                   a1$title, 
+#                   ", ", 
+#                   a1$journal, 
+#                   ", ", 
+#                   a1$volume, 
+#                   ", ",
+#                   a1$pages)
+#   }
+# }
+# 
+# tmp <- do.call(args = tmp, what = rbind)
+# 
+# pubs %>% 
+#   tibble::add_column(., tmp = tmp) %>%
+#   arrange(desc(date)) %>% 
+#   detailed_entries(
+#     what = tmp
+#   )
+# pubs %>% 
+#   dplyr::mutate(., tmp = paste0(authors, 
+#                   " (",
+#                   date,
+#                   "), ", 
+#                   title, 
+#                   ", ", 
+#                   journal, 
+#                   ", ", 
+#                   volume, 
+#                   ", ", 
+#                   pages)) %>%
+#   arrange(desc(date)) %>% 
+#   detailed_entries(
+#     what = tmp
+#   )
+```
+
+- Fisher, Aleksandr. "Demonizing the enemy: the influence of Russian state-sponsored media on American audiences." Post-Soviet Affairs (2020): 1-16.[[Link](https://www.tandfonline.com/doi/abs/10.1080/1060586X.2020.1730121)]
+
+- Fisher, Aleksandr. "Trickle Down Soft Power: Do Russia's Ties to European Parties Influence Public Opinion?." _Foreign Policy Analysis_ (2020). [[Link](https://academic.oup.com/fpa/advance-article-abstract/doi/10.1093/fpa/oraa013/5825379)]
+
+- Fisher, Aleksandr. "A New Cold War? International Public Opinion of Russia and the United States." _International Journal of Public Opinion Research_ 32.1 (2020): 143-152. [[Link](https://academic.oup.com/ijpor/article-abstract/32/1/143/5397055)]
+
+- Evers, Miles M., Aleksandr Fisher, and Steven D. Schaaf. "Is There a Trump Effect? An Experiment on Political Polarization and Audience Costs." _Perspectives on Politics_ 17.2 (2019): 433-452. [[Link](https://www.cambridge.org/core/journals/perspectives-on-politics/article/is-there-a-trump-effect-an-experiment-on-political-polarization-and-audience-costs/BDD30AB0D76FD935B43952121A49C15A)]
+
+```{r policypubs}
+# pubs %>% 
+#   arrange(desc(date)) %>% 
+#   detailed_entries(
+#     what = title,
+#     when = date,
+#     with = authors,
+#     where = journal,
+#     why = paste(volume, pages)
+#   ) 
+# tmp <- vector(mode = "list", length = nrow(pubs))
+# 
+# for (i in seq(1, length(tmp))) {
+#   a1 <- pubs[i, ]
+#   if (a1$pages == " ") {
+#     tmp[[i]] <- paste0(a1$authors, 
+#                   " (",
+#                   a1$date,
+#                   "), ", 
+#                   a1$title, 
+#                   ", ", 
+#                   a1$journal, 
+#                   ", ", 
+#                   a1$volume)
+#     
+#   } else {
+#     tmp[[i]] <- paste0(a1$authors, 
+#                   " (",
+#                   a1$date,
+#                   "), ", 
+#                   a1$title, 
+#                   ", ", 
+#                   a1$journal, 
+#                   ", ", 
+#                   a1$volume, 
+#                   ", ",
+#                   a1$pages)
+#   }
+# }
+# 
+# tmp <- do.call(args = tmp, what = rbind)
+# 
+# pubs %>% 
+#   tibble::add_column(., tmp = tmp) %>%
+#   arrange(desc(date)) %>% 
+#   detailed_entries(
+#     what = tmp
+#   )
+# pubs %>% 
+#   dplyr::mutate(., tmp = paste0(authors, 
+#                   " (",
+#                   date,
+#                   "), ", 
+#                   title, 
+#                   ", ", 
+#                   journal, 
+#                   ", ", 
+#                   volume, 
+#                   ", ", 
+#                   pages)) %>%
+#   arrange(desc(date)) %>% 
+#   detailed_entries(
+#     what = tmp
+#   )
+```
+
+# Policy Publications
+
+- If Trump backs down from his latest Iran threat, will he lose support? We checked. _Washington Post, Monkey Cage_, 2019, with Miles M. Evers and Steven Schaaf. [[Link](https://www.washingtonpost.com/politics/2019/06/26/if-trump-backs-down-his-latest-iran-threat-will-he-lose-support-we-checked/)]
+
+- Perceptions of Russian Interference in U.S. Elections Matters as Much as Actual Involvement. _Foreign Policy Research Institute_, 2019. [[Link](https://www.fpri.org/article/2019/05/perceptions-of-russian-interference-in-u-s-elections-matter-as-much-as-the-actual-involvement/)]
+
+- Moldova and Ukraine: Diverging Neighbors? _Foreign Policy Research Institute_, 2017. [[Link](https://www.fpri.org/article/2017/02/moldova-ukraine-diverging-neighbors/)]
+
+- Ukraine’s Struggle for Democracy: Severe Challenges Ahead. _Foreign Policy Research Institute_, 2015, with Amb. Adrian Basora. [[Link](https://www.fpri.org/article/2014/07/ukraines-struggle-for-democracy-severe-challenges-ahead/)]
+
+- Putin’s Greater Novorossiya: The Dismemberment of Ukraine. _Foreign Policy Research Institute_, 2015, with Amb.Adrian Basora. [[Link](https://www.fpri.org/docs/basora-_putins_greater_novorossiya.pdf)]
+
+- Home-Grown Terrorism: Russia’s Ticking Bomb. _ISN, Center for Security Studies (CSS)_, 2015, with Maia Otarashvili. [[Link](https://www.files.ethz.ch/isn/187916/ISN_181348_en.pdf)]
+
+- Ukraine Crisis Timeline as of January 30, 2015. _Foreign Policy Research Institute_, 2015. [[Link](https://www.fpri.org/2015/02/ukraine-crisis-timeline-as-of-january-30-2015/)]
+
+# Invited Workshops
+
+
+- American Political Science Association, _Washington, DC_ \hfill _2019_  
+
+- Midwest Political Science Association Meeting, _Chicago, IL_ \hfill _2017-2019_  
+
+- 5th Student Conference for Trajectories of Change, _Berlin, Germany_ \hfill _2019_
+
+- Annual DC Area Comparative Workshop, _George Washington University_ \hfill _2019_
+
+- Junior Scholar’s Symposium, Cato Institute \hfill _2018_
+
+- Comparative Politics Workshop, _George Washington University_ \hfill _2018_
+
+- Annual DC Area Comparative Workshop, _Georgetown University_ \hfill _2018_
+
+- ASN Convention, _Columbia University_ \hfill _2018_
+
+- Regime Evolution, Institutional Change, and Social Transformation in Russia, _Yale University_ \hfill _2018_
+
+- Post-Communist Workshop, _George Washington University_ \hfill _2017_
+
+- Rethinking Russian Media Strategy and Influence, _George Washington University_ \hfill _2017_
+
+- Post-Communist Workshop, _George Washington University_ \hfill _2016_
+
+# Awards
+
+- Summer Dissertation Fellowship, _George Washington University_ \hfill _2019_ 
+
+- Dean’s Dissertation Completion Fellowship, _George Washington University_ \hfill _2019_ 
+
+- Trajectories of Change’ Fieldwork Grant, _ZEIT-Stiftung Ebelin und Gerd Bucerius_ \hfill _2019_ 
+
+- Bradley Fellowship, _The Lynde and Harry Bradley Foundation_ \hfill _2018_
+
+- Hoffman Dissertation Fellowship, _Institute for European, Russian, and Eurasian Studies_ \hfill _2018_
+
+- Shirley H. and Robert L. Richards Endowment Scholarship, _George Washington University_ \hfill _2017_
+
+- Rumsfeld Foundation Graduate Fellow, _Rumsfeld Foundation_ \hfill _2017_
+
+- Humane Studies Fellowship, _Institute for Humane Studies_ \hfill _2017_
+
+- Graduate Research Fund, _George Washington University_  \hfill _2016_
+
+- Michael Hoffman Fund, _Institute for European, Russian, and Eurasian Studies_ \hfill _2016_
+
+- Professor Edward R. and Essie Baron Memorial, _Temple University_ \hfill _2014_
+
+- Ronald C. Schwarzkopf Endowed Award in Political Science, _Temple University_ \hfill _2014_
+
+
+
+# Technical Skills
+
+**Languages**: Python, R, Stata, SAS, SQL, Latex,
+
+**Tools**: Pandas, NumPy, Scikit-Learn, NLTK, Spacy, Beautifulsoup, Matplotlib, Seaborn, Flask 
+
+**Quantitative Methods**: Survey experiments, natural experiments, machine learning, decision trees, random forest, natural language processing, cluster analysis, various time-series cross-sectional models, causal mediation analysis, multinomial logistic regression, factor analysis, web scraping 

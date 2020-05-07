@@ -1,0 +1,189 @@
+---
+title: "Reading Slides"
+author: "Aleksandr Fisher"
+latex_engine: xelatex
+output:
+  beamer_presentation: default
+  slidy_presentation: default
+theme: focus
+highlight: zenburn
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## How do you measure 'democracy'
+
+- Billions spent on democracy promotion
+- Eyeball test:
+    - North Korea ... nope
+    - Norway ... sure
+    - Russia ... probably not?
+
+## What does democracy mean?
+
+- constraints on the elites
+  - executive constraint is the most important sub-component of Polity
+
+- individual rights and freedoms
+  - Freedom House weights these heavily
+  
+-  The Economist, for example, produces a measure of democracy that sees mandatory voting as bad for democracy because it infringes on individual rights. 
+
+## Take aways
+
+- To say that one measure is more accurate than another misses the point, since they represent different visions of a highly complex phenomenon
+
+- Good measures are especially important for evaluating mixed regimes
+
+- All measures are biased
+
+- Know what is baked into the definition
+
+## A dozen ways to be middle class
+
+- Many theories on the behavior of "middle" class voters
+
+- how do we categorize someone as middle class
+  - income
+  - education
+  - specific jobs
+  - family money
+  
+- how many people can be middle class?
+
+## Why does it matter?
+
+## How poltical science became irrelevant
+
+# In Class Excercise - Prediction
+
+## Partner Violence
+
+In this exercise, we examine cross-national differences in attitudes towards domestic violence and access to information. We explore the hypothesis that there is an association at an aggregate level between the extent to which individuals in a country have access to knowledge and new information, both through formal schooling and through the mass media, and their likelihood of condemning acts of intimate partner violence. This exercise is in part based on:
+
+Pierotti, Rachel. (2013). "Increasing Rejection of Intimate Partner Violence: Evidence of Global Cultural Diffusion." American Sociological Review, 78: 240-265
+
+## Partner Violence
+
+We use data from the Demographic and Health Surveys, which are a set of over 300 nationally, regionally and residentially representative surveys that have been fielded in developing countries around the world, beginning in 1992. The surveys have identical questionnaires and trainings for interviewers, enabling the data from one country to be directly compared with data collected in other countries. It is important to note that different groups of countries are surveyed every year.
+
+## The Data
+
+
+
+- `beat_goesout`: Percentage of women in each country that think a husband is justified to beat his wife if she goes out without telling him.
+- `beat_burnfood`:	Percentage of women in each country that think a husband is justified to beat his wife if she burns his food.
+- `no_media`:	Percentage of women in each country that rarely encounter a newspaper, radio, or television.
+- `sec_school`:	Percentage of women in each country with secondary or higher education.
+- `year`:	Year of the survey
+- `region`:	Region of the world
+- `country`:	Country
+
+
+## Question 1
+
+Let's begin by examining the association between attitudes towards intimate partner violence and the two exposure to information variables in our data. Load the dhs_ipv.csv data set. Use scatterplots to examine the bivariate relationship between beat_goesout and no_media as well as between beat_goesout and sec_school. Repeat these bivariate graphs between beat_burnfood and no_media, as well as beat_burnfood and sec_school. Be sure to add informative axis labels. Briefly interpret these graphs in light of the hypothesis of the study.
+
+
+## Question 2
+
+Compute the correlation coefficient between beat_burnfood and media exposure, as well as between beat_burnfood and education. Remember to use complete observations. What do these measures tell us about the association between education and media exposure with attitudes towards intimate partner violence?
+
+## Question 3
+
+We proceed to explore the national-level differences in attitudes towards domestic violence. First, use boxplots to compare the variation in the percentage of beat_burnfood between different regions of the world using region. What are the main differences across regions in terms of the median and dispersion of the distribution? Second, using boxplots examine the distribution of no_media and sec_school by region of the world. Comment on the main differences of the distribution of these variables across regions.
+
+## Question 4
+
+An important point of the researcher's hypothesis is that the support towards intimate partner violence should decrease over time, as more women across regions have access to formal schooling and exposure to mass media. To test this idea, using time-series plots, examine the trends in beat_burnfood from 1999-2014 within each region. Thinking about the study design, what should we consider before trusting that this plot shows a change over time in attitudes?
+
+\footnotesize
+```{r}
+# Access to Information and Attitudes towards Intimate Partner Violence
+dviolence = read.csv("C:/Users/afisher/Documents/R Code/qss/MEASUREMENT/dviolence.csv")
+```
+\normalsize
+
+## Question 1: Solution
+
+```{r}
+plot(dviolence$no_media, dviolence$beat_goesout)
+plot(dviolence$no_media, dviolence$beat_burnfood)
+
+plot(dviolence$sec_school, dviolence$beat_goesout)
+plot(dviolence$sec_school, dviolence$beat_burnfood)
+```
+
+
+```{r}
+cor(dviolence$sec_school, dviolence$beat_goesout, use = 'complete.obs')
+```
+
+```{r}
+ggplot(dviolence) +
+  aes(x=no_media, y=beat_goesout)+
+  geom_smooth()+
+  geom_point()+
+  facet_wrap(region ~ .) 
+```
+
+
+## Trump and Clinton 2016
+
+
+```{r}
+# Get Data From the Huffington Post
+library(pollstR)
+chart_name <- "2016-general-election-trump-vs-clinton"
+polls2016 <- pollster_charts_polls(chart_name)[["content"]]
+polls2016 <- as.data.frame(polls2016)
+names(polls2016)
+```
+
+
+library(tidyverse)
+library(lubridate)
+
+polls = read.csv("C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Data/approval_polllist.csv")
+polls = polls %>%
+  select(startdate, enddate, approve, grade) %>%
+  filter(grade=="A+")
+
+polls$startdate = mdy(polls$startdate)
+polls$enddate = mdy(polls$enddate)
+
+class(polls$startdate)
+
+
+polls$DayToMidterm = as.Date('2018-11-6')-polls$enddate
+polls$DayToImpeachment = as.Date('2020-1-16')-polls$enddate
+
+plot(polls$DayToImpeachment, polls$approve,
+     xlab = "Days to the Impeachment", ylab = "Support",
+     xlim = c(550, -50), ylim = c(35, 50), pch = 19,
+     col = "red")
+
+
+text(380, 47, "Midterm\n election")
+abline(v = as.Date("2020-1-16") - as.Date("2018-11-6"),
+       lty = "dashed")
+abline(v = as.Date("2020-1-16") - as.Date("2018-11-6"),
+       lty = "dashed")
+
+library(zoo)
+polls2 <- polls %>%
+  mutate(AvgApprove = rollmean(approve, 10, na.pad = TRUE, align = "right"))
+
+ggplot(polls2) +
+  aes(x=enddate, y=AvgApprove)+
+  geom_point(color='red') +
+  geom_smooth()
+
+TrumpApproval <- TrumpApproval %>%
+  mutate(AvgApprove = rollmean(Approving, 10, na.pad = TRUE, align = "right"))
+
+ggplot(TrumpApproval) +
+  aes(x=Date, y=AvgApprove)+
+  geom_line()

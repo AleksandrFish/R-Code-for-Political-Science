@@ -21,7 +21,7 @@ library(zoo)
 library(lubridate)
 
 # Path to File
-path <- "C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Code/Data Sets/American Presidency Project - Approval Ratings for POTUS.xlsx"
+path <- "C:/Users/afisher/Documents/R Code/R-Code-for-Political-Science/Data/American Presidency Project - Approval Ratings for POTUS.xlsx"
 
 # Read Excel Sheet Names
 names = excel_sheets(path)
@@ -110,4 +110,5 @@ approval_polls <- approval_polls %>%
 # Plot
 ggplot(approval_polls)+
   aes(x=days, y=AvgApprove, col=President)+
-  geom_line()
+  geom_line() +
+  xlim(c(0, 1000))
